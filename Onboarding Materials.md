@@ -11,7 +11,6 @@ Welcome to the team! This guide will help you get started with all the tools and
 - [📋 Spec-Driven Development - Spec Kit](#-spec-driven-development---spec-kit)
 - [📄 API Specifications - OpenSpec](#-api-specifications---openspec)
 - [🐧 Linux Basics (Optional)](#-linux-basics-optional)
-- [🖥️ Server Access - DGX Spark](#️-server-access---dgx-spark)
 - [🔀 Version Control - Git & GitHub](#-version-control---git--github)
 - [🤖 AI Coding Assistants](#-ai-coding-assistants)
 - [🐛 Debugging](#-debugging)
@@ -64,7 +63,6 @@ Slack is our primary communication tool for team discussions, announcements, and
 ### 🔗 Resources & Links
 | Resource        | Link                                        |
 | --------------- | ------------------------------------------- |
-| Slack Workspace | `[Add workspace URL]`                       |
 | Video Tutorial  | https://www.youtube.com/watch?v=o3HJuPaITWk |
 
 
@@ -91,7 +89,6 @@ FigJam is our whiteboarding and brainstorming tool for collaborative design thin
 ### 🔗 Resources & Links
 | Resource         | Link                                                                                     |
 | ---------------- | ---------------------------------------------------------------------------------------- |
-| FigJam Workspace | `[Add workspace URL]`                                                                    |
 | Video Tutorial   | https://youtube.com/playlist?list=PLXDU_eVOJTx7yUfX46VEB3VafmkdNpZhq&si=_WTGqGTVWOhWkO_n |
 
 

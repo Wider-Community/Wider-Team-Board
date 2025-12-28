@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Onboarding Materials.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Onboarding Materials"
             }
           },
           {
@@ -186,9 +186,9 @@
   },
   "active": "11563e701a060038",
   "lastOpenFiles": [
+    "README.md",
     "README.md.tmp.8796.1766921496484",
     "Onboarding Materials.md",
-    "README.md",
     "Template SDLC.canvas",
     "Projects Database.md",
     "Onboarding Materials.md.tmp.8796.1766920997327",
@@ -207,7 +207,6 @@
     "Simple Program Flowchart.canvas.tmp.4904.1764585233579",
     "Onboarding Materials.md.tmp.20356.1764512047619",
     "Onboarding Materials.md.tmp.20356.1764512032720",
-    "Onboarding Materials.md.tmp.14056.1764442663862",
     "Phase 4 - Testing/Accuracy, Quality Test.md",
     "Phase 3 - Implementation/Utitlites.md",
     "Phase 3 - Implementation/Secondary Models.md",
