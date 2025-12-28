@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Onboarding Materials.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Onboarding Materials"
+              "title": "README"
             }
           },
           {
@@ -186,8 +186,10 @@
   },
   "active": "11563e701a060038",
   "lastOpenFiles": [
-    "Template SDLC.canvas",
+    "README.md.tmp.8796.1766921496484",
     "Onboarding Materials.md",
+    "README.md",
+    "Template SDLC.canvas",
     "Projects Database.md",
     "Onboarding Materials.md.tmp.8796.1766920997327",
     "AI Materials.md",
@@ -225,7 +227,6 @@
     "ActionPlan.md",
     "Multilingual AI Agent Process.md",
     "Phase 6 - Maintenance & Improvement/Updates.md",
-    "Phase 6 - Maintenance & Improvement/Performance Monitoring.md",
     "New canvas.canvas",
     "ProcessWorkflow (1).canvas",
     "ProcessWorkflow.canvas",
