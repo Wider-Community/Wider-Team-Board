@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__obsidian-vault__obsidian_list_files_in_dir",
+      "Bash(mv:*)",
+      "mcp__obsidian-vault__obsidian_append_content"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
