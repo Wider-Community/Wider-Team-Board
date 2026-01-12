@@ -181,14 +181,16 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "11563e701a060038",
   "lastOpenFiles": [
+    "GetStartedAQWUM.md",
+    "Onboarding Materials.md",
     "README.md",
     "README.md.tmp.8796.1766921496484",
-    "Onboarding Materials.md",
     "Template SDLC.canvas",
     "Projects Database.md",
     "Onboarding Materials.md.tmp.8796.1766920997327",

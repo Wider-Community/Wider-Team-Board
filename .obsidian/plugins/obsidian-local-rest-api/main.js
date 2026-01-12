@@ -15,18 +15,18 @@ var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
 var __pow = Math.pow;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues = (a, b) => {
-  for (var prop in b || (b = {}))
-    if (__hasOwnProp.call(b, prop))
-      __defNormalProp(a, prop, b[prop]);
+var __spreadValues = (a, b2) => {
+  for (var prop in b2 || (b2 = {}))
+    if (__hasOwnProp.call(b2, prop))
+      __defNormalProp(a, prop, b2[prop]);
   if (__getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(b)) {
-      if (__propIsEnum.call(b, prop))
-        __defNormalProp(a, prop, b[prop]);
+    for (var prop of __getOwnPropSymbols(b2)) {
+      if (__propIsEnum.call(b2, prop))
+        __defNormalProp(a, prop, b2[prop]);
     }
   return a;
 };
-var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+var __spreadProps = (a, b2) => __defProps(a, __getOwnPropDescs(b2));
 var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
 var __objRest = (source, exclude) => {
   var target = {};
@@ -39,6 +39,9 @@ var __objRest = (source, exclude) => {
         target[prop] = source[prop];
     }
   return target;
+};
+var __esm = (fn, res) => function __init() {
+  return fn && (res = (0, fn[Object.keys(fn)[0]])(fn = 0)), res;
 };
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
@@ -79,7 +82,7 @@ var __async = (__this, __arguments, generator) => {
         reject(e);
       }
     };
-    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+    var step = (x2) => x2.done ? resolve(x2.value) : Promise.resolve(x2.value).then(fulfilled, rejected);
     step((generator = generator.apply(__this, __arguments)).next());
   });
 };
@@ -117,9 +120,9 @@ var require_baseN = __commonJS({
         var first = alphabet.charAt(0);
         var digits = [0];
         for (i = 0; i < input.length; ++i) {
-          for (var j = 0, carry = input[i]; j < digits.length; ++j) {
-            carry += digits[j] << 8;
-            digits[j] = carry % base;
+          for (var j2 = 0, carry = input[i]; j2 < digits.length; ++j2) {
+            carry += digits[j2] << 8;
+            digits[j2] = carry % base;
             carry = carry / base | 0;
           }
           while (carry > 0) {
@@ -163,9 +166,9 @@ var require_baseN = __commonJS({
         if (value === void 0) {
           return;
         }
-        for (var j = 0, carry = value; j < bytes.length; ++j) {
-          carry += bytes[j] * base;
-          bytes[j] = carry & 255;
+        for (var j2 = 0, carry = value; j2 < bytes.length; ++j2) {
+          carry += bytes[j2] * base;
+          bytes[j2] = carry & 255;
           carry >>= 8;
         }
         while (carry > 0) {
@@ -173,7 +176,7 @@ var require_baseN = __commonJS({
           carry >>= 8;
         }
       }
-      for (var k = 0; input[k] === first && k < input.length - 1; ++k) {
+      for (var k2 = 0; input[k2] === first && k2 < input.length - 1; ++k2) {
         bytes.push(0);
       }
       if (typeof Buffer !== "undefined") {
@@ -187,9 +190,9 @@ var require_baseN = __commonJS({
       var first = alphabet.charAt(0);
       var digits = [0];
       for (i = 0; i < input.length(); ++i) {
-        for (var j = 0, carry = input.at(i); j < digits.length; ++j) {
-          carry += digits[j] << 8;
-          digits[j] = carry % base;
+        for (var j2 = 0, carry = input.at(i); j2 < digits.length; ++j2) {
+          carry += digits[j2] << 8;
+          digits[j2] = carry % base;
           carry = carry / base | 0;
         }
         while (carry > 0) {
@@ -293,14 +296,14 @@ var require_util = __commonJS({
       }
       return typeof self === "undefined" ? window : self;
     }();
-    util.isArray = Array.isArray || function(x) {
-      return Object.prototype.toString.call(x) === "[object Array]";
+    util.isArray = Array.isArray || function(x2) {
+      return Object.prototype.toString.call(x2) === "[object Array]";
     };
-    util.isArrayBuffer = function(x) {
-      return typeof ArrayBuffer !== "undefined" && x instanceof ArrayBuffer;
+    util.isArrayBuffer = function(x2) {
+      return typeof ArrayBuffer !== "undefined" && x2 instanceof ArrayBuffer;
     };
-    util.isArrayBufferView = function(x) {
-      return x && util.isArrayBuffer(x.buffer) && x.byteLength !== void 0;
+    util.isArrayBufferView = function(x2) {
+      return x2 && util.isArrayBuffer(x2.buffer) && x2.byteLength !== void 0;
     };
     function _checkBitsParam(n) {
       if (!(n === 8 || n === 16 || n === 24 || n === 32)) {
@@ -308,16 +311,16 @@ var require_util = __commonJS({
       }
     }
     util.ByteBuffer = ByteStringBuffer;
-    function ByteStringBuffer(b) {
+    function ByteStringBuffer(b2) {
       this.data = "";
       this.read = 0;
-      if (typeof b === "string") {
-        this.data = b;
-      } else if (util.isArrayBuffer(b) || util.isArrayBufferView(b)) {
-        if (typeof Buffer !== "undefined" && b instanceof Buffer) {
-          this.data = b.toString("binary");
+      if (typeof b2 === "string") {
+        this.data = b2;
+      } else if (util.isArrayBuffer(b2) || util.isArrayBufferView(b2)) {
+        if (typeof Buffer !== "undefined" && b2 instanceof Buffer) {
+          this.data = b2.toString("binary");
         } else {
-          var arr = new Uint8Array(b);
+          var arr = new Uint8Array(b2);
           try {
             this.data = String.fromCharCode.apply(null, arr);
           } catch (e) {
@@ -326,16 +329,16 @@ var require_util = __commonJS({
             }
           }
         }
-      } else if (b instanceof ByteStringBuffer || typeof b === "object" && typeof b.data === "string" && typeof b.read === "number") {
-        this.data = b.data;
-        this.read = b.read;
+      } else if (b2 instanceof ByteStringBuffer || typeof b2 === "object" && typeof b2.data === "string" && typeof b2.read === "number") {
+        this.data = b2.data;
+        this.read = b2.read;
       }
       this._constructedStringLength = 0;
     }
     util.ByteStringBuffer = ByteStringBuffer;
     var _MAX_CONSTRUCTED_STRING_LENGTH = 4096;
-    util.ByteStringBuffer.prototype._optimizeConstructedString = function(x) {
-      this._constructedStringLength += x;
+    util.ByteStringBuffer.prototype._optimizeConstructedString = function(x2) {
+      this._constructedStringLength += x2;
       if (this._constructedStringLength > _MAX_CONSTRUCTED_STRING_LENGTH) {
         this.data.substr(0, 1);
         this._constructedStringLength = 0;
@@ -347,22 +350,22 @@ var require_util = __commonJS({
     util.ByteStringBuffer.prototype.isEmpty = function() {
       return this.length() <= 0;
     };
-    util.ByteStringBuffer.prototype.putByte = function(b) {
-      return this.putBytes(String.fromCharCode(b));
+    util.ByteStringBuffer.prototype.putByte = function(b2) {
+      return this.putBytes(String.fromCharCode(b2));
     };
-    util.ByteStringBuffer.prototype.fillWithByte = function(b, n) {
-      b = String.fromCharCode(b);
-      var d = this.data;
+    util.ByteStringBuffer.prototype.fillWithByte = function(b2, n) {
+      b2 = String.fromCharCode(b2);
+      var d2 = this.data;
       while (n > 0) {
         if (n & 1) {
-          d += b;
+          d2 += b2;
         }
         n >>>= 1;
         if (n > 0) {
-          b += b;
+          b2 += b2;
         }
       }
-      this.data = d;
+      this.data = d2;
       this._optimizeConstructedString(n);
       return this;
     };
@@ -453,12 +456,12 @@ var require_util = __commonJS({
       return rval;
     };
     util.ByteStringBuffer.prototype.getSignedInt = function(n) {
-      var x = this.getInt(n);
+      var x2 = this.getInt(n);
       var max = 2 << n - 2;
-      if (x >= max) {
-        x -= max << 1;
+      if (x2 >= max) {
+        x2 -= max << 1;
       }
-      return x;
+      return x2;
     };
     util.ByteStringBuffer.prototype.getBytes = function(count) {
       var rval;
@@ -480,8 +483,8 @@ var require_util = __commonJS({
     util.ByteStringBuffer.prototype.at = function(i) {
       return this.data.charCodeAt(this.read + i);
     };
-    util.ByteStringBuffer.prototype.setAt = function(i, b) {
-      this.data = this.data.substr(0, this.read + i) + String.fromCharCode(b) + this.data.substr(this.read + i + 1);
+    util.ByteStringBuffer.prototype.setAt = function(i, b2) {
+      this.data = this.data.substr(0, this.read + i) + String.fromCharCode(b2) + this.data.substr(this.read + i + 1);
       return this;
     };
     util.ByteStringBuffer.prototype.last = function() {
@@ -513,36 +516,36 @@ var require_util = __commonJS({
     util.ByteStringBuffer.prototype.toHex = function() {
       var rval = "";
       for (var i = this.read; i < this.data.length; ++i) {
-        var b = this.data.charCodeAt(i);
-        if (b < 16) {
+        var b2 = this.data.charCodeAt(i);
+        if (b2 < 16) {
           rval += "0";
         }
-        rval += b.toString(16);
+        rval += b2.toString(16);
       }
       return rval;
     };
     util.ByteStringBuffer.prototype.toString = function() {
       return util.decodeUtf8(this.bytes());
     };
-    function DataBuffer(b, options) {
+    function DataBuffer(b2, options) {
       options = options || {};
       this.read = options.readOffset || 0;
       this.growSize = options.growSize || 1024;
-      var isArrayBuffer = util.isArrayBuffer(b);
-      var isArrayBufferView = util.isArrayBufferView(b);
+      var isArrayBuffer = util.isArrayBuffer(b2);
+      var isArrayBufferView = util.isArrayBufferView(b2);
       if (isArrayBuffer || isArrayBufferView) {
         if (isArrayBuffer) {
-          this.data = new DataView(b);
+          this.data = new DataView(b2);
         } else {
-          this.data = new DataView(b.buffer, b.byteOffset, b.byteLength);
+          this.data = new DataView(b2.buffer, b2.byteOffset, b2.byteLength);
         }
         this.write = "writeOffset" in options ? options.writeOffset : this.data.byteLength;
         return;
       }
       this.data = new DataView(new ArrayBuffer(0));
       this.write = 0;
-      if (b !== null && b !== void 0) {
-        this.putBytes(b);
+      if (b2 !== null && b2 !== void 0) {
+        this.putBytes(b2);
       }
       if ("writeOffset" in options) {
         this.write = options.writeOffset;
@@ -566,15 +569,15 @@ var require_util = __commonJS({
       this.data = new DataView(dst.buffer);
       return this;
     };
-    util.DataBuffer.prototype.putByte = function(b) {
+    util.DataBuffer.prototype.putByte = function(b2) {
       this.accommodate(1);
-      this.data.setUint8(this.write++, b);
+      this.data.setUint8(this.write++, b2);
       return this;
     };
-    util.DataBuffer.prototype.fillWithByte = function(b, n) {
+    util.DataBuffer.prototype.fillWithByte = function(b2, n) {
       this.accommodate(n);
       for (var i = 0; i < n; ++i) {
-        this.data.setUint8(b);
+        this.data.setUint8(b2);
       }
       return this;
     };
@@ -749,12 +752,12 @@ var require_util = __commonJS({
       return rval;
     };
     util.DataBuffer.prototype.getSignedInt = function(n) {
-      var x = this.getInt(n);
+      var x2 = this.getInt(n);
       var max = 2 << n - 2;
-      if (x >= max) {
-        x -= max << 1;
+      if (x2 >= max) {
+        x2 -= max << 1;
       }
-      return x;
+      return x2;
     };
     util.DataBuffer.prototype.getBytes = function(count) {
       var rval;
@@ -776,8 +779,8 @@ var require_util = __commonJS({
     util.DataBuffer.prototype.at = function(i) {
       return this.data.getUint8(this.read + i);
     };
-    util.DataBuffer.prototype.setAt = function(i, b) {
-      this.data.setUint8(i, b);
+    util.DataBuffer.prototype.setAt = function(i, b2) {
+      this.data.setUint8(i, b2);
       return this;
     };
     util.DataBuffer.prototype.last = function() {
@@ -810,11 +813,11 @@ var require_util = __commonJS({
     util.DataBuffer.prototype.toHex = function() {
       var rval = "";
       for (var i = this.read; i < this.data.byteLength; ++i) {
-        var b = this.data.getUint8(i);
-        if (b < 16) {
+        var b2 = this.data.getUint8(i);
+        if (b2 < 16) {
           rval += "0";
         }
-        rval += b.toString(16);
+        rval += b2.toString(16);
       }
       return rval;
     };
@@ -860,18 +863,18 @@ var require_util = __commonJS({
     };
     util.xorBytes = function(s1, s2, n) {
       var s3 = "";
-      var b = "";
+      var b2 = "";
       var t = "";
       var i = 0;
       var c = 0;
       for (; n > 0; --n, ++i) {
-        b = s1.charCodeAt(i) ^ s2.charCodeAt(i);
+        b2 = s1.charCodeAt(i) ^ s2.charCodeAt(i);
         if (c >= 10) {
           s3 += t;
           t = "";
           c = 0;
         }
-        t += String.fromCharCode(b);
+        t += String.fromCharCode(b2);
         ++c;
       }
       s3 += t;
@@ -1049,11 +1052,11 @@ var require_util = __commonJS({
         out = new Uint8Array(str.length);
       }
       offset = offset || 0;
-      var j = offset;
+      var j2 = offset;
       for (var i = 0; i < str.length; ++i) {
-        out[j++] = str.charCodeAt(i);
+        out[j2++] = str.charCodeAt(i);
       }
-      return output ? j - offset : out;
+      return output ? j2 - offset : out;
     };
     util.binary.hex.encode = util.bytesToHex;
     util.binary.hex.decode = function(hex, output, offset) {
@@ -1062,15 +1065,15 @@ var require_util = __commonJS({
         out = new Uint8Array(Math.ceil(hex.length / 2));
       }
       offset = offset || 0;
-      var i = 0, j = offset;
+      var i = 0, j2 = offset;
       if (hex.length & 1) {
         i = 1;
-        out[j++] = parseInt(hex[0], 16);
+        out[j2++] = parseInt(hex[0], 16);
       }
       for (; i < hex.length; i += 2) {
-        out[j++] = parseInt(hex.substr(i, 2), 16);
+        out[j2++] = parseInt(hex.substr(i, 2), 16);
       }
-      return output ? j - offset : out;
+      return output ? j2 - offset : out;
     };
     util.binary.base64.encode = function(input, maxline) {
       var line = "";
@@ -1105,21 +1108,21 @@ var require_util = __commonJS({
       input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
       offset = offset || 0;
       var enc1, enc2, enc3, enc4;
-      var i = 0, j = offset;
+      var i = 0, j2 = offset;
       while (i < input.length) {
         enc1 = _base64Idx[input.charCodeAt(i++) - 43];
         enc2 = _base64Idx[input.charCodeAt(i++) - 43];
         enc3 = _base64Idx[input.charCodeAt(i++) - 43];
         enc4 = _base64Idx[input.charCodeAt(i++) - 43];
-        out[j++] = enc1 << 2 | enc2 >> 4;
+        out[j2++] = enc1 << 2 | enc2 >> 4;
         if (enc3 !== 64) {
-          out[j++] = (enc2 & 15) << 4 | enc3 >> 2;
+          out[j2++] = (enc2 & 15) << 4 | enc3 >> 2;
           if (enc4 !== 64) {
-            out[j++] = (enc3 & 3) << 6 | enc4;
+            out[j2++] = (enc3 & 3) << 6 | enc4;
           }
         }
       }
-      return output ? j - offset : out.subarray(0, j);
+      return output ? j2 - offset : out.subarray(0, j2);
     };
     util.binary.base58.encode = function(input, maxline) {
       return util.binary.baseN.encode(input, _base58, maxline);
@@ -1138,11 +1141,11 @@ var require_util = __commonJS({
         out = new Uint8Array(str.length);
       }
       offset = offset || 0;
-      var j = offset;
+      var j2 = offset;
       for (var i = 0; i < str.length; ++i) {
-        out[j++] = str.charCodeAt(i);
+        out[j2++] = str.charCodeAt(i);
       }
-      return output ? j - offset : out;
+      return output ? j2 - offset : out;
     };
     util.text.utf8.decode = function(bytes) {
       return util.decodeUtf8(String.fromCharCode.apply(null, bytes));
@@ -1154,13 +1157,13 @@ var require_util = __commonJS({
       }
       var view = new Uint16Array(out.buffer);
       offset = offset || 0;
-      var j = offset;
-      var k = offset;
+      var j2 = offset;
+      var k2 = offset;
       for (var i = 0; i < str.length; ++i) {
-        view[k++] = str.charCodeAt(i);
-        j += 2;
+        view[k2++] = str.charCodeAt(i);
+        j2 += 2;
       }
-      return output ? j - offset : out;
+      return output ? j2 - offset : out;
     };
     util.text.utf16.decode = function(bytes) {
       return String.fromCharCode.apply(null, new Uint16Array(bytes.buffer));
@@ -1311,18 +1314,18 @@ var require_util = __commonJS({
       return true;
     };
     util.format = function(format) {
-      var re = /%./g;
+      var re2 = /%./g;
       var match;
       var part;
       var argi = 0;
       var parts = [];
       var last = 0;
-      while (match = re.exec(format)) {
-        part = format.substring(last, re.lastIndex - 2);
+      while (match = re2.exec(format)) {
+        part = format.substring(last, re2.lastIndex - 2);
         if (part.length > 0) {
           parts.push(part);
         }
-        last = re.lastIndex;
+        last = re2.lastIndex;
         var code = match[0][1];
         switch (code) {
           case "s":
@@ -1345,11 +1348,11 @@ var require_util = __commonJS({
     };
     util.formatNumber = function(number, decimals, dec_point, thousands_sep) {
       var n = number, c = isNaN(decimals = Math.abs(decimals)) ? 2 : decimals;
-      var d = dec_point === void 0 ? "," : dec_point;
+      var d2 = dec_point === void 0 ? "," : dec_point;
       var t = thousands_sep === void 0 ? "." : thousands_sep, s = n < 0 ? "-" : "";
       var i = parseInt(n = Math.abs(+n || 0).toFixed(c), 10) + "";
-      var j = i.length > 3 ? i.length % 3 : 0;
-      return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+      var j2 = i.length > 3 ? i.length % 3 : 0;
+      return s + (j2 ? i.substr(0, j2) + t : "") + i.substr(j2).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d2 + Math.abs(n - i).toFixed(c).slice(2) : "");
     };
     util.formatSize = function(size) {
       if (size >= 1073741824) {
@@ -1377,15 +1380,15 @@ var require_util = __commonJS({
       if (ip.length !== 4) {
         return null;
       }
-      var b = util.createBuffer();
+      var b2 = util.createBuffer();
       for (var i = 0; i < ip.length; ++i) {
         var num = parseInt(ip[i], 10);
         if (isNaN(num)) {
           return null;
         }
-        b.putByte(num);
+        b2.putByte(num);
       }
-      return b.getBytes();
+      return b2.getBytes();
     };
     util.bytesFromIPv6 = function(ip) {
       var blanks = 0;
@@ -1395,20 +1398,20 @@ var require_util = __commonJS({
         return true;
       });
       var zeros = (8 - ip.length + blanks) * 2;
-      var b = util.createBuffer();
+      var b2 = util.createBuffer();
       for (var i = 0; i < 8; ++i) {
         if (!ip[i] || ip[i].length === 0) {
-          b.fillWithByte(0, zeros);
+          b2.fillWithByte(0, zeros);
           zeros = 0;
           continue;
         }
         var bytes = util.hexToBytes(ip[i]);
         if (bytes.length < 2) {
-          b.putByte(0);
+          b2.putByte(0);
         }
-        b.putBytes(bytes);
+        b2.putBytes(bytes);
       }
-      return b.getBytes();
+      return b2.getBytes();
     };
     util.bytesToIP = function(bytes) {
       if (bytes.length === 4) {
@@ -1506,8 +1509,8 @@ var require_util = __commonJS({
       sample([], 5, 16);
       function sample(max, samples, numWorkers) {
         if (samples === 0) {
-          var avg = Math.floor(max.reduce(function(avg2, x) {
-            return avg2 + x;
+          var avg = Math.floor(max.reduce(function(avg2, x2) {
+            return avg2 + x2;
           }, 0) / max.length);
           util.cores = Math.max(1, avg);
           URL.revokeObjectURL(blobUrl);
@@ -2175,11 +2178,11 @@ var require_cipherModes = __commonJS({
       }
       return rval;
     };
-    modes.gcm.prototype.multiply = function(x, y) {
+    modes.gcm.prototype.multiply = function(x2, y2) {
       var z_i = [0, 0, 0, 0];
-      var v_i = y.slice(0);
+      var v_i = y2.slice(0);
       for (var i = 0; i < 128; ++i) {
-        var x_i = x[i / 32 | 0] & 1 << 31 - i % 32;
+        var x_i = x2[i / 32 | 0] & 1 << 31 - i % 32;
         if (x_i) {
           z_i[0] ^= v_i[0];
           z_i[1] ^= v_i[1];
@@ -2190,66 +2193,66 @@ var require_cipherModes = __commonJS({
       }
       return z_i;
     };
-    modes.gcm.prototype.pow = function(x, out) {
-      var lsb = x[3] & 1;
+    modes.gcm.prototype.pow = function(x2, out) {
+      var lsb = x2[3] & 1;
       for (var i = 3; i > 0; --i) {
-        out[i] = x[i] >>> 1 | (x[i - 1] & 1) << 31;
+        out[i] = x2[i] >>> 1 | (x2[i - 1] & 1) << 31;
       }
-      out[0] = x[0] >>> 1;
+      out[0] = x2[0] >>> 1;
       if (lsb) {
         out[0] ^= this._R;
       }
     };
-    modes.gcm.prototype.tableMultiply = function(x) {
-      var z = [0, 0, 0, 0];
+    modes.gcm.prototype.tableMultiply = function(x2) {
+      var z2 = [0, 0, 0, 0];
       for (var i = 0; i < 32; ++i) {
         var idx = i / 8 | 0;
-        var x_i = x[idx] >>> (7 - i % 8) * 4 & 15;
+        var x_i = x2[idx] >>> (7 - i % 8) * 4 & 15;
         var ah = this._m[i][x_i];
-        z[0] ^= ah[0];
-        z[1] ^= ah[1];
-        z[2] ^= ah[2];
-        z[3] ^= ah[3];
+        z2[0] ^= ah[0];
+        z2[1] ^= ah[1];
+        z2[2] ^= ah[2];
+        z2[3] ^= ah[3];
       }
-      return z;
+      return z2;
     };
-    modes.gcm.prototype.ghash = function(h, y, x) {
-      y[0] ^= x[0];
-      y[1] ^= x[1];
-      y[2] ^= x[2];
-      y[3] ^= x[3];
-      return this.tableMultiply(y);
+    modes.gcm.prototype.ghash = function(h, y2, x2) {
+      y2[0] ^= x2[0];
+      y2[1] ^= x2[1];
+      y2[2] ^= x2[2];
+      y2[3] ^= x2[3];
+      return this.tableMultiply(y2);
     };
     modes.gcm.prototype.generateHashTable = function(h, bits) {
       var multiplier = 8 / bits;
       var perInt = 4 * multiplier;
       var size = 16 * multiplier;
-      var m = new Array(size);
+      var m2 = new Array(size);
       for (var i = 0; i < size; ++i) {
         var tmp = [0, 0, 0, 0];
         var idx = i / perInt | 0;
         var shft = (perInt - 1 - i % perInt) * bits;
         tmp[idx] = 1 << bits - 1 << shft;
-        m[i] = this.generateSubHashTable(this.multiply(tmp, h), bits);
+        m2[i] = this.generateSubHashTable(this.multiply(tmp, h), bits);
       }
-      return m;
+      return m2;
     };
     modes.gcm.prototype.generateSubHashTable = function(mid, bits) {
       var size = 1 << bits;
       var half = size >>> 1;
-      var m = new Array(size);
-      m[half] = mid.slice(0);
+      var m2 = new Array(size);
+      m2[half] = mid.slice(0);
       var i = half >>> 1;
       while (i > 0) {
-        this.pow(m[2 * i], m[i] = []);
+        this.pow(m2[2 * i], m2[i] = []);
         i >>= 1;
       }
       i = 2;
       while (i < half) {
-        for (var j = 1; j < i; ++j) {
-          var m_i = m[i];
-          var m_j = m[j];
-          m[i + j] = [
+        for (var j2 = 1; j2 < i; ++j2) {
+          var m_i = m2[i];
+          var m_j = m2[j2];
+          m2[i + j2] = [
             m_i[0] ^ m_j[0],
             m_i[1] ^ m_j[1],
             m_i[2] ^ m_j[2],
@@ -2258,12 +2261,12 @@ var require_cipherModes = __commonJS({
         }
         i *= 2;
       }
-      m[0] = [0, 0, 0, 0];
+      m2[0] = [0, 0, 0, 0];
       for (i = half + 1; i < size; ++i) {
-        var c = m[i ^ half];
-        m[i] = [mid[0] ^ c[0], mid[1] ^ c[1], mid[2] ^ c[2], mid[3] ^ c[3]];
+        var c = m2[i ^ half];
+        m2[i] = [mid[0] ^ c[0], mid[1] ^ c[1], mid[2] ^ c[2], mid[3] ^ c[3]];
       }
-      return m;
+      return m2;
     };
     function transformIV(iv, blockSize) {
       if (typeof iv === "string") {
@@ -2437,7 +2440,7 @@ var require_aes = __commonJS({
         mix[i] = new Array(256);
         imix[i] = new Array(256);
       }
-      var e = 0, ei = 0, e2, e4, e8, sx, sx2, me, ime;
+      var e = 0, ei = 0, e2, e4, e8, sx, sx2, me2, ime;
       for (var i = 0; i < 256; ++i) {
         sx = ei ^ ei << 1 ^ ei << 2 ^ ei << 3 ^ ei << 4;
         sx = sx >> 8 ^ sx & 255 ^ 99;
@@ -2447,12 +2450,12 @@ var require_aes = __commonJS({
         e2 = xtime[e];
         e4 = xtime[e2];
         e8 = xtime[e4];
-        me = sx2 << 24 ^ sx << 16 ^ sx << 8 ^ (sx ^ sx2);
+        me2 = sx2 << 24 ^ sx << 16 ^ sx << 8 ^ (sx ^ sx2);
         ime = (e2 ^ e4 ^ e8) << 24 ^ (e ^ e8) << 16 ^ (e ^ e4 ^ e8) << 8 ^ (e ^ e2 ^ e8);
         for (var n = 0; n < 4; ++n) {
-          mix[n][e] = me;
+          mix[n][e] = me2;
           imix[n][sx] = ime;
-          me = me << 24 | me >>> 8;
+          me2 = me2 << 24 | me2 >>> 8;
           ime = ime << 24 | ime >>> 8;
         }
         if (e === 0) {
@@ -2464,20 +2467,20 @@ var require_aes = __commonJS({
       }
     }
     function _expandKey(key, decrypt) {
-      var w = key.slice(0);
+      var w2 = key.slice(0);
       var temp, iNk = 1;
-      var Nk = w.length;
+      var Nk = w2.length;
       var Nr1 = Nk + 6 + 1;
       var end = Nb * Nr1;
       for (var i = Nk; i < end; ++i) {
-        temp = w[i - 1];
+        temp = w2[i - 1];
         if (i % Nk === 0) {
           temp = sbox[temp >>> 16 & 255] << 24 ^ sbox[temp >>> 8 & 255] << 16 ^ sbox[temp & 255] << 8 ^ sbox[temp >>> 24] ^ rcon[iNk] << 24;
           iNk++;
         } else if (Nk > 6 && i % Nk === 4) {
           temp = sbox[temp >>> 24] << 24 ^ sbox[temp >>> 16 & 255] << 16 ^ sbox[temp >>> 8 & 255] << 8 ^ sbox[temp & 255];
         }
-        w[i] = w[i - Nk] ^ temp;
+        w2[i] = w2[i - Nk] ^ temp;
       }
       if (decrypt) {
         var tmp;
@@ -2485,27 +2488,27 @@ var require_aes = __commonJS({
         var m1 = imix[1];
         var m2 = imix[2];
         var m3 = imix[3];
-        var wnew = w.slice(0);
-        end = w.length;
+        var wnew = w2.slice(0);
+        end = w2.length;
         for (var i = 0, wi = end - Nb; i < end; i += Nb, wi -= Nb) {
           if (i === 0 || i === end - Nb) {
-            wnew[i] = w[wi];
-            wnew[i + 1] = w[wi + 3];
-            wnew[i + 2] = w[wi + 2];
-            wnew[i + 3] = w[wi + 1];
+            wnew[i] = w2[wi];
+            wnew[i + 1] = w2[wi + 3];
+            wnew[i + 2] = w2[wi + 2];
+            wnew[i + 3] = w2[wi + 1];
           } else {
             for (var n = 0; n < Nb; ++n) {
-              tmp = w[wi + n];
+              tmp = w2[wi + n];
               wnew[i + (3 & -n)] = m0[sbox[tmp >>> 24]] ^ m1[sbox[tmp >>> 16 & 255]] ^ m2[sbox[tmp >>> 8 & 255]] ^ m3[sbox[tmp & 255]];
             }
           }
         }
-        w = wnew;
+        w2 = wnew;
       }
-      return w;
+      return w2;
     }
-    function _updateBlock(w, input, output, decrypt) {
-      var Nr = w.length / 4 - 1;
+    function _updateBlock(w2, input, output, decrypt) {
+      var Nr = w2.length / 4 - 1;
       var m0, m1, m2, m3, sub;
       if (decrypt) {
         m0 = imix[0];
@@ -2520,25 +2523,25 @@ var require_aes = __commonJS({
         m3 = mix[3];
         sub = sbox;
       }
-      var a, b, c, d, a2, b2, c2;
-      a = input[0] ^ w[0];
-      b = input[decrypt ? 3 : 1] ^ w[1];
-      c = input[2] ^ w[2];
-      d = input[decrypt ? 1 : 3] ^ w[3];
+      var a, b2, c, d2, a2, b22, c2;
+      a = input[0] ^ w2[0];
+      b2 = input[decrypt ? 3 : 1] ^ w2[1];
+      c = input[2] ^ w2[2];
+      d2 = input[decrypt ? 1 : 3] ^ w2[3];
       var i = 3;
       for (var round = 1; round < Nr; ++round) {
-        a2 = m0[a >>> 24] ^ m1[b >>> 16 & 255] ^ m2[c >>> 8 & 255] ^ m3[d & 255] ^ w[++i];
-        b2 = m0[b >>> 24] ^ m1[c >>> 16 & 255] ^ m2[d >>> 8 & 255] ^ m3[a & 255] ^ w[++i];
-        c2 = m0[c >>> 24] ^ m1[d >>> 16 & 255] ^ m2[a >>> 8 & 255] ^ m3[b & 255] ^ w[++i];
-        d = m0[d >>> 24] ^ m1[a >>> 16 & 255] ^ m2[b >>> 8 & 255] ^ m3[c & 255] ^ w[++i];
+        a2 = m0[a >>> 24] ^ m1[b2 >>> 16 & 255] ^ m2[c >>> 8 & 255] ^ m3[d2 & 255] ^ w2[++i];
+        b22 = m0[b2 >>> 24] ^ m1[c >>> 16 & 255] ^ m2[d2 >>> 8 & 255] ^ m3[a & 255] ^ w2[++i];
+        c2 = m0[c >>> 24] ^ m1[d2 >>> 16 & 255] ^ m2[a >>> 8 & 255] ^ m3[b2 & 255] ^ w2[++i];
+        d2 = m0[d2 >>> 24] ^ m1[a >>> 16 & 255] ^ m2[b2 >>> 8 & 255] ^ m3[c & 255] ^ w2[++i];
         a = a2;
-        b = b2;
+        b2 = b22;
         c = c2;
       }
-      output[0] = sub[a >>> 24] << 24 ^ sub[b >>> 16 & 255] << 16 ^ sub[c >>> 8 & 255] << 8 ^ sub[d & 255] ^ w[++i];
-      output[decrypt ? 3 : 1] = sub[b >>> 24] << 24 ^ sub[c >>> 16 & 255] << 16 ^ sub[d >>> 8 & 255] << 8 ^ sub[a & 255] ^ w[++i];
-      output[2] = sub[c >>> 24] << 24 ^ sub[d >>> 16 & 255] << 16 ^ sub[a >>> 8 & 255] << 8 ^ sub[b & 255] ^ w[++i];
-      output[decrypt ? 1 : 3] = sub[d >>> 24] << 24 ^ sub[a >>> 16 & 255] << 16 ^ sub[b >>> 8 & 255] << 8 ^ sub[c & 255] ^ w[++i];
+      output[0] = sub[a >>> 24] << 24 ^ sub[b2 >>> 16 & 255] << 16 ^ sub[c >>> 8 & 255] << 8 ^ sub[d2 & 255] ^ w2[++i];
+      output[decrypt ? 3 : 1] = sub[b2 >>> 24] << 24 ^ sub[c >>> 16 & 255] << 16 ^ sub[d2 >>> 8 & 255] << 8 ^ sub[a & 255] ^ w2[++i];
+      output[2] = sub[c >>> 24] << 24 ^ sub[d2 >>> 16 & 255] << 16 ^ sub[a >>> 8 & 255] << 8 ^ sub[b2 & 255] ^ w2[++i];
+      output[decrypt ? 1 : 3] = sub[d2 >>> 24] << 24 ^ sub[a >>> 16 & 255] << 16 ^ sub[b2 >>> 8 & 255] << 8 ^ sub[c & 255] ^ w2[++i];
     }
     function _createCipher(options) {
       options = options || {};
@@ -2821,17 +2824,17 @@ var require_asn1 = __commonJS({
       }
       return equal;
     };
-    asn1.getBerValueLength = function(b) {
-      var b2 = b.getByte();
-      if (b2 === 128) {
+    asn1.getBerValueLength = function(b2) {
+      var b22 = b2.getByte();
+      if (b22 === 128) {
         return void 0;
       }
       var length;
-      var longForm = b2 & 128;
+      var longForm = b22 & 128;
       if (!longForm) {
-        length = b2;
+        length = b22;
       } else {
-        length = b.getInt((b2 & 127) << 3);
+        length = b2.getInt((b22 & 127) << 3);
       }
       return length;
     };
@@ -3067,18 +3070,18 @@ var require_asn1 = __commonJS({
       var values = oid.split(".");
       var bytes = forge3.util.createBuffer();
       bytes.putByte(40 * parseInt(values[0], 10) + parseInt(values[1], 10));
-      var last, valueBytes, value, b;
+      var last, valueBytes, value, b2;
       for (var i = 2; i < values.length; ++i) {
         last = true;
         valueBytes = [];
         value = parseInt(values[i], 10);
         do {
-          b = value & 127;
+          b2 = value & 127;
           value = value >>> 7;
           if (!last) {
-            b |= 128;
+            b2 |= 128;
           }
-          valueBytes.push(b);
+          valueBytes.push(b2);
           last = false;
         } while (value > 0);
         for (var n = valueBytes.length - 1; n >= 0; --n) {
@@ -3092,16 +3095,16 @@ var require_asn1 = __commonJS({
       if (typeof bytes === "string") {
         bytes = forge3.util.createBuffer(bytes);
       }
-      var b = bytes.getByte();
-      oid = Math.floor(b / 40) + "." + b % 40;
+      var b2 = bytes.getByte();
+      oid = Math.floor(b2 / 40) + "." + b2 % 40;
       var value = 0;
       while (bytes.length() > 0) {
-        b = bytes.getByte();
+        b2 = bytes.getByte();
         value = value << 7;
-        if (b & 128) {
-          value += b & 127;
+        if (b2 & 128) {
+          value += b2 & 127;
         } else {
-          oid += "." + (value + b);
+          oid += "." + (value + b2);
           value = 0;
         }
       }
@@ -3222,22 +3225,22 @@ var require_asn1 = __commonJS({
       rval += "Z";
       return rval;
     };
-    asn1.integerToDer = function(x) {
+    asn1.integerToDer = function(x2) {
       var rval = forge3.util.createBuffer();
-      if (x >= -128 && x < 128) {
-        return rval.putSignedInt(x, 8);
+      if (x2 >= -128 && x2 < 128) {
+        return rval.putSignedInt(x2, 8);
       }
-      if (x >= -32768 && x < 32768) {
-        return rval.putSignedInt(x, 16);
+      if (x2 >= -32768 && x2 < 32768) {
+        return rval.putSignedInt(x2, 16);
       }
-      if (x >= -8388608 && x < 8388608) {
-        return rval.putSignedInt(x, 24);
+      if (x2 >= -8388608 && x2 < 8388608) {
+        return rval.putSignedInt(x2, 24);
       }
-      if (x >= -2147483648 && x < 2147483648) {
-        return rval.putSignedInt(x, 32);
+      if (x2 >= -2147483648 && x2 < 2147483648) {
+        return rval.putSignedInt(x2, 32);
       }
       var error = new Error("Integer too large; max is 32-bits.");
-      error.integer = x;
+      error.integer = x2;
       throw error;
     };
     asn1.derToInteger = function(bytes) {
@@ -3250,60 +3253,60 @@ var require_asn1 = __commonJS({
       }
       return bytes.getSignedInt(n);
     };
-    asn1.validate = function(obj, v, capture, errors) {
+    asn1.validate = function(obj, v2, capture, errors) {
       var rval = false;
-      if ((obj.tagClass === v.tagClass || typeof v.tagClass === "undefined") && (obj.type === v.type || typeof v.type === "undefined")) {
-        if (obj.constructed === v.constructed || typeof v.constructed === "undefined") {
+      if ((obj.tagClass === v2.tagClass || typeof v2.tagClass === "undefined") && (obj.type === v2.type || typeof v2.type === "undefined")) {
+        if (obj.constructed === v2.constructed || typeof v2.constructed === "undefined") {
           rval = true;
-          if (v.value && forge3.util.isArray(v.value)) {
-            var j = 0;
-            for (var i = 0; rval && i < v.value.length; ++i) {
-              rval = v.value[i].optional || false;
-              if (obj.value[j]) {
-                rval = asn1.validate(obj.value[j], v.value[i], capture, errors);
+          if (v2.value && forge3.util.isArray(v2.value)) {
+            var j2 = 0;
+            for (var i = 0; rval && i < v2.value.length; ++i) {
+              rval = v2.value[i].optional || false;
+              if (obj.value[j2]) {
+                rval = asn1.validate(obj.value[j2], v2.value[i], capture, errors);
                 if (rval) {
-                  ++j;
-                } else if (v.value[i].optional) {
+                  ++j2;
+                } else if (v2.value[i].optional) {
                   rval = true;
                 }
               }
               if (!rval && errors) {
-                errors.push("[" + v.name + '] Tag class "' + v.tagClass + '", type "' + v.type + '" expected value length "' + v.value.length + '", got "' + obj.value.length + '"');
+                errors.push("[" + v2.name + '] Tag class "' + v2.tagClass + '", type "' + v2.type + '" expected value length "' + v2.value.length + '", got "' + obj.value.length + '"');
               }
             }
           }
           if (rval && capture) {
-            if (v.capture) {
-              capture[v.capture] = obj.value;
+            if (v2.capture) {
+              capture[v2.capture] = obj.value;
             }
-            if (v.captureAsn1) {
-              capture[v.captureAsn1] = obj;
+            if (v2.captureAsn1) {
+              capture[v2.captureAsn1] = obj;
             }
-            if (v.captureBitStringContents && "bitStringContents" in obj) {
-              capture[v.captureBitStringContents] = obj.bitStringContents;
+            if (v2.captureBitStringContents && "bitStringContents" in obj) {
+              capture[v2.captureBitStringContents] = obj.bitStringContents;
             }
-            if (v.captureBitStringValue && "bitStringContents" in obj) {
+            if (v2.captureBitStringValue && "bitStringContents" in obj) {
               var value;
               if (obj.bitStringContents.length < 2) {
-                capture[v.captureBitStringValue] = "";
+                capture[v2.captureBitStringValue] = "";
               } else {
                 var unused = obj.bitStringContents.charCodeAt(0);
                 if (unused !== 0) {
                   throw new Error("captureBitStringValue only supported for zero unused bits");
                 }
-                capture[v.captureBitStringValue] = obj.bitStringContents.slice(1);
+                capture[v2.captureBitStringValue] = obj.bitStringContents.slice(1);
               }
             }
           }
         } else if (errors) {
-          errors.push("[" + v.name + '] Expected constructed "' + v.constructed + '", got "' + obj.constructed + '"');
+          errors.push("[" + v2.name + '] Expected constructed "' + v2.constructed + '", got "' + obj.constructed + '"');
         }
       } else if (errors) {
-        if (obj.tagClass !== v.tagClass) {
-          errors.push("[" + v.name + '] Expected tag class "' + v.tagClass + '", got "' + obj.tagClass + '"');
+        if (obj.tagClass !== v2.tagClass) {
+          errors.push("[" + v2.name + '] Expected tag class "' + v2.tagClass + '", got "' + obj.tagClass + '"');
         }
-        if (obj.type !== v.type) {
-          errors.push("[" + v.name + '] Expected type "' + v.type + '", got "' + obj.type + '"');
+        if (obj.type !== v2.type) {
+          errors.push("[" + v2.name + '] Expected type "' + v2.type + '", got "' + obj.type + '"');
         }
       }
       return rval;
@@ -3806,55 +3809,55 @@ var require_md5 = __commonJS({
       }
       _initialized = true;
     }
-    function _update(s, w, bytes) {
-      var t, a, b, c, d, f, r, i;
+    function _update(s, w2, bytes) {
+      var t, a, b2, c, d2, f, r, i;
       var len = bytes.length();
       while (len >= 64) {
         a = s.h0;
-        b = s.h1;
+        b2 = s.h1;
         c = s.h2;
-        d = s.h3;
+        d2 = s.h3;
         for (i = 0; i < 16; ++i) {
-          w[i] = bytes.getInt32Le();
-          f = d ^ b & (c ^ d);
-          t = a + f + _k[i] + w[i];
+          w2[i] = bytes.getInt32Le();
+          f = d2 ^ b2 & (c ^ d2);
+          t = a + f + _k[i] + w2[i];
           r = _r[i];
-          a = d;
-          d = c;
-          c = b;
-          b += t << r | t >>> 32 - r;
+          a = d2;
+          d2 = c;
+          c = b2;
+          b2 += t << r | t >>> 32 - r;
         }
         for (; i < 32; ++i) {
-          f = c ^ d & (b ^ c);
-          t = a + f + _k[i] + w[_g[i]];
+          f = c ^ d2 & (b2 ^ c);
+          t = a + f + _k[i] + w2[_g[i]];
           r = _r[i];
-          a = d;
-          d = c;
-          c = b;
-          b += t << r | t >>> 32 - r;
+          a = d2;
+          d2 = c;
+          c = b2;
+          b2 += t << r | t >>> 32 - r;
         }
         for (; i < 48; ++i) {
-          f = b ^ c ^ d;
-          t = a + f + _k[i] + w[_g[i]];
+          f = b2 ^ c ^ d2;
+          t = a + f + _k[i] + w2[_g[i]];
           r = _r[i];
-          a = d;
-          d = c;
-          c = b;
-          b += t << r | t >>> 32 - r;
+          a = d2;
+          d2 = c;
+          c = b2;
+          b2 += t << r | t >>> 32 - r;
         }
         for (; i < 64; ++i) {
-          f = c ^ (b | ~d);
-          t = a + f + _k[i] + w[_g[i]];
+          f = c ^ (b2 | ~d2);
+          t = a + f + _k[i] + w2[_g[i]];
           r = _r[i];
-          a = d;
-          d = c;
-          c = b;
-          b += t << r | t >>> 32 - r;
+          a = d2;
+          d2 = c;
+          c = b2;
+          b2 += t << r | t >>> 32 - r;
         }
         s.h0 = s.h0 + a | 0;
-        s.h1 = s.h1 + b | 0;
+        s.h1 = s.h1 + b2 | 0;
         s.h2 = s.h2 + c | 0;
-        s.h3 = s.h3 + d | 0;
+        s.h3 = s.h3 + d2 | 0;
         len -= 64;
       }
     }
@@ -4115,7 +4118,7 @@ var require_des = __commonJS({
       var keys = [];
       var shifts = [0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0];
       var n = 0, tmp;
-      for (var j = 0; j < iterations; j++) {
+      for (var j2 = 0; j2 < iterations; j2++) {
         var left = key.getInt32();
         var right = key.getInt32();
         tmp = (left >>> 4 ^ right) & 252645135;
@@ -4189,10 +4192,10 @@ var require_des = __commonJS({
       left ^= tmp << 1;
       left = left << 1 | left >>> 31;
       right = right << 1 | right >>> 31;
-      for (var j = 0; j < iterations; j += 3) {
-        var endloop = looping[j + 1];
-        var loopinc = looping[j + 2];
-        for (var i = looping[j]; i != endloop; i += loopinc) {
+      for (var j2 = 0; j2 < iterations; j2 += 3) {
+        var endloop = looping[j2 + 1];
+        var loopinc = looping[j2 + 2];
+        for (var i = looping[j2]; i != endloop; i += loopinc) {
           var right1 = right ^ keys[i];
           var right2 = (right >>> 4 | right << 28) ^ keys[i + 1];
           tmp = left;
@@ -4323,7 +4326,7 @@ var require_pbkdf2 = __commonJS({
           prf.update(s);
           prf.update(forge3.util.int32ToBytes(i));
           xor = u_c1 = prf.digest().getBytes();
-          for (var j = 2; j <= c; ++j) {
+          for (var j2 = 2; j2 <= c; ++j2) {
             prf.start(null, null);
             prf.update(u_c1);
             u_c = prf.digest().getBytes();
@@ -4334,7 +4337,7 @@ var require_pbkdf2 = __commonJS({
         }
         return dk;
       }
-      var i = 1, j;
+      var i = 1, j2;
       function outer() {
         if (i > len) {
           return callback(null, dk);
@@ -4343,17 +4346,17 @@ var require_pbkdf2 = __commonJS({
         prf.update(s);
         prf.update(forge3.util.int32ToBytes(i));
         xor = u_c1 = prf.digest().getBytes();
-        j = 2;
+        j2 = 2;
         inner();
       }
       function inner() {
-        if (j <= c) {
+        if (j2 <= c) {
           prf.start(null, null);
           prf.update(u_c1);
           u_c = prf.digest().getBytes();
           xor = forge3.util.xorBytes(xor, u_c, hLen);
           u_c1 = u_c;
-          ++j;
+          ++j2;
           return forge3.util.setImmediate(inner);
         }
         dk += i < len ? xor : xor.substr(0, r);
@@ -4543,24 +4546,24 @@ var require_sha256 = __commonJS({
       ];
       _initialized = true;
     }
-    function _update(s, w, bytes) {
-      var t1, t2, s0, s1, ch, maj, i, a, b, c, d, e, f, g, h;
+    function _update(s, w2, bytes) {
+      var t1, t2, s0, s1, ch, maj, i, a, b2, c, d2, e, f, g, h;
       var len = bytes.length();
       while (len >= 64) {
         for (i = 0; i < 16; ++i) {
-          w[i] = bytes.getInt32();
+          w2[i] = bytes.getInt32();
         }
         for (; i < 64; ++i) {
-          t1 = w[i - 2];
+          t1 = w2[i - 2];
           t1 = (t1 >>> 17 | t1 << 15) ^ (t1 >>> 19 | t1 << 13) ^ t1 >>> 10;
-          t2 = w[i - 15];
+          t2 = w2[i - 15];
           t2 = (t2 >>> 7 | t2 << 25) ^ (t2 >>> 18 | t2 << 14) ^ t2 >>> 3;
-          w[i] = t1 + w[i - 7] + t2 + w[i - 16] | 0;
+          w2[i] = t1 + w2[i - 7] + t2 + w2[i - 16] | 0;
         }
         a = s.h0;
-        b = s.h1;
+        b2 = s.h1;
         c = s.h2;
-        d = s.h3;
+        d2 = s.h3;
         e = s.h4;
         f = s.h5;
         g = s.h6;
@@ -4569,22 +4572,22 @@ var require_sha256 = __commonJS({
           s1 = (e >>> 6 | e << 26) ^ (e >>> 11 | e << 21) ^ (e >>> 25 | e << 7);
           ch = g ^ e & (f ^ g);
           s0 = (a >>> 2 | a << 30) ^ (a >>> 13 | a << 19) ^ (a >>> 22 | a << 10);
-          maj = a & b | c & (a ^ b);
-          t1 = h + s1 + ch + _k[i] + w[i];
+          maj = a & b2 | c & (a ^ b2);
+          t1 = h + s1 + ch + _k[i] + w2[i];
           t2 = s0 + maj;
           h = g;
           g = f;
           f = e;
-          e = d + t1 >>> 0;
-          d = c;
-          c = b;
-          b = a;
+          e = d2 + t1 >>> 0;
+          d2 = c;
+          c = b2;
+          b2 = a;
           a = t1 + t2 >>> 0;
         }
         s.h0 = s.h0 + a | 0;
-        s.h1 = s.h1 + b | 0;
+        s.h1 = s.h1 + b2 | 0;
         s.h2 = s.h2 + c | 0;
-        s.h3 = s.h3 + d | 0;
+        s.h3 = s.h3 + d2 | 0;
         s.h4 = s.h4 + e | 0;
         s.h5 = s.h5 + f | 0;
         s.h6 = s.h6 + g | 0;
@@ -4630,15 +4633,15 @@ var require_prng = __commonJS({
         var increment = ctx.plugin.increment;
         var formatKey = ctx.plugin.formatKey;
         var formatSeed = ctx.plugin.formatSeed;
-        var b = forge3.util.createBuffer();
+        var b2 = forge3.util.createBuffer();
         ctx.key = null;
         generate();
         function generate(err) {
           if (err) {
             return callback(err);
           }
-          if (b.length() >= count) {
-            return callback(null, b.getBytes(count));
+          if (b2.length() >= count) {
+            return callback(null, b2.getBytes(count));
           }
           if (ctx.generated > 1048575) {
             ctx.key = null;
@@ -4650,7 +4653,7 @@ var require_prng = __commonJS({
           }
           var bytes = cipher(ctx.key, ctx.seed);
           ctx.generated += bytes.length;
-          b.putBytes(bytes);
+          b2.putBytes(bytes);
           ctx.key = formatKey(cipher(ctx.key, increment(ctx.seed)));
           ctx.seed = formatSeed(cipher(ctx.key, ctx.seed));
           forge3.util.setImmediate(generate);
@@ -4662,8 +4665,8 @@ var require_prng = __commonJS({
         var formatKey = ctx.plugin.formatKey;
         var formatSeed = ctx.plugin.formatSeed;
         ctx.key = null;
-        var b = forge3.util.createBuffer();
-        while (b.length() < count) {
+        var b2 = forge3.util.createBuffer();
+        while (b2.length() < count) {
           if (ctx.generated > 1048575) {
             ctx.key = null;
           }
@@ -4672,11 +4675,11 @@ var require_prng = __commonJS({
           }
           var bytes = cipher(ctx.key, ctx.seed);
           ctx.generated += bytes.length;
-          b.putBytes(bytes);
+          b2.putBytes(bytes);
           ctx.key = formatKey(cipher(ctx.key, increment(ctx.seed)));
           ctx.seed = formatSeed(cipher(ctx.key, ctx.seed));
         }
-        return b.getBytes(count);
+        return b2.getBytes(count);
       };
       function _reseed(callback) {
         if (ctx.pools[0].messageLength >= 32) {
@@ -4706,10 +4709,10 @@ var require_prng = __commonJS({
         var md2 = ctx.plugin.md.create();
         md2.update(ctx.keyBytes);
         var _2powK = 1;
-        for (var k = 0; k < 32; ++k) {
+        for (var k2 = 0; k2 < 32; ++k2) {
           if (ctx.reseeds % _2powK === 0) {
-            md2.update(ctx.pools[k].digest().getBytes());
-            ctx.pools[k].start();
+            md2.update(ctx.pools[k2].digest().getBytes());
+            ctx.pools[k2].start();
           }
           _2powK = _2powK << 1;
         }
@@ -4730,15 +4733,15 @@ var require_prng = __commonJS({
             return _crypto2.getRandomValues(arr);
           };
         }
-        var b = forge3.util.createBuffer();
+        var b2 = forge3.util.createBuffer();
         if (getRandomValues) {
-          while (b.length() < needed) {
-            var count = Math.max(1, Math.min(needed - b.length(), 65536) / 4);
+          while (b2.length() < needed) {
+            var count = Math.max(1, Math.min(needed - b2.length(), 65536) / 4);
             var entropy = new Uint32Array(Math.floor(count));
             try {
               getRandomValues(entropy);
               for (var i2 = 0; i2 < entropy.length; ++i2) {
-                b.putInt32(entropy[i2]);
+                b2.putInt32(entropy[i2]);
               }
             } catch (e) {
               if (!(typeof QuotaExceededError !== "undefined" && e instanceof QuotaExceededError)) {
@@ -4747,10 +4750,10 @@ var require_prng = __commonJS({
             }
           }
         }
-        if (b.length() < needed) {
+        if (b2.length() < needed) {
           var hi, lo, next;
           var seed = Math.floor(Math.random() * 65536);
-          while (b.length() < needed) {
+          while (b2.length() < needed) {
             lo = 16807 * (seed & 65535);
             hi = 16807 * (seed >> 16);
             lo += (hi & 32767) << 16;
@@ -4760,11 +4763,11 @@ var require_prng = __commonJS({
             for (var i2 = 0; i2 < 3; ++i2) {
               next = seed >>> (i2 << 3);
               next ^= Math.floor(Math.random() * 256);
-              b.putByte(next & 255);
+              b2.putByte(next & 255);
             }
           }
         }
-        return b.getBytes(needed);
+        return b2.getBytes(needed);
       }
       if (_crypto) {
         ctx.seedFile = function(needed, callback) {
@@ -4797,8 +4800,8 @@ var require_prng = __commonJS({
       };
       ctx.collectInt = function(i2, n) {
         var bytes = "";
-        for (var x = 0; x < n; x += 8) {
-          bytes += String.fromCharCode(i2 >> x & 255);
+        for (var x2 = 0; x2 < n; x2 += 8) {
+          bytes += String.fromCharCode(i2 >> x2 & 255);
         }
         ctx.collect(bytes);
       };
@@ -5216,53 +5219,53 @@ var require_rc2 = __commonJS({
         key = forge3.util.createBuffer(key);
       }
       effKeyBits = effKeyBits || 128;
-      var L = key;
-      var T = key.length();
+      var L2 = key;
+      var T2 = key.length();
       var T1 = effKeyBits;
       var T8 = Math.ceil(T1 / 8);
       var TM = 255 >> (T1 & 7);
       var i;
-      for (i = T; i < 128; i++) {
-        L.putByte(piTable[L.at(i - 1) + L.at(i - T) & 255]);
+      for (i = T2; i < 128; i++) {
+        L2.putByte(piTable[L2.at(i - 1) + L2.at(i - T2) & 255]);
       }
-      L.setAt(128 - T8, piTable[L.at(128 - T8) & TM]);
+      L2.setAt(128 - T8, piTable[L2.at(128 - T8) & TM]);
       for (i = 127 - T8; i >= 0; i--) {
-        L.setAt(i, piTable[L.at(i + 1) ^ L.at(i + T8)]);
+        L2.setAt(i, piTable[L2.at(i + 1) ^ L2.at(i + T8)]);
       }
-      return L;
+      return L2;
     };
     var createCipher = function(key, bits, encrypt) {
       var _finish = false, _input = null, _output = null, _iv = null;
       var mixRound, mashRound;
-      var i, j, K = [];
+      var i, j2, K2 = [];
       key = forge3.rc2.expandKey(key, bits);
       for (i = 0; i < 64; i++) {
-        K.push(key.getInt16Le());
+        K2.push(key.getInt16Le());
       }
       if (encrypt) {
         mixRound = function(R) {
           for (i = 0; i < 4; i++) {
-            R[i] += K[j] + (R[(i + 3) % 4] & R[(i + 2) % 4]) + (~R[(i + 3) % 4] & R[(i + 1) % 4]);
+            R[i] += K2[j2] + (R[(i + 3) % 4] & R[(i + 2) % 4]) + (~R[(i + 3) % 4] & R[(i + 1) % 4]);
             R[i] = rol(R[i], s[i]);
-            j++;
+            j2++;
           }
         };
         mashRound = function(R) {
           for (i = 0; i < 4; i++) {
-            R[i] += K[R[(i + 3) % 4] & 63];
+            R[i] += K2[R[(i + 3) % 4] & 63];
           }
         };
       } else {
         mixRound = function(R) {
           for (i = 3; i >= 0; i--) {
             R[i] = ror(R[i], s[i]);
-            R[i] -= K[j] + (R[(i + 3) % 4] & R[(i + 2) % 4]) + (~R[(i + 3) % 4] & R[(i + 1) % 4]);
-            j--;
+            R[i] -= K2[j2] + (R[(i + 3) % 4] & R[(i + 2) % 4]) + (~R[(i + 3) % 4] & R[(i + 1) % 4]);
+            j2--;
           }
         };
         mashRound = function(R) {
           for (i = 3; i >= 0; i--) {
-            R[i] -= K[R[(i + 3) % 4] & 63];
+            R[i] -= K2[R[(i + 3) % 4] & 63];
           }
         };
       }
@@ -5279,7 +5282,7 @@ var require_rc2 = __commonJS({
           }
           R.push(val & 65535);
         }
-        j = encrypt ? 0 : 63;
+        j2 = encrypt ? 0 : 63;
         for (var ptr = 0; ptr < plan.length; ptr++) {
           for (var ctr = 0; ctr < plan[ptr][0]; ctr++) {
             plan[ptr][1](R);
@@ -5386,49 +5389,49 @@ var require_jsbn = __commonJS({
     var dbits;
     var canary = 244837814094590;
     var j_lm = (canary & 16777215) == 15715070;
-    function BigInteger(a, b, c) {
+    function BigInteger(a, b2, c) {
       this.data = [];
       if (a != null)
         if (typeof a == "number")
-          this.fromNumber(a, b, c);
-        else if (b == null && typeof a != "string")
+          this.fromNumber(a, b2, c);
+        else if (b2 == null && typeof a != "string")
           this.fromString(a, 256);
         else
-          this.fromString(a, b);
+          this.fromString(a, b2);
     }
     forge3.jsbn.BigInteger = BigInteger;
     function nbi() {
       return new BigInteger(null);
     }
-    function am1(i, x, w, j, c, n) {
+    function am1(i, x2, w2, j2, c, n) {
       while (--n >= 0) {
-        var v = x * this.data[i++] + w.data[j] + c;
-        c = Math.floor(v / 67108864);
-        w.data[j++] = v & 67108863;
+        var v2 = x2 * this.data[i++] + w2.data[j2] + c;
+        c = Math.floor(v2 / 67108864);
+        w2.data[j2++] = v2 & 67108863;
       }
       return c;
     }
-    function am2(i, x, w, j, c, n) {
-      var xl = x & 32767, xh = x >> 15;
+    function am2(i, x2, w2, j2, c, n) {
+      var xl = x2 & 32767, xh = x2 >> 15;
       while (--n >= 0) {
         var l = this.data[i] & 32767;
         var h = this.data[i++] >> 15;
-        var m = xh * l + h * xl;
-        l = xl * l + ((m & 32767) << 15) + w.data[j] + (c & 1073741823);
-        c = (l >>> 30) + (m >>> 15) + xh * h + (c >>> 30);
-        w.data[j++] = l & 1073741823;
+        var m2 = xh * l + h * xl;
+        l = xl * l + ((m2 & 32767) << 15) + w2.data[j2] + (c & 1073741823);
+        c = (l >>> 30) + (m2 >>> 15) + xh * h + (c >>> 30);
+        w2.data[j2++] = l & 1073741823;
       }
       return c;
     }
-    function am3(i, x, w, j, c, n) {
-      var xl = x & 16383, xh = x >> 14;
+    function am3(i, x2, w2, j2, c, n) {
+      var xl = x2 & 16383, xh = x2 >> 14;
       while (--n >= 0) {
         var l = this.data[i] & 16383;
         var h = this.data[i++] >> 14;
-        var m = xh * l + h * xl;
-        l = xl * l + ((m & 16383) << 14) + w.data[j] + c;
-        c = (l >> 28) + (m >> 14) + xh * h;
-        w.data[j++] = l & 268435455;
+        var m2 = xh * l + h * xl;
+        l = xl * l + ((m2 & 16383) << 14) + w2.data[j2] + c;
+        c = (l >> 28) + (m2 >> 14) + xh * h;
+        w2.data[j2++] = l & 268435455;
       }
       return c;
     }
@@ -5478,13 +5481,13 @@ var require_jsbn = __commonJS({
       r.t = this.t;
       r.s = this.s;
     }
-    function bnpFromInt(x) {
+    function bnpFromInt(x2) {
       this.t = 1;
-      this.s = x < 0 ? -1 : 0;
-      if (x > 0)
-        this.data[0] = x;
-      else if (x < -1)
-        this.data[0] = x + this.DV;
+      this.s = x2 < 0 ? -1 : 0;
+      if (x2 > 0)
+        this.data[0] = x2;
+      else if (x2 < -1)
+        this.data[0] = x2 + this.DV;
       else
         this.t = 0;
     }
@@ -5493,47 +5496,47 @@ var require_jsbn = __commonJS({
       r.fromInt(i);
       return r;
     }
-    function bnpFromString(s, b) {
-      var k;
-      if (b == 16)
-        k = 4;
-      else if (b == 8)
-        k = 3;
-      else if (b == 256)
-        k = 8;
-      else if (b == 2)
-        k = 1;
-      else if (b == 32)
-        k = 5;
-      else if (b == 4)
-        k = 2;
+    function bnpFromString(s, b2) {
+      var k2;
+      if (b2 == 16)
+        k2 = 4;
+      else if (b2 == 8)
+        k2 = 3;
+      else if (b2 == 256)
+        k2 = 8;
+      else if (b2 == 2)
+        k2 = 1;
+      else if (b2 == 32)
+        k2 = 5;
+      else if (b2 == 4)
+        k2 = 2;
       else {
-        this.fromRadix(s, b);
+        this.fromRadix(s, b2);
         return;
       }
       this.t = 0;
       this.s = 0;
       var i = s.length, mi = false, sh = 0;
       while (--i >= 0) {
-        var x = k == 8 ? s[i] & 255 : intAt(s, i);
-        if (x < 0) {
+        var x2 = k2 == 8 ? s[i] & 255 : intAt(s, i);
+        if (x2 < 0) {
           if (s.charAt(i) == "-")
             mi = true;
           continue;
         }
         mi = false;
         if (sh == 0)
-          this.data[this.t++] = x;
-        else if (sh + k > this.DB) {
-          this.data[this.t - 1] |= (x & (1 << this.DB - sh) - 1) << sh;
-          this.data[this.t++] = x >> this.DB - sh;
+          this.data[this.t++] = x2;
+        else if (sh + k2 > this.DB) {
+          this.data[this.t - 1] |= (x2 & (1 << this.DB - sh) - 1) << sh;
+          this.data[this.t++] = x2 >> this.DB - sh;
         } else
-          this.data[this.t - 1] |= x << sh;
-        sh += k;
+          this.data[this.t - 1] |= x2 << sh;
+        sh += k2;
         if (sh >= this.DB)
           sh -= this.DB;
       }
-      if (k == 8 && (s[0] & 128) != 0) {
+      if (k2 == 8 && (s[0] & 128) != 0) {
         this.s = -1;
         if (sh > 0)
           this.data[this.t - 1] |= (1 << this.DB - sh) - 1 << sh;
@@ -5547,47 +5550,47 @@ var require_jsbn = __commonJS({
       while (this.t > 0 && this.data[this.t - 1] == c)
         --this.t;
     }
-    function bnToString(b) {
+    function bnToString(b2) {
       if (this.s < 0)
-        return "-" + this.negate().toString(b);
-      var k;
-      if (b == 16)
-        k = 4;
-      else if (b == 8)
-        k = 3;
-      else if (b == 2)
-        k = 1;
-      else if (b == 32)
-        k = 5;
-      else if (b == 4)
-        k = 2;
+        return "-" + this.negate().toString(b2);
+      var k2;
+      if (b2 == 16)
+        k2 = 4;
+      else if (b2 == 8)
+        k2 = 3;
+      else if (b2 == 2)
+        k2 = 1;
+      else if (b2 == 32)
+        k2 = 5;
+      else if (b2 == 4)
+        k2 = 2;
       else
-        return this.toRadix(b);
-      var km = (1 << k) - 1, d, m = false, r = "", i = this.t;
-      var p = this.DB - i * this.DB % k;
+        return this.toRadix(b2);
+      var km = (1 << k2) - 1, d2, m2 = false, r = "", i = this.t;
+      var p = this.DB - i * this.DB % k2;
       if (i-- > 0) {
-        if (p < this.DB && (d = this.data[i] >> p) > 0) {
-          m = true;
-          r = int2char(d);
+        if (p < this.DB && (d2 = this.data[i] >> p) > 0) {
+          m2 = true;
+          r = int2char(d2);
         }
         while (i >= 0) {
-          if (p < k) {
-            d = (this.data[i] & (1 << p) - 1) << k - p;
-            d |= this.data[--i] >> (p += this.DB - k);
+          if (p < k2) {
+            d2 = (this.data[i] & (1 << p) - 1) << k2 - p;
+            d2 |= this.data[--i] >> (p += this.DB - k2);
           } else {
-            d = this.data[i] >> (p -= k) & km;
+            d2 = this.data[i] >> (p -= k2) & km;
             if (p <= 0) {
               p += this.DB;
               --i;
             }
           }
-          if (d > 0)
-            m = true;
-          if (m)
-            r += int2char(d);
+          if (d2 > 0)
+            m2 = true;
+          if (m2)
+            r += int2char(d2);
         }
       }
-      return m ? r : "0";
+      return m2 ? r : "0";
     }
     function bnNegate() {
       var r = nbi();
@@ -5610,26 +5613,26 @@ var require_jsbn = __commonJS({
           return r;
       return 0;
     }
-    function nbits(x) {
+    function nbits(x2) {
       var r = 1, t;
-      if ((t = x >>> 16) != 0) {
-        x = t;
+      if ((t = x2 >>> 16) != 0) {
+        x2 = t;
         r += 16;
       }
-      if ((t = x >> 8) != 0) {
-        x = t;
+      if ((t = x2 >> 8) != 0) {
+        x2 = t;
         r += 8;
       }
-      if ((t = x >> 4) != 0) {
-        x = t;
+      if ((t = x2 >> 4) != 0) {
+        x2 = t;
         r += 4;
       }
-      if ((t = x >> 2) != 0) {
-        x = t;
+      if ((t = x2 >> 2) != 0) {
+        x2 = t;
         r += 2;
       }
-      if ((t = x >> 1) != 0) {
-        x = t;
+      if ((t = x2 >> 1) != 0) {
+        x2 = t;
         r += 1;
       }
       return r;
@@ -5691,8 +5694,8 @@ var require_jsbn = __commonJS({
       r.clamp();
     }
     function bnpSubTo(a, r) {
-      var i = 0, c = 0, m = Math.min(a.t, this.t);
-      while (i < m) {
+      var i = 0, c = 0, m2 = Math.min(a.t, this.t);
+      while (i < m2) {
         c += this.data[i] - a.data[i];
         r.data[i++] = c & this.DM;
         c >>= this.DB;
@@ -5723,87 +5726,87 @@ var require_jsbn = __commonJS({
       r.clamp();
     }
     function bnpMultiplyTo(a, r) {
-      var x = this.abs(), y = a.abs();
-      var i = x.t;
-      r.t = i + y.t;
+      var x2 = this.abs(), y2 = a.abs();
+      var i = x2.t;
+      r.t = i + y2.t;
       while (--i >= 0)
         r.data[i] = 0;
-      for (i = 0; i < y.t; ++i)
-        r.data[i + x.t] = x.am(0, y.data[i], r, i, 0, x.t);
+      for (i = 0; i < y2.t; ++i)
+        r.data[i + x2.t] = x2.am(0, y2.data[i], r, i, 0, x2.t);
       r.s = 0;
       r.clamp();
       if (this.s != a.s)
         BigInteger.ZERO.subTo(r, r);
     }
     function bnpSquareTo(r) {
-      var x = this.abs();
-      var i = r.t = 2 * x.t;
+      var x2 = this.abs();
+      var i = r.t = 2 * x2.t;
       while (--i >= 0)
         r.data[i] = 0;
-      for (i = 0; i < x.t - 1; ++i) {
-        var c = x.am(i, x.data[i], r, 2 * i, 0, 1);
-        if ((r.data[i + x.t] += x.am(i + 1, 2 * x.data[i], r, 2 * i + 1, c, x.t - i - 1)) >= x.DV) {
-          r.data[i + x.t] -= x.DV;
-          r.data[i + x.t + 1] = 1;
+      for (i = 0; i < x2.t - 1; ++i) {
+        var c = x2.am(i, x2.data[i], r, 2 * i, 0, 1);
+        if ((r.data[i + x2.t] += x2.am(i + 1, 2 * x2.data[i], r, 2 * i + 1, c, x2.t - i - 1)) >= x2.DV) {
+          r.data[i + x2.t] -= x2.DV;
+          r.data[i + x2.t + 1] = 1;
         }
       }
       if (r.t > 0)
-        r.data[r.t - 1] += x.am(i, x.data[i], r, 2 * i, 0, 1);
+        r.data[r.t - 1] += x2.am(i, x2.data[i], r, 2 * i, 0, 1);
       r.s = 0;
       r.clamp();
     }
-    function bnpDivRemTo(m, q, r) {
-      var pm = m.abs();
+    function bnpDivRemTo(m2, q2, r) {
+      var pm = m2.abs();
       if (pm.t <= 0)
         return;
       var pt = this.abs();
       if (pt.t < pm.t) {
-        if (q != null)
-          q.fromInt(0);
+        if (q2 != null)
+          q2.fromInt(0);
         if (r != null)
           this.copyTo(r);
         return;
       }
       if (r == null)
         r = nbi();
-      var y = nbi(), ts = this.s, ms = m.s;
+      var y2 = nbi(), ts = this.s, ms = m2.s;
       var nsh = this.DB - nbits(pm.data[pm.t - 1]);
       if (nsh > 0) {
-        pm.lShiftTo(nsh, y);
+        pm.lShiftTo(nsh, y2);
         pt.lShiftTo(nsh, r);
       } else {
-        pm.copyTo(y);
+        pm.copyTo(y2);
         pt.copyTo(r);
       }
-      var ys = y.t;
-      var y0 = y.data[ys - 1];
+      var ys = y2.t;
+      var y0 = y2.data[ys - 1];
       if (y0 == 0)
         return;
-      var yt = y0 * (1 << this.F1) + (ys > 1 ? y.data[ys - 2] >> this.F2 : 0);
+      var yt = y0 * (1 << this.F1) + (ys > 1 ? y2.data[ys - 2] >> this.F2 : 0);
       var d1 = this.FV / yt, d2 = (1 << this.F1) / yt, e = 1 << this.F2;
-      var i = r.t, j = i - ys, t = q == null ? nbi() : q;
-      y.dlShiftTo(j, t);
+      var i = r.t, j2 = i - ys, t = q2 == null ? nbi() : q2;
+      y2.dlShiftTo(j2, t);
       if (r.compareTo(t) >= 0) {
         r.data[r.t++] = 1;
         r.subTo(t, r);
       }
       BigInteger.ONE.dlShiftTo(ys, t);
-      t.subTo(y, y);
-      while (y.t < ys)
-        y.data[y.t++] = 0;
-      while (--j >= 0) {
+      t.subTo(y2, y2);
+      while (y2.t < ys)
+        y2.data[y2.t++] = 0;
+      while (--j2 >= 0) {
         var qd = r.data[--i] == y0 ? this.DM : Math.floor(r.data[i] * d1 + (r.data[i - 1] + e) * d2);
-        if ((r.data[i] += y.am(0, qd, r, j, 0, ys)) < qd) {
-          y.dlShiftTo(j, t);
+        if ((r.data[i] += y2.am(0, qd, r, j2, 0, ys)) < qd) {
+          y2.dlShiftTo(j2, t);
           r.subTo(t, r);
           while (r.data[i] < --qd)
             r.subTo(t, r);
         }
       }
-      if (q != null) {
-        r.drShiftTo(ys, q);
+      if (q2 != null) {
+        r.drShiftTo(ys, q2);
         if (ts != ms)
-          BigInteger.ZERO.subTo(q, q);
+          BigInteger.ZERO.subTo(q2, q2);
       }
       r.t = ys;
       r.clamp();
@@ -5819,27 +5822,27 @@ var require_jsbn = __commonJS({
         a.subTo(r, r);
       return r;
     }
-    function Classic(m) {
-      this.m = m;
+    function Classic(m2) {
+      this.m = m2;
     }
-    function cConvert(x) {
-      if (x.s < 0 || x.compareTo(this.m) >= 0)
-        return x.mod(this.m);
+    function cConvert(x2) {
+      if (x2.s < 0 || x2.compareTo(this.m) >= 0)
+        return x2.mod(this.m);
       else
-        return x;
+        return x2;
     }
-    function cRevert(x) {
-      return x;
+    function cRevert(x2) {
+      return x2;
     }
-    function cReduce(x) {
-      x.divRemTo(this.m, null, x);
+    function cReduce(x2) {
+      x2.divRemTo(this.m, null, x2);
     }
-    function cMulTo(x, y, r) {
-      x.multiplyTo(y, r);
+    function cMulTo(x2, y2, r) {
+      x2.multiplyTo(y2, r);
       this.reduce(r);
     }
-    function cSqrTo(x, r) {
-      x.squareTo(r);
+    function cSqrTo(x2, r) {
+      x2.squareTo(r);
       this.reduce(r);
     }
     Classic.prototype.convert = cConvert;
@@ -5850,62 +5853,62 @@ var require_jsbn = __commonJS({
     function bnpInvDigit() {
       if (this.t < 1)
         return 0;
-      var x = this.data[0];
-      if ((x & 1) == 0)
+      var x2 = this.data[0];
+      if ((x2 & 1) == 0)
         return 0;
-      var y = x & 3;
-      y = y * (2 - (x & 15) * y) & 15;
-      y = y * (2 - (x & 255) * y) & 255;
-      y = y * (2 - ((x & 65535) * y & 65535)) & 65535;
-      y = y * (2 - x * y % this.DV) % this.DV;
-      return y > 0 ? this.DV - y : -y;
+      var y2 = x2 & 3;
+      y2 = y2 * (2 - (x2 & 15) * y2) & 15;
+      y2 = y2 * (2 - (x2 & 255) * y2) & 255;
+      y2 = y2 * (2 - ((x2 & 65535) * y2 & 65535)) & 65535;
+      y2 = y2 * (2 - x2 * y2 % this.DV) % this.DV;
+      return y2 > 0 ? this.DV - y2 : -y2;
     }
-    function Montgomery(m) {
-      this.m = m;
-      this.mp = m.invDigit();
+    function Montgomery(m2) {
+      this.m = m2;
+      this.mp = m2.invDigit();
       this.mpl = this.mp & 32767;
       this.mph = this.mp >> 15;
-      this.um = (1 << m.DB - 15) - 1;
-      this.mt2 = 2 * m.t;
+      this.um = (1 << m2.DB - 15) - 1;
+      this.mt2 = 2 * m2.t;
     }
-    function montConvert(x) {
+    function montConvert(x2) {
       var r = nbi();
-      x.abs().dlShiftTo(this.m.t, r);
+      x2.abs().dlShiftTo(this.m.t, r);
       r.divRemTo(this.m, null, r);
-      if (x.s < 0 && r.compareTo(BigInteger.ZERO) > 0)
+      if (x2.s < 0 && r.compareTo(BigInteger.ZERO) > 0)
         this.m.subTo(r, r);
       return r;
     }
-    function montRevert(x) {
+    function montRevert(x2) {
       var r = nbi();
-      x.copyTo(r);
+      x2.copyTo(r);
       this.reduce(r);
       return r;
     }
-    function montReduce(x) {
-      while (x.t <= this.mt2)
-        x.data[x.t++] = 0;
+    function montReduce(x2) {
+      while (x2.t <= this.mt2)
+        x2.data[x2.t++] = 0;
       for (var i = 0; i < this.m.t; ++i) {
-        var j = x.data[i] & 32767;
-        var u0 = j * this.mpl + ((j * this.mph + (x.data[i] >> 15) * this.mpl & this.um) << 15) & x.DM;
-        j = i + this.m.t;
-        x.data[j] += this.m.am(0, u0, x, i, 0, this.m.t);
-        while (x.data[j] >= x.DV) {
-          x.data[j] -= x.DV;
-          x.data[++j]++;
+        var j2 = x2.data[i] & 32767;
+        var u0 = j2 * this.mpl + ((j2 * this.mph + (x2.data[i] >> 15) * this.mpl & this.um) << 15) & x2.DM;
+        j2 = i + this.m.t;
+        x2.data[j2] += this.m.am(0, u0, x2, i, 0, this.m.t);
+        while (x2.data[j2] >= x2.DV) {
+          x2.data[j2] -= x2.DV;
+          x2.data[++j2]++;
         }
       }
-      x.clamp();
-      x.drShiftTo(this.m.t, x);
-      if (x.compareTo(this.m) >= 0)
-        x.subTo(this.m, x);
+      x2.clamp();
+      x2.drShiftTo(this.m.t, x2);
+      if (x2.compareTo(this.m) >= 0)
+        x2.subTo(this.m, x2);
     }
-    function montSqrTo(x, r) {
-      x.squareTo(r);
+    function montSqrTo(x2, r) {
+      x2.squareTo(r);
       this.reduce(r);
     }
-    function montMulTo(x, y, r) {
-      x.multiplyTo(y, r);
+    function montMulTo(x2, y2, r) {
+      x2.multiplyTo(y2, r);
       this.reduce(r);
     }
     Montgomery.prototype.convert = montConvert;
@@ -5916,30 +5919,30 @@ var require_jsbn = __commonJS({
     function bnpIsEven() {
       return (this.t > 0 ? this.data[0] & 1 : this.s) == 0;
     }
-    function bnpExp(e, z) {
+    function bnpExp(e, z2) {
       if (e > 4294967295 || e < 1)
         return BigInteger.ONE;
-      var r = nbi(), r2 = nbi(), g = z.convert(this), i = nbits(e) - 1;
+      var r = nbi(), r2 = nbi(), g = z2.convert(this), i = nbits(e) - 1;
       g.copyTo(r);
       while (--i >= 0) {
-        z.sqrTo(r, r2);
+        z2.sqrTo(r, r2);
         if ((e & 1 << i) > 0)
-          z.mulTo(r2, g, r);
+          z2.mulTo(r2, g, r);
         else {
           var t = r;
           r = r2;
           r2 = t;
         }
       }
-      return z.revert(r);
+      return z2.revert(r);
     }
-    function bnModPowInt(e, m) {
-      var z;
-      if (e < 256 || m.isEven())
-        z = new Classic(m);
+    function bnModPowInt(e, m2) {
+      var z2;
+      if (e < 256 || m2.isEven())
+        z2 = new Classic(m2);
       else
-        z = new Montgomery(m);
-      return this.exp(e, z);
+        z2 = new Montgomery(m2);
+      return this.exp(e, z2);
     }
     BigInteger.prototype.copyTo = bnpCopyTo;
     BigInteger.prototype.fromInt = bnpFromInt;
@@ -5999,51 +6002,51 @@ var require_jsbn = __commonJS({
       else
         return 1;
     }
-    function bnpToRadix(b) {
-      if (b == null)
-        b = 10;
-      if (this.signum() == 0 || b < 2 || b > 36)
+    function bnpToRadix(b2) {
+      if (b2 == null)
+        b2 = 10;
+      if (this.signum() == 0 || b2 < 2 || b2 > 36)
         return "0";
-      var cs = this.chunkSize(b);
-      var a = Math.pow(b, cs);
-      var d = nbv(a), y = nbi(), z = nbi(), r = "";
-      this.divRemTo(d, y, z);
-      while (y.signum() > 0) {
-        r = (a + z.intValue()).toString(b).substr(1) + r;
-        y.divRemTo(d, y, z);
+      var cs = this.chunkSize(b2);
+      var a = Math.pow(b2, cs);
+      var d2 = nbv(a), y2 = nbi(), z2 = nbi(), r = "";
+      this.divRemTo(d2, y2, z2);
+      while (y2.signum() > 0) {
+        r = (a + z2.intValue()).toString(b2).substr(1) + r;
+        y2.divRemTo(d2, y2, z2);
       }
-      return z.intValue().toString(b) + r;
+      return z2.intValue().toString(b2) + r;
     }
-    function bnpFromRadix(s, b) {
+    function bnpFromRadix(s, b2) {
       this.fromInt(0);
-      if (b == null)
-        b = 10;
-      var cs = this.chunkSize(b);
-      var d = Math.pow(b, cs), mi = false, j = 0, w = 0;
+      if (b2 == null)
+        b2 = 10;
+      var cs = this.chunkSize(b2);
+      var d2 = Math.pow(b2, cs), mi = false, j2 = 0, w2 = 0;
       for (var i = 0; i < s.length; ++i) {
-        var x = intAt(s, i);
-        if (x < 0) {
+        var x2 = intAt(s, i);
+        if (x2 < 0) {
           if (s.charAt(i) == "-" && this.signum() == 0)
             mi = true;
           continue;
         }
-        w = b * w + x;
-        if (++j >= cs) {
-          this.dMultiply(d);
-          this.dAddOffset(w, 0);
-          j = 0;
-          w = 0;
+        w2 = b2 * w2 + x2;
+        if (++j2 >= cs) {
+          this.dMultiply(d2);
+          this.dAddOffset(w2, 0);
+          j2 = 0;
+          w2 = 0;
         }
       }
-      if (j > 0) {
-        this.dMultiply(Math.pow(b, j));
-        this.dAddOffset(w, 0);
+      if (j2 > 0) {
+        this.dMultiply(Math.pow(b2, j2));
+        this.dAddOffset(w2, 0);
       }
       if (mi)
         BigInteger.ZERO.subTo(this, this);
     }
-    function bnpFromNumber(a, b, c) {
-      if (typeof b == "number") {
+    function bnpFromNumber(a, b2, c) {
+      if (typeof b2 == "number") {
         if (a < 2)
           this.fromInt(1);
         else {
@@ -6052,47 +6055,47 @@ var require_jsbn = __commonJS({
             this.bitwiseTo(BigInteger.ONE.shiftLeft(a - 1), op_or, this);
           if (this.isEven())
             this.dAddOffset(1, 0);
-          while (!this.isProbablePrime(b)) {
+          while (!this.isProbablePrime(b2)) {
             this.dAddOffset(2, 0);
             if (this.bitLength() > a)
               this.subTo(BigInteger.ONE.shiftLeft(a - 1), this);
           }
         }
       } else {
-        var x = new Array(), t = a & 7;
-        x.length = (a >> 3) + 1;
-        b.nextBytes(x);
+        var x2 = new Array(), t = a & 7;
+        x2.length = (a >> 3) + 1;
+        b2.nextBytes(x2);
         if (t > 0)
-          x[0] &= (1 << t) - 1;
+          x2[0] &= (1 << t) - 1;
         else
-          x[0] = 0;
-        this.fromString(x, 256);
+          x2[0] = 0;
+        this.fromString(x2, 256);
       }
     }
     function bnToByteArray() {
       var i = this.t, r = new Array();
       r[0] = this.s;
-      var p = this.DB - i * this.DB % 8, d, k = 0;
+      var p = this.DB - i * this.DB % 8, d2, k2 = 0;
       if (i-- > 0) {
-        if (p < this.DB && (d = this.data[i] >> p) != (this.s & this.DM) >> p)
-          r[k++] = d | this.s << this.DB - p;
+        if (p < this.DB && (d2 = this.data[i] >> p) != (this.s & this.DM) >> p)
+          r[k2++] = d2 | this.s << this.DB - p;
         while (i >= 0) {
           if (p < 8) {
-            d = (this.data[i] & (1 << p) - 1) << 8 - p;
-            d |= this.data[--i] >> (p += this.DB - 8);
+            d2 = (this.data[i] & (1 << p) - 1) << 8 - p;
+            d2 |= this.data[--i] >> (p += this.DB - 8);
           } else {
-            d = this.data[i] >> (p -= 8) & 255;
+            d2 = this.data[i] >> (p -= 8) & 255;
             if (p <= 0) {
               p += this.DB;
               --i;
             }
           }
-          if ((d & 128) != 0)
-            d |= -256;
-          if (k == 0 && (this.s & 128) != (d & 128))
-            ++k;
-          if (k > 0 || d != this.s)
-            r[k++] = d;
+          if ((d2 & 128) != 0)
+            d2 |= -256;
+          if (k2 == 0 && (this.s & 128) != (d2 & 128))
+            ++k2;
+          if (k2 > 0 || d2 != this.s)
+            r[k2++] = d2;
         }
       }
       return r;
@@ -6107,49 +6110,49 @@ var require_jsbn = __commonJS({
       return this.compareTo(a) > 0 ? this : a;
     }
     function bnpBitwiseTo(a, op, r) {
-      var i, f, m = Math.min(a.t, this.t);
-      for (i = 0; i < m; ++i)
+      var i, f, m2 = Math.min(a.t, this.t);
+      for (i = 0; i < m2; ++i)
         r.data[i] = op(this.data[i], a.data[i]);
       if (a.t < this.t) {
         f = a.s & this.DM;
-        for (i = m; i < this.t; ++i)
+        for (i = m2; i < this.t; ++i)
           r.data[i] = op(this.data[i], f);
         r.t = this.t;
       } else {
         f = this.s & this.DM;
-        for (i = m; i < a.t; ++i)
+        for (i = m2; i < a.t; ++i)
           r.data[i] = op(f, a.data[i]);
         r.t = a.t;
       }
       r.s = op(this.s, a.s);
       r.clamp();
     }
-    function op_and(x, y) {
-      return x & y;
+    function op_and(x2, y2) {
+      return x2 & y2;
     }
     function bnAnd(a) {
       var r = nbi();
       this.bitwiseTo(a, op_and, r);
       return r;
     }
-    function op_or(x, y) {
-      return x | y;
+    function op_or(x2, y2) {
+      return x2 | y2;
     }
     function bnOr(a) {
       var r = nbi();
       this.bitwiseTo(a, op_or, r);
       return r;
     }
-    function op_xor(x, y) {
-      return x ^ y;
+    function op_xor(x2, y2) {
+      return x2 ^ y2;
     }
     function bnXor(a) {
       var r = nbi();
       this.bitwiseTo(a, op_xor, r);
       return r;
     }
-    function op_andnot(x, y) {
-      return x & ~y;
+    function op_andnot(x2, y2) {
+      return x2 & ~y2;
     }
     function bnAndNot(a) {
       var r = nbi();
@@ -6180,27 +6183,27 @@ var require_jsbn = __commonJS({
         this.rShiftTo(n, r);
       return r;
     }
-    function lbit(x) {
-      if (x == 0)
+    function lbit(x2) {
+      if (x2 == 0)
         return -1;
       var r = 0;
-      if ((x & 65535) == 0) {
-        x >>= 16;
+      if ((x2 & 65535) == 0) {
+        x2 >>= 16;
         r += 16;
       }
-      if ((x & 255) == 0) {
-        x >>= 8;
+      if ((x2 & 255) == 0) {
+        x2 >>= 8;
         r += 8;
       }
-      if ((x & 15) == 0) {
-        x >>= 4;
+      if ((x2 & 15) == 0) {
+        x2 >>= 4;
         r += 4;
       }
-      if ((x & 3) == 0) {
-        x >>= 2;
+      if ((x2 & 3) == 0) {
+        x2 >>= 2;
         r += 2;
       }
-      if ((x & 1) == 0)
+      if ((x2 & 1) == 0)
         ++r;
       return r;
     }
@@ -6212,25 +6215,25 @@ var require_jsbn = __commonJS({
         return this.t * this.DB;
       return -1;
     }
-    function cbit(x) {
+    function cbit(x2) {
       var r = 0;
-      while (x != 0) {
-        x &= x - 1;
+      while (x2 != 0) {
+        x2 &= x2 - 1;
         ++r;
       }
       return r;
     }
     function bnBitCount() {
-      var r = 0, x = this.s & this.DM;
+      var r = 0, x2 = this.s & this.DM;
       for (var i = 0; i < this.t; ++i)
-        r += cbit(this.data[i] ^ x);
+        r += cbit(this.data[i] ^ x2);
       return r;
     }
     function bnTestBit(n) {
-      var j = Math.floor(n / this.DB);
-      if (j >= this.t)
+      var j2 = Math.floor(n / this.DB);
+      if (j2 >= this.t)
         return this.s != 0;
-      return (this.data[j] & 1 << n % this.DB) != 0;
+      return (this.data[j2] & 1 << n % this.DB) != 0;
     }
     function bnpChangeBit(n, op) {
       var r = BigInteger.ONE.shiftLeft(n);
@@ -6247,8 +6250,8 @@ var require_jsbn = __commonJS({
       return this.changeBit(n, op_xor);
     }
     function bnpAddTo(a, r) {
-      var i = 0, c = 0, m = Math.min(a.t, this.t);
-      while (i < m) {
+      var i = 0, c = 0, m2 = Math.min(a.t, this.t);
+      while (i < m2) {
         c += this.data[i] + a.data[i];
         r.data[i++] = c & this.DM;
         c >>= this.DB;
@@ -6304,38 +6307,38 @@ var require_jsbn = __commonJS({
       return r;
     }
     function bnDivideAndRemainder(a) {
-      var q = nbi(), r = nbi();
-      this.divRemTo(a, q, r);
-      return new Array(q, r);
+      var q2 = nbi(), r = nbi();
+      this.divRemTo(a, q2, r);
+      return new Array(q2, r);
     }
     function bnpDMultiply(n) {
       this.data[this.t] = this.am(0, n - 1, this, 0, 0, this.t);
       ++this.t;
       this.clamp();
     }
-    function bnpDAddOffset(n, w) {
+    function bnpDAddOffset(n, w2) {
       if (n == 0)
         return;
-      while (this.t <= w)
+      while (this.t <= w2)
         this.data[this.t++] = 0;
-      this.data[w] += n;
-      while (this.data[w] >= this.DV) {
-        this.data[w] -= this.DV;
-        if (++w >= this.t)
+      this.data[w2] += n;
+      while (this.data[w2] >= this.DV) {
+        this.data[w2] -= this.DV;
+        if (++w2 >= this.t)
           this.data[this.t++] = 0;
-        ++this.data[w];
+        ++this.data[w2];
       }
     }
     function NullExp() {
     }
-    function nNop(x) {
-      return x;
+    function nNop(x2) {
+      return x2;
     }
-    function nMulTo(x, y, r) {
-      x.multiplyTo(y, r);
+    function nMulTo(x2, y2, r) {
+      x2.multiplyTo(y2, r);
     }
-    function nSqrTo(x, r) {
-      x.squareTo(r);
+    function nSqrTo(x2, r) {
+      x2.squareTo(r);
     }
     NullExp.prototype.convert = nNop;
     NullExp.prototype.revert = nNop;
@@ -6350,10 +6353,10 @@ var require_jsbn = __commonJS({
       r.t = i;
       while (i > 0)
         r.data[--i] = 0;
-      var j;
-      for (j = r.t - this.t; i < j; ++i)
+      var j2;
+      for (j2 = r.t - this.t; i < j2; ++i)
         r.data[i + this.t] = this.am(0, a.data[i], r, i, 0, this.t);
-      for (j = Math.min(a.t, n); i < j; ++i)
+      for (j2 = Math.min(a.t, n); i < j2; ++i)
         this.am(0, a.data[i], r, i, 0, n - i);
       r.clamp();
     }
@@ -6368,48 +6371,48 @@ var require_jsbn = __commonJS({
       r.clamp();
       r.drShiftTo(1, r);
     }
-    function Barrett(m) {
+    function Barrett(m2) {
       this.r2 = nbi();
       this.q3 = nbi();
-      BigInteger.ONE.dlShiftTo(2 * m.t, this.r2);
-      this.mu = this.r2.divide(m);
-      this.m = m;
+      BigInteger.ONE.dlShiftTo(2 * m2.t, this.r2);
+      this.mu = this.r2.divide(m2);
+      this.m = m2;
     }
-    function barrettConvert(x) {
-      if (x.s < 0 || x.t > 2 * this.m.t)
-        return x.mod(this.m);
-      else if (x.compareTo(this.m) < 0)
-        return x;
+    function barrettConvert(x2) {
+      if (x2.s < 0 || x2.t > 2 * this.m.t)
+        return x2.mod(this.m);
+      else if (x2.compareTo(this.m) < 0)
+        return x2;
       else {
         var r = nbi();
-        x.copyTo(r);
+        x2.copyTo(r);
         this.reduce(r);
         return r;
       }
     }
-    function barrettRevert(x) {
-      return x;
+    function barrettRevert(x2) {
+      return x2;
     }
-    function barrettReduce(x) {
-      x.drShiftTo(this.m.t - 1, this.r2);
-      if (x.t > this.m.t + 1) {
-        x.t = this.m.t + 1;
-        x.clamp();
+    function barrettReduce(x2) {
+      x2.drShiftTo(this.m.t - 1, this.r2);
+      if (x2.t > this.m.t + 1) {
+        x2.t = this.m.t + 1;
+        x2.clamp();
       }
       this.mu.multiplyUpperTo(this.r2, this.m.t + 1, this.q3);
       this.m.multiplyLowerTo(this.q3, this.m.t + 1, this.r2);
-      while (x.compareTo(this.r2) < 0)
-        x.dAddOffset(1, this.m.t + 1);
-      x.subTo(this.r2, x);
-      while (x.compareTo(this.m) >= 0)
-        x.subTo(this.m, x);
+      while (x2.compareTo(this.r2) < 0)
+        x2.dAddOffset(1, this.m.t + 1);
+      x2.subTo(this.r2, x2);
+      while (x2.compareTo(this.m) >= 0)
+        x2.subTo(this.m, x2);
     }
-    function barrettSqrTo(x, r) {
-      x.squareTo(r);
+    function barrettSqrTo(x2, r) {
+      x2.squareTo(r);
       this.reduce(r);
     }
-    function barrettMulTo(x, y, r) {
-      x.multiplyTo(y, r);
+    function barrettMulTo(x2, y2, r) {
+      x2.multiplyTo(y2, r);
       this.reduce(r);
     }
     Barrett.prototype.convert = barrettConvert;
@@ -6417,234 +6420,234 @@ var require_jsbn = __commonJS({
     Barrett.prototype.reduce = barrettReduce;
     Barrett.prototype.mulTo = barrettMulTo;
     Barrett.prototype.sqrTo = barrettSqrTo;
-    function bnModPow(e, m) {
-      var i = e.bitLength(), k, r = nbv(1), z;
+    function bnModPow(e, m2) {
+      var i = e.bitLength(), k2, r = nbv(1), z2;
       if (i <= 0)
         return r;
       else if (i < 18)
-        k = 1;
+        k2 = 1;
       else if (i < 48)
-        k = 3;
+        k2 = 3;
       else if (i < 144)
-        k = 4;
+        k2 = 4;
       else if (i < 768)
-        k = 5;
+        k2 = 5;
       else
-        k = 6;
+        k2 = 6;
       if (i < 8)
-        z = new Classic(m);
-      else if (m.isEven())
-        z = new Barrett(m);
+        z2 = new Classic(m2);
+      else if (m2.isEven())
+        z2 = new Barrett(m2);
       else
-        z = new Montgomery(m);
-      var g = new Array(), n = 3, k1 = k - 1, km = (1 << k) - 1;
-      g[1] = z.convert(this);
-      if (k > 1) {
+        z2 = new Montgomery(m2);
+      var g = new Array(), n = 3, k1 = k2 - 1, km = (1 << k2) - 1;
+      g[1] = z2.convert(this);
+      if (k2 > 1) {
         var g2 = nbi();
-        z.sqrTo(g[1], g2);
+        z2.sqrTo(g[1], g2);
         while (n <= km) {
           g[n] = nbi();
-          z.mulTo(g2, g[n - 2], g[n]);
+          z2.mulTo(g2, g[n - 2], g[n]);
           n += 2;
         }
       }
-      var j = e.t - 1, w, is1 = true, r2 = nbi(), t;
-      i = nbits(e.data[j]) - 1;
-      while (j >= 0) {
+      var j2 = e.t - 1, w2, is1 = true, r2 = nbi(), t;
+      i = nbits(e.data[j2]) - 1;
+      while (j2 >= 0) {
         if (i >= k1)
-          w = e.data[j] >> i - k1 & km;
+          w2 = e.data[j2] >> i - k1 & km;
         else {
-          w = (e.data[j] & (1 << i + 1) - 1) << k1 - i;
-          if (j > 0)
-            w |= e.data[j - 1] >> this.DB + i - k1;
+          w2 = (e.data[j2] & (1 << i + 1) - 1) << k1 - i;
+          if (j2 > 0)
+            w2 |= e.data[j2 - 1] >> this.DB + i - k1;
         }
-        n = k;
-        while ((w & 1) == 0) {
-          w >>= 1;
+        n = k2;
+        while ((w2 & 1) == 0) {
+          w2 >>= 1;
           --n;
         }
         if ((i -= n) < 0) {
           i += this.DB;
-          --j;
+          --j2;
         }
         if (is1) {
-          g[w].copyTo(r);
+          g[w2].copyTo(r);
           is1 = false;
         } else {
           while (n > 1) {
-            z.sqrTo(r, r2);
-            z.sqrTo(r2, r);
+            z2.sqrTo(r, r2);
+            z2.sqrTo(r2, r);
             n -= 2;
           }
           if (n > 0)
-            z.sqrTo(r, r2);
+            z2.sqrTo(r, r2);
           else {
             t = r;
             r = r2;
             r2 = t;
           }
-          z.mulTo(r2, g[w], r);
+          z2.mulTo(r2, g[w2], r);
         }
-        while (j >= 0 && (e.data[j] & 1 << i) == 0) {
-          z.sqrTo(r, r2);
+        while (j2 >= 0 && (e.data[j2] & 1 << i) == 0) {
+          z2.sqrTo(r, r2);
           t = r;
           r = r2;
           r2 = t;
           if (--i < 0) {
             i = this.DB - 1;
-            --j;
+            --j2;
           }
         }
       }
-      return z.revert(r);
+      return z2.revert(r);
     }
     function bnGCD(a) {
-      var x = this.s < 0 ? this.negate() : this.clone();
-      var y = a.s < 0 ? a.negate() : a.clone();
-      if (x.compareTo(y) < 0) {
-        var t = x;
-        x = y;
-        y = t;
+      var x2 = this.s < 0 ? this.negate() : this.clone();
+      var y2 = a.s < 0 ? a.negate() : a.clone();
+      if (x2.compareTo(y2) < 0) {
+        var t = x2;
+        x2 = y2;
+        y2 = t;
       }
-      var i = x.getLowestSetBit(), g = y.getLowestSetBit();
+      var i = x2.getLowestSetBit(), g = y2.getLowestSetBit();
       if (g < 0)
-        return x;
+        return x2;
       if (i < g)
         g = i;
       if (g > 0) {
-        x.rShiftTo(g, x);
-        y.rShiftTo(g, y);
+        x2.rShiftTo(g, x2);
+        y2.rShiftTo(g, y2);
       }
-      while (x.signum() > 0) {
-        if ((i = x.getLowestSetBit()) > 0)
-          x.rShiftTo(i, x);
-        if ((i = y.getLowestSetBit()) > 0)
-          y.rShiftTo(i, y);
-        if (x.compareTo(y) >= 0) {
-          x.subTo(y, x);
-          x.rShiftTo(1, x);
+      while (x2.signum() > 0) {
+        if ((i = x2.getLowestSetBit()) > 0)
+          x2.rShiftTo(i, x2);
+        if ((i = y2.getLowestSetBit()) > 0)
+          y2.rShiftTo(i, y2);
+        if (x2.compareTo(y2) >= 0) {
+          x2.subTo(y2, x2);
+          x2.rShiftTo(1, x2);
         } else {
-          y.subTo(x, y);
-          y.rShiftTo(1, y);
+          y2.subTo(x2, y2);
+          y2.rShiftTo(1, y2);
         }
       }
       if (g > 0)
-        y.lShiftTo(g, y);
-      return y;
+        y2.lShiftTo(g, y2);
+      return y2;
     }
     function bnpModInt(n) {
       if (n <= 0)
         return 0;
-      var d = this.DV % n, r = this.s < 0 ? n - 1 : 0;
+      var d2 = this.DV % n, r = this.s < 0 ? n - 1 : 0;
       if (this.t > 0)
-        if (d == 0)
+        if (d2 == 0)
           r = this.data[0] % n;
         else
           for (var i = this.t - 1; i >= 0; --i)
-            r = (d * r + this.data[i]) % n;
+            r = (d2 * r + this.data[i]) % n;
       return r;
     }
-    function bnModInverse(m) {
-      var ac = m.isEven();
-      if (this.isEven() && ac || m.signum() == 0)
+    function bnModInverse(m2) {
+      var ac = m2.isEven();
+      if (this.isEven() && ac || m2.signum() == 0)
         return BigInteger.ZERO;
-      var u = m.clone(), v = this.clone();
-      var a = nbv(1), b = nbv(0), c = nbv(0), d = nbv(1);
-      while (u.signum() != 0) {
-        while (u.isEven()) {
-          u.rShiftTo(1, u);
+      var u3 = m2.clone(), v2 = this.clone();
+      var a = nbv(1), b2 = nbv(0), c = nbv(0), d2 = nbv(1);
+      while (u3.signum() != 0) {
+        while (u3.isEven()) {
+          u3.rShiftTo(1, u3);
           if (ac) {
-            if (!a.isEven() || !b.isEven()) {
+            if (!a.isEven() || !b2.isEven()) {
               a.addTo(this, a);
-              b.subTo(m, b);
+              b2.subTo(m2, b2);
             }
             a.rShiftTo(1, a);
-          } else if (!b.isEven())
-            b.subTo(m, b);
-          b.rShiftTo(1, b);
+          } else if (!b2.isEven())
+            b2.subTo(m2, b2);
+          b2.rShiftTo(1, b2);
         }
-        while (v.isEven()) {
-          v.rShiftTo(1, v);
+        while (v2.isEven()) {
+          v2.rShiftTo(1, v2);
           if (ac) {
-            if (!c.isEven() || !d.isEven()) {
+            if (!c.isEven() || !d2.isEven()) {
               c.addTo(this, c);
-              d.subTo(m, d);
+              d2.subTo(m2, d2);
             }
             c.rShiftTo(1, c);
-          } else if (!d.isEven())
-            d.subTo(m, d);
-          d.rShiftTo(1, d);
+          } else if (!d2.isEven())
+            d2.subTo(m2, d2);
+          d2.rShiftTo(1, d2);
         }
-        if (u.compareTo(v) >= 0) {
-          u.subTo(v, u);
+        if (u3.compareTo(v2) >= 0) {
+          u3.subTo(v2, u3);
           if (ac)
             a.subTo(c, a);
-          b.subTo(d, b);
+          b2.subTo(d2, b2);
         } else {
-          v.subTo(u, v);
+          v2.subTo(u3, v2);
           if (ac)
             c.subTo(a, c);
-          d.subTo(b, d);
+          d2.subTo(b2, d2);
         }
       }
-      if (v.compareTo(BigInteger.ONE) != 0)
+      if (v2.compareTo(BigInteger.ONE) != 0)
         return BigInteger.ZERO;
-      if (d.compareTo(m) >= 0)
-        return d.subtract(m);
-      if (d.signum() < 0)
-        d.addTo(m, d);
+      if (d2.compareTo(m2) >= 0)
+        return d2.subtract(m2);
+      if (d2.signum() < 0)
+        d2.addTo(m2, d2);
       else
-        return d;
-      if (d.signum() < 0)
-        return d.add(m);
+        return d2;
+      if (d2.signum() < 0)
+        return d2.add(m2);
       else
-        return d;
+        return d2;
     }
     var lowprimes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509];
     var lplim = (1 << 26) / lowprimes[lowprimes.length - 1];
     function bnIsProbablePrime(t) {
-      var i, x = this.abs();
-      if (x.t == 1 && x.data[0] <= lowprimes[lowprimes.length - 1]) {
+      var i, x2 = this.abs();
+      if (x2.t == 1 && x2.data[0] <= lowprimes[lowprimes.length - 1]) {
         for (i = 0; i < lowprimes.length; ++i)
-          if (x.data[0] == lowprimes[i])
+          if (x2.data[0] == lowprimes[i])
             return true;
         return false;
       }
-      if (x.isEven())
+      if (x2.isEven())
         return false;
       i = 1;
       while (i < lowprimes.length) {
-        var m = lowprimes[i], j = i + 1;
-        while (j < lowprimes.length && m < lplim)
-          m *= lowprimes[j++];
-        m = x.modInt(m);
-        while (i < j)
-          if (m % lowprimes[i++] == 0)
+        var m2 = lowprimes[i], j2 = i + 1;
+        while (j2 < lowprimes.length && m2 < lplim)
+          m2 *= lowprimes[j2++];
+        m2 = x2.modInt(m2);
+        while (i < j2)
+          if (m2 % lowprimes[i++] == 0)
             return false;
       }
-      return x.millerRabin(t);
+      return x2.millerRabin(t);
     }
     function bnpMillerRabin(t) {
       var n1 = this.subtract(BigInteger.ONE);
-      var k = n1.getLowestSetBit();
-      if (k <= 0)
+      var k2 = n1.getLowestSetBit();
+      if (k2 <= 0)
         return false;
-      var r = n1.shiftRight(k);
+      var r = n1.shiftRight(k2);
       var prng = bnGetPrng();
       var a;
       for (var i = 0; i < t; ++i) {
         do {
           a = new BigInteger(this.bitLength(), prng);
         } while (a.compareTo(BigInteger.ONE) <= 0 || a.compareTo(n1) >= 0);
-        var y = a.modPow(r, this);
-        if (y.compareTo(BigInteger.ONE) != 0 && y.compareTo(n1) != 0) {
-          var j = 1;
-          while (j++ < k && y.compareTo(n1) != 0) {
-            y = y.modPowInt(2, this);
-            if (y.compareTo(BigInteger.ONE) == 0)
+        var y2 = a.modPow(r, this);
+        if (y2.compareTo(BigInteger.ONE) != 0 && y2.compareTo(n1) != 0) {
+          var j2 = 1;
+          while (j2++ < k2 && y2.compareTo(n1) != 0) {
+            y2 = y2.modPowInt(2, this);
+            if (y2.compareTo(BigInteger.ONE) == 0)
               return false;
           }
-          if (y.compareTo(n1) != 0)
+          if (y2.compareTo(n1) != 0)
             return false;
         }
       }
@@ -6652,9 +6655,9 @@ var require_jsbn = __commonJS({
     }
     function bnGetPrng() {
       return {
-        nextBytes: function(x) {
-          for (var i = 0; i < x.length; ++i) {
-            x[i] = Math.floor(Math.random() * 256);
+        nextBytes: function(x2) {
+          for (var i = 0; i < x2.length; ++i) {
+            x2[i] = Math.floor(Math.random() * 256);
           }
         }
       };
@@ -6810,90 +6813,90 @@ var require_sha1 = __commonJS({
       _padding += forge3.util.fillString(String.fromCharCode(0), 64);
       _initialized = true;
     }
-    function _update(s, w, bytes) {
-      var t, a, b, c, d, e, f, i;
+    function _update(s, w2, bytes) {
+      var t, a, b2, c, d2, e, f, i;
       var len = bytes.length();
       while (len >= 64) {
         a = s.h0;
-        b = s.h1;
+        b2 = s.h1;
         c = s.h2;
-        d = s.h3;
+        d2 = s.h3;
         e = s.h4;
         for (i = 0; i < 16; ++i) {
           t = bytes.getInt32();
-          w[i] = t;
-          f = d ^ b & (c ^ d);
+          w2[i] = t;
+          f = d2 ^ b2 & (c ^ d2);
           t = (a << 5 | a >>> 27) + f + e + 1518500249 + t;
-          e = d;
-          d = c;
-          c = (b << 30 | b >>> 2) >>> 0;
-          b = a;
+          e = d2;
+          d2 = c;
+          c = (b2 << 30 | b2 >>> 2) >>> 0;
+          b2 = a;
           a = t;
         }
         for (; i < 20; ++i) {
-          t = w[i - 3] ^ w[i - 8] ^ w[i - 14] ^ w[i - 16];
+          t = w2[i - 3] ^ w2[i - 8] ^ w2[i - 14] ^ w2[i - 16];
           t = t << 1 | t >>> 31;
-          w[i] = t;
-          f = d ^ b & (c ^ d);
+          w2[i] = t;
+          f = d2 ^ b2 & (c ^ d2);
           t = (a << 5 | a >>> 27) + f + e + 1518500249 + t;
-          e = d;
-          d = c;
-          c = (b << 30 | b >>> 2) >>> 0;
-          b = a;
+          e = d2;
+          d2 = c;
+          c = (b2 << 30 | b2 >>> 2) >>> 0;
+          b2 = a;
           a = t;
         }
         for (; i < 32; ++i) {
-          t = w[i - 3] ^ w[i - 8] ^ w[i - 14] ^ w[i - 16];
+          t = w2[i - 3] ^ w2[i - 8] ^ w2[i - 14] ^ w2[i - 16];
           t = t << 1 | t >>> 31;
-          w[i] = t;
-          f = b ^ c ^ d;
+          w2[i] = t;
+          f = b2 ^ c ^ d2;
           t = (a << 5 | a >>> 27) + f + e + 1859775393 + t;
-          e = d;
-          d = c;
-          c = (b << 30 | b >>> 2) >>> 0;
-          b = a;
+          e = d2;
+          d2 = c;
+          c = (b2 << 30 | b2 >>> 2) >>> 0;
+          b2 = a;
           a = t;
         }
         for (; i < 40; ++i) {
-          t = w[i - 6] ^ w[i - 16] ^ w[i - 28] ^ w[i - 32];
+          t = w2[i - 6] ^ w2[i - 16] ^ w2[i - 28] ^ w2[i - 32];
           t = t << 2 | t >>> 30;
-          w[i] = t;
-          f = b ^ c ^ d;
+          w2[i] = t;
+          f = b2 ^ c ^ d2;
           t = (a << 5 | a >>> 27) + f + e + 1859775393 + t;
-          e = d;
-          d = c;
-          c = (b << 30 | b >>> 2) >>> 0;
-          b = a;
+          e = d2;
+          d2 = c;
+          c = (b2 << 30 | b2 >>> 2) >>> 0;
+          b2 = a;
           a = t;
         }
         for (; i < 60; ++i) {
-          t = w[i - 6] ^ w[i - 16] ^ w[i - 28] ^ w[i - 32];
+          t = w2[i - 6] ^ w2[i - 16] ^ w2[i - 28] ^ w2[i - 32];
           t = t << 2 | t >>> 30;
-          w[i] = t;
-          f = b & c | d & (b ^ c);
+          w2[i] = t;
+          f = b2 & c | d2 & (b2 ^ c);
           t = (a << 5 | a >>> 27) + f + e + 2400959708 + t;
-          e = d;
-          d = c;
-          c = (b << 30 | b >>> 2) >>> 0;
-          b = a;
+          e = d2;
+          d2 = c;
+          c = (b2 << 30 | b2 >>> 2) >>> 0;
+          b2 = a;
           a = t;
         }
         for (; i < 80; ++i) {
-          t = w[i - 6] ^ w[i - 16] ^ w[i - 28] ^ w[i - 32];
+          t = w2[i - 6] ^ w2[i - 16] ^ w2[i - 28] ^ w2[i - 32];
           t = t << 2 | t >>> 30;
-          w[i] = t;
-          f = b ^ c ^ d;
+          w2[i] = t;
+          f = b2 ^ c ^ d2;
           t = (a << 5 | a >>> 27) + f + e + 3395469782 + t;
-          e = d;
-          d = c;
-          c = (b << 30 | b >>> 2) >>> 0;
-          b = a;
+          e = d2;
+          d2 = c;
+          c = (b2 << 30 | b2 >>> 2) >>> 0;
+          b2 = a;
           a = t;
         }
         s.h0 = s.h0 + a | 0;
-        s.h1 = s.h1 + b | 0;
+        s.h1 = s.h1 + b2 | 0;
         s.h2 = s.h2 + c | 0;
-        s.h3 = s.h3 + d | 0;
+        s.h3 = s.h3 + d2 | 0;
         s.h4 = s.h4 + e | 0;
         len -= 64;
       }
@@ -7004,7 +7007,7 @@ var require_pkcs1 = __commonJS({
       }
       md.update(label, "raw");
       var lHash = md.digest().getBytes();
-      var y = em.charAt(0);
+      var y2 = em.charAt(0);
       var maskedSeed = em.substring(1, md.digestLength + 1);
       var maskedDB = em.substring(1 + md.digestLength);
       var seedMask = rsa_mgf1(maskedDB, md.digestLength, mgf1Md);
@@ -7012,14 +7015,14 @@ var require_pkcs1 = __commonJS({
       var dbMask = rsa_mgf1(seed, keyLength - md.digestLength - 1, mgf1Md);
       var db = forge3.util.xorBytes(maskedDB, dbMask, maskedDB.length);
       var lHashPrime = db.substring(0, md.digestLength);
-      var error = y !== "\0";
+      var error = y2 !== "\0";
       for (var i = 0; i < md.digestLength; ++i) {
         error |= lHash.charAt(i) !== lHashPrime.charAt(i);
       }
       var in_ps = 1;
       var index = md.digestLength;
-      for (var j = md.digestLength; j < db.length; j++) {
-        var code = db.charCodeAt(j);
+      for (var j2 = md.digestLength; j2 < db.length; j2++) {
+        var code = db.charCodeAt(j2);
         var is_0 = code & 1 ^ 1;
         var error_mask = in_ps ? 65534 : 0;
         error |= code & error_mask;
@@ -7065,8 +7068,8 @@ var require_prime = __commonJS({
       var GCD_30_DELTA = [6, 4, 2, 4, 2, 4, 6, 2];
       var THIRTY = new BigInteger(null);
       THIRTY.fromInt(30);
-      var op_or = function(x, y) {
-        return x | y;
+      var op_or = function(x2, y2) {
+        return x2 | y2;
       };
       prime.generateProbablePrime = function(bits, options, callback) {
         if (typeof options === "function") {
@@ -7081,10 +7084,10 @@ var require_prime = __commonJS({
         algorithm.options = algorithm.options || {};
         var prng = options.prng || forge3.random;
         var rng = {
-          nextBytes: function(x) {
-            var b = prng.getBytesSync(x.length);
-            for (var i = 0; i < x.length; ++i) {
-              x[i] = b.charCodeAt(i);
+          nextBytes: function(x2) {
+            var b2 = prng.getBytesSync(x2.length);
+            for (var i = 0; i < x2.length; ++i) {
+              x2[i] = b2.charCodeAt(i);
             }
           }
         };
@@ -7437,12 +7440,12 @@ var require_rsa = __commonJS({
       digestInfo.value.push(digest);
       return asn1.toDer(digestInfo).getBytes();
     };
-    var _modPow = function(x, key, pub) {
+    var _modPow = function(x2, key, pub) {
       if (pub) {
-        return x.modPow(key.e, key.n);
+        return x2.modPow(key.e, key.n);
       }
       if (!key.p || !key.q) {
-        return x.modPow(key.d, key.n);
+        return x2.modPow(key.d, key.n);
       }
       if (!key.dP) {
         key.dP = key.d.mod(key.p.subtract(BigInteger.ONE));
@@ -7457,32 +7460,32 @@ var require_rsa = __commonJS({
       do {
         r = new BigInteger(forge3.util.bytesToHex(forge3.random.getBytes(key.n.bitLength() / 8)), 16);
       } while (r.compareTo(key.n) >= 0 || !r.gcd(key.n).equals(BigInteger.ONE));
-      x = x.multiply(r.modPow(key.e, key.n)).mod(key.n);
-      var xp = x.mod(key.p).modPow(key.dP, key.p);
-      var xq = x.mod(key.q).modPow(key.dQ, key.q);
+      x2 = x2.multiply(r.modPow(key.e, key.n)).mod(key.n);
+      var xp = x2.mod(key.p).modPow(key.dP, key.p);
+      var xq = x2.mod(key.q).modPow(key.dQ, key.q);
       while (xp.compareTo(xq) < 0) {
         xp = xp.add(key.p);
       }
-      var y = xp.subtract(xq).multiply(key.qInv).mod(key.p).multiply(key.q).add(xq);
-      y = y.multiply(r.modInverse(key.n)).mod(key.n);
-      return y;
+      var y2 = xp.subtract(xq).multiply(key.qInv).mod(key.p).multiply(key.q).add(xq);
+      y2 = y2.multiply(r.modInverse(key.n)).mod(key.n);
+      return y2;
     };
-    pki2.rsa.encrypt = function(m, key, bt) {
+    pki2.rsa.encrypt = function(m2, key, bt) {
       var pub = bt;
       var eb;
-      var k = Math.ceil(key.n.bitLength() / 8);
+      var k2 = Math.ceil(key.n.bitLength() / 8);
       if (bt !== false && bt !== true) {
         pub = bt === 2;
-        eb = _encodePkcs1_v1_5(m, key, bt);
+        eb = _encodePkcs1_v1_5(m2, key, bt);
       } else {
         eb = forge3.util.createBuffer();
-        eb.putBytes(m);
+        eb.putBytes(m2);
       }
-      var x = new BigInteger(eb.toHex(), 16);
-      var y = _modPow(x, key, pub);
-      var yhex = y.toString(16);
+      var x2 = new BigInteger(eb.toHex(), 16);
+      var y2 = _modPow(x2, key, pub);
+      var yhex = y2.toString(16);
       var ed = forge3.util.createBuffer();
-      var zeros = k - Math.ceil(yhex.length / 2);
+      var zeros = k2 - Math.ceil(yhex.length / 2);
       while (zeros > 0) {
         ed.putByte(0);
         --zeros;
@@ -7491,21 +7494,21 @@ var require_rsa = __commonJS({
       return ed.getBytes();
     };
     pki2.rsa.decrypt = function(ed, key, pub, ml) {
-      var k = Math.ceil(key.n.bitLength() / 8);
-      if (ed.length !== k) {
+      var k2 = Math.ceil(key.n.bitLength() / 8);
+      if (ed.length !== k2) {
         var error = new Error("Encrypted message length is invalid.");
         error.length = ed.length;
-        error.expected = k;
+        error.expected = k2;
         throw error;
       }
-      var y = new BigInteger(forge3.util.createBuffer(ed).toHex(), 16);
-      if (y.compareTo(key.n) >= 0) {
+      var y2 = new BigInteger(forge3.util.createBuffer(ed).toHex(), 16);
+      if (y2.compareTo(key.n) >= 0) {
         throw new Error("Encrypted message is invalid.");
       }
-      var x = _modPow(y, key, pub);
-      var xhex = x.toString(16);
+      var x2 = _modPow(y2, key, pub);
+      var xhex = x2.toString(16);
       var eb = forge3.util.createBuffer();
-      var zeros = k - Math.ceil(xhex.length / 2);
+      var zeros = k2 - Math.ceil(xhex.length / 2);
       while (zeros > 0) {
         eb.putByte(0);
         --zeros;
@@ -7524,10 +7527,10 @@ var require_rsa = __commonJS({
       options = options || {};
       var prng = options.prng || forge3.random;
       var rng = {
-        nextBytes: function(x) {
-          var b = prng.getBytesSync(x.length);
-          for (var i = 0; i < x.length; ++i) {
-            x[i] = b.charCodeAt(i);
+        nextBytes: function(x2) {
+          var b2 = prng.getBytesSync(x2.length);
+          for (var i = 0; i < x2.length; ++i) {
+            x2[i] = b2.charCodeAt(i);
           }
         }
       };
@@ -7562,8 +7565,8 @@ var require_rsa = __commonJS({
       var THIRTY = new BigInteger(null);
       THIRTY.fromInt(30);
       var deltaIdx = 0;
-      var op_or = function(x, y) {
-        return x | y;
+      var op_or = function(x2, y2) {
+        return x2 | y2;
       };
       var t1 = +new Date();
       var t2;
@@ -7631,9 +7634,9 @@ var require_rsa = __commonJS({
             state.state = 0;
           }
         } else if (state.state === 5) {
-          var d = state.e.modInverse(state.phi);
+          var d2 = state.e.modInverse(state.phi);
           state.keys = {
-            privateKey: pki2.rsa.setPrivateKey(state.n, state.e, d, state.p, state.q, d.mod(state.p1), d.mod(state.q1), state.q.modInverse(state.p)),
+            privateKey: pki2.rsa.setPrivateKey(state.n, state.e, d2, state.p, state.q, d2.mod(state.p1), d2.mod(state.q1), state.q.modInverse(state.p)),
             publicKey: pki2.rsa.setPublicKey(state.n, state.e)
           };
         }
@@ -7798,14 +7801,14 @@ var require_rsa = __commonJS({
         }
         if (scheme === "RSAES-PKCS1-V1_5") {
           scheme = {
-            encode: function(m, key2, pub) {
-              return _encodePkcs1_v1_5(m, key2, 2).getBytes();
+            encode: function(m2, key2, pub) {
+              return _encodePkcs1_v1_5(m2, key2, 2).getBytes();
             }
           };
         } else if (scheme === "RSA-OAEP" || scheme === "RSAES-OAEP") {
           scheme = {
-            encode: function(m, key2) {
-              return forge3.pkcs1.encode_rsa_oaep(key2, m, schemeOptions);
+            encode: function(m2, key2) {
+              return forge3.pkcs1.encode_rsa_oaep(key2, m2, schemeOptions);
             }
           };
         } else if (["RAW", "NONE", "NULL", null].indexOf(scheme) !== -1) {
@@ -7834,9 +7837,9 @@ var require_rsa = __commonJS({
         }
         if (scheme === "RSASSA-PKCS1-V1_5") {
           scheme = {
-            verify: function(digest2, d2) {
-              d2 = _decodePkcs1_v1_5(d2, key, true);
-              var obj = asn1.fromDer(d2, {
+            verify: function(digest2, d3) {
+              d3 = _decodePkcs1_v1_5(d3, key, true);
+              var obj = asn1.fromDer(d3, {
                 parseAllBytes: options._parseAllDigestBytes
               });
               var capture = {};
@@ -7862,24 +7865,24 @@ var require_rsa = __commonJS({
           };
         } else if (scheme === "NONE" || scheme === "NULL" || scheme === null) {
           scheme = {
-            verify: function(digest2, d2) {
-              d2 = _decodePkcs1_v1_5(d2, key, true);
-              return digest2 === d2;
+            verify: function(digest2, d3) {
+              d3 = _decodePkcs1_v1_5(d3, key, true);
+              return digest2 === d3;
             }
           };
         }
-        var d = pki2.rsa.decrypt(signature, key, true, false);
-        return scheme.verify(digest, d, key.n.bitLength());
+        var d2 = pki2.rsa.decrypt(signature, key, true, false);
+        return scheme.verify(digest, d2, key.n.bitLength());
       };
       return key;
     };
-    pki2.setRsaPrivateKey = pki2.rsa.setPrivateKey = function(n, e, d, p, q, dP, dQ, qInv) {
+    pki2.setRsaPrivateKey = pki2.rsa.setPrivateKey = function(n, e, d2, p, q2, dP, dQ, qInv) {
       var key = {
         n,
         e,
-        d,
+        d: d2,
         p,
-        q,
+        q: q2,
         dP,
         dQ,
         qInv
@@ -7890,23 +7893,23 @@ var require_rsa = __commonJS({
         } else if (scheme === void 0) {
           scheme = "RSAES-PKCS1-V1_5";
         }
-        var d2 = pki2.rsa.decrypt(data, key, false, false);
+        var d3 = pki2.rsa.decrypt(data, key, false, false);
         if (scheme === "RSAES-PKCS1-V1_5") {
           scheme = { decode: _decodePkcs1_v1_5 };
         } else if (scheme === "RSA-OAEP" || scheme === "RSAES-OAEP") {
           scheme = {
-            decode: function(d3, key2) {
-              return forge3.pkcs1.decode_rsa_oaep(key2, d3, schemeOptions);
+            decode: function(d4, key2) {
+              return forge3.pkcs1.decode_rsa_oaep(key2, d4, schemeOptions);
             }
           };
         } else if (["RAW", "NONE", "NULL", null].indexOf(scheme) !== -1) {
-          scheme = { decode: function(d3) {
-            return d3;
+          scheme = { decode: function(d4) {
+            return d4;
           } };
         } else {
           throw new Error('Unsupported encryption scheme: "' + scheme + '".');
         }
-        return scheme.decode(d2, key, false);
+        return scheme.decode(d3, key, false);
       };
       key.sign = function(md, scheme) {
         var bt = false;
@@ -7922,8 +7925,8 @@ var require_rsa = __commonJS({
           } };
           bt = 1;
         }
-        var d2 = scheme.encode(md, key.n.bitLength());
-        return pki2.rsa.encrypt(d2, key, bt);
+        var d3 = scheme.encode(md, key.n.bitLength());
+        return pki2.rsa.encrypt(d3, key, bt);
       };
       return key;
     };
@@ -7950,16 +7953,16 @@ var require_rsa = __commonJS({
         error.errors = errors;
         throw error;
       }
-      var n, e, d, p, q, dP, dQ, qInv;
+      var n, e, d2, p, q2, dP, dQ, qInv;
       n = forge3.util.createBuffer(capture.privateKeyModulus).toHex();
       e = forge3.util.createBuffer(capture.privateKeyPublicExponent).toHex();
-      d = forge3.util.createBuffer(capture.privateKeyPrivateExponent).toHex();
+      d2 = forge3.util.createBuffer(capture.privateKeyPrivateExponent).toHex();
       p = forge3.util.createBuffer(capture.privateKeyPrime1).toHex();
-      q = forge3.util.createBuffer(capture.privateKeyPrime2).toHex();
+      q2 = forge3.util.createBuffer(capture.privateKeyPrime2).toHex();
       dP = forge3.util.createBuffer(capture.privateKeyExponent1).toHex();
       dQ = forge3.util.createBuffer(capture.privateKeyExponent2).toHex();
       qInv = forge3.util.createBuffer(capture.privateKeyCoefficient).toHex();
-      return pki2.setRsaPrivateKey(new BigInteger(n, 16), new BigInteger(e, 16), new BigInteger(d, 16), new BigInteger(p, 16), new BigInteger(q, 16), new BigInteger(dP, 16), new BigInteger(dQ, 16), new BigInteger(qInv, 16));
+      return pki2.setRsaPrivateKey(new BigInteger(n, 16), new BigInteger(e, 16), new BigInteger(d2, 16), new BigInteger(p, 16), new BigInteger(q2, 16), new BigInteger(dP, 16), new BigInteger(dQ, 16), new BigInteger(qInv, 16));
     };
     pki2.privateKeyToAsn1 = pki2.privateKeyToRSAPrivateKey = function(key) {
       return asn1.create(asn1.Class.UNIVERSAL, asn1.Type.SEQUENCE, true, [
@@ -8013,18 +8016,18 @@ var require_rsa = __commonJS({
         asn1.create(asn1.Class.UNIVERSAL, asn1.Type.INTEGER, false, _bnToBytes(key.e))
       ]);
     };
-    function _encodePkcs1_v1_5(m, key, bt) {
+    function _encodePkcs1_v1_5(m2, key, bt) {
       var eb = forge3.util.createBuffer();
-      var k = Math.ceil(key.n.bitLength() / 8);
-      if (m.length > k - 11) {
+      var k2 = Math.ceil(key.n.bitLength() / 8);
+      if (m2.length > k2 - 11) {
         var error = new Error("Message is too long for PKCS#1 v1.5 padding.");
-        error.length = m.length;
-        error.max = k - 11;
+        error.length = m2.length;
+        error.max = k2 - 11;
         throw error;
       }
       eb.putByte(0);
       eb.putByte(bt);
-      var padNum = k - 3 - m.length;
+      var padNum = k2 - 3 - m2.length;
       var padByte;
       if (bt === 0 || bt === 1) {
         padByte = bt === 0 ? 0 : 255;
@@ -8047,11 +8050,11 @@ var require_rsa = __commonJS({
         }
       }
       eb.putByte(0);
-      eb.putBytes(m);
+      eb.putBytes(m2);
       return eb;
     }
     function _decodePkcs1_v1_5(em, key, pub, ml) {
-      var k = Math.ceil(key.n.bitLength() / 8);
+      var k2 = Math.ceil(key.n.bitLength() / 8);
       var eb = forge3.util.createBuffer(em);
       var first = eb.getByte();
       var bt = eb.getByte();
@@ -8060,7 +8063,7 @@ var require_rsa = __commonJS({
       }
       var padNum = 0;
       if (bt === 0) {
-        padNum = k - 3 - ml;
+        padNum = k2 - 3 - ml;
         for (var i = 0; i < padNum; ++i) {
           if (eb.getByte() !== 0) {
             throw new Error("Encryption block is invalid.");
@@ -8086,7 +8089,7 @@ var require_rsa = __commonJS({
         }
       }
       var zero = eb.getByte();
-      if (zero !== 0 || padNum !== k - 3 - eb.length()) {
+      if (zero !== 0 || padNum !== k2 - 3 - eb.length()) {
         throw new Error("Encryption block is invalid.");
       }
       return eb.getBytes();
@@ -8160,16 +8163,16 @@ var require_rsa = __commonJS({
           getPrime(state.qBits, finish);
           return;
         }
-        var d = state.e.modInverse(state.phi);
+        var d2 = state.e.modInverse(state.phi);
         state.keys = {
-          privateKey: pki2.rsa.setPrivateKey(state.n, state.e, d, state.p, state.q, d.mod(state.p1), d.mod(state.q1), state.q.modInverse(state.p)),
+          privateKey: pki2.rsa.setPrivateKey(state.n, state.e, d2, state.p, state.q, d2.mod(state.p1), d2.mod(state.q1), state.q.modInverse(state.p)),
           publicKey: pki2.rsa.setPublicKey(state.n, state.e)
         };
         callback(null, state.keys);
       }
     }
-    function _bnToBytes(b) {
-      var hex = b.toString(16);
+    function _bnToBytes(b2) {
+      var hex = b2.toString(16);
       if (hex[0] >= "8") {
         hex = "00" + hex;
       }
@@ -8213,8 +8216,8 @@ var require_rsa = __commonJS({
     function _detectSubtleMsCrypto(fn) {
       return typeof util.globalScope !== "undefined" && typeof util.globalScope.msCrypto === "object" && typeof util.globalScope.msCrypto.subtle === "object" && typeof util.globalScope.msCrypto.subtle[fn] === "function";
     }
-    function _intToUint8Array(x) {
-      var bytes = forge3.util.hexToBytes(x.toString(16));
+    function _intToUint8Array(x2) {
+      var bytes = forge3.util.hexToBytes(x2.toString(16));
       var buffer = new Uint8Array(bytes.length);
       for (var i = 0; i < bytes.length; ++i) {
         buffer[i] = bytes.charCodeAt(i);
@@ -8649,15 +8652,15 @@ var require_pbe = __commonJS({
       return rval;
     };
     pki2.pbe.generatePkcs12Key = function(password, salt, id, iter, n, md) {
-      var j, l;
+      var j2, l;
       if (typeof md === "undefined" || md === null) {
         if (!("sha1" in forge3.md)) {
           throw new Error('"sha1" hash algorithm unavailable.');
         }
         md = forge3.md.sha1.create();
       }
-      var u = md.digestLength;
-      var v = md.blockLength;
+      var u3 = md.digestLength;
+      var v2 = md.blockLength;
       var result = new forge3.util.ByteBuffer();
       var passBuf = new forge3.util.ByteBuffer();
       if (password !== null && password !== void 0) {
@@ -8668,47 +8671,47 @@ var require_pbe = __commonJS({
       }
       var p = passBuf.length();
       var s = salt.length();
-      var D = new forge3.util.ByteBuffer();
-      D.fillWithByte(id, v);
-      var Slen = v * Math.ceil(s / v);
-      var S = new forge3.util.ByteBuffer();
+      var D2 = new forge3.util.ByteBuffer();
+      D2.fillWithByte(id, v2);
+      var Slen = v2 * Math.ceil(s / v2);
+      var S2 = new forge3.util.ByteBuffer();
       for (l = 0; l < Slen; l++) {
-        S.putByte(salt.at(l % s));
+        S2.putByte(salt.at(l % s));
       }
-      var Plen = v * Math.ceil(p / v);
-      var P = new forge3.util.ByteBuffer();
+      var Plen = v2 * Math.ceil(p / v2);
+      var P2 = new forge3.util.ByteBuffer();
       for (l = 0; l < Plen; l++) {
-        P.putByte(passBuf.at(l % p));
+        P2.putByte(passBuf.at(l % p));
       }
-      var I = S;
-      I.putBuffer(P);
-      var c = Math.ceil(n / u);
+      var I2 = S2;
+      I2.putBuffer(P2);
+      var c = Math.ceil(n / u3);
       for (var i = 1; i <= c; i++) {
         var buf = new forge3.util.ByteBuffer();
-        buf.putBytes(D.bytes());
-        buf.putBytes(I.bytes());
+        buf.putBytes(D2.bytes());
+        buf.putBytes(I2.bytes());
         for (var round = 0; round < iter; round++) {
           md.start();
           md.update(buf.getBytes());
           buf = md.digest();
         }
-        var B = new forge3.util.ByteBuffer();
-        for (l = 0; l < v; l++) {
-          B.putByte(buf.at(l % u));
+        var B2 = new forge3.util.ByteBuffer();
+        for (l = 0; l < v2; l++) {
+          B2.putByte(buf.at(l % u3));
         }
-        var k = Math.ceil(s / v) + Math.ceil(p / v);
+        var k2 = Math.ceil(s / v2) + Math.ceil(p / v2);
         var Inew = new forge3.util.ByteBuffer();
-        for (j = 0; j < k; j++) {
-          var chunk = new forge3.util.ByteBuffer(I.getBytes(v));
-          var x = 511;
-          for (l = B.length() - 1; l >= 0; l--) {
-            x = x >> 8;
-            x += B.at(l) + chunk.at(l);
-            chunk.setAt(l, x & 255);
+        for (j2 = 0; j2 < k2; j2++) {
+          var chunk = new forge3.util.ByteBuffer(I2.getBytes(v2));
+          var x2 = 511;
+          for (l = B2.length() - 1; l >= 0; l--) {
+            x2 = x2 >> 8;
+            x2 += B2.at(l) + chunk.at(l);
+            chunk.setAt(l, x2 & 255);
           }
           Inew.putBuffer(chunk);
         }
-        I = Inew;
+        I2 = Inew;
         result.putBuffer(buf);
       }
       result.truncate(result.length() - n);
@@ -11083,13 +11086,13 @@ var require_x509 = __commonJS({
           };
         }
         if (error === null) {
-          var se = {
+          var se2 = {
             keyUsage: true,
             basicConstraints: true
           };
           for (var i = 0; error === null && i < cert.extensions.length; ++i) {
             var ext = cert.extensions[i];
-            if (ext.critical && !(ext.name in se)) {
+            if (ext.critical && !(ext.name in se2)) {
               error = {
                 message: "Certificate has an unsupported critical extension.",
                 error: pki2.certificateError.unsupported_certificate
@@ -11329,8 +11332,8 @@ var require_pkcs12 = __commonJS({
     function _getBagsByAttribute(safeContents, attrName, attrValue, bagType) {
       var result = [];
       for (var i = 0; i < safeContents.length; i++) {
-        for (var j = 0; j < safeContents[i].safeBags.length; j++) {
-          var bag = safeContents[i].safeBags[j];
+        for (var j2 = 0; j2 < safeContents[i].safeBags.length; j2++) {
+          var bag = safeContents[i].safeBags[j2];
           if (bagType !== void 0 && bag.type !== bagType) {
             continue;
           }
@@ -11606,8 +11609,8 @@ var require_pkcs12 = __commonJS({
             continue;
           }
           decodedAttrs[pki2.oids[oid]] = [];
-          for (var j = 0; j < capture.values.length; ++j) {
-            decodedAttrs[pki2.oids[oid]].push(capture.values[j].value);
+          for (var j2 = 0; j2 < capture.values.length; ++j2) {
+            decodedAttrs[pki2.oids[oid]].push(capture.values[j2].value);
           }
         }
       }
@@ -11877,15 +11880,15 @@ var require_tls = __commonJS({
     var hmac_sha1 = function(key2, seqNum, record) {
       var hmac = forge3.hmac.create();
       hmac.start("SHA1", key2);
-      var b = forge3.util.createBuffer();
-      b.putInt32(seqNum[0]);
-      b.putInt32(seqNum[1]);
-      b.putByte(record.type);
-      b.putByte(record.version.major);
-      b.putByte(record.version.minor);
-      b.putInt16(record.length);
-      b.putBytes(record.fragment.bytes());
-      hmac.update(b.getBytes());
+      var b2 = forge3.util.createBuffer();
+      b2.putInt32(seqNum[0]);
+      b2.putInt32(seqNum[1]);
+      b2.putByte(record.type);
+      b2.putByte(record.version.major);
+      b2.putByte(record.version.minor);
+      b2.putInt16(record.length);
+      b2.putBytes(record.fragment.bytes());
+      hmac.update(b2.getBytes());
       return hmac.digest().getBytes();
     };
     var deflate = function(c, record, s) {
@@ -11910,27 +11913,27 @@ var require_tls = __commonJS({
       }
       return rval;
     };
-    var readVector = function(b, lenBytes) {
+    var readVector = function(b2, lenBytes) {
       var len = 0;
       switch (lenBytes) {
         case 1:
-          len = b.getByte();
+          len = b2.getByte();
           break;
         case 2:
-          len = b.getInt16();
+          len = b2.getInt16();
           break;
         case 3:
-          len = b.getInt24();
+          len = b2.getInt24();
           break;
         case 4:
-          len = b.getInt32();
+          len = b2.getInt32();
           break;
       }
-      return forge3.util.createBuffer(b.getBytes(len));
+      return forge3.util.createBuffer(b2.getBytes(len));
     };
-    var writeVector = function(b, lenBytes, v) {
-      b.putInt(v.length(), lenBytes << 3);
-      b.putBuffer(v);
+    var writeVector = function(b2, lenBytes, v2) {
+      b2.putInt(v2.length(), lenBytes << 3);
+      b2.putBuffer(v2);
     };
     var tls = {};
     tls.Versions = {
@@ -12075,27 +12078,27 @@ var require_tls = __commonJS({
           }
         });
       } else {
-        var b = record.fragment;
-        var remaining = b.length();
+        var b2 = record.fragment;
+        var remaining = b2.length();
         msg = {
           version: {
-            major: b.getByte(),
-            minor: b.getByte()
+            major: b2.getByte(),
+            minor: b2.getByte()
           },
-          random: forge3.util.createBuffer(b.getBytes(32)),
-          session_id: readVector(b, 1),
+          random: forge3.util.createBuffer(b2.getBytes(32)),
+          session_id: readVector(b2, 1),
           extensions: []
         };
         if (client) {
-          msg.cipher_suite = b.getBytes(2);
-          msg.compression_method = b.getByte();
+          msg.cipher_suite = b2.getBytes(2);
+          msg.compression_method = b2.getByte();
         } else {
-          msg.cipher_suites = readVector(b, 2);
-          msg.compression_methods = readVector(b, 1);
+          msg.cipher_suites = readVector(b2, 2);
+          msg.compression_methods = readVector(b2, 1);
         }
-        remaining = length - (remaining - b.length());
+        remaining = length - (remaining - b2.length());
         if (remaining > 0) {
-          var exts = readVector(b, 2);
+          var exts = readVector(b2, 2);
           while (exts.length() > 0) {
             msg.extensions.push({
               type: [exts.getByte(), exts.getByte()],
@@ -12312,9 +12315,9 @@ var require_tls = __commonJS({
           }
         });
       }
-      var b = record.fragment;
+      var b2 = record.fragment;
       var msg = {
-        certificate_list: readVector(b, 3)
+        certificate_list: readVector(b2, 3)
       };
       var cert, asn1;
       var certs = [];
@@ -12385,9 +12388,9 @@ var require_tls = __commonJS({
           }
         });
       }
-      var b = record.fragment;
+      var b2 = record.fragment;
       var msg = {
-        enc_pre_master_secret: readVector(b, 2).getBytes()
+        enc_pre_master_secret: readVector(b2, 2).getBytes()
       };
       var privateKey = null;
       if (c.getPrivateKey) {
@@ -12443,10 +12446,10 @@ var require_tls = __commonJS({
           }
         });
       }
-      var b = record.fragment;
+      var b2 = record.fragment;
       var msg = {
-        certificate_types: readVector(b, 1),
-        certificate_authorities: readVector(b, 2)
+        certificate_types: readVector(b2, 1),
+        certificate_authorities: readVector(b2, 2)
       };
       c.session.certificateRequest = msg;
       c.expect = SHD;
@@ -12463,12 +12466,12 @@ var require_tls = __commonJS({
           }
         });
       }
-      var b = record.fragment;
-      b.read -= 4;
-      var msgBytes = b.bytes();
-      b.read += 4;
+      var b2 = record.fragment;
+      b2.read -= 4;
+      var msgBytes = b2.bytes();
+      b2.read += 4;
       var msg = {
-        signature: readVector(b, 2).getBytes()
+        signature: readVector(b2, 2).getBytes()
       };
       var verify = forge3.util.createBuffer();
       verify.putBuffer(c.session.md5.digest());
@@ -12594,21 +12597,21 @@ var require_tls = __commonJS({
       c.process();
     };
     tls.handleFinished = function(c, record, length) {
-      var b = record.fragment;
-      b.read -= 4;
-      var msgBytes = b.bytes();
-      b.read += 4;
+      var b2 = record.fragment;
+      b2.read -= 4;
+      var msgBytes = b2.bytes();
+      b2.read += 4;
       var vd = record.fragment.getBytes();
-      b = forge3.util.createBuffer();
-      b.putBuffer(c.session.md5.digest());
-      b.putBuffer(c.session.sha1.digest());
+      b2 = forge3.util.createBuffer();
+      b2.putBuffer(c.session.md5.digest());
+      b2.putBuffer(c.session.sha1.digest());
       var client = c.entity === tls.ConnectionEnd.client;
       var label = client ? "server finished" : "client finished";
       var sp = c.session.sp;
       var vdl = 12;
       var prf = prf_TLS1;
-      b = prf(sp.master_secret, label, b.getBytes(), vdl);
-      if (b.getBytes() !== vd) {
+      b2 = prf(sp.master_secret, label, b2.getBytes(), vdl);
+      if (b2.getBytes() !== vd) {
         return c.error(c, {
           message: "Invalid verify_data in Finished message.",
           send: true,
@@ -12642,10 +12645,10 @@ var require_tls = __commonJS({
       c.process();
     };
     tls.handleAlert = function(c, record) {
-      var b = record.fragment;
+      var b2 = record.fragment;
       var alert = {
-        level: b.getByte(),
-        description: b.getByte()
+        level: b2.getByte(),
+        description: b2.getByte()
       };
       var msg;
       switch (alert.description) {
@@ -12734,19 +12737,19 @@ var require_tls = __commonJS({
       c.process();
     };
     tls.handleHandshake = function(c, record) {
-      var b = record.fragment;
-      var type = b.getByte();
-      var length = b.getInt24();
-      if (length > b.length()) {
+      var b2 = record.fragment;
+      var type = b2.getByte();
+      var length = b2.getInt24();
+      if (length > b2.length()) {
         c.fragmented = record;
         record.fragment = forge3.util.createBuffer();
-        b.read -= 4;
+        b2.read -= 4;
         return c.process();
       }
       c.fragmented = null;
-      b.read -= 4;
-      var bytes = b.bytes(length + 4);
-      b.read += 4;
+      b2.read -= 4;
+      var bytes = b2.bytes(length + 4);
+      b2.read += 4;
       if (type in hsTable[c.entity][c.expect]) {
         if (c.entity === tls.ConnectionEnd.server && !c.open && !c.fail) {
           c.handshaking = true;
@@ -12780,10 +12783,10 @@ var require_tls = __commonJS({
       c.process();
     };
     tls.handleHeartbeat = function(c, record) {
-      var b = record.fragment;
-      var type = b.getByte();
-      var length = b.getInt16();
-      var payload = b.getBytes(length);
+      var b2 = record.fragment;
+      var type = b2.getByte();
+      var length = b2.getInt16();
+      var payload = b2.getBytes(length);
       if (type === tls.HeartbeatMessageType.heartbeat_request) {
         if (c.handshaking || length > payload.length) {
           return c.process();
@@ -13001,8 +13004,8 @@ var require_tls = __commonJS({
       return state;
     };
     tls.createRandom = function() {
-      var d = new Date();
-      var utc = +d + d.getTimezoneOffset() * 6e4;
+      var d2 = new Date();
+      var utc = +d2 + d2.getTimezoneOffset() * 6e4;
       var rval = forge3.util.createBuffer();
       rval.putInt32(utc);
       rval.putBytes(forge3.random.getBytes(28));
@@ -13024,12 +13027,12 @@ var require_tls = __commonJS({
       return record;
     };
     tls.createAlert = function(c, alert) {
-      var b = forge3.util.createBuffer();
-      b.putByte(alert.level);
-      b.putByte(alert.description);
+      var b2 = forge3.util.createBuffer();
+      b2.putByte(alert.level);
+      b2.putByte(alert.description);
       return tls.createRecord(c, {
         type: tls.ContentType.alert,
-        data: b
+        data: b2
       });
     };
     tls.createClientHello = function(c) {
@@ -13158,20 +13161,20 @@ var require_tls = __commonJS({
       return rval;
     };
     tls.createClientKeyExchange = function(c) {
-      var b = forge3.util.createBuffer();
-      b.putByte(c.session.clientHelloVersion.major);
-      b.putByte(c.session.clientHelloVersion.minor);
-      b.putBytes(forge3.random.getBytes(46));
+      var b2 = forge3.util.createBuffer();
+      b2.putByte(c.session.clientHelloVersion.major);
+      b2.putByte(c.session.clientHelloVersion.minor);
+      b2.putBytes(forge3.random.getBytes(46));
       var sp = c.session.sp;
-      sp.pre_master_secret = b.getBytes();
+      sp.pre_master_secret = b2.getBytes();
       var key2 = c.session.serverCertificate.publicKey;
-      b = key2.encrypt(sp.pre_master_secret);
-      var length = b.length + 2;
+      b2 = key2.encrypt(sp.pre_master_secret);
+      var length = b2.length + 2;
       var rval = forge3.util.createBuffer();
       rval.putByte(tls.HandshakeType.client_key_exchange);
       rval.putInt24(length);
-      rval.putInt16(b.length);
-      rval.putBytes(b);
+      rval.putInt16(b2.length);
+      rval.putBytes(b2);
       return rval;
     };
     tls.createServerKeyExchange = function(c) {
@@ -13184,11 +13187,11 @@ var require_tls = __commonJS({
       return rval;
     };
     tls.getClientSignature = function(c, callback) {
-      var b = forge3.util.createBuffer();
-      b.putBuffer(c.session.md5.digest());
-      b.putBuffer(c.session.sha1.digest());
-      b = b.getBytes();
-      c.getSignature = c.getSignature || function(c2, b2, callback2) {
+      var b2 = forge3.util.createBuffer();
+      b2.putBuffer(c.session.md5.digest());
+      b2.putBuffer(c.session.sha1.digest());
+      b2 = b2.getBytes();
+      c.getSignature = c.getSignature || function(c2, b3, callback2) {
         var privateKey = null;
         if (c2.getPrivateKey) {
           try {
@@ -13216,11 +13219,11 @@ var require_tls = __commonJS({
             }
           });
         } else {
-          b2 = privateKey.sign(b2, null);
+          b3 = privateKey.sign(b3, null);
         }
-        callback2(c2, b2);
+        callback2(c2, b3);
       };
-      c.getSignature(c, b, callback);
+      c.getSignature(c, b2, callback);
     };
     tls.createCertificateVerify = function(c, signature) {
       var length = signature.length + 2;
@@ -13262,19 +13265,19 @@ var require_tls = __commonJS({
       return rval;
     };
     tls.createFinished = function(c) {
-      var b = forge3.util.createBuffer();
-      b.putBuffer(c.session.md5.digest());
-      b.putBuffer(c.session.sha1.digest());
+      var b2 = forge3.util.createBuffer();
+      b2.putBuffer(c.session.md5.digest());
+      b2.putBuffer(c.session.sha1.digest());
       var client = c.entity === tls.ConnectionEnd.client;
       var sp = c.session.sp;
       var vdl = 12;
       var prf = prf_TLS1;
       var label = client ? "client finished" : "server finished";
-      b = prf(sp.master_secret, label, b.getBytes(), vdl);
+      b2 = prf(sp.master_secret, label, b2.getBytes(), vdl);
       var rval = forge3.util.createBuffer();
       rval.putByte(tls.HandshakeType.finished);
-      rval.putInt24(b.length());
-      rval.putBuffer(b);
+      rval.putInt24(b2.length());
+      rval.putBuffer(b2);
       return rval;
     };
     tls.createHeartbeat = function(type, payload, payloadLength) {
@@ -13585,18 +13588,18 @@ var require_tls = __commonJS({
       };
       var _readRecordHeader = function(c2) {
         var rval = 0;
-        var b = c2.input;
-        var len = b.length();
+        var b2 = c2.input;
+        var len = b2.length();
         if (len < 5) {
           rval = 5 - len;
         } else {
           c2.record = {
-            type: b.getByte(),
+            type: b2.getByte(),
             version: {
-              major: b.getByte(),
-              minor: b.getByte()
+              major: b2.getByte(),
+              minor: b2.getByte()
             },
-            length: b.getInt16(),
+            length: b2.getInt16(),
             fragment: forge3.util.createBuffer(),
             ready: false
           };
@@ -13619,13 +13622,13 @@ var require_tls = __commonJS({
       };
       var _readRecord = function(c2) {
         var rval = 0;
-        var b = c2.input;
-        var len = b.length();
+        var b2 = c2.input;
+        var len = b2.length();
         if (len < c2.record.length) {
           rval = c2.record.length - len;
         } else {
-          c2.record.fragment.putBytes(b.getBytes(c2.record.length));
-          b.compact();
+          c2.record.fragment.putBytes(b2.getBytes(c2.record.length));
+          b2.compact();
           var s = c2.state.current.read;
           if (s.update(c2, c2.record)) {
             if (c2.fragmented !== null) {
@@ -14201,7 +14204,7 @@ var require_sha512 = __commonJS({
       ];
       _initialized = true;
     }
-    function _update(s, w, bytes) {
+    function _update(s, w2, bytes) {
       var t1_hi, t1_lo;
       var t2_hi, t2_lo;
       var s0_hi, s0_lo;
@@ -14216,29 +14219,29 @@ var require_sha512 = __commonJS({
       var f_hi, f_lo;
       var g_hi, g_lo;
       var h_hi, h_lo;
-      var i, hi, lo, w2, w7, w15, w16;
+      var i, hi, lo, w22, w7, w15, w16;
       var len = bytes.length();
       while (len >= 128) {
         for (i = 0; i < 16; ++i) {
-          w[i][0] = bytes.getInt32() >>> 0;
-          w[i][1] = bytes.getInt32() >>> 0;
+          w2[i][0] = bytes.getInt32() >>> 0;
+          w2[i][1] = bytes.getInt32() >>> 0;
         }
         for (; i < 80; ++i) {
-          w2 = w[i - 2];
-          hi = w2[0];
-          lo = w2[1];
+          w22 = w2[i - 2];
+          hi = w22[0];
+          lo = w22[1];
           t1_hi = ((hi >>> 19 | lo << 13) ^ (lo >>> 29 | hi << 3) ^ hi >>> 6) >>> 0;
           t1_lo = ((hi << 13 | lo >>> 19) ^ (lo << 3 | hi >>> 29) ^ (hi << 26 | lo >>> 6)) >>> 0;
-          w15 = w[i - 15];
+          w15 = w2[i - 15];
           hi = w15[0];
           lo = w15[1];
           t2_hi = ((hi >>> 1 | lo << 31) ^ (hi >>> 8 | lo << 24) ^ hi >>> 7) >>> 0;
           t2_lo = ((hi << 31 | lo >>> 1) ^ (hi << 24 | lo >>> 8) ^ (hi << 25 | lo >>> 7)) >>> 0;
-          w7 = w[i - 7];
-          w16 = w[i - 16];
+          w7 = w2[i - 7];
+          w16 = w2[i - 16];
           lo = t1_lo + w7[1] + t2_lo + w16[1];
-          w[i][0] = t1_hi + w7[0] + t2_hi + w16[0] + (lo / 4294967296 >>> 0) >>> 0;
-          w[i][1] = lo >>> 0;
+          w2[i][0] = t1_hi + w7[0] + t2_hi + w16[0] + (lo / 4294967296 >>> 0) >>> 0;
+          w2[i][1] = lo >>> 0;
         }
         a_hi = s[0][0];
         a_lo = s[0][1];
@@ -14265,8 +14268,8 @@ var require_sha512 = __commonJS({
           s0_lo = ((a_hi << 4 | a_lo >>> 28) ^ (a_lo << 30 | a_hi >>> 2) ^ (a_lo << 25 | a_hi >>> 7)) >>> 0;
           maj_hi = (a_hi & b_hi | c_hi & (a_hi ^ b_hi)) >>> 0;
           maj_lo = (a_lo & b_lo | c_lo & (a_lo ^ b_lo)) >>> 0;
-          lo = h_lo + s1_lo + ch_lo + _k[i][1] + w[i][1];
-          t1_hi = h_hi + s1_hi + ch_hi + _k[i][0] + w[i][0] + (lo / 4294967296 >>> 0) >>> 0;
+          lo = h_lo + s1_lo + ch_lo + _k[i][1] + w2[i][1];
+          t1_hi = h_hi + s1_hi + ch_hi + _k[i][0] + w2[i][0] + (lo / 4294967296 >>> 0) >>> 0;
           t1_lo = lo >>> 0;
           lo = s0_lo + maj_lo;
           t2_hi = s0_hi + maj_hi + (lo / 4294967296 >>> 0) >>> 0;
@@ -14537,7 +14540,7 @@ var require_ed25519 = __commonJS({
         throw new TypeError('"options.publicKey" must have a byte length of ' + ed25519.constants.PUBLIC_KEY_BYTE_LENGTH);
       }
       var sm = new NativeBuffer(ed25519.constants.SIGN_BYTE_LENGTH + msg.length);
-      var m = new NativeBuffer(ed25519.constants.SIGN_BYTE_LENGTH + msg.length);
+      var m2 = new NativeBuffer(ed25519.constants.SIGN_BYTE_LENGTH + msg.length);
       var i;
       for (i = 0; i < ed25519.constants.SIGN_BYTE_LENGTH; ++i) {
         sm[i] = sig[i];
@@ -14545,7 +14548,7 @@ var require_ed25519 = __commonJS({
       for (i = 0; i < msg.length; ++i) {
         sm[i + ed25519.constants.SIGN_BYTE_LENGTH] = msg[i];
       }
-      return crypto_sign_open(m, sm, sm.length, publicKey) >= 0;
+      return crypto_sign_open(m2, sm, sm.length, publicKey) >= 0;
     };
     function messageToNativeBuffer(options) {
       var message = options.message;
@@ -14580,7 +14583,7 @@ var require_ed25519 = __commonJS({
     }
     var gf0 = gf();
     var gf1 = gf([1]);
-    var D = gf([
+    var D2 = gf([
       30883,
       4953,
       19914,
@@ -14598,7 +14601,7 @@ var require_ed25519 = __commonJS({
       27886,
       20995
     ]);
-    var D2 = gf([
+    var D22 = gf([
       61785,
       9906,
       39828,
@@ -14616,7 +14619,7 @@ var require_ed25519 = __commonJS({
       55772,
       9222
     ]);
-    var X = gf([
+    var X2 = gf([
       54554,
       36645,
       11616,
@@ -14652,7 +14655,7 @@ var require_ed25519 = __commonJS({
       26214,
       26214
     ]);
-    var L = new Float64Array([
+    var L2 = new Float64Array([
       237,
       211,
       245,
@@ -14686,7 +14689,7 @@ var require_ed25519 = __commonJS({
       0,
       16
     ]);
-    var I = gf([
+    var I2 = gf([
       41136,
       18958,
       6951,
@@ -14721,30 +14724,30 @@ var require_ed25519 = __commonJS({
     function crypto_sign_keypair(pk, sk) {
       var p = [gf(), gf(), gf(), gf()];
       var i;
-      var d = sha512(sk, 32);
-      d[0] &= 248;
-      d[31] &= 127;
-      d[31] |= 64;
-      scalarbase(p, d);
+      var d2 = sha512(sk, 32);
+      d2[0] &= 248;
+      d2[31] &= 127;
+      d2[31] |= 64;
+      scalarbase(p, d2);
       pack(pk, p);
       for (i = 0; i < 32; ++i) {
         sk[i + 32] = pk[i];
       }
       return 0;
     }
-    function crypto_sign(sm, m, n, sk) {
-      var i, j, x = new Float64Array(64);
+    function crypto_sign(sm, m2, n, sk) {
+      var i, j2, x2 = new Float64Array(64);
       var p = [gf(), gf(), gf(), gf()];
-      var d = sha512(sk, 32);
-      d[0] &= 248;
-      d[31] &= 127;
-      d[31] |= 64;
+      var d2 = sha512(sk, 32);
+      d2[0] &= 248;
+      d2[31] &= 127;
+      d2[31] |= 64;
       var smlen = n + 64;
       for (i = 0; i < n; ++i) {
-        sm[64 + i] = m[i];
+        sm[64 + i] = m2[i];
       }
       for (i = 0; i < 32; ++i) {
-        sm[32 + i] = d[32 + i];
+        sm[32 + i] = d2[32 + i];
       }
       var r = sha512(sm.subarray(32), n + 32);
       reduce(r);
@@ -14756,142 +14759,142 @@ var require_ed25519 = __commonJS({
       var h = sha512(sm, n + 64);
       reduce(h);
       for (i = 32; i < 64; ++i) {
-        x[i] = 0;
+        x2[i] = 0;
       }
       for (i = 0; i < 32; ++i) {
-        x[i] = r[i];
+        x2[i] = r[i];
       }
       for (i = 0; i < 32; ++i) {
-        for (j = 0; j < 32; j++) {
-          x[i + j] += h[i] * d[j];
+        for (j2 = 0; j2 < 32; j2++) {
+          x2[i + j2] += h[i] * d2[j2];
         }
       }
-      modL(sm.subarray(32), x);
+      modL(sm.subarray(32), x2);
       return smlen;
     }
-    function crypto_sign_open(m, sm, n, pk) {
+    function crypto_sign_open(m2, sm, n, pk) {
       var i, mlen;
       var t = new NativeBuffer(32);
-      var p = [gf(), gf(), gf(), gf()], q = [gf(), gf(), gf(), gf()];
+      var p = [gf(), gf(), gf(), gf()], q2 = [gf(), gf(), gf(), gf()];
       mlen = -1;
       if (n < 64) {
         return -1;
       }
-      if (unpackneg(q, pk)) {
+      if (unpackneg(q2, pk)) {
         return -1;
       }
       for (i = 0; i < n; ++i) {
-        m[i] = sm[i];
+        m2[i] = sm[i];
       }
       for (i = 0; i < 32; ++i) {
-        m[i + 32] = pk[i];
+        m2[i + 32] = pk[i];
       }
-      var h = sha512(m, n);
+      var h = sha512(m2, n);
       reduce(h);
-      scalarmult(p, q, h);
-      scalarbase(q, sm.subarray(32));
-      add(p, q);
+      scalarmult(p, q2, h);
+      scalarbase(q2, sm.subarray(32));
+      add(p, q2);
       pack(t, p);
       n -= 64;
       if (crypto_verify_32(sm, 0, t, 0)) {
         for (i = 0; i < n; ++i) {
-          m[i] = 0;
+          m2[i] = 0;
         }
         return -1;
       }
       for (i = 0; i < n; ++i) {
-        m[i] = sm[i + 64];
+        m2[i] = sm[i + 64];
       }
       mlen = n;
       return mlen;
     }
-    function modL(r, x) {
-      var carry, i, j, k;
+    function modL(r, x2) {
+      var carry, i, j2, k2;
       for (i = 63; i >= 32; --i) {
         carry = 0;
-        for (j = i - 32, k = i - 12; j < k; ++j) {
-          x[j] += carry - 16 * x[i] * L[j - (i - 32)];
-          carry = x[j] + 128 >> 8;
-          x[j] -= carry * 256;
+        for (j2 = i - 32, k2 = i - 12; j2 < k2; ++j2) {
+          x2[j2] += carry - 16 * x2[i] * L2[j2 - (i - 32)];
+          carry = x2[j2] + 128 >> 8;
+          x2[j2] -= carry * 256;
         }
-        x[j] += carry;
-        x[i] = 0;
+        x2[j2] += carry;
+        x2[i] = 0;
       }
       carry = 0;
-      for (j = 0; j < 32; ++j) {
-        x[j] += carry - (x[31] >> 4) * L[j];
-        carry = x[j] >> 8;
-        x[j] &= 255;
+      for (j2 = 0; j2 < 32; ++j2) {
+        x2[j2] += carry - (x2[31] >> 4) * L2[j2];
+        carry = x2[j2] >> 8;
+        x2[j2] &= 255;
       }
-      for (j = 0; j < 32; ++j) {
-        x[j] -= carry * L[j];
+      for (j2 = 0; j2 < 32; ++j2) {
+        x2[j2] -= carry * L2[j2];
       }
       for (i = 0; i < 32; ++i) {
-        x[i + 1] += x[i] >> 8;
-        r[i] = x[i] & 255;
+        x2[i + 1] += x2[i] >> 8;
+        r[i] = x2[i] & 255;
       }
     }
     function reduce(r) {
-      var x = new Float64Array(64);
+      var x2 = new Float64Array(64);
       for (var i = 0; i < 64; ++i) {
-        x[i] = r[i];
+        x2[i] = r[i];
         r[i] = 0;
       }
-      modL(r, x);
+      modL(r, x2);
     }
-    function add(p, q) {
-      var a = gf(), b = gf(), c = gf(), d = gf(), e = gf(), f = gf(), g = gf(), h = gf(), t = gf();
-      Z(a, p[1], p[0]);
-      Z(t, q[1], q[0]);
-      M(a, a, t);
-      A(b, p[0], p[1]);
-      A(t, q[0], q[1]);
-      M(b, b, t);
-      M(c, p[3], q[3]);
-      M(c, c, D2);
-      M(d, p[2], q[2]);
-      A(d, d, d);
-      Z(e, b, a);
-      Z(f, d, c);
-      A(g, d, c);
-      A(h, b, a);
-      M(p[0], e, f);
-      M(p[1], h, g);
-      M(p[2], g, f);
-      M(p[3], e, h);
+    function add(p, q2) {
+      var a = gf(), b2 = gf(), c = gf(), d2 = gf(), e = gf(), f = gf(), g = gf(), h = gf(), t = gf();
+      Z2(a, p[1], p[0]);
+      Z2(t, q2[1], q2[0]);
+      M2(a, a, t);
+      A(b2, p[0], p[1]);
+      A(t, q2[0], q2[1]);
+      M2(b2, b2, t);
+      M2(c, p[3], q2[3]);
+      M2(c, c, D22);
+      M2(d2, p[2], q2[2]);
+      A(d2, d2, d2);
+      Z2(e, b2, a);
+      Z2(f, d2, c);
+      A(g, d2, c);
+      A(h, b2, a);
+      M2(p[0], e, f);
+      M2(p[1], h, g);
+      M2(p[2], g, f);
+      M2(p[3], e, h);
     }
-    function cswap(p, q, b) {
+    function cswap(p, q2, b2) {
       for (var i = 0; i < 4; ++i) {
-        sel25519(p[i], q[i], b);
+        sel25519(p[i], q2[i], b2);
       }
     }
     function pack(r, p) {
       var tx = gf(), ty = gf(), zi = gf();
       inv25519(zi, p[2]);
-      M(tx, p[0], zi);
-      M(ty, p[1], zi);
+      M2(tx, p[0], zi);
+      M2(ty, p[1], zi);
       pack25519(r, ty);
       r[31] ^= par25519(tx) << 7;
     }
     function pack25519(o, n) {
-      var i, j, b;
-      var m = gf(), t = gf();
+      var i, j2, b2;
+      var m2 = gf(), t = gf();
       for (i = 0; i < 16; ++i) {
         t[i] = n[i];
       }
       car25519(t);
       car25519(t);
       car25519(t);
-      for (j = 0; j < 2; ++j) {
-        m[0] = t[0] - 65517;
+      for (j2 = 0; j2 < 2; ++j2) {
+        m2[0] = t[0] - 65517;
         for (i = 1; i < 15; ++i) {
-          m[i] = t[i] - 65535 - (m[i - 1] >> 16 & 1);
-          m[i - 1] &= 65535;
+          m2[i] = t[i] - 65535 - (m2[i - 1] >> 16 & 1);
+          m2[i - 1] &= 65535;
         }
-        m[15] = t[15] - 32767 - (m[14] >> 16 & 1);
-        b = m[15] >> 16 & 1;
-        m[14] &= 65535;
-        sel25519(t, m, 1 - b);
+        m2[15] = t[15] - 32767 - (m2[14] >> 16 & 1);
+        b2 = m2[15] >> 16 & 1;
+        m2[14] &= 65535;
+        sel25519(t, m2, 1 - b2);
       }
       for (i = 0; i < 16; i++) {
         o[2 * i] = t[i] & 255;
@@ -14902,34 +14905,34 @@ var require_ed25519 = __commonJS({
       var t = gf(), chk = gf(), num = gf(), den = gf(), den2 = gf(), den4 = gf(), den6 = gf();
       set25519(r[2], gf1);
       unpack25519(r[1], p);
-      S(num, r[1]);
-      M(den, num, D);
-      Z(num, num, r[2]);
+      S2(num, r[1]);
+      M2(den, num, D2);
+      Z2(num, num, r[2]);
       A(den, r[2], den);
-      S(den2, den);
-      S(den4, den2);
-      M(den6, den4, den2);
-      M(t, den6, num);
-      M(t, t, den);
+      S2(den2, den);
+      S2(den4, den2);
+      M2(den6, den4, den2);
+      M2(t, den6, num);
+      M2(t, t, den);
       pow2523(t, t);
-      M(t, t, num);
-      M(t, t, den);
-      M(t, t, den);
-      M(r[0], t, den);
-      S(chk, r[0]);
-      M(chk, chk, den);
+      M2(t, t, num);
+      M2(t, t, den);
+      M2(t, t, den);
+      M2(r[0], t, den);
+      S2(chk, r[0]);
+      M2(chk, chk, den);
       if (neq25519(chk, num)) {
-        M(r[0], r[0], I);
+        M2(r[0], r[0], I2);
       }
-      S(chk, r[0]);
-      M(chk, chk, den);
+      S2(chk, r[0]);
+      M2(chk, chk, den);
       if (neq25519(chk, num)) {
         return -1;
       }
       if (par25519(r[0]) === p[31] >> 7) {
-        Z(r[0], gf0, r[0]);
+        Z2(r[0], gf0, r[0]);
       }
-      M(r[3], r[0], r[1]);
+      M2(r[3], r[0], r[1]);
       return 0;
     }
     function unpack25519(o, n) {
@@ -14946,58 +14949,58 @@ var require_ed25519 = __commonJS({
         c[a] = i[a];
       }
       for (a = 250; a >= 0; --a) {
-        S(c, c);
+        S2(c, c);
         if (a !== 1) {
-          M(c, c, i);
+          M2(c, c, i);
         }
       }
       for (a = 0; a < 16; ++a) {
         o[a] = c[a];
       }
     }
-    function neq25519(a, b) {
+    function neq25519(a, b2) {
       var c = new NativeBuffer(32);
-      var d = new NativeBuffer(32);
+      var d2 = new NativeBuffer(32);
       pack25519(c, a);
-      pack25519(d, b);
-      return crypto_verify_32(c, 0, d, 0);
+      pack25519(d2, b2);
+      return crypto_verify_32(c, 0, d2, 0);
     }
-    function crypto_verify_32(x, xi, y, yi) {
-      return vn(x, xi, y, yi, 32);
+    function crypto_verify_32(x2, xi, y2, yi) {
+      return vn(x2, xi, y2, yi, 32);
     }
-    function vn(x, xi, y, yi, n) {
-      var i, d = 0;
+    function vn(x2, xi, y2, yi, n) {
+      var i, d2 = 0;
       for (i = 0; i < n; ++i) {
-        d |= x[xi + i] ^ y[yi + i];
+        d2 |= x2[xi + i] ^ y2[yi + i];
       }
-      return (1 & d - 1 >>> 8) - 1;
+      return (1 & d2 - 1 >>> 8) - 1;
     }
     function par25519(a) {
-      var d = new NativeBuffer(32);
-      pack25519(d, a);
-      return d[0] & 1;
+      var d2 = new NativeBuffer(32);
+      pack25519(d2, a);
+      return d2[0] & 1;
     }
-    function scalarmult(p, q, s) {
-      var b, i;
+    function scalarmult(p, q2, s) {
+      var b2, i;
       set25519(p[0], gf0);
       set25519(p[1], gf1);
       set25519(p[2], gf1);
       set25519(p[3], gf0);
       for (i = 255; i >= 0; --i) {
-        b = s[i / 8 | 0] >> (i & 7) & 1;
-        cswap(p, q, b);
-        add(q, p);
+        b2 = s[i / 8 | 0] >> (i & 7) & 1;
+        cswap(p, q2, b2);
+        add(q2, p);
         add(p, p);
-        cswap(p, q, b);
+        cswap(p, q2, b2);
       }
     }
     function scalarbase(p, s) {
-      var q = [gf(), gf(), gf(), gf()];
-      set25519(q[0], X);
-      set25519(q[1], Y);
-      set25519(q[2], gf1);
-      M(q[3], X, Y);
-      scalarmult(p, q, s);
+      var q2 = [gf(), gf(), gf(), gf()];
+      set25519(q2[0], X2);
+      set25519(q2[1], Y);
+      set25519(q2[2], gf1);
+      M2(q2[3], X2, Y);
+      scalarmult(p, q2, s);
     }
     function set25519(r, a) {
       var i;
@@ -15012,9 +15015,9 @@ var require_ed25519 = __commonJS({
         c[a] = i[a];
       }
       for (a = 253; a >= 0; --a) {
-        S(c, c);
+        S2(c, c);
         if (a !== 2 && a !== 4) {
-          M(c, c, i);
+          M2(c, c, i);
         }
       }
       for (a = 0; a < 16; ++a) {
@@ -15022,20 +15025,20 @@ var require_ed25519 = __commonJS({
       }
     }
     function car25519(o) {
-      var i, v, c = 1;
+      var i, v2, c = 1;
       for (i = 0; i < 16; ++i) {
-        v = o[i] + c + 65535;
-        c = Math.floor(v / 65536);
-        o[i] = v - c * 65536;
+        v2 = o[i] + c + 65535;
+        c = Math.floor(v2 / 65536);
+        o[i] = v2 - c * 65536;
       }
       o[0] += c - 1 + 37 * (c - 1);
     }
-    function sel25519(p, q, b) {
-      var t, c = ~(b - 1);
+    function sel25519(p, q2, b2) {
+      var t, c = ~(b2 - 1);
       for (var i = 0; i < 16; ++i) {
-        t = c & (p[i] ^ q[i]);
+        t = c & (p[i] ^ q2[i]);
         p[i] ^= t;
-        q[i] ^= t;
+        q2[i] ^= t;
       }
     }
     function gf(init) {
@@ -15047,293 +15050,293 @@ var require_ed25519 = __commonJS({
       }
       return r;
     }
-    function A(o, a, b) {
+    function A(o, a, b2) {
       for (var i = 0; i < 16; ++i) {
-        o[i] = a[i] + b[i];
+        o[i] = a[i] + b2[i];
       }
     }
-    function Z(o, a, b) {
+    function Z2(o, a, b2) {
       for (var i = 0; i < 16; ++i) {
-        o[i] = a[i] - b[i];
+        o[i] = a[i] - b2[i];
       }
     }
-    function S(o, a) {
-      M(o, a, a);
+    function S2(o, a) {
+      M2(o, a, a);
     }
-    function M(o, a, b) {
-      var v, c, t0 = 0, t1 = 0, t2 = 0, t3 = 0, t4 = 0, t5 = 0, t6 = 0, t7 = 0, t8 = 0, t9 = 0, t10 = 0, t11 = 0, t12 = 0, t13 = 0, t14 = 0, t15 = 0, t16 = 0, t17 = 0, t18 = 0, t19 = 0, t20 = 0, t21 = 0, t22 = 0, t23 = 0, t24 = 0, t25 = 0, t26 = 0, t27 = 0, t28 = 0, t29 = 0, t30 = 0, b0 = b[0], b1 = b[1], b2 = b[2], b3 = b[3], b4 = b[4], b5 = b[5], b6 = b[6], b7 = b[7], b8 = b[8], b9 = b[9], b10 = b[10], b11 = b[11], b12 = b[12], b13 = b[13], b14 = b[14], b15 = b[15];
-      v = a[0];
-      t0 += v * b0;
-      t1 += v * b1;
-      t2 += v * b2;
-      t3 += v * b3;
-      t4 += v * b4;
-      t5 += v * b5;
-      t6 += v * b6;
-      t7 += v * b7;
-      t8 += v * b8;
-      t9 += v * b9;
-      t10 += v * b10;
-      t11 += v * b11;
-      t12 += v * b12;
-      t13 += v * b13;
-      t14 += v * b14;
-      t15 += v * b15;
-      v = a[1];
-      t1 += v * b0;
-      t2 += v * b1;
-      t3 += v * b2;
-      t4 += v * b3;
-      t5 += v * b4;
-      t6 += v * b5;
-      t7 += v * b6;
-      t8 += v * b7;
-      t9 += v * b8;
-      t10 += v * b9;
-      t11 += v * b10;
-      t12 += v * b11;
-      t13 += v * b12;
-      t14 += v * b13;
-      t15 += v * b14;
-      t16 += v * b15;
-      v = a[2];
-      t2 += v * b0;
-      t3 += v * b1;
-      t4 += v * b2;
-      t5 += v * b3;
-      t6 += v * b4;
-      t7 += v * b5;
-      t8 += v * b6;
-      t9 += v * b7;
-      t10 += v * b8;
-      t11 += v * b9;
-      t12 += v * b10;
-      t13 += v * b11;
-      t14 += v * b12;
-      t15 += v * b13;
-      t16 += v * b14;
-      t17 += v * b15;
-      v = a[3];
-      t3 += v * b0;
-      t4 += v * b1;
-      t5 += v * b2;
-      t6 += v * b3;
-      t7 += v * b4;
-      t8 += v * b5;
-      t9 += v * b6;
-      t10 += v * b7;
-      t11 += v * b8;
-      t12 += v * b9;
-      t13 += v * b10;
-      t14 += v * b11;
-      t15 += v * b12;
-      t16 += v * b13;
-      t17 += v * b14;
-      t18 += v * b15;
-      v = a[4];
-      t4 += v * b0;
-      t5 += v * b1;
-      t6 += v * b2;
-      t7 += v * b3;
-      t8 += v * b4;
-      t9 += v * b5;
-      t10 += v * b6;
-      t11 += v * b7;
-      t12 += v * b8;
-      t13 += v * b9;
-      t14 += v * b10;
-      t15 += v * b11;
-      t16 += v * b12;
-      t17 += v * b13;
-      t18 += v * b14;
-      t19 += v * b15;
-      v = a[5];
-      t5 += v * b0;
-      t6 += v * b1;
-      t7 += v * b2;
-      t8 += v * b3;
-      t9 += v * b4;
-      t10 += v * b5;
-      t11 += v * b6;
-      t12 += v * b7;
-      t13 += v * b8;
-      t14 += v * b9;
-      t15 += v * b10;
-      t16 += v * b11;
-      t17 += v * b12;
-      t18 += v * b13;
-      t19 += v * b14;
-      t20 += v * b15;
-      v = a[6];
-      t6 += v * b0;
-      t7 += v * b1;
-      t8 += v * b2;
-      t9 += v * b3;
-      t10 += v * b4;
-      t11 += v * b5;
-      t12 += v * b6;
-      t13 += v * b7;
-      t14 += v * b8;
-      t15 += v * b9;
-      t16 += v * b10;
-      t17 += v * b11;
-      t18 += v * b12;
-      t19 += v * b13;
-      t20 += v * b14;
-      t21 += v * b15;
-      v = a[7];
-      t7 += v * b0;
-      t8 += v * b1;
-      t9 += v * b2;
-      t10 += v * b3;
-      t11 += v * b4;
-      t12 += v * b5;
-      t13 += v * b6;
-      t14 += v * b7;
-      t15 += v * b8;
-      t16 += v * b9;
-      t17 += v * b10;
-      t18 += v * b11;
-      t19 += v * b12;
-      t20 += v * b13;
-      t21 += v * b14;
-      t22 += v * b15;
-      v = a[8];
-      t8 += v * b0;
-      t9 += v * b1;
-      t10 += v * b2;
-      t11 += v * b3;
-      t12 += v * b4;
-      t13 += v * b5;
-      t14 += v * b6;
-      t15 += v * b7;
-      t16 += v * b8;
-      t17 += v * b9;
-      t18 += v * b10;
-      t19 += v * b11;
-      t20 += v * b12;
-      t21 += v * b13;
-      t22 += v * b14;
-      t23 += v * b15;
-      v = a[9];
-      t9 += v * b0;
-      t10 += v * b1;
-      t11 += v * b2;
-      t12 += v * b3;
-      t13 += v * b4;
-      t14 += v * b5;
-      t15 += v * b6;
-      t16 += v * b7;
-      t17 += v * b8;
-      t18 += v * b9;
-      t19 += v * b10;
-      t20 += v * b11;
-      t21 += v * b12;
-      t22 += v * b13;
-      t23 += v * b14;
-      t24 += v * b15;
-      v = a[10];
-      t10 += v * b0;
-      t11 += v * b1;
-      t12 += v * b2;
-      t13 += v * b3;
-      t14 += v * b4;
-      t15 += v * b5;
-      t16 += v * b6;
-      t17 += v * b7;
-      t18 += v * b8;
-      t19 += v * b9;
-      t20 += v * b10;
-      t21 += v * b11;
-      t22 += v * b12;
-      t23 += v * b13;
-      t24 += v * b14;
-      t25 += v * b15;
-      v = a[11];
-      t11 += v * b0;
-      t12 += v * b1;
-      t13 += v * b2;
-      t14 += v * b3;
-      t15 += v * b4;
-      t16 += v * b5;
-      t17 += v * b6;
-      t18 += v * b7;
-      t19 += v * b8;
-      t20 += v * b9;
-      t21 += v * b10;
-      t22 += v * b11;
-      t23 += v * b12;
-      t24 += v * b13;
-      t25 += v * b14;
-      t26 += v * b15;
-      v = a[12];
-      t12 += v * b0;
-      t13 += v * b1;
-      t14 += v * b2;
-      t15 += v * b3;
-      t16 += v * b4;
-      t17 += v * b5;
-      t18 += v * b6;
-      t19 += v * b7;
-      t20 += v * b8;
-      t21 += v * b9;
-      t22 += v * b10;
-      t23 += v * b11;
-      t24 += v * b12;
-      t25 += v * b13;
-      t26 += v * b14;
-      t27 += v * b15;
-      v = a[13];
-      t13 += v * b0;
-      t14 += v * b1;
-      t15 += v * b2;
-      t16 += v * b3;
-      t17 += v * b4;
-      t18 += v * b5;
-      t19 += v * b6;
-      t20 += v * b7;
-      t21 += v * b8;
-      t22 += v * b9;
-      t23 += v * b10;
-      t24 += v * b11;
-      t25 += v * b12;
-      t26 += v * b13;
-      t27 += v * b14;
-      t28 += v * b15;
-      v = a[14];
-      t14 += v * b0;
-      t15 += v * b1;
-      t16 += v * b2;
-      t17 += v * b3;
-      t18 += v * b4;
-      t19 += v * b5;
-      t20 += v * b6;
-      t21 += v * b7;
-      t22 += v * b8;
-      t23 += v * b9;
-      t24 += v * b10;
-      t25 += v * b11;
-      t26 += v * b12;
-      t27 += v * b13;
-      t28 += v * b14;
-      t29 += v * b15;
-      v = a[15];
-      t15 += v * b0;
-      t16 += v * b1;
-      t17 += v * b2;
-      t18 += v * b3;
-      t19 += v * b4;
-      t20 += v * b5;
-      t21 += v * b6;
-      t22 += v * b7;
-      t23 += v * b8;
-      t24 += v * b9;
-      t25 += v * b10;
-      t26 += v * b11;
-      t27 += v * b12;
-      t28 += v * b13;
-      t29 += v * b14;
-      t30 += v * b15;
+    function M2(o, a, b2) {
+      var v2, c, t0 = 0, t1 = 0, t2 = 0, t3 = 0, t4 = 0, t5 = 0, t6 = 0, t7 = 0, t8 = 0, t9 = 0, t10 = 0, t11 = 0, t12 = 0, t13 = 0, t14 = 0, t15 = 0, t16 = 0, t17 = 0, t18 = 0, t19 = 0, t20 = 0, t21 = 0, t22 = 0, t23 = 0, t24 = 0, t25 = 0, t26 = 0, t27 = 0, t28 = 0, t29 = 0, t30 = 0, b0 = b2[0], b1 = b2[1], b22 = b2[2], b3 = b2[3], b4 = b2[4], b5 = b2[5], b6 = b2[6], b7 = b2[7], b8 = b2[8], b9 = b2[9], b10 = b2[10], b11 = b2[11], b12 = b2[12], b13 = b2[13], b14 = b2[14], b15 = b2[15];
+      v2 = a[0];
+      t0 += v2 * b0;
+      t1 += v2 * b1;
+      t2 += v2 * b22;
+      t3 += v2 * b3;
+      t4 += v2 * b4;
+      t5 += v2 * b5;
+      t6 += v2 * b6;
+      t7 += v2 * b7;
+      t8 += v2 * b8;
+      t9 += v2 * b9;
+      t10 += v2 * b10;
+      t11 += v2 * b11;
+      t12 += v2 * b12;
+      t13 += v2 * b13;
+      t14 += v2 * b14;
+      t15 += v2 * b15;
+      v2 = a[1];
+      t1 += v2 * b0;
+      t2 += v2 * b1;
+      t3 += v2 * b22;
+      t4 += v2 * b3;
+      t5 += v2 * b4;
+      t6 += v2 * b5;
+      t7 += v2 * b6;
+      t8 += v2 * b7;
+      t9 += v2 * b8;
+      t10 += v2 * b9;
+      t11 += v2 * b10;
+      t12 += v2 * b11;
+      t13 += v2 * b12;
+      t14 += v2 * b13;
+      t15 += v2 * b14;
+      t16 += v2 * b15;
+      v2 = a[2];
+      t2 += v2 * b0;
+      t3 += v2 * b1;
+      t4 += v2 * b22;
+      t5 += v2 * b3;
+      t6 += v2 * b4;
+      t7 += v2 * b5;
+      t8 += v2 * b6;
+      t9 += v2 * b7;
+      t10 += v2 * b8;
+      t11 += v2 * b9;
+      t12 += v2 * b10;
+      t13 += v2 * b11;
+      t14 += v2 * b12;
+      t15 += v2 * b13;
+      t16 += v2 * b14;
+      t17 += v2 * b15;
+      v2 = a[3];
+      t3 += v2 * b0;
+      t4 += v2 * b1;
+      t5 += v2 * b22;
+      t6 += v2 * b3;
+      t7 += v2 * b4;
+      t8 += v2 * b5;
+      t9 += v2 * b6;
+      t10 += v2 * b7;
+      t11 += v2 * b8;
+      t12 += v2 * b9;
+      t13 += v2 * b10;
+      t14 += v2 * b11;
+      t15 += v2 * b12;
+      t16 += v2 * b13;
+      t17 += v2 * b14;
+      t18 += v2 * b15;
+      v2 = a[4];
+      t4 += v2 * b0;
+      t5 += v2 * b1;
+      t6 += v2 * b22;
+      t7 += v2 * b3;
+      t8 += v2 * b4;
+      t9 += v2 * b5;
+      t10 += v2 * b6;
+      t11 += v2 * b7;
+      t12 += v2 * b8;
+      t13 += v2 * b9;
+      t14 += v2 * b10;
+      t15 += v2 * b11;
+      t16 += v2 * b12;
+      t17 += v2 * b13;
+      t18 += v2 * b14;
+      t19 += v2 * b15;
+      v2 = a[5];
+      t5 += v2 * b0;
+      t6 += v2 * b1;
+      t7 += v2 * b22;
+      t8 += v2 * b3;
+      t9 += v2 * b4;
+      t10 += v2 * b5;
+      t11 += v2 * b6;
+      t12 += v2 * b7;
+      t13 += v2 * b8;
+      t14 += v2 * b9;
+      t15 += v2 * b10;
+      t16 += v2 * b11;
+      t17 += v2 * b12;
+      t18 += v2 * b13;
+      t19 += v2 * b14;
+      t20 += v2 * b15;
+      v2 = a[6];
+      t6 += v2 * b0;
+      t7 += v2 * b1;
+      t8 += v2 * b22;
+      t9 += v2 * b3;
+      t10 += v2 * b4;
+      t11 += v2 * b5;
+      t12 += v2 * b6;
+      t13 += v2 * b7;
+      t14 += v2 * b8;
+      t15 += v2 * b9;
+      t16 += v2 * b10;
+      t17 += v2 * b11;
+      t18 += v2 * b12;
+      t19 += v2 * b13;
+      t20 += v2 * b14;
+      t21 += v2 * b15;
+      v2 = a[7];
+      t7 += v2 * b0;
+      t8 += v2 * b1;
+      t9 += v2 * b22;
+      t10 += v2 * b3;
+      t11 += v2 * b4;
+      t12 += v2 * b5;
+      t13 += v2 * b6;
+      t14 += v2 * b7;
+      t15 += v2 * b8;
+      t16 += v2 * b9;
+      t17 += v2 * b10;
+      t18 += v2 * b11;
+      t19 += v2 * b12;
+      t20 += v2 * b13;
+      t21 += v2 * b14;
+      t22 += v2 * b15;
+      v2 = a[8];
+      t8 += v2 * b0;
+      t9 += v2 * b1;
+      t10 += v2 * b22;
+      t11 += v2 * b3;
+      t12 += v2 * b4;
+      t13 += v2 * b5;
+      t14 += v2 * b6;
+      t15 += v2 * b7;
+      t16 += v2 * b8;
+      t17 += v2 * b9;
+      t18 += v2 * b10;
+      t19 += v2 * b11;
+      t20 += v2 * b12;
+      t21 += v2 * b13;
+      t22 += v2 * b14;
+      t23 += v2 * b15;
+      v2 = a[9];
+      t9 += v2 * b0;
+      t10 += v2 * b1;
+      t11 += v2 * b22;
+      t12 += v2 * b3;
+      t13 += v2 * b4;
+      t14 += v2 * b5;
+      t15 += v2 * b6;
+      t16 += v2 * b7;
+      t17 += v2 * b8;
+      t18 += v2 * b9;
+      t19 += v2 * b10;
+      t20 += v2 * b11;
+      t21 += v2 * b12;
+      t22 += v2 * b13;
+      t23 += v2 * b14;
+      t24 += v2 * b15;
+      v2 = a[10];
+      t10 += v2 * b0;
+      t11 += v2 * b1;
+      t12 += v2 * b22;
+      t13 += v2 * b3;
+      t14 += v2 * b4;
+      t15 += v2 * b5;
+      t16 += v2 * b6;
+      t17 += v2 * b7;
+      t18 += v2 * b8;
+      t19 += v2 * b9;
+      t20 += v2 * b10;
+      t21 += v2 * b11;
+      t22 += v2 * b12;
+      t23 += v2 * b13;
+      t24 += v2 * b14;
+      t25 += v2 * b15;
+      v2 = a[11];
+      t11 += v2 * b0;
+      t12 += v2 * b1;
+      t13 += v2 * b22;
+      t14 += v2 * b3;
+      t15 += v2 * b4;
+      t16 += v2 * b5;
+      t17 += v2 * b6;
+      t18 += v2 * b7;
+      t19 += v2 * b8;
+      t20 += v2 * b9;
+      t21 += v2 * b10;
+      t22 += v2 * b11;
+      t23 += v2 * b12;
+      t24 += v2 * b13;
+      t25 += v2 * b14;
+      t26 += v2 * b15;
+      v2 = a[12];
+      t12 += v2 * b0;
+      t13 += v2 * b1;
+      t14 += v2 * b22;
+      t15 += v2 * b3;
+      t16 += v2 * b4;
+      t17 += v2 * b5;
+      t18 += v2 * b6;
+      t19 += v2 * b7;
+      t20 += v2 * b8;
+      t21 += v2 * b9;
+      t22 += v2 * b10;
+      t23 += v2 * b11;
+      t24 += v2 * b12;
+      t25 += v2 * b13;
+      t26 += v2 * b14;
+      t27 += v2 * b15;
+      v2 = a[13];
+      t13 += v2 * b0;
+      t14 += v2 * b1;
+      t15 += v2 * b22;
+      t16 += v2 * b3;
+      t17 += v2 * b4;
+      t18 += v2 * b5;
+      t19 += v2 * b6;
+      t20 += v2 * b7;
+      t21 += v2 * b8;
+      t22 += v2 * b9;
+      t23 += v2 * b10;
+      t24 += v2 * b11;
+      t25 += v2 * b12;
+      t26 += v2 * b13;
+      t27 += v2 * b14;
+      t28 += v2 * b15;
+      v2 = a[14];
+      t14 += v2 * b0;
+      t15 += v2 * b1;
+      t16 += v2 * b22;
+      t17 += v2 * b3;
+      t18 += v2 * b4;
+      t19 += v2 * b5;
+      t20 += v2 * b6;
+      t21 += v2 * b7;
+      t22 += v2 * b8;
+      t23 += v2 * b9;
+      t24 += v2 * b10;
+      t25 += v2 * b11;
+      t26 += v2 * b12;
+      t27 += v2 * b13;
+      t28 += v2 * b14;
+      t29 += v2 * b15;
+      v2 = a[15];
+      t15 += v2 * b0;
+      t16 += v2 * b1;
+      t17 += v2 * b22;
+      t18 += v2 * b3;
+      t19 += v2 * b4;
+      t20 += v2 * b5;
+      t21 += v2 * b6;
+      t22 += v2 * b7;
+      t23 += v2 * b8;
+      t24 += v2 * b9;
+      t25 += v2 * b10;
+      t26 += v2 * b11;
+      t27 += v2 * b12;
+      t28 += v2 * b13;
+      t29 += v2 * b14;
+      t30 += v2 * b15;
       t0 += 38 * t16;
       t1 += 38 * t17;
       t2 += 38 * t18;
@@ -15350,104 +15353,104 @@ var require_ed25519 = __commonJS({
       t13 += 38 * t29;
       t14 += 38 * t30;
       c = 1;
-      v = t0 + c + 65535;
-      c = Math.floor(v / 65536);
-      t0 = v - c * 65536;
-      v = t1 + c + 65535;
-      c = Math.floor(v / 65536);
-      t1 = v - c * 65536;
-      v = t2 + c + 65535;
-      c = Math.floor(v / 65536);
-      t2 = v - c * 65536;
-      v = t3 + c + 65535;
-      c = Math.floor(v / 65536);
-      t3 = v - c * 65536;
-      v = t4 + c + 65535;
-      c = Math.floor(v / 65536);
-      t4 = v - c * 65536;
-      v = t5 + c + 65535;
-      c = Math.floor(v / 65536);
-      t5 = v - c * 65536;
-      v = t6 + c + 65535;
-      c = Math.floor(v / 65536);
-      t6 = v - c * 65536;
-      v = t7 + c + 65535;
-      c = Math.floor(v / 65536);
-      t7 = v - c * 65536;
-      v = t8 + c + 65535;
-      c = Math.floor(v / 65536);
-      t8 = v - c * 65536;
-      v = t9 + c + 65535;
-      c = Math.floor(v / 65536);
-      t9 = v - c * 65536;
-      v = t10 + c + 65535;
-      c = Math.floor(v / 65536);
-      t10 = v - c * 65536;
-      v = t11 + c + 65535;
-      c = Math.floor(v / 65536);
-      t11 = v - c * 65536;
-      v = t12 + c + 65535;
-      c = Math.floor(v / 65536);
-      t12 = v - c * 65536;
-      v = t13 + c + 65535;
-      c = Math.floor(v / 65536);
-      t13 = v - c * 65536;
-      v = t14 + c + 65535;
-      c = Math.floor(v / 65536);
-      t14 = v - c * 65536;
-      v = t15 + c + 65535;
-      c = Math.floor(v / 65536);
-      t15 = v - c * 65536;
+      v2 = t0 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t0 = v2 - c * 65536;
+      v2 = t1 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t1 = v2 - c * 65536;
+      v2 = t2 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t2 = v2 - c * 65536;
+      v2 = t3 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t3 = v2 - c * 65536;
+      v2 = t4 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t4 = v2 - c * 65536;
+      v2 = t5 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t5 = v2 - c * 65536;
+      v2 = t6 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t6 = v2 - c * 65536;
+      v2 = t7 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t7 = v2 - c * 65536;
+      v2 = t8 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t8 = v2 - c * 65536;
+      v2 = t9 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t9 = v2 - c * 65536;
+      v2 = t10 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t10 = v2 - c * 65536;
+      v2 = t11 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t11 = v2 - c * 65536;
+      v2 = t12 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t12 = v2 - c * 65536;
+      v2 = t13 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t13 = v2 - c * 65536;
+      v2 = t14 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t14 = v2 - c * 65536;
+      v2 = t15 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t15 = v2 - c * 65536;
       t0 += c - 1 + 37 * (c - 1);
       c = 1;
-      v = t0 + c + 65535;
-      c = Math.floor(v / 65536);
-      t0 = v - c * 65536;
-      v = t1 + c + 65535;
-      c = Math.floor(v / 65536);
-      t1 = v - c * 65536;
-      v = t2 + c + 65535;
-      c = Math.floor(v / 65536);
-      t2 = v - c * 65536;
-      v = t3 + c + 65535;
-      c = Math.floor(v / 65536);
-      t3 = v - c * 65536;
-      v = t4 + c + 65535;
-      c = Math.floor(v / 65536);
-      t4 = v - c * 65536;
-      v = t5 + c + 65535;
-      c = Math.floor(v / 65536);
-      t5 = v - c * 65536;
-      v = t6 + c + 65535;
-      c = Math.floor(v / 65536);
-      t6 = v - c * 65536;
-      v = t7 + c + 65535;
-      c = Math.floor(v / 65536);
-      t7 = v - c * 65536;
-      v = t8 + c + 65535;
-      c = Math.floor(v / 65536);
-      t8 = v - c * 65536;
-      v = t9 + c + 65535;
-      c = Math.floor(v / 65536);
-      t9 = v - c * 65536;
-      v = t10 + c + 65535;
-      c = Math.floor(v / 65536);
-      t10 = v - c * 65536;
-      v = t11 + c + 65535;
-      c = Math.floor(v / 65536);
-      t11 = v - c * 65536;
-      v = t12 + c + 65535;
-      c = Math.floor(v / 65536);
-      t12 = v - c * 65536;
-      v = t13 + c + 65535;
-      c = Math.floor(v / 65536);
-      t13 = v - c * 65536;
-      v = t14 + c + 65535;
-      c = Math.floor(v / 65536);
-      t14 = v - c * 65536;
-      v = t15 + c + 65535;
-      c = Math.floor(v / 65536);
-      t15 = v - c * 65536;
+      v2 = t0 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t0 = v2 - c * 65536;
+      v2 = t1 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t1 = v2 - c * 65536;
+      v2 = t2 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t2 = v2 - c * 65536;
+      v2 = t3 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t3 = v2 - c * 65536;
+      v2 = t4 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t4 = v2 - c * 65536;
+      v2 = t5 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t5 = v2 - c * 65536;
+      v2 = t6 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t6 = v2 - c * 65536;
+      v2 = t7 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t7 = v2 - c * 65536;
+      v2 = t8 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t8 = v2 - c * 65536;
+      v2 = t9 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t9 = v2 - c * 65536;
+      v2 = t10 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t10 = v2 - c * 65536;
+      v2 = t11 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t11 = v2 - c * 65536;
+      v2 = t12 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t12 = v2 - c * 65536;
+      v2 = t13 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t13 = v2 - c * 65536;
+      v2 = t14 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t14 = v2 - c * 65536;
+      v2 = t15 + c + 65535;
+      c = Math.floor(v2 / 65536);
+      t15 = v2 - c * 65536;
       t0 += c - 1 + 37 * (c - 1);
       o[0] = t0;
       o[1] = t1;
@@ -15511,14 +15514,14 @@ var require_kem = __commonJS({
       _createKDF(this, md, 1, digestLength || md.digestLength);
     };
     function _createKDF(kdf, md, counterStart, digestLength) {
-      kdf.generate = function(x, length) {
+      kdf.generate = function(x2, length) {
         var key = new forge3.util.ByteBuffer();
-        var k = Math.ceil(length / digestLength) + counterStart;
+        var k2 = Math.ceil(length / digestLength) + counterStart;
         var c = new forge3.util.ByteBuffer();
-        for (var i = counterStart; i < k; ++i) {
+        for (var i = counterStart; i < k2; ++i) {
           c.putInt32(i);
           md.start();
-          md.update(x + c.getBytes());
+          md.update(x2 + c.getBytes());
           var hash = md.digest();
           key.putBytes(hash.getBytes(digestLength));
         }
@@ -16059,8 +16062,8 @@ var require_pkcs7 = __commonJS({
               continue;
             }
             var match = true;
-            for (var j = 0; j < sAttr.length; ++j) {
-              if (rAttr[j].type !== sAttr[j].type || rAttr[j].value !== sAttr[j].value) {
+            for (var j2 = 0; j2 < sAttr.length; ++j2) {
+              if (rAttr[j2].type !== sAttr[j2].type || rAttr[j2].value !== sAttr[j2].value) {
                 match = false;
                 break;
               }
@@ -16541,16 +16544,16 @@ var require_main = __commonJS({
     var DEFAULT_QUARTERLY_NOTE_FORMAT = "YYYY-[Q]Q";
     var DEFAULT_YEARLY_NOTE_FORMAT = "YYYY";
     function shouldUsePeriodicNotesSettings(periodicity) {
-      var _a, _b;
+      var _a2, _b;
       const periodicNotes2 = window.app.plugins.getPlugin("periodic-notes");
-      return periodicNotes2 && ((_b = (_a = periodicNotes2.settings) == null ? void 0 : _a[periodicity]) == null ? void 0 : _b.enabled);
+      return periodicNotes2 && ((_b = (_a2 = periodicNotes2.settings) == null ? void 0 : _a2[periodicity]) == null ? void 0 : _b.enabled);
     }
     function getDailyNoteSettings() {
-      var _a, _b, _c, _d;
+      var _a2, _b, _c, _d;
       try {
         const { internalPlugins, plugins } = window.app;
         if (shouldUsePeriodicNotesSettings("daily")) {
-          const { format: format2, folder: folder2, template: template2 } = ((_b = (_a = plugins.getPlugin("periodic-notes")) == null ? void 0 : _a.settings) == null ? void 0 : _b.daily) || {};
+          const { format: format2, folder: folder2, template: template2 } = ((_b = (_a2 = plugins.getPlugin("periodic-notes")) == null ? void 0 : _a2.settings) == null ? void 0 : _b.daily) || {};
           return {
             format: format2 || DEFAULT_DAILY_NOTE_FORMAT,
             folder: (folder2 == null ? void 0 : folder2.trim()) || "",
@@ -16568,16 +16571,16 @@ var require_main = __commonJS({
       }
     }
     function getWeeklyNoteSettings() {
-      var _a, _b, _c, _d, _e, _f, _g;
+      var _a2, _b, _c, _d, _e2, _f, _g;
       try {
         const pluginManager = window.app.plugins;
-        const calendarSettings = (_a = pluginManager.getPlugin("calendar")) == null ? void 0 : _a.options;
+        const calendarSettings = (_a2 = pluginManager.getPlugin("calendar")) == null ? void 0 : _a2.options;
         const periodicNotesSettings = (_c = (_b = pluginManager.getPlugin("periodic-notes")) == null ? void 0 : _b.settings) == null ? void 0 : _c.weekly;
         if (shouldUsePeriodicNotesSettings("weekly")) {
           return {
             format: periodicNotesSettings.format || DEFAULT_WEEKLY_NOTE_FORMAT,
             folder: ((_d = periodicNotesSettings.folder) == null ? void 0 : _d.trim()) || "",
-            template: ((_e = periodicNotesSettings.template) == null ? void 0 : _e.trim()) || ""
+            template: ((_e2 = periodicNotesSettings.template) == null ? void 0 : _e2.trim()) || ""
           };
         }
         const settings = calendarSettings || {};
@@ -16591,10 +16594,10 @@ var require_main = __commonJS({
       }
     }
     function getMonthlyNoteSettings() {
-      var _a, _b, _c, _d;
+      var _a2, _b, _c, _d;
       const pluginManager = window.app.plugins;
       try {
-        const settings = shouldUsePeriodicNotesSettings("monthly") && ((_b = (_a = pluginManager.getPlugin("periodic-notes")) == null ? void 0 : _a.settings) == null ? void 0 : _b.monthly) || {};
+        const settings = shouldUsePeriodicNotesSettings("monthly") && ((_b = (_a2 = pluginManager.getPlugin("periodic-notes")) == null ? void 0 : _a2.settings) == null ? void 0 : _b.monthly) || {};
         return {
           format: settings.format || DEFAULT_MONTHLY_NOTE_FORMAT,
           folder: ((_c = settings.folder) == null ? void 0 : _c.trim()) || "",
@@ -16605,10 +16608,10 @@ var require_main = __commonJS({
       }
     }
     function getQuarterlyNoteSettings() {
-      var _a, _b, _c, _d;
+      var _a2, _b, _c, _d;
       const pluginManager = window.app.plugins;
       try {
-        const settings = shouldUsePeriodicNotesSettings("quarterly") && ((_b = (_a = pluginManager.getPlugin("periodic-notes")) == null ? void 0 : _a.settings) == null ? void 0 : _b.quarterly) || {};
+        const settings = shouldUsePeriodicNotesSettings("quarterly") && ((_b = (_a2 = pluginManager.getPlugin("periodic-notes")) == null ? void 0 : _a2.settings) == null ? void 0 : _b.quarterly) || {};
         return {
           format: settings.format || DEFAULT_QUARTERLY_NOTE_FORMAT,
           folder: ((_c = settings.folder) == null ? void 0 : _c.trim()) || "",
@@ -16619,10 +16622,10 @@ var require_main = __commonJS({
       }
     }
     function getYearlyNoteSettings() {
-      var _a, _b, _c, _d;
+      var _a2, _b, _c, _d;
       const pluginManager = window.app.plugins;
       try {
-        const settings = shouldUsePeriodicNotesSettings("yearly") && ((_b = (_a = pluginManager.getPlugin("periodic-notes")) == null ? void 0 : _a.settings) == null ? void 0 : _b.yearly) || {};
+        const settings = shouldUsePeriodicNotesSettings("yearly") && ((_b = (_a2 = pluginManager.getPlugin("periodic-notes")) == null ? void 0 : _a2.settings) == null ? void 0 : _b.yearly) || {};
         return {
           format: settings.format || DEFAULT_YEARLY_NOTE_FORMAT,
           folder: ((_c = settings.folder) == null ? void 0 : _c.trim()) || "",
@@ -16751,7 +16754,7 @@ var require_main = __commonJS({
         const filename = date.format(format);
         const normalizedPath = yield getNotePath(folder, filename);
         try {
-          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*date\s*}}/gi, filename).replace(/{{\s*time\s*}}/gi, moment().format("HH:mm")).replace(/{{\s*title\s*}}/gi, filename).replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
+          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*date\s*}}/gi, filename).replace(/{{\s*time\s*}}/gi, moment().format("HH:mm")).replace(/{{\s*title\s*}}/gi, filename).replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_2, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
             const now = moment();
             const currentDate = date.clone().set({
               hour: now.get("hour"),
@@ -16775,8 +16778,8 @@ var require_main = __commonJS({
       });
     }
     function getDailyNote(date, dailyNotes) {
-      var _a;
-      return (_a = dailyNotes[getDateUID(date, "day")]) != null ? _a : null;
+      var _a2;
+      return (_a2 = dailyNotes[getDateUID(date, "day")]) != null ? _a2 : null;
     }
     function getAllDailyNotes() {
       const { vault } = window.app;
@@ -16828,7 +16831,7 @@ var require_main = __commonJS({
         const filename = date.format(format);
         const normalizedPath = yield getNotePath(folder, filename);
         try {
-          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
+          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_2, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
             const now = window.moment();
             const currentDate = date.clone().set({
               hour: now.get("hour"),
@@ -16842,7 +16845,7 @@ var require_main = __commonJS({
               return currentDate.format(momentFormat.substring(1).trim());
             }
             return currentDate.format(format);
-          }).replace(/{{\s*title\s*}}/gi, filename).replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm")).replace(/{{\s*(sunday|monday|tuesday|wednesday|thursday|friday|saturday)\s*:(.*?)}}/gi, (_, dayOfWeek, momentFormat) => {
+          }).replace(/{{\s*title\s*}}/gi, filename).replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm")).replace(/{{\s*(sunday|monday|tuesday|wednesday|thursday|friday|saturday)\s*:(.*?)}}/gi, (_2, dayOfWeek, momentFormat) => {
             const day = getDayOfWeekNumericalValue(dayOfWeek);
             return date.weekday(day).format(momentFormat.trim());
           }));
@@ -16855,8 +16858,8 @@ var require_main = __commonJS({
       });
     }
     function getWeeklyNote(date, weeklyNotes) {
-      var _a;
-      return (_a = weeklyNotes[getDateUID(date, "week")]) != null ? _a : null;
+      var _a2;
+      return (_a2 = weeklyNotes[getDateUID(date, "week")]) != null ? _a2 : null;
     }
     function getAllWeeklyNotes() {
       const weeklyNotes = {};
@@ -16890,7 +16893,7 @@ var require_main = __commonJS({
         const filename = date.format(format);
         const normalizedPath = yield getNotePath(folder, filename);
         try {
-          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
+          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_2, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
             const now = window.moment();
             const currentDate = date.clone().set({
               hour: now.get("hour"),
@@ -16914,8 +16917,8 @@ var require_main = __commonJS({
       });
     }
     function getMonthlyNote(date, monthlyNotes) {
-      var _a;
-      return (_a = monthlyNotes[getDateUID(date, "month")]) != null ? _a : null;
+      var _a2;
+      return (_a2 = monthlyNotes[getDateUID(date, "month")]) != null ? _a2 : null;
     }
     function getAllMonthlyNotes() {
       const monthlyNotes = {};
@@ -16949,7 +16952,7 @@ var require_main = __commonJS({
         const filename = date.format(format);
         const normalizedPath = yield getNotePath(folder, filename);
         try {
-          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
+          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_2, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
             const now = window.moment();
             const currentDate = date.clone().set({
               hour: now.get("hour"),
@@ -16973,8 +16976,8 @@ var require_main = __commonJS({
       });
     }
     function getQuarterlyNote(date, quarterly) {
-      var _a;
-      return (_a = quarterly[getDateUID(date, "quarter")]) != null ? _a : null;
+      var _a2;
+      return (_a2 = quarterly[getDateUID(date, "quarter")]) != null ? _a2 : null;
     }
     function getAllQuarterlyNotes() {
       const quarterly = {};
@@ -17008,7 +17011,7 @@ var require_main = __commonJS({
         const filename = date.format(format);
         const normalizedPath = yield getNotePath(folder, filename);
         try {
-          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
+          const createdFile = yield vault.create(normalizedPath, templateContents.replace(/{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi, (_2, _timeOrDate, calc, timeDelta, unit, momentFormat) => {
             const now = window.moment();
             const currentDate = date.clone().set({
               hour: now.get("hour"),
@@ -17032,8 +17035,8 @@ var require_main = __commonJS({
       });
     }
     function getYearlyNote(date, yearlyNotes) {
-      var _a;
-      return (_a = yearlyNotes[getDateUID(date, "year")]) != null ? _a : null;
+      var _a2;
+      return (_a2 = yearlyNotes[getDateUID(date, "year")]) != null ? _a2 : null;
     }
     function getAllYearlyNotes() {
       const yearlyNotes = {};
@@ -17058,41 +17061,41 @@ var require_main = __commonJS({
       return yearlyNotes;
     }
     function appHasDailyNotesPluginLoaded() {
-      var _a, _b;
+      var _a2, _b;
       const { app } = window;
       const dailyNotesPlugin = app.internalPlugins.plugins["daily-notes"];
       if (dailyNotesPlugin && dailyNotesPlugin.enabled) {
         return true;
       }
       const periodicNotes2 = app.plugins.getPlugin("periodic-notes");
-      return periodicNotes2 && ((_b = (_a = periodicNotes2.settings) == null ? void 0 : _a.daily) == null ? void 0 : _b.enabled);
+      return periodicNotes2 && ((_b = (_a2 = periodicNotes2.settings) == null ? void 0 : _a2.daily) == null ? void 0 : _b.enabled);
     }
     function appHasWeeklyNotesPluginLoaded() {
-      var _a, _b;
+      var _a2, _b;
       const { app } = window;
       if (app.plugins.getPlugin("calendar")) {
         return true;
       }
       const periodicNotes2 = app.plugins.getPlugin("periodic-notes");
-      return periodicNotes2 && ((_b = (_a = periodicNotes2.settings) == null ? void 0 : _a.weekly) == null ? void 0 : _b.enabled);
+      return periodicNotes2 && ((_b = (_a2 = periodicNotes2.settings) == null ? void 0 : _a2.weekly) == null ? void 0 : _b.enabled);
     }
     function appHasMonthlyNotesPluginLoaded() {
-      var _a, _b;
+      var _a2, _b;
       const { app } = window;
       const periodicNotes2 = app.plugins.getPlugin("periodic-notes");
-      return periodicNotes2 && ((_b = (_a = periodicNotes2.settings) == null ? void 0 : _a.monthly) == null ? void 0 : _b.enabled);
+      return periodicNotes2 && ((_b = (_a2 = periodicNotes2.settings) == null ? void 0 : _a2.monthly) == null ? void 0 : _b.enabled);
     }
     function appHasQuarterlyNotesPluginLoaded() {
-      var _a, _b;
+      var _a2, _b;
       const { app } = window;
       const periodicNotes2 = app.plugins.getPlugin("periodic-notes");
-      return periodicNotes2 && ((_b = (_a = periodicNotes2.settings) == null ? void 0 : _a.quarterly) == null ? void 0 : _b.enabled);
+      return periodicNotes2 && ((_b = (_a2 = periodicNotes2.settings) == null ? void 0 : _a2.quarterly) == null ? void 0 : _b.enabled);
     }
     function appHasYearlyNotesPluginLoaded() {
-      var _a, _b;
+      var _a2, _b;
       const { app } = window;
       const periodicNotes2 = app.plugins.getPlugin("periodic-notes");
-      return periodicNotes2 && ((_b = (_a = periodicNotes2.settings) == null ? void 0 : _a.yearly) == null ? void 0 : _b.enabled);
+      return periodicNotes2 && ((_b = (_a2 = periodicNotes2.settings) == null ? void 0 : _a2.yearly) == null ? void 0 : _b.enabled);
     }
     function getPeriodicNoteSettings(granularity) {
       const getSettings = {
@@ -17553,7 +17556,7 @@ var require_lib2 = __commonJS({
     }
     var intlRelCache = {};
     function getCachedRTF(locString, opts = {}) {
-      const _a = opts, { base } = _a, cacheKeyOpts = __objRest(_a, ["base"]);
+      const _a2 = opts, { base } = _a2, cacheKeyOpts = __objRest(_a2, ["base"]);
       const key = JSON.stringify([locString, cacheKeyOpts]);
       let inf = intlRelCache[key];
       if (!inf) {
@@ -17647,7 +17650,7 @@ var require_lib2 = __commonJS({
       constructor(intl, forceSimple, opts) {
         this.padTo = opts.padTo || 0;
         this.floor = opts.floor || false;
-        const _a = opts, { padTo, floor } = _a, otherOpts = __objRest(_a, ["padTo", "floor"]);
+        const _a2 = opts, { padTo, floor } = _a2, otherOpts = __objRest(_a2, ["padTo", "floor"]);
         if (!forceSimple || Object.keys(otherOpts).length > 0) {
           const intlOpts = __spreadValues({ useGrouping: false }, opts);
           if (opts.padTo > 0)
@@ -17669,17 +17672,17 @@ var require_lib2 = __commonJS({
       constructor(dt, intl, opts) {
         this.opts = opts;
         this.originalZone = void 0;
-        let z = void 0;
+        let z2 = void 0;
         if (this.opts.timeZone) {
           this.dt = dt;
         } else if (dt.zone.type === "fixed") {
           const gmtOffset = -1 * (dt.offset / 60);
           const offsetZ = gmtOffset >= 0 ? `Etc/GMT+${gmtOffset}` : `Etc/GMT${gmtOffset}`;
           if (dt.offset !== 0 && IANAZone.create(offsetZ).valid) {
-            z = offsetZ;
+            z2 = offsetZ;
             this.dt = dt;
           } else {
-            z = "UTC";
+            z2 = "UTC";
             this.dt = dt.offset === 0 ? dt : dt.setZone("UTC").plus({ minutes: dt.offset });
             this.originalZone = dt.zone;
           }
@@ -17687,14 +17690,14 @@ var require_lib2 = __commonJS({
           this.dt = dt;
         } else if (dt.zone.type === "iana") {
           this.dt = dt;
-          z = dt.zone.name;
+          z2 = dt.zone.name;
         } else {
-          z = "UTC";
+          z2 = "UTC";
           this.dt = dt.setZone("UTC").plus({ minutes: dt.offset });
           this.originalZone = dt.zone;
         }
         const intlOpts = __spreadValues({}, this.opts);
-        intlOpts.timeZone = intlOpts.timeZone || z;
+        intlOpts.timeZone = intlOpts.timeZone || z2;
         this.dtf = getCachedDTF(intl, intlOpts);
       }
       format() {
@@ -17842,7 +17845,7 @@ var require_lib2 = __commonJS({
         });
       }
       extract(dt, intlOpts, field) {
-        const df = this.dtFormatter(dt, intlOpts), results = df.formatToParts(), matching = results.find((m) => m.type.toLowerCase() === field);
+        const df = this.dtFormatter(dt, intlOpts), results = df.formatToParts(), matching = results.find((m2) => m2.type.toLowerCase() === field);
         return matching ? matching.value : null;
       }
       numberFormatter(opts = {}) {
@@ -18069,8 +18072,8 @@ var require_lib2 = __commonJS({
       }, null)[1];
     }
     function pick(obj, keys) {
-      return keys.reduce((a, k) => {
-        a[k] = obj[k];
+      return keys.reduce((a, k2) => {
+        a[k2] = obj[k2];
         return a;
       }, {});
     }
@@ -18080,8 +18083,8 @@ var require_lib2 = __commonJS({
     function integerBetween(thing, bottom, top) {
       return isInteger(thing) && thing >= bottom && thing <= top;
     }
-    function floorMod(x, n2) {
-      return x - n2 * Math.floor(x / n2);
+    function floorMod(x2, n2) {
+      return x2 - n2 * Math.floor(x2 / n2);
     }
     function padStart(input, n2 = 2) {
       const isNeg = input < 0;
@@ -18134,12 +18137,12 @@ var require_lib2 = __commonJS({
       }
     }
     function objToLocalTS(obj) {
-      let d = Date.UTC(obj.year, obj.month - 1, obj.day, obj.hour, obj.minute, obj.second, obj.millisecond);
+      let d2 = Date.UTC(obj.year, obj.month - 1, obj.day, obj.hour, obj.minute, obj.second, obj.millisecond);
       if (obj.year < 100 && obj.year >= 0) {
-        d = new Date(d);
-        d.setUTCFullYear(obj.year, obj.month - 1, obj.day);
+        d2 = new Date(d2);
+        d2.setUTCFullYear(obj.year, obj.month - 1, obj.day);
       }
-      return +d;
+      return +d2;
     }
     function weeksInWeekYear(weekYear) {
       const p1 = (weekYear + Math.floor(weekYear / 4) - Math.floor(weekYear / 100) + Math.floor(weekYear / 400)) % 7, last = weekYear - 1, p2 = (last + Math.floor(last / 4) - Math.floor(last / 100) + Math.floor(last / 400)) % 7;
@@ -18164,7 +18167,7 @@ var require_lib2 = __commonJS({
         intlOpts.timeZone = timeZone;
       }
       const modified = __spreadValues({ timeZoneName: offsetFormat }, intlOpts);
-      const parsed = new Intl.DateTimeFormat(locale, modified).formatToParts(date).find((m) => m.type.toLowerCase() === "timezonename");
+      const parsed = new Intl.DateTimeFormat(locale, modified).formatToParts(date).find((m2) => m2.type.toLowerCase() === "timezonename");
       return parsed ? parsed.value : null;
     }
     function signedOffset(offHourStr, offMinuteStr) {
@@ -18183,12 +18186,12 @@ var require_lib2 = __commonJS({
     }
     function normalizeObject(obj, normalizer) {
       const normalized = {};
-      for (const u in obj) {
-        if (hasOwnProperty(obj, u)) {
-          const v = obj[u];
-          if (v === void 0 || v === null)
+      for (const u3 in obj) {
+        if (hasOwnProperty(obj, u3)) {
+          const v2 = obj[u3];
+          if (v2 === void 0 || v2 === null)
             continue;
-          normalized[normalizer(u)] = asNumber(v);
+          normalized[normalizer(u3)] = asNumber(v2);
         }
       }
       return normalized;
@@ -18626,8 +18629,8 @@ var require_lib2 = __commonJS({
       return RegExp(`^${full}$`);
     }
     function combineExtractors(...extractors) {
-      return (m) => extractors.reduce(([mergedVals, mergedZone, cursor], ex) => {
-        const [val, zone, next] = ex(m, cursor);
+      return (m2) => extractors.reduce(([mergedVals, mergedZone, cursor], ex) => {
+        const [val, zone, next] = ex(m2, cursor);
         return [__spreadValues(__spreadValues({}, mergedVals), val), zone || mergedZone, next];
       }, [{}, null, 1]).slice(0, 2);
     }
@@ -18636,9 +18639,9 @@ var require_lib2 = __commonJS({
         return [null, null];
       }
       for (const [regex, extractor] of patterns) {
-        const m = regex.exec(s2);
-        if (m) {
-          return extractor(m);
+        const m2 = regex.exec(s2);
+        if (m2) {
+          return extractor(m2);
         }
       }
       return [null, null];
@@ -18667,8 +18670,8 @@ var require_lib2 = __commonJS({
     var sqlTimeRegex = RegExp(`${isoTimeBaseRegex.source} ?(?:${offsetRegex.source}|(${ianaRegex.source}))?`);
     var sqlTimeExtensionRegex = RegExp(`(?: ${sqlTimeRegex.source})?`);
     function int(match2, pos, fallback) {
-      const m = match2[pos];
-      return isUndefined(m) ? fallback : parseInteger(m);
+      const m2 = match2[pos];
+      return isUndefined(m2) ? fallback : parseInteger(m2);
     }
     function extractISOYmd(match2, cursor) {
       const item = {
@@ -18912,8 +18915,8 @@ var require_lib2 = __commonJS({
       return new Duration(conf);
     }
     function durationToMillis(matrix, vals) {
-      var _a;
-      let sum = (_a = vals.milliseconds) != null ? _a : 0;
+      var _a2;
+      let sum = (_a2 = vals.milliseconds) != null ? _a2 : 0;
       for (const unit of reverseUnits.slice(1)) {
         if (vals[unit]) {
           sum += vals[unit] * matrix[unit]["milliseconds"];
@@ -19141,9 +19144,9 @@ var require_lib2 = __commonJS({
         if (!this.isValid)
           return this;
         const dur = Duration.fromDurationLike(duration), result = {};
-        for (const k of orderedUnits$1) {
-          if (hasOwnProperty(dur.values, k) || hasOwnProperty(this.values, k)) {
-            result[k] = dur.get(k) + this.get(k);
+        for (const k2 of orderedUnits$1) {
+          if (hasOwnProperty(dur.values, k2) || hasOwnProperty(this.values, k2)) {
+            result[k2] = dur.get(k2) + this.get(k2);
           }
         }
         return clone$1(this, { values: result }, true);
@@ -19158,8 +19161,8 @@ var require_lib2 = __commonJS({
         if (!this.isValid)
           return this;
         const result = {};
-        for (const k of Object.keys(this.values)) {
-          result[k] = asNumber(fn(this.values[k], k));
+        for (const k2 of Object.keys(this.values)) {
+          result[k2] = asNumber(fn(this.values[k2], k2));
         }
         return clone$1(this, { values: result }, true);
       }
@@ -19199,25 +19202,25 @@ var require_lib2 = __commonJS({
         if (units.length === 0) {
           return this;
         }
-        units = units.map((u) => Duration.normalizeUnit(u));
+        units = units.map((u3) => Duration.normalizeUnit(u3));
         const built = {}, accumulated = {}, vals = this.toObject();
         let lastUnit;
-        for (const k of orderedUnits$1) {
-          if (units.indexOf(k) >= 0) {
-            lastUnit = k;
+        for (const k2 of orderedUnits$1) {
+          if (units.indexOf(k2) >= 0) {
+            lastUnit = k2;
             let own = 0;
             for (const ak in accumulated) {
-              own += this.matrix[ak][k] * accumulated[ak];
+              own += this.matrix[ak][k2] * accumulated[ak];
               accumulated[ak] = 0;
             }
-            if (isNumber(vals[k])) {
-              own += vals[k];
+            if (isNumber(vals[k2])) {
+              own += vals[k2];
             }
             const i = Math.trunc(own);
-            built[k] = i;
-            accumulated[k] = (own * 1e3 - i * 1e3) / 1e3;
-          } else if (isNumber(vals[k])) {
-            accumulated[k] = vals[k];
+            built[k2] = i;
+            accumulated[k2] = (own * 1e3 - i * 1e3) / 1e3;
+          } else if (isNumber(vals[k2])) {
+            accumulated[k2] = vals[k2];
           }
         }
         for (const key in accumulated) {
@@ -19237,8 +19240,8 @@ var require_lib2 = __commonJS({
         if (!this.isValid)
           return this;
         const negated = {};
-        for (const k of Object.keys(this.values)) {
-          negated[k] = this.values[k] === 0 ? 0 : -this.values[k];
+        for (const k2 of Object.keys(this.values)) {
+          negated[k2] = this.values[k2] === 0 ? 0 : -this.values[k2];
         }
         return clone$1(this, { values: negated }, true);
       }
@@ -19290,8 +19293,8 @@ var require_lib2 = __commonJS({
             return v2 === void 0 || v2 === 0;
           return v1 === v2;
         }
-        for (const u of orderedUnits$1) {
-          if (!eq(this.values[u], other.values[u])) {
+        for (const u3 of orderedUnits$1) {
+          if (!eq(this.values[u3], other.values[u3])) {
             return false;
           }
         }
@@ -19438,7 +19441,7 @@ var require_lib2 = __commonJS({
       splitAt(...dateTimes) {
         if (!this.isValid)
           return [];
-        const sorted = dateTimes.map(friendlyDateTime).filter((d) => this.contains(d)).sort(), results = [];
+        const sorted = dateTimes.map(friendlyDateTime).filter((d2) => this.contains(d2)).sort(), results = [];
         let { s: s2 } = this, i = 0;
         while (s2 < this.e) {
           const added = sorted[i] || this.e, next = +added > +this.e ? this.e : added;
@@ -19456,7 +19459,7 @@ var require_lib2 = __commonJS({
         let { s: s2 } = this, idx = 1, next;
         const results = [];
         while (s2 < this.e) {
-          const added = this.start.plus(dur.mapUnits((x) => x * idx));
+          const added = this.start.plus(dur.mapUnits((x2) => x2 * idx));
           next = +added > +this.e ? this.e : added;
           results.push(Interval.fromDateTimes(s2, next));
           s2 = next;
@@ -19510,7 +19513,7 @@ var require_lib2 = __commonJS({
         return Interval.fromDateTimes(s2, e);
       }
       static merge(intervals) {
-        const [found, final] = intervals.sort((a, b) => a.s - b.s).reduce(([sofar, current], item) => {
+        const [found, final] = intervals.sort((a, b2) => a.s - b2.s).reduce(([sofar, current], item) => {
           if (!current) {
             return [sofar, item];
           } else if (current.overlaps(item) || current.abutsStart(item)) {
@@ -19529,7 +19532,7 @@ var require_lib2 = __commonJS({
         const results = [], ends = intervals.map((i) => [
           { time: i.s, type: "s" },
           { time: i.e, type: "e" }
-        ]), flattened = Array.prototype.concat(...ends), arr = flattened.sort((a, b) => a.time - b.time);
+        ]), flattened = Array.prototype.concat(...ends), arr = flattened.sort((a, b2) => a.time - b2.time);
         for (const i of arr) {
           currentCount += i.type === "s" ? 1 : -1;
           if (currentCount === 1) {
@@ -19623,13 +19626,13 @@ var require_lib2 = __commonJS({
     }
     function highOrderDiffs(cursor, later, units) {
       const differs = [
-        ["years", (a, b) => b.year - a.year],
-        ["quarters", (a, b) => b.quarter - a.quarter + (b.year - a.year) * 4],
-        ["months", (a, b) => b.month - a.month + (b.year - a.year) * 12],
+        ["years", (a, b2) => b2.year - a.year],
+        ["quarters", (a, b2) => b2.quarter - a.quarter + (b2.year - a.year) * 4],
+        ["months", (a, b2) => b2.month - a.month + (b2.year - a.year) * 12],
         [
           "weeks",
-          (a, b) => {
-            const days = dayDiff(a, b);
+          (a, b2) => {
+            const days = dayDiff(a, b2);
             return (days - days % 7) / 7;
           }
         ],
@@ -19661,7 +19664,7 @@ var require_lib2 = __commonJS({
     function diff(earlier, later, units, opts) {
       let [cursor, results, highWater, lowestOrder] = highOrderDiffs(earlier, later, units);
       const remainingMillis = later - cursor;
-      const lowerOrderUnits = units.filter((u) => ["hours", "minutes", "seconds", "milliseconds"].indexOf(u) >= 0);
+      const lowerOrderUnits = units.filter((u3) => ["hours", "minutes", "seconds", "milliseconds"].indexOf(u3) >= 0);
       if (lowerOrderUnits.length === 0) {
         if (highWater < later) {
           highWater = cursor.plus({ [lowestOrder]: 1 });
@@ -19771,7 +19774,7 @@ var require_lib2 = __commonJS({
       }
     }
     function offset(regex, groups) {
-      return { regex, deser: ([, h, m]) => signedOffset(h, m), groups };
+      return { regex, deser: ([, h, m2]) => signedOffset(h, m2), groups };
     }
     function simple(regex) {
       return { regex, deser: ([s2]) => s2 };
@@ -19972,8 +19975,8 @@ var require_lib2 = __commonJS({
       return void 0;
     }
     function buildRegex(units) {
-      const re = units.map((u) => u.regex).reduce((f, r) => `${f}(${r.source})`, "");
-      return [`^${re}$`, units];
+      const re2 = units.map((u3) => u3.regex).reduce((f, r) => `${f}(${r.source})`, "");
+      return [`^${re2}$`, units];
     }
     function match(input, regex, handlers) {
       const matches = input.match(regex);
@@ -20055,10 +20058,10 @@ var require_lib2 = __commonJS({
       if (!isUndefined(matches.u)) {
         matches.S = parseMillis(matches.u);
       }
-      const vals = Object.keys(matches).reduce((r, k) => {
-        const f = toField(k);
+      const vals = Object.keys(matches).reduce((r, k2) => {
+        const f = toField(k2);
         if (f) {
-          r[f] = matches[k];
+          r[f] = matches[k2];
         }
         return r;
       }, {});
@@ -20117,11 +20120,11 @@ var require_lib2 = __commonJS({
       return new Invalid("unit out of range", `you specified ${value} (of type ${typeof value}) as a ${unit}, which is invalid`);
     }
     function dayOfWeek(year, month, day) {
-      const d = new Date(Date.UTC(year, month - 1, day));
+      const d2 = new Date(Date.UTC(year, month - 1, day));
       if (year < 100 && year >= 0) {
-        d.setUTCFullYear(d.getUTCFullYear() - 1900);
+        d2.setUTCFullYear(d2.getUTCFullYear() - 1900);
       }
-      const js = d.getUTCDay();
+      const js = d2.getUTCDay();
       return js === 0 ? 7 : js;
     }
     function computeOrdinal(year, month, day) {
@@ -20252,15 +20255,15 @@ var require_lib2 = __commonJS({
     }
     function tsToObj(ts, offset2) {
       ts += offset2 * 60 * 1e3;
-      const d = new Date(ts);
+      const d2 = new Date(ts);
       return {
-        year: d.getUTCFullYear(),
-        month: d.getUTCMonth() + 1,
-        day: d.getUTCDate(),
-        hour: d.getUTCHours(),
-        minute: d.getUTCMinutes(),
-        second: d.getUTCSeconds(),
-        millisecond: d.getUTCMilliseconds()
+        year: d2.getUTCFullYear(),
+        month: d2.getUTCMonth() + 1,
+        day: d2.getUTCDate(),
+        hour: d2.getUTCHours(),
+        minute: d2.getUTCMinutes(),
+        second: d2.getUTCSeconds(),
+        millisecond: d2.getUTCMilliseconds()
       };
     }
     function objToTS(obj, offset2, zone) {
@@ -20431,9 +20434,9 @@ var require_lib2 = __commonJS({
       const zone = normalizeZone(opts.zone, Settings.defaultZone), loc = Locale.fromObject(opts), tsNow = Settings.now();
       let ts, o;
       if (!isUndefined(obj.year)) {
-        for (const u of orderedUnits) {
-          if (isUndefined(obj[u])) {
-            obj[u] = defaultUnitValues[u];
+        for (const u3 of orderedUnits) {
+          if (isUndefined(obj[u3])) {
+            obj[u3] = defaultUnitValues[u3];
           }
         }
         const invalid = hasInvalidGregorianData(obj) || hasInvalidTimeData(obj);
@@ -20588,14 +20591,14 @@ var require_lib2 = __commonJS({
           defaultValues = defaultUnitValues;
         }
         let foundFirst = false;
-        for (const u of units) {
-          const v = normalized[u];
-          if (!isUndefined(v)) {
+        for (const u3 of units) {
+          const v2 = normalized[u3];
+          if (!isUndefined(v2)) {
             foundFirst = true;
           } else if (foundFirst) {
-            normalized[u] = defaultValues[u];
+            normalized[u3] = defaultValues[u3];
           } else {
-            normalized[u] = objNow[u];
+            normalized[u3] = objNow[u3];
           }
         }
         const higherOrderInvalid = useWeekData ? hasInvalidWeekData(normalized) : containsOrdinal ? hasInvalidOrdinalData(normalized) : hasInvalidGregorianData(normalized), invalid = higherOrderInvalid || hasInvalidTimeData(normalized);
@@ -20906,8 +20909,8 @@ var require_lib2 = __commonJS({
           o.weekday = 1;
         }
         if (normalizedUnit === "quarters") {
-          const q = Math.ceil(this.month / 3);
-          o.month = (q - 1) * 3 + 1;
+          const q2 = Math.ceil(this.month / 3);
+          o.month = (q2 - 1) * 3 + 1;
         }
         return this.set(o);
       }
@@ -21293,7 +21296,7 @@ var require_lib2 = __commonJS({
       }
       Result2.flatMap2 = flatMap2;
       function map2(first, second, f) {
-        return flatMap2(first, second, (a, b) => success(f(a, b)));
+        return flatMap2(first, second, (a, b2) => success(f(a, b2)));
       }
       Result2.map2 = map2;
     })(Result || (Result = {}));
@@ -21309,8 +21312,8 @@ var require_lib2 = __commonJS({
           function r(e) {
             if (t[e])
               return t[e].exports;
-            var u = t[e] = { i: e, l: false, exports: {} };
-            return n2[e].call(u.exports, u, u.exports, r), u.l = true, u.exports;
+            var u3 = t[e] = { i: e, l: false, exports: {} };
+            return n2[e].call(u3.exports, u3, u3.exports, r), u3.l = true, u3.exports;
           }
           return r.m = n2, r.c = t, r.d = function(n3, t2, e) {
             r.o(n3, t2) || Object.defineProperty(n3, t2, { configurable: false, enumerable: true, get: e });
@@ -21332,7 +21335,7 @@ var require_lib2 = __commonJS({
               return new e(n3);
             this._ = n3;
           }
-          var u = e.prototype;
+          var u3 = e.prototype;
           function o(n3, t2) {
             for (var r2 = 0; r2 < n3; r2++)
               t2(r2);
@@ -21342,13 +21345,13 @@ var require_lib2 = __commonJS({
               o(t3.length, function(r3) {
                 n4(t3[r3], r3, t3);
               });
-            }(function(r3, e2, u2) {
-              t2 = n3(t2, r3, e2, u2);
+            }(function(r3, e2, u4) {
+              t2 = n3(t2, r3, e2, u4);
             }, r2), t2;
           }
           function a(n3, t2) {
-            return i(function(t3, r2, e2, u2) {
-              return t3.concat([n3(r2, e2, u2)]);
+            return i(function(t3, r2, e2, u4) {
+              return t3.concat([n3(r2, e2, u4)]);
             }, [], t2);
           }
           function f(n3, t2) {
@@ -21379,7 +21382,7 @@ var require_lib2 = __commonJS({
             }, 0, n3);
             if (t2 % 8 != 0)
               throw new Error("The bits [" + n3.join(", ") + "] add up to " + t2 + " which is not an even number of bytes; the total should be divisible by 8");
-            var r2, u2 = t2 / 8, o2 = (r2 = function(n4) {
+            var r2, u4 = t2 / 8, o2 = (r2 = function(n4) {
               return n4 > 48;
             }, i(function(n4, t3) {
               return n4 || (r2(t3) ? t3 : n4);
@@ -21387,8 +21390,8 @@ var require_lib2 = __commonJS({
             if (o2)
               throw new Error(o2 + " bit range requested exceeds 48 bit (6 byte) Number max.");
             return new e(function(t3, r3) {
-              var e2 = u2 + r3;
-              return e2 > t3.length ? x(r3, u2.toString() + " bytes") : b(e2, i(function(n4, t4) {
+              var e2 = u4 + r3;
+              return e2 > t3.length ? x2(r3, u4.toString() + " bytes") : b2(e2, i(function(n4, t4) {
                 var r4 = f(t4, n4.buf);
                 return { coll: n4.coll.concat(r4.v), buf: r4.buf };
               }, { coll: [], buf: t3.slice(r3, e2) }, n3).coll);
@@ -21396,7 +21399,7 @@ var require_lib2 = __commonJS({
           }
           function h(n3, t2) {
             return new e(function(r2, e2) {
-              return s2(), e2 + t2 > r2.length ? x(e2, t2 + " bytes for " + n3) : b(e2 + t2, r2.slice(e2, e2 + t2));
+              return s2(), e2 + t2 > r2.length ? x2(e2, t2 + " bytes for " + n3) : b2(e2 + t2, r2.slice(e2, e2 + t2));
             });
           }
           function p(n3, t2) {
@@ -21404,12 +21407,12 @@ var require_lib2 = __commonJS({
               throw new Error(n3 + " requires integer length in range [0, 6].");
             var r2;
           }
-          function d(n3) {
+          function d2(n3) {
             return p("uintBE", n3), h("uintBE(" + n3 + ")", n3).map(function(t2) {
               return t2.readUIntBE(0, n3);
             });
           }
-          function v(n3) {
+          function v2(n3) {
             return p("uintLE", n3), h("uintLE(" + n3 + ")", n3).map(function(t2) {
               return t2.readUIntLE(0, n3);
             });
@@ -21419,27 +21422,27 @@ var require_lib2 = __commonJS({
               return t2.readIntBE(0, n3);
             });
           }
-          function m(n3) {
+          function m2(n3) {
             return p("intLE", n3), h("intLE(" + n3 + ")", n3).map(function(t2) {
               return t2.readIntLE(0, n3);
             });
           }
-          function y(n3) {
+          function y2(n3) {
             return n3 instanceof e;
           }
-          function E(n3) {
+          function E2(n3) {
             return {}.toString.call(n3) === "[object Array]";
           }
-          function w(n3) {
+          function w2(n3) {
             return c() && Buffer.isBuffer(n3);
           }
-          function b(n3, t2) {
+          function b2(n3, t2) {
             return { status: true, index: n3, value: t2, furthest: -1, expected: [] };
           }
-          function x(n3, t2) {
-            return E(t2) || (t2 = [t2]), { status: false, index: -1, value: null, furthest: n3, expected: t2 };
+          function x2(n3, t2) {
+            return E2(t2) || (t2 = [t2]), { status: false, index: -1, value: null, furthest: n3, expected: t2 };
           }
-          function B(n3, t2) {
+          function B2(n3, t2) {
             if (!t2)
               return n3;
             if (n3.furthest > t2.furthest)
@@ -21451,8 +21454,8 @@ var require_lib2 = __commonJS({
                 var n5 = typeof Set != "undefined";
                 return e._supportsSet = n5, n5;
               }() && Array.from) {
-                for (var r3 = new Set(n4), u2 = 0; u2 < t3.length; u2++)
-                  r3.add(t3[u2]);
+                for (var r3 = new Set(n4), u4 = 0; u4 < t3.length; u4++)
+                  r3.add(t3[u4]);
                 var o2 = Array.from(r3);
                 return o2.sort(), o2;
               }
@@ -21467,197 +21470,197 @@ var require_lib2 = __commonJS({
             }(n3.expected, t2.expected) : t2.expected;
             return { status: n3.status, index: n3.index, value: n3.value, furthest: t2.furthest, expected: r2 };
           }
-          var j = {};
-          function S(n3, t2) {
-            if (w(n3))
+          var j2 = {};
+          function S2(n3, t2) {
+            if (w2(n3))
               return { offset: t2, line: -1, column: -1 };
-            n3 in j || (j[n3] = {});
-            for (var r2 = j[n3], e2 = 0, u2 = 0, o2 = 0, i2 = t2; i2 >= 0; ) {
+            n3 in j2 || (j2[n3] = {});
+            for (var r2 = j2[n3], e2 = 0, u4 = 0, o2 = 0, i2 = t2; i2 >= 0; ) {
               if (i2 in r2) {
                 e2 = r2[i2].line, o2 === 0 && (o2 = r2[i2].lineStart);
                 break;
               }
-              (n3.charAt(i2) === "\n" || n3.charAt(i2) === "\r" && n3.charAt(i2 + 1) !== "\n") && (u2++, o2 === 0 && (o2 = i2 + 1)), i2--;
+              (n3.charAt(i2) === "\n" || n3.charAt(i2) === "\r" && n3.charAt(i2 + 1) !== "\n") && (u4++, o2 === 0 && (o2 = i2 + 1)), i2--;
             }
-            var a2 = e2 + u2, f2 = t2 - o2;
+            var a2 = e2 + u4, f2 = t2 - o2;
             return r2[t2] = { line: a2, lineStart: o2 }, { offset: t2, line: a2 + 1, column: f2 + 1 };
           }
-          function _(n3) {
-            if (!y(n3))
+          function _2(n3) {
+            if (!y2(n3))
               throw new Error("not a parser: " + n3);
           }
-          function L(n3, t2) {
+          function L2(n3, t2) {
             return typeof n3 == "string" ? n3.charAt(t2) : n3[t2];
           }
           function O(n3) {
             if (typeof n3 != "number")
               throw new Error("not a number: " + n3);
           }
-          function k(n3) {
+          function k2(n3) {
             if (typeof n3 != "function")
               throw new Error("not a function: " + n3);
           }
-          function P(n3) {
+          function P2(n3) {
             if (typeof n3 != "string")
               throw new Error("not a string: " + n3);
           }
-          var q = 2, A = 3, I = 8, F = 5 * I, M = 4 * I, z = "  ";
+          var q2 = 2, A = 3, I2 = 8, F2 = 5 * I2, M2 = 4 * I2, z2 = "  ";
           function R(n3, t2) {
             return new Array(t2 + 1).join(n3);
           }
-          function U(n3, t2, r2) {
+          function U2(n3, t2, r2) {
             var e2 = t2 - n3.length;
             return e2 <= 0 ? n3 : R(r2, e2) + n3;
           }
-          function W(n3, t2, r2, e2) {
+          function W2(n3, t2, r2, e2) {
             return { from: n3 - t2 > 0 ? n3 - t2 : 0, to: n3 + r2 > e2 ? e2 : n3 + r2 };
           }
-          function D(n3, t2) {
-            var r2, e2, u2, o2, f2, c2 = t2.index, s3 = c2.offset, l3 = 1;
+          function D2(n3, t2) {
+            var r2, e2, u4, o2, f2, c2 = t2.index, s3 = c2.offset, l3 = 1;
             if (s3 === n3.length)
               return "Got the end of the input";
-            if (w(n3)) {
-              var h2 = s3 - s3 % I, p2 = s3 - h2, d2 = W(h2, F, M + I, n3.length), v2 = a(function(n4) {
+            if (w2(n3)) {
+              var h2 = s3 - s3 % I2, p2 = s3 - h2, d3 = W2(h2, F2, M2 + I2, n3.length), v3 = a(function(n4) {
                 return a(function(n5) {
-                  return U(n5.toString(16), 2, "0");
+                  return U2(n5.toString(16), 2, "0");
                 }, n4);
               }, function(n4, t3) {
-                var r3 = n4.length, e3 = [], u3 = 0;
+                var r3 = n4.length, e3 = [], u5 = 0;
                 if (r3 <= t3)
                   return [n4.slice()];
                 for (var o3 = 0; o3 < r3; o3++)
-                  e3[u3] || e3.push([]), e3[u3].push(n4[o3]), (o3 + 1) % t3 == 0 && u3++;
+                  e3[u5] || e3.push([]), e3[u5].push(n4[o3]), (o3 + 1) % t3 == 0 && u5++;
                 return e3;
-              }(n3.slice(d2.from, d2.to).toJSON().data, I));
+              }(n3.slice(d3.from, d3.to).toJSON().data, I2));
               o2 = function(n4) {
-                return n4.from === 0 && n4.to === 1 ? { from: n4.from, to: n4.to } : { from: n4.from / I, to: Math.floor(n4.to / I) };
-              }(d2), e2 = h2 / I, r2 = 3 * p2, p2 >= 4 && (r2 += 1), l3 = 2, u2 = a(function(n4) {
+                return n4.from === 0 && n4.to === 1 ? { from: n4.from, to: n4.to } : { from: n4.from / I2, to: Math.floor(n4.to / I2) };
+              }(d3), e2 = h2 / I2, r2 = 3 * p2, p2 >= 4 && (r2 += 1), l3 = 2, u4 = a(function(n4) {
                 return n4.length <= 4 ? n4.join(" ") : n4.slice(0, 4).join(" ") + "  " + n4.slice(4).join(" ");
-              }, v2), (f2 = (8 * (o2.to > 0 ? o2.to - 1 : o2.to)).toString(16).length) < 2 && (f2 = 2);
+              }, v3), (f2 = (8 * (o2.to > 0 ? o2.to - 1 : o2.to)).toString(16).length) < 2 && (f2 = 2);
             } else {
               var g2 = n3.split(/\r\n|[\n\r\u2028\u2029]/);
-              r2 = c2.column - 1, e2 = c2.line - 1, o2 = W(e2, q, A, g2.length), u2 = g2.slice(o2.from, o2.to), f2 = o2.to.toString().length;
+              r2 = c2.column - 1, e2 = c2.line - 1, o2 = W2(e2, q2, A, g2.length), u4 = g2.slice(o2.from, o2.to), f2 = o2.to.toString().length;
             }
-            var m2 = e2 - o2.from;
-            return w(n3) && (f2 = (8 * (o2.to > 0 ? o2.to - 1 : o2.to)).toString(16).length) < 2 && (f2 = 2), i(function(t3, e3, u3) {
-              var i2, a2 = u3 === m2, c3 = a2 ? "> " : z;
-              return i2 = w(n3) ? U((8 * (o2.from + u3)).toString(16), f2, "0") : U((o2.from + u3 + 1).toString(), f2, " "), [].concat(t3, [c3 + i2 + " | " + e3], a2 ? [z + R(" ", f2) + " | " + U("", r2, " ") + R("^", l3)] : []);
-            }, [], u2).join("\n");
+            var m3 = e2 - o2.from;
+            return w2(n3) && (f2 = (8 * (o2.to > 0 ? o2.to - 1 : o2.to)).toString(16).length) < 2 && (f2 = 2), i(function(t3, e3, u5) {
+              var i2, a2 = u5 === m3, c3 = a2 ? "> " : z2;
+              return i2 = w2(n3) ? U2((8 * (o2.from + u5)).toString(16), f2, "0") : U2((o2.from + u5 + 1).toString(), f2, " "), [].concat(t3, [c3 + i2 + " | " + e3], a2 ? [z2 + R(" ", f2) + " | " + U2("", r2, " ") + R("^", l3)] : []);
+            }, [], u4).join("\n");
           }
-          function N(n3, t2) {
-            return ["\n", "-- PARSING FAILED " + R("-", 50), "\n\n", D(n3, t2), "\n\n", (r2 = t2.expected, r2.length === 1 ? "Expected:\n\n" + r2[0] : "Expected one of the following: \n\n" + r2.join(", ")), "\n"].join("");
+          function N2(n3, t2) {
+            return ["\n", "-- PARSING FAILED " + R("-", 50), "\n\n", D2(n3, t2), "\n\n", (r2 = t2.expected, r2.length === 1 ? "Expected:\n\n" + r2[0] : "Expected one of the following: \n\n" + r2.join(", ")), "\n"].join("");
             var r2;
           }
-          function G(n3) {
+          function G2(n3) {
             return n3.flags !== void 0 ? n3.flags : [n3.global ? "g" : "", n3.ignoreCase ? "i" : "", n3.multiline ? "m" : "", n3.unicode ? "u" : "", n3.sticky ? "y" : ""].join("");
           }
-          function C() {
+          function C2() {
             for (var n3 = [].slice.call(arguments), t2 = n3.length, r2 = 0; r2 < t2; r2 += 1)
-              _(n3[r2]);
+              _2(n3[r2]);
             return e(function(r3, e2) {
-              for (var u2, o2 = new Array(t2), i2 = 0; i2 < t2; i2 += 1) {
-                if (!(u2 = B(n3[i2]._(r3, e2), u2)).status)
-                  return u2;
-                o2[i2] = u2.value, e2 = u2.index;
+              for (var u4, o2 = new Array(t2), i2 = 0; i2 < t2; i2 += 1) {
+                if (!(u4 = B2(n3[i2]._(r3, e2), u4)).status)
+                  return u4;
+                o2[i2] = u4.value, e2 = u4.index;
               }
-              return B(b(e2, o2), u2);
+              return B2(b2(e2, o2), u4);
             });
           }
-          function J() {
+          function J2() {
             var n3 = [].slice.call(arguments);
             if (n3.length === 0)
               throw new Error("seqMap needs at least one argument");
             var t2 = n3.pop();
-            return k(t2), C.apply(null, n3).map(function(n4) {
+            return k2(t2), C2.apply(null, n3).map(function(n4) {
               return t2.apply(null, n4);
             });
           }
-          function T() {
+          function T2() {
             var n3 = [].slice.call(arguments), t2 = n3.length;
             if (t2 === 0)
               return Y("zero alternates");
             for (var r2 = 0; r2 < t2; r2 += 1)
-              _(n3[r2]);
+              _2(n3[r2]);
             return e(function(t3, r3) {
-              for (var e2, u2 = 0; u2 < n3.length; u2 += 1)
-                if ((e2 = B(n3[u2]._(t3, r3), e2)).status)
+              for (var e2, u4 = 0; u4 < n3.length; u4 += 1)
+                if ((e2 = B2(n3[u4]._(t3, r3), e2)).status)
                   return e2;
               return e2;
             });
           }
           function V(n3, t2) {
-            return H(n3, t2).or(X([]));
+            return H(n3, t2).or(X2([]));
           }
           function H(n3, t2) {
-            return _(n3), _(t2), J(n3, t2.then(n3).many(), function(n4, t3) {
+            return _2(n3), _2(t2), J2(n3, t2.then(n3).many(), function(n4, t3) {
               return [n4].concat(t3);
             });
           }
-          function K(n3) {
-            P(n3);
+          function K2(n3) {
+            P2(n3);
             var t2 = "'" + n3 + "'";
             return e(function(r2, e2) {
-              var u2 = e2 + n3.length, o2 = r2.slice(e2, u2);
-              return o2 === n3 ? b(u2, o2) : x(e2, t2);
+              var u4 = e2 + n3.length, o2 = r2.slice(e2, u4);
+              return o2 === n3 ? b2(u4, o2) : x2(e2, t2);
             });
           }
-          function Q(n3, t2) {
+          function Q2(n3, t2) {
             !function(n4) {
               if (!(n4 instanceof RegExp))
                 throw new Error("not a regexp: " + n4);
-              for (var t3 = G(n4), r3 = 0; r3 < t3.length; r3++) {
+              for (var t3 = G2(n4), r3 = 0; r3 < t3.length; r3++) {
                 var e2 = t3.charAt(r3);
                 if (e2 !== "i" && e2 !== "m" && e2 !== "u" && e2 !== "s")
                   throw new Error('unsupported regexp flag "' + e2 + '": ' + n4);
               }
             }(n3), arguments.length >= 2 ? O(t2) : t2 = 0;
             var r2 = function(n4) {
-              return RegExp("^(?:" + n4.source + ")", G(n4));
-            }(n3), u2 = "" + n3;
+              return RegExp("^(?:" + n4.source + ")", G2(n4));
+            }(n3), u4 = "" + n3;
             return e(function(n4, e2) {
               var o2 = r2.exec(n4.slice(e2));
               if (o2) {
                 if (0 <= t2 && t2 <= o2.length) {
                   var i2 = o2[0], a2 = o2[t2];
-                  return b(e2 + i2.length, a2);
+                  return b2(e2 + i2.length, a2);
                 }
-                return x(e2, "valid match group (0 to " + o2.length + ") in " + u2);
+                return x2(e2, "valid match group (0 to " + o2.length + ") in " + u4);
               }
-              return x(e2, u2);
+              return x2(e2, u4);
             });
           }
-          function X(n3) {
+          function X2(n3) {
             return e(function(t2, r2) {
-              return b(r2, n3);
+              return b2(r2, n3);
             });
           }
           function Y(n3) {
             return e(function(t2, r2) {
-              return x(r2, n3);
+              return x2(r2, n3);
             });
           }
-          function Z(n3) {
-            if (y(n3))
+          function Z2(n3) {
+            if (y2(n3))
               return e(function(t2, r2) {
                 var e2 = n3._(t2, r2);
                 return e2.index = r2, e2.value = "", e2;
               });
             if (typeof n3 == "string")
-              return Z(K(n3));
+              return Z2(K2(n3));
             if (n3 instanceof RegExp)
-              return Z(Q(n3));
+              return Z2(Q2(n3));
             throw new Error("not a string, regexp, or parser: " + n3);
           }
-          function $(n3) {
-            return _(n3), e(function(t2, r2) {
-              var e2 = n3._(t2, r2), u2 = t2.slice(r2, e2.index);
-              return e2.status ? x(r2, 'not "' + u2 + '"') : b(r2, null);
+          function $2(n3) {
+            return _2(n3), e(function(t2, r2) {
+              var e2 = n3._(t2, r2), u4 = t2.slice(r2, e2.index);
+              return e2.status ? x2(r2, 'not "' + u4 + '"') : b2(r2, null);
             });
           }
           function nn(n3) {
-            return k(n3), e(function(t2, r2) {
-              var e2 = L(t2, r2);
-              return r2 < t2.length && n3(e2) ? b(r2 + 1, e2) : x(r2, "a character/byte matching " + n3);
+            return k2(n3), e(function(t2, r2) {
+              var e2 = L2(t2, r2);
+              return r2 < t2.length && n3(e2) ? b2(r2 + 1, e2) : x2(r2, "a character/byte matching " + n3);
             });
           }
           function tn(n3, t2) {
@@ -21670,149 +21673,149 @@ var require_lib2 = __commonJS({
           function rn() {
             return Y("fantasy-land/empty");
           }
-          u.parse = function(n3) {
-            if (typeof n3 != "string" && !w(n3))
+          u3.parse = function(n3) {
+            if (typeof n3 != "string" && !w2(n3))
               throw new Error(".parse must be called with a string or Buffer as its argument");
             var t2, r2 = this.skip(an)._(n3, 0);
-            return t2 = r2.status ? { status: true, value: r2.value } : { status: false, index: S(n3, r2.furthest), expected: r2.expected }, delete j[n3], t2;
-          }, u.tryParse = function(n3) {
+            return t2 = r2.status ? { status: true, value: r2.value } : { status: false, index: S2(n3, r2.furthest), expected: r2.expected }, delete j2[n3], t2;
+          }, u3.tryParse = function(n3) {
             var t2 = this.parse(n3);
             if (t2.status)
               return t2.value;
-            var r2 = N(n3, t2), e2 = new Error(r2);
+            var r2 = N2(n3, t2), e2 = new Error(r2);
             throw e2.type = "ParsimmonError", e2.result = t2, e2;
-          }, u.assert = function(n3, t2) {
+          }, u3.assert = function(n3, t2) {
             return this.chain(function(r2) {
-              return n3(r2) ? X(r2) : Y(t2);
+              return n3(r2) ? X2(r2) : Y(t2);
             });
-          }, u.or = function(n3) {
-            return T(this, n3);
-          }, u.trim = function(n3) {
+          }, u3.or = function(n3) {
+            return T2(this, n3);
+          }, u3.trim = function(n3) {
             return this.wrap(n3, n3);
-          }, u.wrap = function(n3, t2) {
-            return J(n3, this, t2, function(n4, t3) {
+          }, u3.wrap = function(n3, t2) {
+            return J2(n3, this, t2, function(n4, t3) {
               return t3;
             });
-          }, u.thru = function(n3) {
+          }, u3.thru = function(n3) {
             return n3(this);
-          }, u.then = function(n3) {
-            return _(n3), C(this, n3).map(function(n4) {
+          }, u3.then = function(n3) {
+            return _2(n3), C2(this, n3).map(function(n4) {
               return n4[1];
             });
-          }, u.many = function() {
+          }, u3.many = function() {
             var n3 = this;
             return e(function(t2, r2) {
-              for (var e2 = [], u2 = void 0; ; ) {
-                if (!(u2 = B(n3._(t2, r2), u2)).status)
-                  return B(b(r2, e2), u2);
-                if (r2 === u2.index)
+              for (var e2 = [], u4 = void 0; ; ) {
+                if (!(u4 = B2(n3._(t2, r2), u4)).status)
+                  return B2(b2(r2, e2), u4);
+                if (r2 === u4.index)
                   throw new Error("infinite loop detected in .many() parser --- calling .many() on a parser which can accept zero characters is usually the cause");
-                r2 = u2.index, e2.push(u2.value);
+                r2 = u4.index, e2.push(u4.value);
               }
             });
-          }, u.tieWith = function(n3) {
-            return P(n3), this.map(function(t2) {
+          }, u3.tieWith = function(n3) {
+            return P2(n3), this.map(function(t2) {
               if (function(n4) {
-                if (!E(n4))
+                if (!E2(n4))
                   throw new Error("not an array: " + n4);
               }(t2), t2.length) {
-                P(t2[0]);
+                P2(t2[0]);
                 for (var r2 = t2[0], e2 = 1; e2 < t2.length; e2++)
-                  P(t2[e2]), r2 += n3 + t2[e2];
+                  P2(t2[e2]), r2 += n3 + t2[e2];
                 return r2;
               }
               return "";
             });
-          }, u.tie = function() {
+          }, u3.tie = function() {
             return this.tieWith("");
-          }, u.times = function(n3, t2) {
+          }, u3.times = function(n3, t2) {
             var r2 = this;
-            return arguments.length < 2 && (t2 = n3), O(n3), O(t2), e(function(e2, u2) {
+            return arguments.length < 2 && (t2 = n3), O(n3), O(t2), e(function(e2, u4) {
               for (var o2 = [], i2 = void 0, a2 = void 0, f2 = 0; f2 < n3; f2 += 1) {
-                if (a2 = B(i2 = r2._(e2, u2), a2), !i2.status)
+                if (a2 = B2(i2 = r2._(e2, u4), a2), !i2.status)
                   return a2;
-                u2 = i2.index, o2.push(i2.value);
+                u4 = i2.index, o2.push(i2.value);
               }
-              for (; f2 < t2 && (a2 = B(i2 = r2._(e2, u2), a2), i2.status); f2 += 1)
-                u2 = i2.index, o2.push(i2.value);
-              return B(b(u2, o2), a2);
+              for (; f2 < t2 && (a2 = B2(i2 = r2._(e2, u4), a2), i2.status); f2 += 1)
+                u4 = i2.index, o2.push(i2.value);
+              return B2(b2(u4, o2), a2);
             });
-          }, u.result = function(n3) {
+          }, u3.result = function(n3) {
             return this.map(function() {
               return n3;
             });
-          }, u.atMost = function(n3) {
+          }, u3.atMost = function(n3) {
             return this.times(0, n3);
-          }, u.atLeast = function(n3) {
-            return J(this.times(n3), this.many(), function(n4, t2) {
+          }, u3.atLeast = function(n3) {
+            return J2(this.times(n3), this.many(), function(n4, t2) {
               return n4.concat(t2);
             });
-          }, u.map = function(n3) {
-            k(n3);
+          }, u3.map = function(n3) {
+            k2(n3);
             var t2 = this;
             return e(function(r2, e2) {
-              var u2 = t2._(r2, e2);
-              return u2.status ? B(b(u2.index, n3(u2.value)), u2) : u2;
+              var u4 = t2._(r2, e2);
+              return u4.status ? B2(b2(u4.index, n3(u4.value)), u4) : u4;
             });
-          }, u.contramap = function(n3) {
-            k(n3);
+          }, u3.contramap = function(n3) {
+            k2(n3);
             var t2 = this;
             return e(function(r2, e2) {
-              var u2 = t2.parse(n3(r2.slice(e2)));
-              return u2.status ? b(e2 + r2.length, u2.value) : u2;
+              var u4 = t2.parse(n3(r2.slice(e2)));
+              return u4.status ? b2(e2 + r2.length, u4.value) : u4;
             });
-          }, u.promap = function(n3, t2) {
-            return k(n3), k(t2), this.contramap(n3).map(t2);
-          }, u.skip = function(n3) {
-            return C(this, n3).map(function(n4) {
+          }, u3.promap = function(n3, t2) {
+            return k2(n3), k2(t2), this.contramap(n3).map(t2);
+          }, u3.skip = function(n3) {
+            return C2(this, n3).map(function(n4) {
               return n4[0];
             });
-          }, u.mark = function() {
-            return J(en, this, en, function(n3, t2, r2) {
+          }, u3.mark = function() {
+            return J2(en, this, en, function(n3, t2, r2) {
               return { start: n3, value: t2, end: r2 };
             });
-          }, u.node = function(n3) {
-            return J(en, this, en, function(t2, r2, e2) {
+          }, u3.node = function(n3) {
+            return J2(en, this, en, function(t2, r2, e2) {
               return { name: n3, value: r2, start: t2, end: e2 };
             });
-          }, u.sepBy = function(n3) {
+          }, u3.sepBy = function(n3) {
             return V(this, n3);
-          }, u.sepBy1 = function(n3) {
+          }, u3.sepBy1 = function(n3) {
             return H(this, n3);
-          }, u.lookahead = function(n3) {
-            return this.skip(Z(n3));
-          }, u.notFollowedBy = function(n3) {
-            return this.skip($(n3));
-          }, u.desc = function(n3) {
-            E(n3) || (n3 = [n3]);
+          }, u3.lookahead = function(n3) {
+            return this.skip(Z2(n3));
+          }, u3.notFollowedBy = function(n3) {
+            return this.skip($2(n3));
+          }, u3.desc = function(n3) {
+            E2(n3) || (n3 = [n3]);
             var t2 = this;
             return e(function(r2, e2) {
-              var u2 = t2._(r2, e2);
-              return u2.status || (u2.expected = n3), u2;
+              var u4 = t2._(r2, e2);
+              return u4.status || (u4.expected = n3), u4;
             });
-          }, u.fallback = function(n3) {
-            return this.or(X(n3));
-          }, u.ap = function(n3) {
-            return J(n3, this, function(n4, t2) {
+          }, u3.fallback = function(n3) {
+            return this.or(X2(n3));
+          }, u3.ap = function(n3) {
+            return J2(n3, this, function(n4, t2) {
               return n4(t2);
             });
-          }, u.chain = function(n3) {
+          }, u3.chain = function(n3) {
             var t2 = this;
             return e(function(r2, e2) {
-              var u2 = t2._(r2, e2);
-              return u2.status ? B(n3(u2.value)._(r2, u2.index), u2) : u2;
+              var u4 = t2._(r2, e2);
+              return u4.status ? B2(n3(u4.value)._(r2, u4.index), u4) : u4;
             });
-          }, u.concat = u.or, u.empty = rn, u.of = X, u["fantasy-land/ap"] = u.ap, u["fantasy-land/chain"] = u.chain, u["fantasy-land/concat"] = u.concat, u["fantasy-land/empty"] = u.empty, u["fantasy-land/of"] = u.of, u["fantasy-land/map"] = u.map;
+          }, u3.concat = u3.or, u3.empty = rn, u3.of = X2, u3["fantasy-land/ap"] = u3.ap, u3["fantasy-land/chain"] = u3.chain, u3["fantasy-land/concat"] = u3.concat, u3["fantasy-land/empty"] = u3.empty, u3["fantasy-land/of"] = u3.of, u3["fantasy-land/map"] = u3.map;
           var en = e(function(n3, t2) {
-            return b(t2, S(n3, t2));
+            return b2(t2, S2(n3, t2));
           }), un = e(function(n3, t2) {
-            return t2 >= n3.length ? x(t2, "any character/byte") : b(t2 + 1, L(n3, t2));
+            return t2 >= n3.length ? x2(t2, "any character/byte") : b2(t2 + 1, L2(n3, t2));
           }), on = e(function(n3, t2) {
-            return b(n3.length, n3.slice(t2));
+            return b2(n3.length, n3.slice(t2));
           }), an = e(function(n3, t2) {
-            return t2 < n3.length ? x(t2, "EOF") : b(t2, null);
-          }), fn = Q(/[0-9]/).desc("a digit"), cn = Q(/[0-9]*/).desc("optional digits"), sn = Q(/[a-z]/i).desc("a letter"), ln = Q(/[a-z]*/i).desc("optional letters"), hn = Q(/\s*/).desc("optional whitespace"), pn = Q(/\s+/).desc("whitespace"), dn = K("\r"), vn = K("\n"), gn = K("\r\n"), mn = T(gn, vn, dn).desc("newline"), yn = T(mn, an);
-          e.all = on, e.alt = T, e.any = un, e.cr = dn, e.createLanguage = function(n3) {
+            return t2 < n3.length ? x2(t2, "EOF") : b2(t2, null);
+          }), fn = Q2(/[0-9]/).desc("a digit"), cn = Q2(/[0-9]*/).desc("optional digits"), sn = Q2(/[a-z]/i).desc("a letter"), ln = Q2(/[a-z]*/i).desc("optional letters"), hn = Q2(/\s*/).desc("optional whitespace"), pn = Q2(/\s+/).desc("whitespace"), dn = K2("\r"), vn = K2("\n"), gn = K2("\r\n"), mn = T2(gn, vn, dn).desc("newline"), yn = T2(mn, an);
+          e.all = on, e.alt = T2, e.any = un, e.cr = dn, e.createLanguage = function(n3) {
             var t2 = {};
             for (var r2 in n3)
               ({}).hasOwnProperty.call(n3, r2) && function(r3) {
@@ -21822,12 +21825,12 @@ var require_lib2 = __commonJS({
               }(r2);
             return t2;
           }, e.crlf = gn, e.custom = function(n3) {
-            return e(n3(b, x));
-          }, e.digit = fn, e.digits = cn, e.empty = rn, e.end = yn, e.eof = an, e.fail = Y, e.formatError = N, e.index = en, e.isParser = y, e.lazy = tn, e.letter = sn, e.letters = ln, e.lf = vn, e.lookahead = Z, e.makeFailure = x, e.makeSuccess = b, e.newline = mn, e.noneOf = function(n3) {
+            return e(n3(b2, x2));
+          }, e.digit = fn, e.digits = cn, e.empty = rn, e.end = yn, e.eof = an, e.fail = Y, e.formatError = N2, e.index = en, e.isParser = y2, e.lazy = tn, e.letter = sn, e.letters = ln, e.lf = vn, e.lookahead = Z2, e.makeFailure = x2, e.makeSuccess = b2, e.newline = mn, e.noneOf = function(n3) {
             return nn(function(t2) {
               return n3.indexOf(t2) < 0;
             }).desc("none of '" + n3 + "'");
-          }, e.notFollowedBy = $, e.of = X, e.oneOf = function(n3) {
+          }, e.notFollowedBy = $2, e.of = X2, e.oneOf = function(n3) {
             for (var t2 = n3.split(""), r2 = 0; r2 < t2.length; r2++)
               t2[r2] = "'" + t2[r2] + "'";
             return nn(function(t3) {
@@ -21837,11 +21840,11 @@ var require_lib2 = __commonJS({
             return nn(function(r2) {
               return n3 <= r2 && r2 <= t2;
             }).desc(n3 + "-" + t2);
-          }, e.regex = Q, e.regexp = Q, e.sepBy = V, e.sepBy1 = H, e.seq = C, e.seqMap = J, e.seqObj = function() {
-            for (var n3, t2 = {}, r2 = 0, u2 = (n3 = arguments, Array.prototype.slice.call(n3)), o2 = u2.length, i2 = 0; i2 < o2; i2 += 1) {
-              var a2 = u2[i2];
-              if (!y(a2)) {
-                if (E(a2) && a2.length === 2 && typeof a2[0] == "string" && y(a2[1])) {
+          }, e.regex = Q2, e.regexp = Q2, e.sepBy = V, e.sepBy1 = H, e.seq = C2, e.seqMap = J2, e.seqObj = function() {
+            for (var n3, t2 = {}, r2 = 0, u4 = (n3 = arguments, Array.prototype.slice.call(n3)), o2 = u4.length, i2 = 0; i2 < o2; i2 += 1) {
+              var a2 = u4[i2];
+              if (!y2(a2)) {
+                if (E2(a2) && a2.length === 2 && typeof a2[0] == "string" && y2(a2[1])) {
                   var f2 = a2[0];
                   if (Object.prototype.hasOwnProperty.call(t2, f2))
                     throw new Error("seqObj: duplicate key " + f2);
@@ -21856,26 +21859,26 @@ var require_lib2 = __commonJS({
             return e(function(n4, t3) {
               for (var r3, e2 = {}, i3 = 0; i3 < o2; i3 += 1) {
                 var a3, f3;
-                if (E(u2[i3]) ? (a3 = u2[i3][0], f3 = u2[i3][1]) : (a3 = null, f3 = u2[i3]), !(r3 = B(f3._(n4, t3), r3)).status)
+                if (E2(u4[i3]) ? (a3 = u4[i3][0], f3 = u4[i3][1]) : (a3 = null, f3 = u4[i3]), !(r3 = B2(f3._(n4, t3), r3)).status)
                   return r3;
                 a3 && (e2[a3] = r3.value), t3 = r3.index;
               }
-              return B(b(t3, e2), r3);
+              return B2(b2(t3, e2), r3);
             });
-          }, e.string = K, e.succeed = X, e.takeWhile = function(n3) {
-            return k(n3), e(function(t2, r2) {
-              for (var e2 = r2; e2 < t2.length && n3(L(t2, e2)); )
+          }, e.string = K2, e.succeed = X2, e.takeWhile = function(n3) {
+            return k2(n3), e(function(t2, r2) {
+              for (var e2 = r2; e2 < t2.length && n3(L2(t2, e2)); )
                 e2++;
-              return b(e2, t2.slice(r2, e2));
+              return b2(e2, t2.slice(r2, e2));
             });
-          }, e.test = nn, e.whitespace = pn, e["fantasy-land/empty"] = rn, e["fantasy-land/of"] = X, e.Binary = { bitSeq: l2, bitSeqObj: function(n3) {
+          }, e.test = nn, e.whitespace = pn, e["fantasy-land/empty"] = rn, e["fantasy-land/of"] = X2, e.Binary = { bitSeq: l2, bitSeqObj: function(n3) {
             s2();
             var t2 = {}, r2 = 0, e2 = a(function(n4) {
-              if (E(n4)) {
+              if (E2(n4)) {
                 var e3 = n4;
                 if (e3.length !== 2)
                   throw new Error("[" + e3.join(", ") + "] should be length 2, got length " + e3.length);
-                if (P(e3[0]), O(e3[1]), Object.prototype.hasOwnProperty.call(t2, e3[0]))
+                if (P2(e3[0]), O(e3[1]), Object.prototype.hasOwnProperty.call(t2, e3[0]))
                   throw new Error("duplicate key in bitSeqObj: " + e3[0]);
                 return t2[e3[0]] = true, r2++, e3;
               }
@@ -21883,7 +21886,7 @@ var require_lib2 = __commonJS({
             }, n3);
             if (r2 < 1)
               throw new Error("bitSeqObj expects at least one named pair, got [" + n3.join(", ") + "]");
-            var u2 = a(function(n4) {
+            var u4 = a(function(n4) {
               return n4[0];
             }, e2);
             return l2(a(function(n4) {
@@ -21893,15 +21896,15 @@ var require_lib2 = __commonJS({
                 return t3[0] !== null && (n5[t3[0]] = t3[1]), n5;
               }, {}, a(function(t3, r3) {
                 return [t3, n4[r3]];
-              }, u2));
+              }, u4));
             });
           }, byte: function(n3) {
             if (s2(), O(n3), n3 > 255)
               throw new Error("Value specified to byte constructor (" + n3 + "=0x" + n3.toString(16) + ") is larger in value than a single byte.");
             var t2 = (n3 > 15 ? "0x" : "0x0") + n3.toString(16);
             return e(function(r2, e2) {
-              var u2 = L(r2, e2);
-              return u2 === n3 ? b(e2 + 1, u2) : x(e2, t2);
+              var u4 = L2(r2, e2);
+              return u4 === n3 ? b2(e2 + 1, u4) : x2(e2, t2);
             });
           }, buffer: function(n3) {
             return h("buffer", n3).map(function(n4) {
@@ -21911,7 +21914,7 @@ var require_lib2 = __commonJS({
             return h("string", t2).map(function(t3) {
               return t3.toString(n3);
             });
-          }, uintBE: d, uint8BE: d(1), uint16BE: d(2), uint32BE: d(4), uintLE: v, uint8LE: v(1), uint16LE: v(2), uint32LE: v(4), intBE: g, int8BE: g(1), int16BE: g(2), int32BE: g(4), intLE: m, int8LE: m(1), int16LE: m(2), int32LE: m(4), floatBE: h("floatBE", 4).map(function(n3) {
+          }, uintBE: d2, uint8BE: d2(1), uint16BE: d2(2), uint32BE: d2(4), uintLE: v2, uint8LE: v2(1), uint16LE: v2(2), uint32LE: v2(4), intBE: g, int8BE: g(1), int16BE: g(2), int32BE: g(4), intLE: m2, int8LE: m2(1), int16LE: m2(2), int32LE: m2(4), floatBE: h("floatBE", 4).map(function(n3) {
             return n3.readFloatBE(0);
           }), floatLE: h("floatLE", 4).map(function(n3) {
             return n3.readFloatLE(0);
@@ -21939,8 +21942,8 @@ var require_lib2 = __commonJS({
         path2 = path2.substring(0, path2.length - 3);
       return path2;
     }
-    parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regex(new RegExp(emojiRegex(), "")), parsimmon_umd_minExports.regex(/[0-9\p{Letter}_-]+/u).map((str) => str.toLocaleLowerCase()), parsimmon_umd_minExports.whitespace.map((_) => "-"), parsimmon_umd_minExports.any.map((_) => "")).many().map((result) => result.join(""));
-    var HEADER_CANONICALIZER = parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regex(new RegExp(emojiRegex(), "")), parsimmon_umd_minExports.regex(/[0-9\p{Letter}_-]+/u), parsimmon_umd_minExports.whitespace.map((_) => " "), parsimmon_umd_minExports.any.map((_) => " ")).many().map((result) => {
+    parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regex(new RegExp(emojiRegex(), "")), parsimmon_umd_minExports.regex(/[0-9\p{Letter}_-]+/u).map((str) => str.toLocaleLowerCase()), parsimmon_umd_minExports.whitespace.map((_2) => "-"), parsimmon_umd_minExports.any.map((_2) => "")).many().map((result) => result.join(""));
+    var HEADER_CANONICALIZER = parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regex(new RegExp(emojiRegex(), "")), parsimmon_umd_minExports.regex(/[0-9\p{Letter}_-]+/u), parsimmon_umd_minExports.whitespace.map((_2) => " "), parsimmon_umd_minExports.any.map((_2) => " ")).many().map((result) => {
       return result.join("").split(/\s+/).join(" ").trim();
     });
     function normalizeHeaderForLink(header) {
@@ -22039,7 +22042,7 @@ var require_lib2 = __commonJS({
       }
       Values2.mapLeaves = mapLeaves;
       function compareValue(val1, val2, linkNormalizer) {
-        var _a, _b;
+        var _a2, _b;
         if (val1 === void 0)
           val1 = null;
         if (val2 === void 0)
@@ -22081,7 +22084,7 @@ var require_lib2 = __commonJS({
           case "link":
             let link1 = wrap1.value;
             let link2 = wrap2.value;
-            let normalize = linkNormalizer != null ? linkNormalizer : (x) => x;
+            let normalize = linkNormalizer != null ? linkNormalizer : (x2) => x2;
             let pathCompare = normalize(link1.path).localeCompare(normalize(link2.path));
             if (pathCompare != 0)
               return pathCompare;
@@ -22094,7 +22097,7 @@ var require_lib2 = __commonJS({
               return -1;
             if (!link1.subpath && !link2.subpath)
               return 0;
-            return ((_a = link1.subpath) != null ? _a : "").localeCompare((_b = link2.subpath) != null ? _b : "");
+            return ((_a2 = link1.subpath) != null ? _a2 : "").localeCompare((_b = link2.subpath) != null ? _b : "");
           case "date":
             return wrap1.value < wrap2.value ? -1 : wrap1.value.equals(wrap2.value) ? 0 : 1;
           case "duration":
@@ -22132,8 +22135,8 @@ var require_lib2 = __commonJS({
       }
       Values2.compareValue = compareValue;
       function typeOf(val) {
-        var _a;
-        return (_a = wrapValue(val)) == null ? void 0 : _a.type;
+        var _a2;
+        return (_a2 = wrapValue(val)) == null ? void 0 : _a2.type;
       }
       Values2.typeOf = typeOf;
       function isTruthy(field) {
@@ -22170,7 +22173,7 @@ var require_lib2 = __commonJS({
         if (field === null || field === void 0)
           return field;
         if (Values2.isArray(field)) {
-          return [].concat(field.map((v) => deepCopy(v)));
+          return [].concat(field.map((v2) => deepCopy(v2)));
         } else if (Values2.isObject(field)) {
           let result = {};
           for (let [key, value] of Object.entries(field))
@@ -22362,10 +22365,10 @@ var require_lib2 = __commonJS({
         return result;
       }
       obsidianLink() {
-        var _a, _b;
+        var _a2, _b;
         const escaped = this.path.replaceAll("|", "\\|");
         if (this.type == "header")
-          return escaped + "#" + ((_a = this.subpath) == null ? void 0 : _a.replaceAll("|", "\\|"));
+          return escaped + "#" + ((_a2 = this.subpath) == null ? void 0 : _a2.replaceAll("|", "\\|"));
         if (this.type == "block")
           return escaped + "#^" + ((_b = this.subpath) == null ? void 0 : _b.replaceAll("|", "\\|"));
         else
@@ -22402,8 +22405,8 @@ var require_lib2 = __commonJS({
         this.display = display;
       }
       markdown() {
-        var _a;
-        return `[${(_a = this.display) != null ? _a : this.url}](${this.url})`;
+        var _a2;
+        return `[${(_a2 = this.display) != null ? _a2 : this.url}](${this.url})`;
       }
     };
     var Widgets;
@@ -22615,9 +22618,9 @@ var require_lib2 = __commonJS({
       });
     }
     var EXPRESSION = parsimmon_umd_minExports.createLanguage({
-      number: (q) => parsimmon_umd_minExports.regexp(/-?[0-9]+(\.[0-9]+)?/).map((str) => Number.parseFloat(str)).desc("number"),
-      string: (q) => parsimmon_umd_minExports.string('"').then(parsimmon_umd_minExports.alt(q.escapeCharacter, parsimmon_umd_minExports.noneOf('"\\')).atLeast(0).map((chars) => chars.join(""))).skip(parsimmon_umd_minExports.string('"')).desc("string"),
-      escapeCharacter: (_) => parsimmon_umd_minExports.string("\\").then(parsimmon_umd_minExports.any).map((escaped) => {
+      number: (q2) => parsimmon_umd_minExports.regexp(/-?[0-9]+(\.[0-9]+)?/).map((str) => Number.parseFloat(str)).desc("number"),
+      string: (q2) => parsimmon_umd_minExports.string('"').then(parsimmon_umd_minExports.alt(q2.escapeCharacter, parsimmon_umd_minExports.noneOf('"\\')).atLeast(0).map((chars) => chars.join(""))).skip(parsimmon_umd_minExports.string('"')).desc("string"),
+      escapeCharacter: (_2) => parsimmon_umd_minExports.string("\\").then(parsimmon_umd_minExports.any).map((escaped) => {
         if (escaped === '"')
           return '"';
         if (escaped === "\\")
@@ -22625,19 +22628,19 @@ var require_lib2 = __commonJS({
         else
           return "\\" + escaped;
       }),
-      bool: (_) => parsimmon_umd_minExports.regexp(/true|false|True|False/).map((str) => str.toLowerCase() == "true").desc("boolean ('true' or 'false')"),
-      tag: (_) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("#"), parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/[^\u2000-\u206F\u2E00-\u2E7F'!"#$%&()*+,.:;<=>?@^`{|}~\[\]\\\s]/).desc("text")).many(), (start, rest) => start + rest.join("")).desc("tag ('#hello/stuff')"),
-      identifier: (_) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/\p{Letter}/u), parsimmon_umd_minExports.regexp(EMOJI_REGEX).desc("text")), parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/[0-9\p{Letter}_-]/u), parsimmon_umd_minExports.regexp(EMOJI_REGEX).desc("text")).many(), (first, rest) => first + rest.join("")).desc("variable identifier"),
-      link: (_) => parsimmon_umd_minExports.regexp(/\[\[([^\[\]]*?)\]\]/u, 1).map((linkInner) => parseInnerLink(linkInner)).desc("file link"),
-      embedLink: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("!").atMost(1), q.link, (p, l2) => {
+      bool: (_2) => parsimmon_umd_minExports.regexp(/true|false|True|False/).map((str) => str.toLowerCase() == "true").desc("boolean ('true' or 'false')"),
+      tag: (_2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("#"), parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/[^\u2000-\u206F\u2E00-\u2E7F'!"#$%&()*+,.:;<=>?@^`{|}~\[\]\\\s]/).desc("text")).many(), (start, rest) => start + rest.join("")).desc("tag ('#hello/stuff')"),
+      identifier: (_2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/\p{Letter}/u), parsimmon_umd_minExports.regexp(EMOJI_REGEX).desc("text")), parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/[0-9\p{Letter}_-]/u), parsimmon_umd_minExports.regexp(EMOJI_REGEX).desc("text")).many(), (first, rest) => first + rest.join("")).desc("variable identifier"),
+      link: (_2) => parsimmon_umd_minExports.regexp(/\[\[([^\[\]]*?)\]\]/u, 1).map((linkInner) => parseInnerLink(linkInner)).desc("file link"),
+      embedLink: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("!").atMost(1), q2.link, (p, l2) => {
         if (p.length > 0)
           l2.embed = true;
         return l2;
       }).desc("file link"),
-      binaryPlusMinus: (_) => parsimmon_umd_minExports.regexp(/\+|-/).map((str) => str).desc("'+' or '-'"),
-      binaryMulDiv: (_) => parsimmon_umd_minExports.regexp(/\*|\/|%/).map((str) => str).desc("'*' or '/' or '%'"),
-      binaryCompareOp: (_) => parsimmon_umd_minExports.regexp(/>=|<=|!=|>|<|=/).map((str) => str).desc("'>=' or '<=' or '!=' or '=' or '>' or '<'"),
-      binaryBooleanOp: (_) => parsimmon_umd_minExports.regexp(/and|or|&|\|/i).map((str) => {
+      binaryPlusMinus: (_2) => parsimmon_umd_minExports.regexp(/\+|-/).map((str) => str).desc("'+' or '-'"),
+      binaryMulDiv: (_2) => parsimmon_umd_minExports.regexp(/\*|\/|%/).map((str) => str).desc("'*' or '/' or '%'"),
+      binaryCompareOp: (_2) => parsimmon_umd_minExports.regexp(/>=|<=|!=|>|<|=/).map((str) => str).desc("'>=' or '<=' or '!=' or '=' or '>' or '<'"),
+      binaryBooleanOp: (_2) => parsimmon_umd_minExports.regexp(/and|or|&|\|/i).map((str) => {
         if (str.toLowerCase() == "and")
           return "&";
         else if (str.toLowerCase() == "or")
@@ -22645,41 +22648,41 @@ var require_lib2 = __commonJS({
         else
           return str;
       }).desc("'and' or 'or'"),
-      rootDate: (_) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/\d{4}/), parsimmon_umd_minExports.string("-"), parsimmon_umd_minExports.regexp(/\d{2}/), (year, _2, month) => {
+      rootDate: (_2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/\d{4}/), parsimmon_umd_minExports.string("-"), parsimmon_umd_minExports.regexp(/\d{2}/), (year, _3, month) => {
         return DateTime.fromObject({ year: Number.parseInt(year), month: Number.parseInt(month) });
       }).desc("date in format YYYY-MM[-DDTHH-MM-SS.MS]"),
-      dateShorthand: (_) => parsimmon_umd_minExports.alt(...Object.keys(DATE_SHORTHANDS).sort((a, b) => b.length - a.length).map(parsimmon_umd_minExports.string)),
-      date: (q) => chainOpt(q.rootDate, (ym) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("-"), parsimmon_umd_minExports.regexp(/\d{2}/), (_, day) => ym.set({ day: Number.parseInt(day) })), (ymd) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("T"), parsimmon_umd_minExports.regexp(/\d{2}/), (_, hour) => ymd.set({ hour: Number.parseInt(hour) })), (ymdh) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string(":"), parsimmon_umd_minExports.regexp(/\d{2}/), (_, minute) => ymdh.set({ minute: Number.parseInt(minute) })), (ymdhm) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string(":"), parsimmon_umd_minExports.regexp(/\d{2}/), (_, second) => ymdhm.set({ second: Number.parseInt(second) })), (ymdhms) => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("."), parsimmon_umd_minExports.regexp(/\d{3}/), (_, millisecond) => ymdhms.set({ millisecond: Number.parseInt(millisecond) })), parsimmon_umd_minExports.succeed(ymdhms)), (dt) => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("+").or(parsimmon_umd_minExports.string("-")), parsimmon_umd_minExports.regexp(/\d{1,2}(:\d{2})?/), (pm, hr) => dt.setZone("UTC" + pm + hr, { keepLocalTime: true })), parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("Z"), () => dt.setZone("utc", { keepLocalTime: true })), parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("["), parsimmon_umd_minExports.regexp(/[0-9A-Za-z+-\/]+/u), parsimmon_umd_minExports.string("]"), (_a, zone, _b) => dt.setZone(zone, { keepLocalTime: true })))).assert((dt) => dt.isValid, "valid date").desc("date in format YYYY-MM[-DDTHH-MM-SS.MS]"),
-      datePlus: (q) => parsimmon_umd_minExports.alt(q.dateShorthand.map((d) => DATE_SHORTHANDS[d]()), q.date).desc("date in format YYYY-MM[-DDTHH-MM-SS.MS] or in shorthand"),
-      durationType: (_) => parsimmon_umd_minExports.alt(...Object.keys(DURATION_TYPES).sort((a, b) => b.length - a.length).map(parsimmon_umd_minExports.string)),
-      duration: (q) => parsimmon_umd_minExports.seqMap(q.number, parsimmon_umd_minExports.optWhitespace, q.durationType, (count, _, t) => DURATION_TYPES[t].mapUnits((x) => x * count)).sepBy1(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace).or(parsimmon_umd_minExports.optWhitespace)).map((durations) => durations.reduce((p, c) => p.plus(c))).desc("duration like 4hr2min"),
-      rawNull: (_) => parsimmon_umd_minExports.string("null"),
-      tagSource: (q) => q.tag.map((tag) => Sources.tag(tag)),
-      csvSource: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("csv(").skip(parsimmon_umd_minExports.optWhitespace), q.string, parsimmon_umd_minExports.string(")"), (_1, path2, _2) => Sources.csv(path2)),
-      linkIncomingSource: (q) => q.link.map((link) => Sources.link(link.path, true)),
-      linkOutgoingSource: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("outgoing(").skip(parsimmon_umd_minExports.optWhitespace), q.link, parsimmon_umd_minExports.string(")"), (_1, link, _2) => Sources.link(link.path, false)),
-      folderSource: (q) => q.string.map((str) => Sources.folder(str)),
-      parensSource: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("("), parsimmon_umd_minExports.optWhitespace, q.source, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (_1, _2, field, _3, _4) => field),
-      negateSource: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.alt(parsimmon_umd_minExports.string("-"), parsimmon_umd_minExports.string("!")), q.atomSource, (_, source) => Sources.negate(source)),
-      atomSource: (q) => parsimmon_umd_minExports.alt(q.parensSource, q.negateSource, q.linkOutgoingSource, q.linkIncomingSource, q.folderSource, q.tagSource, q.csvSource),
-      binaryOpSource: (q) => createBinaryParser(q.atomSource, q.binaryBooleanOp.map((s2) => s2), Sources.binaryOp),
-      source: (q) => q.binaryOpSource,
-      variableField: (q) => q.identifier.chain((r) => {
+      dateShorthand: (_2) => parsimmon_umd_minExports.alt(...Object.keys(DATE_SHORTHANDS).sort((a, b2) => b2.length - a.length).map(parsimmon_umd_minExports.string)),
+      date: (q2) => chainOpt(q2.rootDate, (ym) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("-"), parsimmon_umd_minExports.regexp(/\d{2}/), (_2, day) => ym.set({ day: Number.parseInt(day) })), (ymd) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("T"), parsimmon_umd_minExports.regexp(/\d{2}/), (_2, hour) => ymd.set({ hour: Number.parseInt(hour) })), (ymdh) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string(":"), parsimmon_umd_minExports.regexp(/\d{2}/), (_2, minute) => ymdh.set({ minute: Number.parseInt(minute) })), (ymdhm) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string(":"), parsimmon_umd_minExports.regexp(/\d{2}/), (_2, second) => ymdhm.set({ second: Number.parseInt(second) })), (ymdhms) => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("."), parsimmon_umd_minExports.regexp(/\d{3}/), (_2, millisecond) => ymdhms.set({ millisecond: Number.parseInt(millisecond) })), parsimmon_umd_minExports.succeed(ymdhms)), (dt) => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("+").or(parsimmon_umd_minExports.string("-")), parsimmon_umd_minExports.regexp(/\d{1,2}(:\d{2})?/), (pm, hr) => dt.setZone("UTC" + pm + hr, { keepLocalTime: true })), parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("Z"), () => dt.setZone("utc", { keepLocalTime: true })), parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("["), parsimmon_umd_minExports.regexp(/[0-9A-Za-z+-\/]+/u), parsimmon_umd_minExports.string("]"), (_a2, zone, _b) => dt.setZone(zone, { keepLocalTime: true })))).assert((dt) => dt.isValid, "valid date").desc("date in format YYYY-MM[-DDTHH-MM-SS.MS]"),
+      datePlus: (q2) => parsimmon_umd_minExports.alt(q2.dateShorthand.map((d2) => DATE_SHORTHANDS[d2]()), q2.date).desc("date in format YYYY-MM[-DDTHH-MM-SS.MS] or in shorthand"),
+      durationType: (_2) => parsimmon_umd_minExports.alt(...Object.keys(DURATION_TYPES).sort((a, b2) => b2.length - a.length).map(parsimmon_umd_minExports.string)),
+      duration: (q2) => parsimmon_umd_minExports.seqMap(q2.number, parsimmon_umd_minExports.optWhitespace, q2.durationType, (count, _2, t) => DURATION_TYPES[t].mapUnits((x2) => x2 * count)).sepBy1(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace).or(parsimmon_umd_minExports.optWhitespace)).map((durations) => durations.reduce((p, c) => p.plus(c))).desc("duration like 4hr2min"),
+      rawNull: (_2) => parsimmon_umd_minExports.string("null"),
+      tagSource: (q2) => q2.tag.map((tag) => Sources.tag(tag)),
+      csvSource: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("csv(").skip(parsimmon_umd_minExports.optWhitespace), q2.string, parsimmon_umd_minExports.string(")"), (_1, path2, _2) => Sources.csv(path2)),
+      linkIncomingSource: (q2) => q2.link.map((link) => Sources.link(link.path, true)),
+      linkOutgoingSource: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("outgoing(").skip(parsimmon_umd_minExports.optWhitespace), q2.link, parsimmon_umd_minExports.string(")"), (_1, link, _2) => Sources.link(link.path, false)),
+      folderSource: (q2) => q2.string.map((str) => Sources.folder(str)),
+      parensSource: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("("), parsimmon_umd_minExports.optWhitespace, q2.source, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (_1, _2, field, _3, _4) => field),
+      negateSource: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.alt(parsimmon_umd_minExports.string("-"), parsimmon_umd_minExports.string("!")), q2.atomSource, (_2, source) => Sources.negate(source)),
+      atomSource: (q2) => parsimmon_umd_minExports.alt(q2.parensSource, q2.negateSource, q2.linkOutgoingSource, q2.linkIncomingSource, q2.folderSource, q2.tagSource, q2.csvSource),
+      binaryOpSource: (q2) => createBinaryParser(q2.atomSource, q2.binaryBooleanOp.map((s2) => s2), Sources.binaryOp),
+      source: (q2) => q2.binaryOpSource,
+      variableField: (q2) => q2.identifier.chain((r) => {
         if (KEYWORDS.includes(r.toUpperCase())) {
           return parsimmon_umd_minExports.fail("Variable fields cannot be a keyword (" + KEYWORDS.join(" or ") + ")");
         } else {
           return parsimmon_umd_minExports.succeed(Fields.variable(r));
         }
       }).desc("variable"),
-      numberField: (q) => q.number.map((val) => Fields.literal(val)).desc("number"),
-      stringField: (q) => q.string.map((val) => Fields.literal(val)).desc("string"),
-      boolField: (q) => q.bool.map((val) => Fields.literal(val)).desc("boolean"),
-      dateField: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("date("), parsimmon_umd_minExports.optWhitespace, q.datePlus, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (prefix, _1, date, _2, postfix) => Fields.literal(date)).desc("date"),
-      durationField: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("dur("), parsimmon_umd_minExports.optWhitespace, q.duration, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (prefix, _1, dur, _2, postfix) => Fields.literal(dur)).desc("duration"),
-      nullField: (q) => q.rawNull.map((_) => Fields.NULL),
-      linkField: (q) => q.link.map((f) => Fields.literal(f)),
-      listField: (q) => q.field.sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)).wrap(parsimmon_umd_minExports.string("[").skip(parsimmon_umd_minExports.optWhitespace), parsimmon_umd_minExports.optWhitespace.then(parsimmon_umd_minExports.string("]"))).map((l2) => Fields.list(l2)).desc("list ('[1, 2, 3]')"),
-      objectField: (q) => parsimmon_umd_minExports.seqMap(q.identifier.or(q.string), parsimmon_umd_minExports.string(":").trim(parsimmon_umd_minExports.optWhitespace), q.field, (name, _sep, value) => {
+      numberField: (q2) => q2.number.map((val) => Fields.literal(val)).desc("number"),
+      stringField: (q2) => q2.string.map((val) => Fields.literal(val)).desc("string"),
+      boolField: (q2) => q2.bool.map((val) => Fields.literal(val)).desc("boolean"),
+      dateField: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("date("), parsimmon_umd_minExports.optWhitespace, q2.datePlus, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (prefix, _1, date, _2, postfix) => Fields.literal(date)).desc("date"),
+      durationField: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("dur("), parsimmon_umd_minExports.optWhitespace, q2.duration, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (prefix, _1, dur, _2, postfix) => Fields.literal(dur)).desc("duration"),
+      nullField: (q2) => q2.rawNull.map((_2) => Fields.NULL),
+      linkField: (q2) => q2.link.map((f) => Fields.literal(f)),
+      listField: (q2) => q2.field.sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)).wrap(parsimmon_umd_minExports.string("[").skip(parsimmon_umd_minExports.optWhitespace), parsimmon_umd_minExports.optWhitespace.then(parsimmon_umd_minExports.string("]"))).map((l2) => Fields.list(l2)).desc("list ('[1, 2, 3]')"),
+      objectField: (q2) => parsimmon_umd_minExports.seqMap(q2.identifier.or(q2.string), parsimmon_umd_minExports.string(":").trim(parsimmon_umd_minExports.optWhitespace), q2.field, (name, _sep, value) => {
         return { name, value };
       }).sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)).wrap(parsimmon_umd_minExports.string("{").skip(parsimmon_umd_minExports.optWhitespace), parsimmon_umd_minExports.optWhitespace.then(parsimmon_umd_minExports.string("}"))).map((vals) => {
         let res = {};
@@ -22687,11 +22690,11 @@ var require_lib2 = __commonJS({
           res[entry.name] = entry.value;
         return Fields.object(res);
       }).desc("object ('{ a: 1, b: 2 }')"),
-      atomInlineField: (q) => parsimmon_umd_minExports.alt(q.date, q.duration.map((d) => normalizeDuration(d)), q.string, q.tag, q.embedLink, q.bool, q.number, q.rawNull),
-      inlineFieldList: (q) => q.atomInlineField.sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace).lookahead(q.atomInlineField)),
-      inlineField: (q) => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.seqMap(q.atomInlineField, parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace), q.inlineFieldList, (f, _s, l2) => [f].concat(l2)), q.atomInlineField),
-      atomField: (q) => parsimmon_umd_minExports.alt(q.embedLink.map((l2) => Fields.literal(l2)), q.negatedField, q.linkField, q.listField, q.objectField, q.lambdaField, q.parensField, q.boolField, q.numberField, q.stringField, q.dateField, q.durationField, q.nullField, q.variableField),
-      indexField: (q) => parsimmon_umd_minExports.seqMap(q.atomField, parsimmon_umd_minExports.alt(q.dotPostfix, q.indexPostfix, q.functionPostfix).many(), (obj, postfixes) => {
+      atomInlineField: (q2) => parsimmon_umd_minExports.alt(q2.date, q2.duration.map((d2) => normalizeDuration(d2)), q2.string, q2.tag, q2.embedLink, q2.bool, q2.number, q2.rawNull),
+      inlineFieldList: (q2) => q2.atomInlineField.sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace).lookahead(q2.atomInlineField)),
+      inlineField: (q2) => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.seqMap(q2.atomInlineField, parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace), q2.inlineFieldList, (f, _s, l2) => [f].concat(l2)), q2.atomInlineField),
+      atomField: (q2) => parsimmon_umd_minExports.alt(q2.embedLink.map((l2) => Fields.literal(l2)), q2.negatedField, q2.linkField, q2.listField, q2.objectField, q2.lambdaField, q2.parensField, q2.boolField, q2.numberField, q2.stringField, q2.dateField, q2.durationField, q2.nullField, q2.variableField),
+      indexField: (q2) => parsimmon_umd_minExports.seqMap(q2.atomField, parsimmon_umd_minExports.alt(q2.dotPostfix, q2.indexPostfix, q2.functionPostfix).many(), (obj, postfixes) => {
         let result = obj;
         for (let post of postfixes) {
           switch (post.type) {
@@ -22708,26 +22711,26 @@ var require_lib2 = __commonJS({
         }
         return result;
       }),
-      negatedField: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("!"), q.indexField, (_, field) => Fields.negate(field)).desc("negated field"),
-      parensField: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("("), parsimmon_umd_minExports.optWhitespace, q.field, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (_1, _2, field, _3, _4) => field),
-      lambdaField: (q) => parsimmon_umd_minExports.seqMap(q.identifier.sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)).wrap(parsimmon_umd_minExports.string("(").trim(parsimmon_umd_minExports.optWhitespace), parsimmon_umd_minExports.string(")").trim(parsimmon_umd_minExports.optWhitespace)), parsimmon_umd_minExports.string("=>").trim(parsimmon_umd_minExports.optWhitespace), q.field, (ident, _ignore, value) => {
+      negatedField: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("!"), q2.indexField, (_2, field) => Fields.negate(field)).desc("negated field"),
+      parensField: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("("), parsimmon_umd_minExports.optWhitespace, q2.field, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (_1, _2, field, _3, _4) => field),
+      lambdaField: (q2) => parsimmon_umd_minExports.seqMap(q2.identifier.sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)).wrap(parsimmon_umd_minExports.string("(").trim(parsimmon_umd_minExports.optWhitespace), parsimmon_umd_minExports.string(")").trim(parsimmon_umd_minExports.optWhitespace)), parsimmon_umd_minExports.string("=>").trim(parsimmon_umd_minExports.optWhitespace), q2.field, (ident, _ignore, value) => {
         return { type: "lambda", arguments: ident, value };
       }),
-      dotPostfix: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("."), q.identifier, (_, field) => {
+      dotPostfix: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("."), q2.identifier, (_2, field) => {
         return { type: "dot", field };
       }),
-      indexPostfix: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("["), parsimmon_umd_minExports.optWhitespace, q.field, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string("]"), (_, _2, field, _3, _4) => {
+      indexPostfix: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("["), parsimmon_umd_minExports.optWhitespace, q2.field, parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string("]"), (_2, _22, field, _3, _4) => {
         return { type: "index", field };
       }),
-      functionPostfix: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("("), parsimmon_umd_minExports.optWhitespace, q.field.sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)), parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (_, _1, fields, _2, _3) => {
+      functionPostfix: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.string("("), parsimmon_umd_minExports.optWhitespace, q2.field.sepBy(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)), parsimmon_umd_minExports.optWhitespace, parsimmon_umd_minExports.string(")"), (_2, _1, fields, _22, _3) => {
         return { type: "function", fields };
       }),
-      binaryMulDivField: (q) => createBinaryParser(q.indexField, q.binaryMulDiv, Fields.binaryOp),
-      binaryPlusMinusField: (q) => createBinaryParser(q.binaryMulDivField, q.binaryPlusMinus, Fields.binaryOp),
-      binaryCompareField: (q) => createBinaryParser(q.binaryPlusMinusField, q.binaryCompareOp, Fields.binaryOp),
-      binaryBooleanField: (q) => createBinaryParser(q.binaryCompareField, q.binaryBooleanOp, Fields.binaryOp),
-      binaryOpField: (q) => q.binaryBooleanField,
-      field: (q) => q.binaryOpField
+      binaryMulDivField: (q2) => createBinaryParser(q2.indexField, q2.binaryMulDiv, Fields.binaryOp),
+      binaryPlusMinusField: (q2) => createBinaryParser(q2.binaryMulDivField, q2.binaryPlusMinus, Fields.binaryOp),
+      binaryCompareField: (q2) => createBinaryParser(q2.binaryPlusMinusField, q2.binaryCompareOp, Fields.binaryOp),
+      binaryBooleanField: (q2) => createBinaryParser(q2.binaryCompareField, q2.binaryBooleanOp, Fields.binaryOp),
+      binaryOpField: (q2) => q2.binaryBooleanField,
+      field: (q2) => q2.binaryOpField
     });
     function parseField(text) {
       try {
@@ -22764,8 +22767,8 @@ var require_lib2 = __commonJS({
       return parsimmon_umd_minExports.eof.map(if_eof).or(parsimmon_umd_minExports.whitespace.then(parser));
     }
     var QUERY_LANGUAGE = parsimmon_umd_minExports.createLanguage({
-      queryType: (q) => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/TABLE|LIST|TASK|CALENDAR/i)).map((str) => str.toLowerCase()).desc("query type ('TABLE', 'LIST', 'TASK', or 'CALENDAR')"),
-      explicitNamedField: (q) => parsimmon_umd_minExports.seqMap(EXPRESSION.field.skip(parsimmon_umd_minExports.whitespace), parsimmon_umd_minExports.regexp(/AS/i).skip(parsimmon_umd_minExports.whitespace), EXPRESSION.identifier.or(EXPRESSION.string), (field, _as, ident) => QueryFields.named(ident, field)),
+      queryType: (q2) => parsimmon_umd_minExports.alt(parsimmon_umd_minExports.regexp(/TABLE|LIST|TASK|CALENDAR/i)).map((str) => str.toLowerCase()).desc("query type ('TABLE', 'LIST', 'TASK', or 'CALENDAR')"),
+      explicitNamedField: (q2) => parsimmon_umd_minExports.seqMap(EXPRESSION.field.skip(parsimmon_umd_minExports.whitespace), parsimmon_umd_minExports.regexp(/AS/i).skip(parsimmon_umd_minExports.whitespace), EXPRESSION.identifier.or(EXPRESSION.string), (field, _as, ident) => QueryFields.named(ident, field)),
       comment: () => parsimmon_umd_minExports.Parser((input, i) => {
         let line = input.substring(i);
         if (!line.startsWith("//"))
@@ -22774,8 +22777,8 @@ var require_lib2 = __commonJS({
         let comment = line.substring(2).trim();
         return parsimmon_umd_minExports.makeSuccess(i + line.length, comment);
       }),
-      namedField: (q) => parsimmon_umd_minExports.alt(q.explicitNamedField, captureRaw(EXPRESSION.field).map(([value, text]) => QueryFields.named(stripNewlines(text), value))),
-      sortField: (q) => parsimmon_umd_minExports.seqMap(EXPRESSION.field.skip(parsimmon_umd_minExports.optWhitespace), parsimmon_umd_minExports.regexp(/ASCENDING|DESCENDING|ASC|DESC/i).atMost(1), (field, dir) => {
+      namedField: (q2) => parsimmon_umd_minExports.alt(q2.explicitNamedField, captureRaw(EXPRESSION.field).map(([value, text]) => QueryFields.named(stripNewlines(text), value))),
+      sortField: (q2) => parsimmon_umd_minExports.seqMap(EXPRESSION.field.skip(parsimmon_umd_minExports.optWhitespace), parsimmon_umd_minExports.regexp(/ASCENDING|DESCENDING|ASC|DESC/i).atMost(1), (field, dir) => {
         let direction = dir.length == 0 ? "ascending" : dir[0].toLowerCase();
         if (direction == "desc")
           direction = "descending";
@@ -22786,10 +22789,10 @@ var require_lib2 = __commonJS({
           direction
         };
       }),
-      headerClause: (q) => q.queryType.chain((type) => {
+      headerClause: (q2) => q2.queryType.chain((type) => {
         switch (type) {
           case "table": {
-            return precededByWhitespaceIfNotEof(() => ({ type, fields: [], showId: true }), parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/WITHOUT\s+ID/i).skip(parsimmon_umd_minExports.optWhitespace).atMost(1), parsimmon_umd_minExports.sepBy(q.namedField, parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)), (withoutId, fields) => {
+            return precededByWhitespaceIfNotEof(() => ({ type, fields: [], showId: true }), parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/WITHOUT\s+ID/i).skip(parsimmon_umd_minExports.optWhitespace).atMost(1), parsimmon_umd_minExports.sepBy(q2.namedField, parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)), (withoutId, fields) => {
               return { type, fields, showId: withoutId.length == 0 };
             }));
           }
@@ -22804,7 +22807,7 @@ var require_lib2 = __commonJS({
           case "task":
             return parsimmon_umd_minExports.succeed({ type });
           case "calendar":
-            return parsimmon_umd_minExports.whitespace.then(parsimmon_umd_minExports.seqMap(q.namedField, (field) => {
+            return parsimmon_umd_minExports.whitespace.then(parsimmon_umd_minExports.seqMap(q2.namedField, (field) => {
               return {
                 type,
                 showId: true,
@@ -22815,24 +22818,24 @@ var require_lib2 = __commonJS({
             return parsimmon_umd_minExports.fail(`Unrecognized query type '${type}'`);
         }
       }).desc("TABLE or LIST or TASK or CALENDAR"),
-      fromClause: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/FROM/i), parsimmon_umd_minExports.whitespace, EXPRESSION.source, (_1, _2, source) => source),
-      whereClause: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/WHERE/i), parsimmon_umd_minExports.whitespace, EXPRESSION.field, (where, _, field) => {
+      fromClause: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/FROM/i), parsimmon_umd_minExports.whitespace, EXPRESSION.source, (_1, _2, source) => source),
+      whereClause: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/WHERE/i), parsimmon_umd_minExports.whitespace, EXPRESSION.field, (where, _2, field) => {
         return { type: "where", clause: field };
       }).desc("WHERE <expression>"),
-      sortByClause: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/SORT/i), parsimmon_umd_minExports.whitespace, q.sortField.sepBy1(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)), (sort, _1, fields) => {
+      sortByClause: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/SORT/i), parsimmon_umd_minExports.whitespace, q2.sortField.sepBy1(parsimmon_umd_minExports.string(",").trim(parsimmon_umd_minExports.optWhitespace)), (sort, _1, fields) => {
         return { type: "sort", fields };
       }).desc("SORT field [ASC/DESC]"),
-      limitClause: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/LIMIT/i), parsimmon_umd_minExports.whitespace, EXPRESSION.field, (limit, _1, field) => {
+      limitClause: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/LIMIT/i), parsimmon_umd_minExports.whitespace, EXPRESSION.field, (limit, _1, field) => {
         return { type: "limit", amount: field };
       }).desc("LIMIT <value>"),
-      flattenClause: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/FLATTEN/i).skip(parsimmon_umd_minExports.whitespace), q.namedField, (_, field) => {
+      flattenClause: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/FLATTEN/i).skip(parsimmon_umd_minExports.whitespace), q2.namedField, (_2, field) => {
         return { type: "flatten", field };
       }).desc("FLATTEN <value> [AS <name>]"),
-      groupByClause: (q) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/GROUP BY/i).skip(parsimmon_umd_minExports.whitespace), q.namedField, (_, field) => {
+      groupByClause: (q2) => parsimmon_umd_minExports.seqMap(parsimmon_umd_minExports.regexp(/GROUP BY/i).skip(parsimmon_umd_minExports.whitespace), q2.namedField, (_2, field) => {
         return { type: "group", field };
       }).desc("GROUP BY <value> [AS <name>]"),
-      clause: (q) => parsimmon_umd_minExports.alt(q.fromClause, q.whereClause, q.sortByClause, q.limitClause, q.groupByClause, q.flattenClause),
-      query: (q) => parsimmon_umd_minExports.seqMap(q.headerClause.trim(optionalWhitespaceOrComment), q.fromClause.trim(optionalWhitespaceOrComment).atMost(1), q.clause.trim(optionalWhitespaceOrComment).many(), (header, from, clauses) => {
+      clause: (q2) => parsimmon_umd_minExports.alt(q2.fromClause, q2.whereClause, q2.sortByClause, q2.limitClause, q2.groupByClause, q2.flattenClause),
+      query: (q2) => parsimmon_umd_minExports.seqMap(q2.headerClause.trim(optionalWhitespaceOrComment), q2.fromClause.trim(optionalWhitespaceOrComment).atMost(1), q2.clause.trim(optionalWhitespaceOrComment).many(), (header, from, clauses) => {
         return {
           header,
           source: from.length == 0 ? Sources.folder("") : from[0],
@@ -22843,9 +22846,9 @@ var require_lib2 = __commonJS({
     });
     var optionalWhitespaceOrComment = parsimmon_umd_minExports.alt(parsimmon_umd_minExports.whitespace, QUERY_LANGUAGE.comment).many().map((arr) => arr.join(""));
     var getAPI2 = (app) => {
-      var _a;
+      var _a2;
       if (app)
-        return (_a = app.plugins.plugins.dataview) == null ? void 0 : _a.api;
+        return (_a2 = app.plugins.plugins.dataview) == null ? void 0 : _a2.api;
       else
         return window.DataviewAPI;
     };
@@ -23743,10 +23746,10 @@ var require_http_errors = __commonJS({
 var require_ms = __commonJS({
   "node_modules/body-parser/node_modules/ms/index.js"(exports, module2) {
     var s = 1e3;
-    var m = s * 60;
-    var h = m * 60;
-    var d = h * 24;
-    var y = d * 365.25;
+    var m2 = s * 60;
+    var h = m2 * 60;
+    var d2 = h * 24;
+    var y2 = d2 * 365.25;
     module2.exports = function(val, options) {
       options = options || {};
       var type = typeof val;
@@ -23774,11 +23777,11 @@ var require_ms = __commonJS({
         case "yrs":
         case "yr":
         case "y":
-          return n * y;
+          return n * y2;
         case "days":
         case "day":
         case "d":
-          return n * d;
+          return n * d2;
         case "hours":
         case "hour":
         case "hrs":
@@ -23790,7 +23793,7 @@ var require_ms = __commonJS({
         case "mins":
         case "min":
         case "m":
-          return n * m;
+          return n * m2;
         case "seconds":
         case "second":
         case "secs":
@@ -23808,14 +23811,14 @@ var require_ms = __commonJS({
       }
     }
     function fmtShort(ms) {
-      if (ms >= d) {
-        return Math.round(ms / d) + "d";
+      if (ms >= d2) {
+        return Math.round(ms / d2) + "d";
       }
       if (ms >= h) {
         return Math.round(ms / h) + "h";
       }
-      if (ms >= m) {
-        return Math.round(ms / m) + "m";
+      if (ms >= m2) {
+        return Math.round(ms / m2) + "m";
       }
       if (ms >= s) {
         return Math.round(ms / s) + "s";
@@ -23823,7 +23826,7 @@ var require_ms = __commonJS({
       return ms + "ms";
     }
     function fmtLong(ms) {
-      return plural(ms, d, "day") || plural(ms, h, "hour") || plural(ms, m, "minute") || plural(ms, s, "second") || ms + " ms";
+      return plural(ms, d2, "day") || plural(ms, h, "hour") || plural(ms, m2, "minute") || plural(ms, s, "second") || ms + " ms";
     }
     function plural(ms, n, name) {
       if (ms < n) {
@@ -23970,9 +23973,9 @@ var require_browser = __commonJS({
       }
       return typeof document !== "undefined" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || typeof window !== "undefined" && window.console && (window.console.firebug || window.console.exception && window.console.table) || typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
     }
-    exports.formatters.j = function(v) {
+    exports.formatters.j = function(v2) {
       try {
-        return JSON.stringify(v);
+        return JSON.stringify(v2);
       } catch (err) {
         return "[UnexpectedJSONParseError]: " + err.message;
       }
@@ -24046,8 +24049,8 @@ var require_node = __commonJS({
     exports.inspectOpts = Object.keys(process.env).filter(function(key) {
       return /^debug_/i.test(key);
     }).reduce(function(obj, key) {
-      var prop = key.substring(6).toLowerCase().replace(/_([a-z])/g, function(_, k) {
-        return k.toUpperCase();
+      var prop = key.substring(6).toLowerCase().replace(/_([a-z])/g, function(_2, k2) {
+        return k2.toUpperCase();
       });
       var val = process.env[key];
       if (/^(yes|on|true|enabled)$/i.test(val))
@@ -24070,15 +24073,15 @@ var require_node = __commonJS({
     function useColors() {
       return "colors" in exports.inspectOpts ? Boolean(exports.inspectOpts.colors) : tty.isatty(fd);
     }
-    exports.formatters.o = function(v) {
+    exports.formatters.o = function(v2) {
       this.inspectOpts.colors = this.useColors;
-      return util.inspect(v, this.inspectOpts).split("\n").map(function(str) {
+      return util.inspect(v2, this.inspectOpts).split("\n").map(function(str) {
         return str.trim();
       }).join(" ");
     };
-    exports.formatters.O = function(v) {
+    exports.formatters.O = function(v2) {
       this.inspectOpts.colors = this.useColors;
-      return util.inspect(v, this.inspectOpts);
+      return util.inspect(v2, this.inspectOpts);
     };
     function formatArgs(args) {
       var name = this.namespace;
@@ -24540,19 +24543,19 @@ var require_utf16 = __commonJS({
     Utf16BEDecoder.prototype.write = function(buf) {
       if (buf.length == 0)
         return "";
-      var buf2 = Buffer2.alloc(buf.length + 1), i = 0, j = 0;
+      var buf2 = Buffer2.alloc(buf.length + 1), i = 0, j2 = 0;
       if (this.overflowByte !== -1) {
         buf2[0] = buf[0];
         buf2[1] = this.overflowByte;
         i = 1;
-        j = 2;
+        j2 = 2;
       }
-      for (; i < buf.length - 1; i += 2, j += 2) {
-        buf2[j] = buf[i + 1];
-        buf2[j + 1] = buf[i];
+      for (; i < buf.length - 1; i += 2, j2 += 2) {
+        buf2[j2] = buf[i + 1];
+        buf2[j2 + 1] = buf[i];
       }
       this.overflowByte = i == buf.length - 1 ? buf[buf.length - 1] : -1;
-      return buf2.slice(0, j).toString("ucs2");
+      return buf2.slice(0, j2).toString("ucs2");
     };
     Utf16BEDecoder.prototype.end = function() {
     };
@@ -25524,8 +25527,8 @@ var require_dbcs_codec = __commonJS({
           if (typeof val === "number")
             skipEncodeChars[val] = true;
           else
-            for (var j = val.from; j <= val.to; j++)
-              skipEncodeChars[j] = true;
+            for (var j2 = val.from; j2 <= val.to; j2++)
+              skipEncodeChars[j2] = true;
         }
       this._fillEncodeTable(0, 0, skipEncodeChars);
       if (codecOptions.encodeAdd) {
@@ -25547,8 +25550,8 @@ var require_dbcs_codec = __commonJS({
         for (var i2 = 129; i2 <= 254; i2++) {
           var secondByteNodeIdx = NODE_START - this.decodeTables[0][i2];
           var secondByteNode = this.decodeTables[secondByteNodeIdx];
-          for (var j = 48; j <= 57; j++)
-            secondByteNode[j] = NODE_START - thirdByteNodeIdx;
+          for (var j2 = 48; j2 <= 57; j2++)
+            secondByteNode[j2] = NODE_START - thirdByteNodeIdx;
         }
         for (var i2 = 129; i2 <= 254; i2++)
           thirdByteNode[i2] = NODE_START - fourthByteNodeIdx;
@@ -25581,8 +25584,8 @@ var require_dbcs_codec = __commonJS({
       var curAddr = parseInt(chunk[0], 16);
       var writeTable = this._getDecodeTrieNode(curAddr);
       curAddr = curAddr & 255;
-      for (var k = 1; k < chunk.length; k++) {
-        var part = chunk[k];
+      for (var k2 = 1; k2 < chunk.length; k2++) {
+        var part = chunk[k2];
         if (typeof part === "string") {
           for (var l = 0; l < part.length; ) {
             var code = part.charCodeAt(l++);
@@ -25595,7 +25598,7 @@ var require_dbcs_codec = __commonJS({
             } else if (4080 < code && code <= 4095) {
               var len = 4095 - code + 2;
               var seq = [];
-              for (var m = 0; m < len; m++)
+              for (var m2 = 0; m2 < len; m2++)
                 seq.push(part.charCodeAt(l++));
               writeTable[curAddr++] = SEQ_START - this.decodeTableSeq.length;
               this.decodeTableSeq.push(seq);
@@ -25640,7 +25643,7 @@ var require_dbcs_codec = __commonJS({
         bucket[low] = SEQ_START - this.encodeTableSeq.length;
         this.encodeTableSeq.push(node);
       }
-      for (var j = 1; j < seq.length - 1; j++) {
+      for (var j2 = 1; j2 < seq.length - 1; j2++) {
         var oldVal = node[uCode];
         if (typeof oldVal === "object")
           node = oldVal;
@@ -25677,7 +25680,7 @@ var require_dbcs_codec = __commonJS({
       this.gb18030 = codec.gb18030;
     }
     DBCSEncoder.prototype.write = function(str) {
-      var newBuf = Buffer2.alloc(str.length * (this.gb18030 ? 4 : 3)), leadSurrogate = this.leadSurrogate, seqObj = this.seqObj, nextChar = -1, i2 = 0, j = 0;
+      var newBuf = Buffer2.alloc(str.length * (this.gb18030 ? 4 : 3)), leadSurrogate = this.leadSurrogate, seqObj = this.seqObj, nextChar = -1, i2 = 0, j2 = 0;
       while (true) {
         if (nextChar === -1) {
           if (i2 == str.length)
@@ -25738,13 +25741,13 @@ var require_dbcs_codec = __commonJS({
             var idx = findIdx(this.gb18030.uChars, uCode);
             if (idx != -1) {
               var dbcsCode = this.gb18030.gbChars[idx] + (uCode - this.gb18030.uChars[idx]);
-              newBuf[j++] = 129 + Math.floor(dbcsCode / 12600);
+              newBuf[j2++] = 129 + Math.floor(dbcsCode / 12600);
               dbcsCode = dbcsCode % 12600;
-              newBuf[j++] = 48 + Math.floor(dbcsCode / 1260);
+              newBuf[j2++] = 48 + Math.floor(dbcsCode / 1260);
               dbcsCode = dbcsCode % 1260;
-              newBuf[j++] = 129 + Math.floor(dbcsCode / 10);
+              newBuf[j2++] = 129 + Math.floor(dbcsCode / 10);
               dbcsCode = dbcsCode % 10;
-              newBuf[j++] = 48 + dbcsCode;
+              newBuf[j2++] = 48 + dbcsCode;
               continue;
             }
           }
@@ -25752,42 +25755,42 @@ var require_dbcs_codec = __commonJS({
         if (dbcsCode === UNASSIGNED)
           dbcsCode = this.defaultCharSingleByte;
         if (dbcsCode < 256) {
-          newBuf[j++] = dbcsCode;
+          newBuf[j2++] = dbcsCode;
         } else if (dbcsCode < 65536) {
-          newBuf[j++] = dbcsCode >> 8;
-          newBuf[j++] = dbcsCode & 255;
+          newBuf[j2++] = dbcsCode >> 8;
+          newBuf[j2++] = dbcsCode & 255;
         } else {
-          newBuf[j++] = dbcsCode >> 16;
-          newBuf[j++] = dbcsCode >> 8 & 255;
-          newBuf[j++] = dbcsCode & 255;
+          newBuf[j2++] = dbcsCode >> 16;
+          newBuf[j2++] = dbcsCode >> 8 & 255;
+          newBuf[j2++] = dbcsCode & 255;
         }
       }
       this.seqObj = seqObj;
       this.leadSurrogate = leadSurrogate;
-      return newBuf.slice(0, j);
+      return newBuf.slice(0, j2);
     };
     DBCSEncoder.prototype.end = function() {
       if (this.leadSurrogate === -1 && this.seqObj === void 0)
         return;
-      var newBuf = Buffer2.alloc(10), j = 0;
+      var newBuf = Buffer2.alloc(10), j2 = 0;
       if (this.seqObj) {
         var dbcsCode = this.seqObj[DEF_CHAR];
         if (dbcsCode !== void 0) {
           if (dbcsCode < 256) {
-            newBuf[j++] = dbcsCode;
+            newBuf[j2++] = dbcsCode;
           } else {
-            newBuf[j++] = dbcsCode >> 8;
-            newBuf[j++] = dbcsCode & 255;
+            newBuf[j2++] = dbcsCode >> 8;
+            newBuf[j2++] = dbcsCode & 255;
           }
         } else {
         }
         this.seqObj = void 0;
       }
       if (this.leadSurrogate !== -1) {
-        newBuf[j++] = this.defaultCharSingleByte;
+        newBuf[j2++] = this.defaultCharSingleByte;
         this.leadSurrogate = -1;
       }
-      return newBuf.slice(0, j);
+      return newBuf.slice(0, j2);
     };
     DBCSEncoder.prototype.findIdx = findIdx;
     function DBCSDecoder(options, codec) {
@@ -25802,7 +25805,7 @@ var require_dbcs_codec = __commonJS({
       var newBuf = Buffer2.alloc(buf.length * 2), nodeIdx = this.nodeIdx, prevBuf = this.prevBuf, prevBufOffset = this.prevBuf.length, seqStart = -this.prevBuf.length, uCode;
       if (prevBufOffset > 0)
         prevBuf = Buffer2.concat([prevBuf, buf.slice(0, 10)]);
-      for (var i2 = 0, j = 0; i2 < buf.length; i2++) {
+      for (var i2 = 0, j2 = 0; i2 < buf.length; i2++) {
         var curByte = i2 >= 0 ? buf[i2] : prevBuf[i2 + prevBufOffset];
         var uCode = this.decodeTables[nodeIdx][curByte];
         if (uCode >= 0) {
@@ -25819,10 +25822,10 @@ var require_dbcs_codec = __commonJS({
           continue;
         } else if (uCode <= SEQ_START) {
           var seq = this.decodeTableSeq[SEQ_START - uCode];
-          for (var k = 0; k < seq.length - 1; k++) {
-            uCode = seq[k];
-            newBuf[j++] = uCode & 255;
-            newBuf[j++] = uCode >> 8;
+          for (var k2 = 0; k2 < seq.length - 1; k2++) {
+            uCode = seq[k2];
+            newBuf[j2++] = uCode & 255;
+            newBuf[j2++] = uCode >> 8;
           }
           uCode = seq[seq.length - 1];
         } else
@@ -25830,18 +25833,18 @@ var require_dbcs_codec = __commonJS({
         if (uCode > 65535) {
           uCode -= 65536;
           var uCodeLead = 55296 + Math.floor(uCode / 1024);
-          newBuf[j++] = uCodeLead & 255;
-          newBuf[j++] = uCodeLead >> 8;
+          newBuf[j2++] = uCodeLead & 255;
+          newBuf[j2++] = uCodeLead >> 8;
           uCode = 56320 + uCode % 1024;
         }
-        newBuf[j++] = uCode & 255;
-        newBuf[j++] = uCode >> 8;
+        newBuf[j2++] = uCode & 255;
+        newBuf[j2++] = uCode >> 8;
         nodeIdx = 0;
         seqStart = i2 + 1;
       }
       this.nodeIdx = nodeIdx;
       this.prevBuf = seqStart >= 0 ? buf.slice(seqStart) : prevBuf.slice(seqStart + prevBufOffset);
-      return newBuf.slice(0, j).toString("ucs2");
+      return newBuf.slice(0, j2).toString("ucs2");
     };
     DBCSDecoder.prototype.end = function() {
       var ret = "";
@@ -27876,8 +27879,8 @@ var require_ee_first = __commonJS({
         if (!Array.isArray(arr) || arr.length < 2)
           throw new TypeError("each array member must be [ee, events...]");
         var ee = arr[0];
-        for (var j = 1; j < arr.length; j++) {
-          var event = arr[j];
+        for (var j2 = 1; j2 < arr.length; j2++) {
+          var event = arr[j2];
           var fn = listener(event, callback);
           ee.on(event, fn);
           cleanups.push({
@@ -27892,10 +27895,10 @@ var require_ee_first = __commonJS({
         done.apply(null, arguments);
       }
       function cleanup() {
-        var x;
+        var x2;
         for (var i2 = 0; i2 < cleanups.length; i2++) {
-          x = cleanups[i2];
-          x.ee.removeListener(x.event, x.fn);
+          x2 = cleanups[i2];
+          x2.ee.removeListener(x2.event, x2.fn);
         }
       }
       function thunk(fn2) {
@@ -37599,106 +37602,106 @@ var require_object_inspect = __commonJS({
       if (f.name) {
         return f.name;
       }
-      var m = $match.call(functionToString.call(f), /^function\s*([\w$]+)/);
-      if (m) {
-        return m[1];
+      var m2 = $match.call(functionToString.call(f), /^function\s*([\w$]+)/);
+      if (m2) {
+        return m2[1];
       }
       return null;
     }
-    function indexOf(xs, x) {
+    function indexOf(xs, x2) {
       if (xs.indexOf) {
-        return xs.indexOf(x);
+        return xs.indexOf(x2);
       }
       for (var i = 0, l = xs.length; i < l; i++) {
-        if (xs[i] === x) {
+        if (xs[i] === x2) {
           return i;
         }
       }
       return -1;
     }
-    function isMap(x) {
-      if (!mapSize || !x || typeof x !== "object") {
+    function isMap(x2) {
+      if (!mapSize || !x2 || typeof x2 !== "object") {
         return false;
       }
       try {
-        mapSize.call(x);
+        mapSize.call(x2);
         try {
-          setSize.call(x);
+          setSize.call(x2);
         } catch (s) {
           return true;
         }
-        return x instanceof Map;
+        return x2 instanceof Map;
       } catch (e) {
       }
       return false;
     }
-    function isWeakMap(x) {
-      if (!weakMapHas || !x || typeof x !== "object") {
+    function isWeakMap(x2) {
+      if (!weakMapHas || !x2 || typeof x2 !== "object") {
         return false;
       }
       try {
-        weakMapHas.call(x, weakMapHas);
+        weakMapHas.call(x2, weakMapHas);
         try {
-          weakSetHas.call(x, weakSetHas);
+          weakSetHas.call(x2, weakSetHas);
         } catch (s) {
           return true;
         }
-        return x instanceof WeakMap;
+        return x2 instanceof WeakMap;
       } catch (e) {
       }
       return false;
     }
-    function isWeakRef(x) {
-      if (!weakRefDeref || !x || typeof x !== "object") {
+    function isWeakRef(x2) {
+      if (!weakRefDeref || !x2 || typeof x2 !== "object") {
         return false;
       }
       try {
-        weakRefDeref.call(x);
+        weakRefDeref.call(x2);
         return true;
       } catch (e) {
       }
       return false;
     }
-    function isSet(x) {
-      if (!setSize || !x || typeof x !== "object") {
+    function isSet(x2) {
+      if (!setSize || !x2 || typeof x2 !== "object") {
         return false;
       }
       try {
-        setSize.call(x);
+        setSize.call(x2);
         try {
-          mapSize.call(x);
-        } catch (m) {
+          mapSize.call(x2);
+        } catch (m2) {
           return true;
         }
-        return x instanceof Set;
+        return x2 instanceof Set;
       } catch (e) {
       }
       return false;
     }
-    function isWeakSet(x) {
-      if (!weakSetHas || !x || typeof x !== "object") {
+    function isWeakSet(x2) {
+      if (!weakSetHas || !x2 || typeof x2 !== "object") {
         return false;
       }
       try {
-        weakSetHas.call(x, weakSetHas);
+        weakSetHas.call(x2, weakSetHas);
         try {
-          weakMapHas.call(x, weakMapHas);
+          weakMapHas.call(x2, weakMapHas);
         } catch (s) {
           return true;
         }
-        return x instanceof WeakSet;
+        return x2 instanceof WeakSet;
       } catch (e) {
       }
       return false;
     }
-    function isElement(x) {
-      if (!x || typeof x !== "object") {
+    function isElement(x2) {
+      if (!x2 || typeof x2 !== "object") {
         return false;
       }
-      if (typeof HTMLElement !== "undefined" && x instanceof HTMLElement) {
+      if (typeof HTMLElement !== "undefined" && x2 instanceof HTMLElement) {
         return true;
       }
-      return typeof x.nodeName === "string" && typeof x.getAttribute === "function";
+      return typeof x2.nodeName === "string" && typeof x2.getAttribute === "function";
     }
     function inspectString(str, opts) {
       if (str.length > opts.maxStringLength) {
@@ -37713,15 +37716,15 @@ var require_object_inspect = __commonJS({
     }
     function lowbyte(c) {
       var n = c.charCodeAt(0);
-      var x = {
+      var x2 = {
         8: "b",
         9: "t",
         10: "n",
         12: "f",
         13: "r"
       }[n];
-      if (x) {
-        return "\\" + x;
+      if (x2) {
+        return "\\" + x2;
       }
       return "\\x" + (n < 16 ? "0" : "") + $toUpperCase.call(n.toString(16));
     }
@@ -37777,8 +37780,8 @@ var require_object_inspect = __commonJS({
       var symMap;
       if (hasShammedSymbols) {
         symMap = {};
-        for (var k = 0; k < syms.length; k++) {
-          symMap["$" + syms[k]] = syms[k];
+        for (var k2 = 0; k2 < syms.length; k2++) {
+          symMap["$" + syms[k2]] = syms[k2];
         }
       }
       for (var key in obj) {
@@ -37797,9 +37800,9 @@ var require_object_inspect = __commonJS({
         }
       }
       if (typeof gOPS === "function") {
-        for (var j = 0; j < syms.length; j++) {
-          if (isEnumerable.call(obj, syms[j])) {
-            xs.push("[" + inspect(syms[j]) + "]: " + inspect(obj[syms[j]], obj));
+        for (var j2 = 0; j2 < syms.length; j2++) {
+          if (isEnumerable.call(obj, syms[j2])) {
+            xs.push("[" + inspect(syms[j2]) + "]: " + inspect(obj[syms[j2]], obj));
           }
         }
       }
@@ -38087,7 +38090,7 @@ var require_shams = __commonJS({
       }
       var symVal = 42;
       obj[sym] = symVal;
-      for (var _ in obj) {
+      for (var _2 in obj) {
         return false;
       }
       if (typeof Object.keys === "function" && Object.keys(obj).length !== 0) {
@@ -38163,20 +38166,20 @@ var require_implementation = __commonJS({
     var toStr = Object.prototype.toString;
     var max = Math.max;
     var funcType = "[object Function]";
-    var concatty = function concatty2(a, b) {
+    var concatty = function concatty2(a, b2) {
       var arr = [];
       for (var i = 0; i < a.length; i += 1) {
         arr[i] = a[i];
       }
-      for (var j = 0; j < b.length; j += 1) {
-        arr[j + a.length] = b[j];
+      for (var j2 = 0; j2 < b2.length; j2 += 1) {
+        arr[j2 + a.length] = b2[j2];
       }
       return arr;
     };
     var slicy = function slicy2(arrLike, offset) {
       var arr = [];
-      for (var i = offset || 0, j = 0; i < arrLike.length; i += 1, j += 1) {
-        arr[j] = arrLike[i];
+      for (var i = offset || 0, j2 = 0; i < arrLike.length; i += 1, j2 += 1) {
+        arr[j2] = arrLike[i];
       }
       return arr;
     };
@@ -38898,9 +38901,9 @@ var require_utils = __commonJS({
         var obj = item.obj[item.prop];
         if (isArray(obj)) {
           var compacted = [];
-          for (var j = 0; j < obj.length; ++j) {
-            if (typeof obj[j] !== "undefined") {
-              compacted.push(obj[j]);
+          for (var j2 = 0; j2 < obj.length; ++j2) {
+            if (typeof obj[j2] !== "undefined") {
+              compacted.push(obj[j2]);
             }
           }
           item.obj[item.prop] = compacted;
@@ -38998,8 +39001,8 @@ var require_utils = __commonJS({
         });
       }
       var out = "";
-      for (var j = 0; j < string.length; j += limit) {
-        var segment = string.length >= limit ? string.slice(j, j + limit) : string;
+      for (var j2 = 0; j2 < string.length; j2 += limit) {
+        var segment = string.length >= limit ? string.slice(j2, j2 + limit) : string;
         var arr = [];
         for (var i = 0; i < segment.length; ++i) {
           var c = segment.charCodeAt(i);
@@ -39034,8 +39037,8 @@ var require_utils = __commonJS({
         var item = queue[i];
         var obj = item.obj[item.prop];
         var keys = Object.keys(obj);
-        for (var j = 0; j < keys.length; ++j) {
-          var key = keys[j];
+        for (var j2 = 0; j2 < keys.length; ++j2) {
+          var key = keys[j2];
           var val = obj[key];
           if (typeof val === "object" && val !== null && refs.indexOf(val) === -1) {
             queue.push({ obj, prop: key });
@@ -39055,8 +39058,8 @@ var require_utils = __commonJS({
       }
       return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
     };
-    var combine = function combine2(a, b) {
-      return [].concat(a, b);
+    var combine = function combine2(a, b2) {
+      return [].concat(a, b2);
     };
     var maybeMap = function maybeMap2(val, fn) {
       if (isArray(val)) {
@@ -39131,8 +39134,8 @@ var require_stringify = __commonJS({
       skipNulls: false,
       strictNullHandling: false
     };
-    var isNonNullishPrimitive = function isNonNullishPrimitive2(v) {
-      return typeof v === "string" || typeof v === "number" || typeof v === "boolean" || typeof v === "symbol" || typeof v === "bigint";
+    var isNonNullishPrimitive = function isNonNullishPrimitive2(v2) {
+      return typeof v2 === "string" || typeof v2 === "number" || typeof v2 === "boolean" || typeof v2 === "symbol" || typeof v2 === "bigint";
     };
     var sentinel = {};
     var stringify = function stringify2(object, prefix, generateArrayPrefix, commaRoundTrip, allowEmptyArrays, strictNullHandling, skipNulls, encodeDotInKeys, encoder, filter, sort, allowDots, serializeDate, format, formatter, encodeValuesOnly, charset, sideChannel) {
@@ -39200,8 +39203,8 @@ var require_stringify = __commonJS({
       if (allowEmptyArrays && isArray(obj) && obj.length === 0) {
         return adjustedPrefix + "[]";
       }
-      for (var j = 0; j < objKeys.length; ++j) {
-        var key = objKeys[j];
+      for (var j2 = 0; j2 < objKeys.length; ++j2) {
+        var key = objKeys[j2];
         var value = typeof key === "object" && typeof key.value !== "undefined" ? key.value : obj[key];
         if (skipNulls && value === null) {
           continue;
@@ -39844,10 +39847,10 @@ var require_merge_descriptors = __commonJS({
 var require_ms2 = __commonJS({
   "node_modules/finalhandler/node_modules/ms/index.js"(exports, module2) {
     var s = 1e3;
-    var m = s * 60;
-    var h = m * 60;
-    var d = h * 24;
-    var y = d * 365.25;
+    var m2 = s * 60;
+    var h = m2 * 60;
+    var d2 = h * 24;
+    var y2 = d2 * 365.25;
     module2.exports = function(val, options) {
       options = options || {};
       var type = typeof val;
@@ -39875,11 +39878,11 @@ var require_ms2 = __commonJS({
         case "yrs":
         case "yr":
         case "y":
-          return n * y;
+          return n * y2;
         case "days":
         case "day":
         case "d":
-          return n * d;
+          return n * d2;
         case "hours":
         case "hour":
         case "hrs":
@@ -39891,7 +39894,7 @@ var require_ms2 = __commonJS({
         case "mins":
         case "min":
         case "m":
-          return n * m;
+          return n * m2;
         case "seconds":
         case "second":
         case "secs":
@@ -39909,14 +39912,14 @@ var require_ms2 = __commonJS({
       }
     }
     function fmtShort(ms) {
-      if (ms >= d) {
-        return Math.round(ms / d) + "d";
+      if (ms >= d2) {
+        return Math.round(ms / d2) + "d";
       }
       if (ms >= h) {
         return Math.round(ms / h) + "h";
       }
-      if (ms >= m) {
-        return Math.round(ms / m) + "m";
+      if (ms >= m2) {
+        return Math.round(ms / m2) + "m";
       }
       if (ms >= s) {
         return Math.round(ms / s) + "s";
@@ -39924,7 +39927,7 @@ var require_ms2 = __commonJS({
       return ms + "ms";
     }
     function fmtLong(ms) {
-      return plural(ms, d, "day") || plural(ms, h, "hour") || plural(ms, m, "minute") || plural(ms, s, "second") || ms + " ms";
+      return plural(ms, d2, "day") || plural(ms, h, "hour") || plural(ms, m2, "minute") || plural(ms, s, "second") || ms + " ms";
     }
     function plural(ms, n, name) {
       if (ms < n) {
@@ -40071,9 +40074,9 @@ var require_browser2 = __commonJS({
       }
       return typeof document !== "undefined" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || typeof window !== "undefined" && window.console && (window.console.firebug || window.console.exception && window.console.table) || typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
     }
-    exports.formatters.j = function(v) {
+    exports.formatters.j = function(v2) {
       try {
-        return JSON.stringify(v);
+        return JSON.stringify(v2);
       } catch (err) {
         return "[UnexpectedJSONParseError]: " + err.message;
       }
@@ -40147,8 +40150,8 @@ var require_node2 = __commonJS({
     exports.inspectOpts = Object.keys(process.env).filter(function(key) {
       return /^debug_/i.test(key);
     }).reduce(function(obj, key) {
-      var prop = key.substring(6).toLowerCase().replace(/_([a-z])/g, function(_, k) {
-        return k.toUpperCase();
+      var prop = key.substring(6).toLowerCase().replace(/_([a-z])/g, function(_2, k2) {
+        return k2.toUpperCase();
       });
       var val = process.env[key];
       if (/^(yes|on|true|enabled)$/i.test(val))
@@ -40171,15 +40174,15 @@ var require_node2 = __commonJS({
     function useColors() {
       return "colors" in exports.inspectOpts ? Boolean(exports.inspectOpts.colors) : tty.isatty(fd);
     }
-    exports.formatters.o = function(v) {
+    exports.formatters.o = function(v2) {
       this.inspectOpts.colors = this.useColors;
-      return util.inspect(v, this.inspectOpts).split("\n").map(function(str) {
+      return util.inspect(v2, this.inspectOpts).split("\n").map(function(str) {
         return str.trim();
       }).join(" ");
     };
-    exports.formatters.O = function(v) {
+    exports.formatters.O = function(v2) {
       this.inspectOpts.colors = this.useColors;
-      return util.inspect(v, this.inspectOpts);
+      return util.inspect(v2, this.inspectOpts);
     };
     function formatArgs(args) {
       var name = this.namespace;
@@ -40559,10 +40562,10 @@ var require_finalhandler = __commonJS({
 var require_ms3 = __commonJS({
   "node_modules/express/node_modules/ms/index.js"(exports, module2) {
     var s = 1e3;
-    var m = s * 60;
-    var h = m * 60;
-    var d = h * 24;
-    var y = d * 365.25;
+    var m2 = s * 60;
+    var h = m2 * 60;
+    var d2 = h * 24;
+    var y2 = d2 * 365.25;
     module2.exports = function(val, options) {
       options = options || {};
       var type = typeof val;
@@ -40590,11 +40593,11 @@ var require_ms3 = __commonJS({
         case "yrs":
         case "yr":
         case "y":
-          return n * y;
+          return n * y2;
         case "days":
         case "day":
         case "d":
-          return n * d;
+          return n * d2;
         case "hours":
         case "hour":
         case "hrs":
@@ -40606,7 +40609,7 @@ var require_ms3 = __commonJS({
         case "mins":
         case "min":
         case "m":
-          return n * m;
+          return n * m2;
         case "seconds":
         case "second":
         case "secs":
@@ -40624,14 +40627,14 @@ var require_ms3 = __commonJS({
       }
     }
     function fmtShort(ms) {
-      if (ms >= d) {
-        return Math.round(ms / d) + "d";
+      if (ms >= d2) {
+        return Math.round(ms / d2) + "d";
       }
       if (ms >= h) {
         return Math.round(ms / h) + "h";
       }
-      if (ms >= m) {
-        return Math.round(ms / m) + "m";
+      if (ms >= m2) {
+        return Math.round(ms / m2) + "m";
       }
       if (ms >= s) {
         return Math.round(ms / s) + "s";
@@ -40639,7 +40642,7 @@ var require_ms3 = __commonJS({
       return ms + "ms";
     }
     function fmtLong(ms) {
-      return plural(ms, d, "day") || plural(ms, h, "hour") || plural(ms, m, "minute") || plural(ms, s, "second") || ms + " ms";
+      return plural(ms, d2, "day") || plural(ms, h, "hour") || plural(ms, m2, "minute") || plural(ms, s, "second") || ms + " ms";
     }
     function plural(ms, n, name) {
       if (ms < n) {
@@ -40786,9 +40789,9 @@ var require_browser3 = __commonJS({
       }
       return typeof document !== "undefined" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || typeof window !== "undefined" && window.console && (window.console.firebug || window.console.exception && window.console.table) || typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
     }
-    exports.formatters.j = function(v) {
+    exports.formatters.j = function(v2) {
       try {
-        return JSON.stringify(v);
+        return JSON.stringify(v2);
       } catch (err) {
         return "[UnexpectedJSONParseError]: " + err.message;
       }
@@ -40862,8 +40865,8 @@ var require_node3 = __commonJS({
     exports.inspectOpts = Object.keys(process.env).filter(function(key) {
       return /^debug_/i.test(key);
     }).reduce(function(obj, key) {
-      var prop = key.substring(6).toLowerCase().replace(/_([a-z])/g, function(_, k) {
-        return k.toUpperCase();
+      var prop = key.substring(6).toLowerCase().replace(/_([a-z])/g, function(_2, k2) {
+        return k2.toUpperCase();
       });
       var val = process.env[key];
       if (/^(yes|on|true|enabled)$/i.test(val))
@@ -40886,15 +40889,15 @@ var require_node3 = __commonJS({
     function useColors() {
       return "colors" in exports.inspectOpts ? Boolean(exports.inspectOpts.colors) : tty.isatty(fd);
     }
-    exports.formatters.o = function(v) {
+    exports.formatters.o = function(v2) {
       this.inspectOpts.colors = this.useColors;
-      return util.inspect(v, this.inspectOpts).split("\n").map(function(str) {
+      return util.inspect(v2, this.inspectOpts).split("\n").map(function(str) {
         return str.trim();
       }).join(" ");
     };
-    exports.formatters.O = function(v) {
+    exports.formatters.O = function(v2) {
       this.inspectOpts.colors = this.useColors;
-      return util.inspect(v, this.inspectOpts);
+      return util.inspect(v2, this.inspectOpts);
     };
     function formatArgs(args) {
       var name = this.namespace;
@@ -41035,15 +41038,15 @@ var require_path_to_regexp = __commonJS({
       var name = 0;
       var pos = 0;
       var backtrack = "";
-      var m;
+      var m2;
       if (path2 instanceof RegExp) {
-        while (m = MATCHING_GROUP_REGEXP.exec(path2.source)) {
-          if (m[0][0] === "\\")
+        while (m2 = MATCHING_GROUP_REGEXP.exec(path2.source)) {
+          if (m2[0][0] === "\\")
             continue;
           keys.push({
-            name: m[1] || name++,
+            name: m2[1] || name++,
             optional: false,
-            offset: m.index
+            offset: m2.index
           });
         }
         return path2;
@@ -41087,8 +41090,8 @@ var require_path_to_regexp = __commonJS({
         slash = slash || "";
         format = format ? "\\." : "";
         optional = optional || "";
-        capture = capture ? capture.replace(/\\.|\*/, function(m2) {
-          return m2 === "*" ? "(.*)" : m2;
+        capture = capture ? capture.replace(/\\.|\*/, function(m3) {
+          return m3 === "*" ? "(.*)" : m3;
         }) : backtrack ? "((?:(?!/|" + backtrack + ").)+?)" : "([^/" + format + "]+?)";
         keys.push({
           name: key,
@@ -41099,14 +41102,14 @@ var require_path_to_regexp = __commonJS({
         extraOffset += result.length - match.length;
         return result;
       });
-      while (m = MATCHING_GROUP_REGEXP.exec(path2)) {
-        if (m[0][0] === "\\")
+      while (m2 = MATCHING_GROUP_REGEXP.exec(path2)) {
+        if (m2[0][0] === "\\")
           continue;
-        if (keysOffset + i === keys.length || keys[keysOffset + i].offset > m.index) {
+        if (keysOffset + i === keys.length || keys[keysOffset + i].offset > m2.index) {
           keys.splice(keysOffset + i, 0, {
             name: name++,
             optional: false,
-            offset: m.index
+            offset: m2.index
           });
         }
         i++;
@@ -41376,10 +41379,10 @@ var require_route = __commonJS({
 // node_modules/utils-merge/index.js
 var require_utils_merge = __commonJS({
   "node_modules/utils-merge/index.js"(exports, module2) {
-    exports = module2.exports = function(a, b) {
-      if (a && b) {
-        for (var key in b) {
-          a[key] = b[key];
+    exports = module2.exports = function(a, b2) {
+      if (a && b2) {
+        for (var key in b2) {
+          a[key] = b2[key];
         }
       }
       return a;
@@ -42127,10 +42130,10 @@ var require_content_disposition = __commonJS({
 var require_ms4 = __commonJS({
   "node_modules/send/node_modules/debug/node_modules/ms/index.js"(exports, module2) {
     var s = 1e3;
-    var m = s * 60;
-    var h = m * 60;
-    var d = h * 24;
-    var y = d * 365.25;
+    var m2 = s * 60;
+    var h = m2 * 60;
+    var d2 = h * 24;
+    var y2 = d2 * 365.25;
     module2.exports = function(val, options) {
       options = options || {};
       var type = typeof val;
@@ -42158,11 +42161,11 @@ var require_ms4 = __commonJS({
         case "yrs":
         case "yr":
         case "y":
-          return n * y;
+          return n * y2;
         case "days":
         case "day":
         case "d":
-          return n * d;
+          return n * d2;
         case "hours":
         case "hour":
         case "hrs":
@@ -42174,7 +42177,7 @@ var require_ms4 = __commonJS({
         case "mins":
         case "min":
         case "m":
-          return n * m;
+          return n * m2;
         case "seconds":
         case "second":
         case "secs":
@@ -42192,14 +42195,14 @@ var require_ms4 = __commonJS({
       }
     }
     function fmtShort(ms) {
-      if (ms >= d) {
-        return Math.round(ms / d) + "d";
+      if (ms >= d2) {
+        return Math.round(ms / d2) + "d";
       }
       if (ms >= h) {
         return Math.round(ms / h) + "h";
       }
-      if (ms >= m) {
-        return Math.round(ms / m) + "m";
+      if (ms >= m2) {
+        return Math.round(ms / m2) + "m";
       }
       if (ms >= s) {
         return Math.round(ms / s) + "s";
@@ -42207,7 +42210,7 @@ var require_ms4 = __commonJS({
       return ms + "ms";
     }
     function fmtLong(ms) {
-      return plural(ms, d, "day") || plural(ms, h, "hour") || plural(ms, m, "minute") || plural(ms, s, "second") || ms + " ms";
+      return plural(ms, d2, "day") || plural(ms, h, "hour") || plural(ms, m2, "minute") || plural(ms, s, "second") || ms + " ms";
     }
     function plural(ms, n, name) {
       if (ms < n) {
@@ -42354,9 +42357,9 @@ var require_browser4 = __commonJS({
       }
       return typeof document !== "undefined" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || typeof window !== "undefined" && window.console && (window.console.firebug || window.console.exception && window.console.table) || typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || typeof navigator !== "undefined" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
     }
-    exports.formatters.j = function(v) {
+    exports.formatters.j = function(v2) {
       try {
-        return JSON.stringify(v);
+        return JSON.stringify(v2);
       } catch (err) {
         return "[UnexpectedJSONParseError]: " + err.message;
       }
@@ -42430,8 +42433,8 @@ var require_node4 = __commonJS({
     exports.inspectOpts = Object.keys(process.env).filter(function(key) {
       return /^debug_/i.test(key);
     }).reduce(function(obj, key) {
-      var prop = key.substring(6).toLowerCase().replace(/_([a-z])/g, function(_, k) {
-        return k.toUpperCase();
+      var prop = key.substring(6).toLowerCase().replace(/_([a-z])/g, function(_2, k2) {
+        return k2.toUpperCase();
       });
       var val = process.env[key];
       if (/^(yes|on|true|enabled)$/i.test(val))
@@ -42454,15 +42457,15 @@ var require_node4 = __commonJS({
     function useColors() {
       return "colors" in exports.inspectOpts ? Boolean(exports.inspectOpts.colors) : tty.isatty(fd);
     }
-    exports.formatters.o = function(v) {
+    exports.formatters.o = function(v2) {
       this.inspectOpts.colors = this.useColors;
-      return util.inspect(v, this.inspectOpts).split("\n").map(function(str) {
+      return util.inspect(v2, this.inspectOpts).split("\n").map(function(str) {
         return str.trim();
       }).join(" ");
     };
-    exports.formatters.O = function(v) {
+    exports.formatters.O = function(v2) {
       this.inspectOpts.colors = this.useColors;
-      return util.inspect(v, this.inspectOpts);
+      return util.inspect(v2, this.inspectOpts);
     };
     function formatArgs(args) {
       var name = this.namespace;
@@ -42743,11 +42746,11 @@ var require_mime = __commonJS({
 var require_ms5 = __commonJS({
   "node_modules/ms/index.js"(exports, module2) {
     var s = 1e3;
-    var m = s * 60;
-    var h = m * 60;
-    var d = h * 24;
-    var w = d * 7;
-    var y = d * 365.25;
+    var m2 = s * 60;
+    var h = m2 * 60;
+    var d2 = h * 24;
+    var w2 = d2 * 7;
+    var y2 = d2 * 365.25;
     module2.exports = function(val, options) {
       options = options || {};
       var type = typeof val;
@@ -42775,15 +42778,15 @@ var require_ms5 = __commonJS({
         case "yrs":
         case "yr":
         case "y":
-          return n * y;
+          return n * y2;
         case "weeks":
         case "week":
         case "w":
-          return n * w;
+          return n * w2;
         case "days":
         case "day":
         case "d":
-          return n * d;
+          return n * d2;
         case "hours":
         case "hour":
         case "hrs":
@@ -42795,7 +42798,7 @@ var require_ms5 = __commonJS({
         case "mins":
         case "min":
         case "m":
-          return n * m;
+          return n * m2;
         case "seconds":
         case "second":
         case "secs":
@@ -42814,14 +42817,14 @@ var require_ms5 = __commonJS({
     }
     function fmtShort(ms) {
       var msAbs = Math.abs(ms);
-      if (msAbs >= d) {
-        return Math.round(ms / d) + "d";
+      if (msAbs >= d2) {
+        return Math.round(ms / d2) + "d";
       }
       if (msAbs >= h) {
         return Math.round(ms / h) + "h";
       }
-      if (msAbs >= m) {
-        return Math.round(ms / m) + "m";
+      if (msAbs >= m2) {
+        return Math.round(ms / m2) + "m";
       }
       if (msAbs >= s) {
         return Math.round(ms / s) + "s";
@@ -42830,14 +42833,14 @@ var require_ms5 = __commonJS({
     }
     function fmtLong(ms) {
       var msAbs = Math.abs(ms);
-      if (msAbs >= d) {
-        return plural(ms, msAbs, d, "day");
+      if (msAbs >= d2) {
+        return plural(ms, msAbs, d2, "day");
       }
       if (msAbs >= h) {
         return plural(ms, msAbs, h, "hour");
       }
-      if (msAbs >= m) {
-        return plural(ms, msAbs, m, "minute");
+      if (msAbs >= m2) {
+        return plural(ms, msAbs, m2, "minute");
       }
       if (msAbs >= s) {
         return plural(ms, msAbs, s, "second");
@@ -42895,17 +42898,17 @@ var require_range_parser = __commonJS({
     }
     function combineRanges(ranges) {
       var ordered = ranges.map(mapWithIndex).sort(sortByRangeStart);
-      for (var j = 0, i = 1; i < ordered.length; i++) {
+      for (var j2 = 0, i = 1; i < ordered.length; i++) {
         var range = ordered[i];
-        var current = ordered[j];
+        var current = ordered[j2];
         if (range.start > current.end + 1) {
-          ordered[++j] = range;
+          ordered[++j2] = range;
         } else if (range.end > current.end) {
           current.end = range.end;
           current.index = Math.min(current.index, range.index);
         }
       }
-      ordered.length = j + 1;
+      ordered.length = j2 + 1;
       var combined = ordered.sort(sortByRangeIndex).map(mapWithoutIndex);
       combined.type = ranges.type;
       return combined;
@@ -42923,11 +42926,11 @@ var require_range_parser = __commonJS({
         end: range.end
       };
     }
-    function sortByRangeIndex(a, b) {
-      return a.index - b.index;
+    function sortByRangeIndex(a, b2) {
+      return a.index - b2.index;
     }
-    function sortByRangeStart(a, b) {
-      return a.start - b.start;
+    function sortByRangeStart(a, b2) {
+      return a.start - b2.start;
     }
   }
 });
@@ -43559,7 +43562,7 @@ var require_ipaddr = __commonJS({
         return true;
       };
       ipaddr.subnetMatch = function(address, rangeList, defaultName) {
-        var k, len, rangeName, rangeSubnets, subnet;
+        var k2, len, rangeName, rangeSubnets, subnet;
         if (defaultName == null) {
           defaultName = "unicast";
         }
@@ -43568,8 +43571,8 @@ var require_ipaddr = __commonJS({
           if (rangeSubnets[0] && !(rangeSubnets[0] instanceof Array)) {
             rangeSubnets = [rangeSubnets];
           }
-          for (k = 0, len = rangeSubnets.length; k < len; k++) {
-            subnet = rangeSubnets[k];
+          for (k2 = 0, len = rangeSubnets.length; k2 < len; k2++) {
+            subnet = rangeSubnets[k2];
             if (address.kind() === subnet[0].kind()) {
               if (address.match.apply(address, subnet)) {
                 return rangeName;
@@ -43581,12 +43584,12 @@ var require_ipaddr = __commonJS({
       };
       ipaddr.IPv4 = function() {
         function IPv4(octets) {
-          var k, len, octet;
+          var k2, len, octet;
           if (octets.length !== 4) {
             throw new Error("ipaddr: ipv4 octet count should be 4");
           }
-          for (k = 0, len = octets.length; k < len; k++) {
-            octet = octets[k];
+          for (k2 = 0, len = octets.length; k2 < len; k2++) {
+            octet = octets[k2];
             if (!(0 <= octet && octet <= 255)) {
               throw new Error("ipaddr: ipv4 octet should fit in 8 bits");
             }
@@ -43632,7 +43635,7 @@ var require_ipaddr = __commonJS({
           return ipaddr.IPv6.parse("::ffff:" + this.toString());
         };
         IPv4.prototype.prefixLengthFromSubnetMask = function() {
-          var cidr, i, k, octet, stop, zeros, zerotable;
+          var cidr, i, k2, octet, stop, zeros, zerotable;
           zerotable = {
             0: 8,
             128: 7,
@@ -43646,7 +43649,7 @@ var require_ipaddr = __commonJS({
           };
           cidr = 0;
           stop = false;
-          for (i = k = 3; k >= 0; i = k += -1) {
+          for (i = k2 = 3; k2 >= 0; i = k2 += -1) {
             octet = this.octets[i];
             if (octet in zerotable) {
               zeros = zerotable[octet];
@@ -43681,11 +43684,11 @@ var require_ipaddr = __commonJS({
         };
         if (match = string.match(ipv4Regexes.fourOctet)) {
           return function() {
-            var k, len, ref, results;
+            var k2, len, ref, results;
             ref = match.slice(1, 6);
             results = [];
-            for (k = 0, len = ref.length; k < len; k++) {
-              part = ref[k];
+            for (k2 = 0, len = ref.length; k2 < len; k2++) {
+              part = ref[k2];
               results.push(parseIntAuto(part));
             }
             return results;
@@ -43696,9 +43699,9 @@ var require_ipaddr = __commonJS({
             throw new Error("ipaddr: address outside defined range");
           }
           return function() {
-            var k, results;
+            var k2, results;
             results = [];
-            for (shift = k = 0; k <= 24; shift = k += 8) {
+            for (shift = k2 = 0; k2 <= 24; shift = k2 += 8) {
               results.push(value >> shift & 255);
             }
             return results;
@@ -43709,10 +43712,10 @@ var require_ipaddr = __commonJS({
       };
       ipaddr.IPv6 = function() {
         function IPv6(parts, zoneId) {
-          var i, k, l, len, part, ref;
+          var i, k2, l, len, part, ref;
           if (parts.length === 16) {
             this.parts = [];
-            for (i = k = 0; k <= 14; i = k += 2) {
+            for (i = k2 = 0; k2 <= 14; i = k2 += 2) {
               this.parts.push(parts[i] << 8 | parts[i + 1]);
             }
           } else if (parts.length === 8) {
@@ -43755,11 +43758,11 @@ var require_ipaddr = __commonJS({
           return string.substring(0, bestMatchIndex) + "::" + string.substring(bestMatchIndex + bestMatchLength);
         };
         IPv6.prototype.toByteArray = function() {
-          var bytes, k, len, part, ref;
+          var bytes, k2, len, part, ref;
           bytes = [];
           ref = this.parts;
-          for (k = 0, len = ref.length; k < len; k++) {
-            part = ref[k];
+          for (k2 = 0, len = ref.length; k2 < len; k2++) {
+            part = ref[k2];
             bytes.push(part >> 8);
             bytes.push(part & 255);
           }
@@ -43768,11 +43771,11 @@ var require_ipaddr = __commonJS({
         IPv6.prototype.toNormalizedString = function() {
           var addr, part, suffix;
           addr = function() {
-            var k, len, ref, results;
+            var k2, len, ref, results;
             ref = this.parts;
             results = [];
-            for (k = 0, len = ref.length; k < len; k++) {
-              part = ref[k];
+            for (k2 = 0, len = ref.length; k2 < len; k2++) {
+              part = ref[k2];
               results.push(part.toString(16));
             }
             return results;
@@ -43786,11 +43789,11 @@ var require_ipaddr = __commonJS({
         IPv6.prototype.toFixedLengthString = function() {
           var addr, part, suffix;
           addr = function() {
-            var k, len, ref, results;
+            var k2, len, ref, results;
             ref = this.parts;
             results = [];
-            for (k = 0, len = ref.length; k < len; k++) {
-              part = ref[k];
+            for (k2 = 0, len = ref.length; k2 < len; k2++) {
+              part = ref[k2];
               results.push(part.toString(16).padStart(4, "0"));
             }
             return results;
@@ -43839,7 +43842,7 @@ var require_ipaddr = __commonJS({
           return new ipaddr.IPv4([high >> 8, high & 255, low >> 8, low & 255]);
         };
         IPv6.prototype.prefixLengthFromSubnetMask = function() {
-          var cidr, i, k, part, stop, zeros, zerotable;
+          var cidr, i, k2, part, stop, zeros, zerotable;
           zerotable = {
             0: 16,
             32768: 15,
@@ -43861,7 +43864,7 @@ var require_ipaddr = __commonJS({
           };
           cidr = 0;
           stop = false;
-          for (i = k = 7; k >= 0; i = k += -1) {
+          for (i = k2 = 7; k2 >= 0; i = k2 += -1) {
             part = this.parts[i];
             if (part in zerotable) {
               zeros = zerotable[part];
@@ -43924,11 +43927,11 @@ var require_ipaddr = __commonJS({
           string = string.slice(0, -1);
         }
         parts = function() {
-          var k, len, ref, results;
+          var k2, len, ref, results;
           ref = string.split(":");
           results = [];
-          for (k = 0, len = ref.length; k < len; k++) {
-            part = ref[k];
+          for (k2 = 0, len = ref.length; k2 < len; k2++) {
+            part = ref[k2];
             results.push(parseInt(part, 16));
           }
           return results;
@@ -43939,7 +43942,7 @@ var require_ipaddr = __commonJS({
         };
       };
       ipaddr.IPv6.parser = function(string) {
-        var addr, k, len, match, octet, octets, zoneId;
+        var addr, k2, len, match, octet, octets, zoneId;
         if (ipv6Regexes["native"].test(string)) {
           return expandIPv6(string, 8);
         } else if (match = string.match(ipv6Regexes["transitional"])) {
@@ -43947,8 +43950,8 @@ var require_ipaddr = __commonJS({
           addr = expandIPv6(match[1].slice(0, -1) + zoneId, 6);
           if (addr.parts) {
             octets = [parseInt(match[2]), parseInt(match[3]), parseInt(match[4]), parseInt(match[5])];
-            for (k = 0, len = octets.length; k < len; k++) {
-              octet = octets[k];
+            for (k2 = 0, len = octets.length; k2 < len; k2++) {
+              octet = octets[k2];
               if (!(0 <= octet && octet <= 255)) {
                 return null;
               }
@@ -44030,17 +44033,17 @@ var require_ipaddr = __commonJS({
         throw new Error("ipaddr: string is not formatted like an IPv4 CIDR range");
       };
       ipaddr.IPv4.subnetMaskFromPrefixLength = function(prefix) {
-        var filledOctetCount, j, octets;
+        var filledOctetCount, j2, octets;
         prefix = parseInt(prefix);
         if (prefix < 0 || prefix > 32) {
           throw new Error("ipaddr: invalid IPv4 prefix length");
         }
         octets = [0, 0, 0, 0];
-        j = 0;
+        j2 = 0;
         filledOctetCount = Math.floor(prefix / 8);
-        while (j < filledOctetCount) {
-          octets[j] = 255;
-          j++;
+        while (j2 < filledOctetCount) {
+          octets[j2] = 255;
+          j2++;
         }
         if (filledOctetCount < 4) {
           octets[filledOctetCount] = Math.pow(2, prefix % 8) - 1 << 8 - prefix % 8;
@@ -44415,8 +44418,8 @@ var require_utils2 = __commonJS({
         };
       }
       if (typeof val === "string") {
-        val = val.split(",").map(function(v) {
-          return v.trim();
+        val = val.split(",").map(function(v2) {
+          return v2.trim();
         });
       }
       return proxyaddr.compile(val || []);
@@ -44732,13 +44735,13 @@ var require_charset = __commonJS({
     var simpleCharsetRegExp = /^\s*([^\s;]+)\s*(?:;(.*))?$/;
     function parseAcceptCharset(accept) {
       var accepts = accept.split(",");
-      for (var i = 0, j = 0; i < accepts.length; i++) {
+      for (var i = 0, j2 = 0; i < accepts.length; i++) {
         var charset = parseCharset(accepts[i].trim(), i);
         if (charset) {
-          accepts[j++] = charset;
+          accepts[j2++] = charset;
         }
       }
-      accepts.length = j;
+      accepts.length = j2;
       return accepts;
     }
     function parseCharset(str, i) {
@@ -44746,20 +44749,20 @@ var require_charset = __commonJS({
       if (!match)
         return null;
       var charset = match[1];
-      var q = 1;
+      var q2 = 1;
       if (match[2]) {
         var params = match[2].split(";");
-        for (var j = 0; j < params.length; j++) {
-          var p = params[j].trim().split("=");
+        for (var j2 = 0; j2 < params.length; j2++) {
+          var p = params[j2].trim().split("=");
           if (p[0] === "q") {
-            q = parseFloat(p[1]);
+            q2 = parseFloat(p[1]);
             break;
           }
         }
       }
       return {
         charset,
-        q,
+        q: q2,
         i
       };
     }
@@ -44799,8 +44802,8 @@ var require_charset = __commonJS({
         return provided[priorities.indexOf(priority)];
       });
     }
-    function compareSpecs(a, b) {
-      return b.q - a.q || b.s - a.s || a.o - b.o || a.i - b.i || 0;
+    function compareSpecs(a, b2) {
+      return b2.q - a.q || b2.s - a.s || a.o - b2.o || a.i - b2.i || 0;
     }
     function getFullCharset(spec) {
       return spec.charset;
@@ -44822,22 +44825,22 @@ var require_encoding = __commonJS({
       var accepts = accept.split(",");
       var hasIdentity = false;
       var minQuality = 1;
-      for (var i = 0, j = 0; i < accepts.length; i++) {
+      for (var i = 0, j2 = 0; i < accepts.length; i++) {
         var encoding = parseEncoding(accepts[i].trim(), i);
         if (encoding) {
-          accepts[j++] = encoding;
+          accepts[j2++] = encoding;
           hasIdentity = hasIdentity || specify("identity", encoding);
           minQuality = Math.min(minQuality, encoding.q || 1);
         }
       }
       if (!hasIdentity) {
-        accepts[j++] = {
+        accepts[j2++] = {
           encoding: "identity",
           q: minQuality,
           i
         };
       }
-      accepts.length = j;
+      accepts.length = j2;
       return accepts;
     }
     function parseEncoding(str, i) {
@@ -44845,20 +44848,20 @@ var require_encoding = __commonJS({
       if (!match)
         return null;
       var encoding = match[1];
-      var q = 1;
+      var q2 = 1;
       if (match[2]) {
         var params = match[2].split(";");
-        for (var j = 0; j < params.length; j++) {
-          var p = params[j].trim().split("=");
+        for (var j2 = 0; j2 < params.length; j2++) {
+          var p = params[j2].trim().split("=");
           if (p[0] === "q") {
-            q = parseFloat(p[1]);
+            q2 = parseFloat(p[1]);
             break;
           }
         }
       }
       return {
         encoding,
-        q,
+        q: q2,
         i
       };
     }
@@ -44898,8 +44901,8 @@ var require_encoding = __commonJS({
         return provided[priorities.indexOf(priority)];
       });
     }
-    function compareSpecs(a, b) {
-      return b.q - a.q || b.s - a.s || a.o - b.o || a.i - b.i || 0;
+    function compareSpecs(a, b2) {
+      return b2.q - a.q || b2.s - a.s || a.o - b2.o || a.i - b2.i || 0;
     }
     function getFullEncoding(spec) {
       return spec.encoding;
@@ -44919,13 +44922,13 @@ var require_language = __commonJS({
     var simpleLanguageRegExp = /^\s*([^\s\-;]+)(?:-([^\s;]+))?\s*(?:;(.*))?$/;
     function parseAcceptLanguage(accept) {
       var accepts = accept.split(",");
-      for (var i = 0, j = 0; i < accepts.length; i++) {
+      for (var i = 0, j2 = 0; i < accepts.length; i++) {
         var language = parseLanguage(accepts[i].trim(), i);
         if (language) {
-          accepts[j++] = language;
+          accepts[j2++] = language;
         }
       }
-      accepts.length = j;
+      accepts.length = j2;
       return accepts;
     }
     function parseLanguage(str, i) {
@@ -44937,19 +44940,19 @@ var require_language = __commonJS({
       var full = prefix;
       if (suffix)
         full += "-" + suffix;
-      var q = 1;
+      var q2 = 1;
       if (match[3]) {
         var params = match[3].split(";");
-        for (var j = 0; j < params.length; j++) {
-          var p = params[j].split("=");
+        for (var j2 = 0; j2 < params.length; j2++) {
+          var p = params[j2].split("=");
           if (p[0] === "q")
-            q = parseFloat(p[1]);
+            q2 = parseFloat(p[1]);
         }
       }
       return {
         prefix,
         suffix,
-        q,
+        q: q2,
         i,
         full
       };
@@ -44997,8 +45000,8 @@ var require_language = __commonJS({
         return provided[priorities.indexOf(priority)];
       });
     }
-    function compareSpecs(a, b) {
-      return b.q - a.q || b.s - a.s || a.o - b.o || a.i - b.i || 0;
+    function compareSpecs(a, b2) {
+      return b2.q - a.q || b2.s - a.s || a.o - b2.o || a.i - b2.i || 0;
     }
     function getFullLanguage(spec) {
       return spec.full;
@@ -45018,13 +45021,13 @@ var require_mediaType = __commonJS({
     var simpleMediaTypeRegExp = /^\s*([^\s\/;]+)\/([^;\s]+)\s*(?:;(.*))?$/;
     function parseAccept(accept) {
       var accepts = splitMediaTypes(accept);
-      for (var i = 0, j = 0; i < accepts.length; i++) {
+      for (var i = 0, j2 = 0; i < accepts.length; i++) {
         var mediaType = parseMediaType(accepts[i].trim(), i);
         if (mediaType) {
-          accepts[j++] = mediaType;
+          accepts[j2++] = mediaType;
         }
       }
-      accepts.length = j;
+      accepts.length = j2;
       return accepts;
     }
     function parseMediaType(str, i) {
@@ -45032,18 +45035,18 @@ var require_mediaType = __commonJS({
       if (!match)
         return null;
       var params = Object.create(null);
-      var q = 1;
+      var q2 = 1;
       var subtype = match[2];
       var type = match[1];
       if (match[3]) {
         var kvps = splitParameters(match[3]).map(splitKeyValuePair);
-        for (var j = 0; j < kvps.length; j++) {
-          var pair = kvps[j];
+        for (var j2 = 0; j2 < kvps.length; j2++) {
+          var pair = kvps[j2];
           var key = pair[0].toLowerCase();
           var val = pair[1];
           var value = val && val[0] === '"' && val[val.length - 1] === '"' ? val.substr(1, val.length - 2) : val;
           if (key === "q") {
-            q = parseFloat(value);
+            q2 = parseFloat(value);
             break;
           }
           params[key] = value;
@@ -45053,7 +45056,7 @@ var require_mediaType = __commonJS({
         type,
         subtype,
         params,
-        q,
+        q: q2,
         i
       };
     }
@@ -45085,8 +45088,8 @@ var require_mediaType = __commonJS({
       }
       var keys = Object.keys(spec.params);
       if (keys.length > 0) {
-        if (keys.every(function(k) {
-          return spec.params[k] == "*" || (spec.params[k] || "").toLowerCase() == (p.params[k] || "").toLowerCase();
+        if (keys.every(function(k2) {
+          return spec.params[k2] == "*" || (spec.params[k2] || "").toLowerCase() == (p.params[k2] || "").toLowerCase();
         })) {
           s |= 1;
         } else {
@@ -45112,8 +45115,8 @@ var require_mediaType = __commonJS({
         return provided[priorities.indexOf(priority)];
       });
     }
-    function compareSpecs(a, b) {
-      return b.q - a.q || b.s - a.s || a.o - b.o || a.i - b.i || 0;
+    function compareSpecs(a, b2) {
+      return b2.q - a.q || b2.s - a.s || a.o - b2.o || a.i - b2.i || 0;
     }
     function getFullType(spec) {
       return spec.type + "/" + spec.subtype;
@@ -45144,26 +45147,26 @@ var require_mediaType = __commonJS({
     }
     function splitMediaTypes(accept) {
       var accepts = accept.split(",");
-      for (var i = 1, j = 0; i < accepts.length; i++) {
-        if (quoteCount(accepts[j]) % 2 == 0) {
-          accepts[++j] = accepts[i];
+      for (var i = 1, j2 = 0; i < accepts.length; i++) {
+        if (quoteCount(accepts[j2]) % 2 == 0) {
+          accepts[++j2] = accepts[i];
         } else {
-          accepts[j] += "," + accepts[i];
+          accepts[j2] += "," + accepts[i];
         }
       }
-      accepts.length = j + 1;
+      accepts.length = j2 + 1;
       return accepts;
     }
     function splitParameters(str) {
       var parameters = str.split(";");
-      for (var i = 1, j = 0; i < parameters.length; i++) {
-        if (quoteCount(parameters[j]) % 2 == 0) {
-          parameters[++j] = parameters[i];
+      for (var i = 1, j2 = 0; i < parameters.length; i++) {
+        if (quoteCount(parameters[j2]) % 2 == 0) {
+          parameters[++j2] = parameters[i];
         } else {
-          parameters[j] += ";" + parameters[i];
+          parameters[j2] += ";" + parameters[i];
         }
       }
-      parameters.length = j + 1;
+      parameters.length = j2 + 1;
       for (var i = 0; i < parameters.length; i++) {
         parameters[i] = parameters[i].trim();
       }
@@ -45680,8 +45683,8 @@ var require_vary = __commonJS({
         throw new TypeError("field argument is required");
       }
       var fields = !Array.isArray(field) ? parse(String(field)) : field;
-      for (var j = 0; j < fields.length; j++) {
-        if (!FIELD_NAME_REGEXP.test(fields[j])) {
+      for (var j2 = 0; j2 < fields.length; j2++) {
+        if (!FIELD_NAME_REGEXP.test(fields[j2])) {
           throw new TypeError("field argument contains an invalid header name");
         }
       }
@@ -46033,8 +46036,8 @@ var require_response = __commonJS({
     res.format = function(obj) {
       var req = this.req;
       var next = req.next;
-      var keys = Object.keys(obj).filter(function(v) {
-        return v !== "default";
+      var keys = Object.keys(obj).filter(function(v2) {
+        return v2 !== "default";
       });
       var key = keys.length > 0 ? req.accepts(keys) : false;
       this.vary("Accept");
@@ -46156,8 +46159,8 @@ var require_response = __commonJS({
           body = statuses.message[status] + ". Redirecting to " + address;
         },
         html: function() {
-          var u = escapeHtml(address);
-          body = "<p>" + statuses.message[status] + ". Redirecting to " + u + "</p>";
+          var u3 = escapeHtml(address);
+          body = "<p>" + statuses.message[status] + ". Redirecting to " + u3 + "</p>";
         },
         default: function() {
           body = "";
@@ -46263,8 +46266,8 @@ var require_response = __commonJS({
           var obj = options.headers;
           var keys = Object.keys(obj);
           for (var i = 0; i < keys.length; i++) {
-            var k = keys[i];
-            res3.setHeader(k, obj[k]);
+            var k2 = keys[i];
+            res3.setHeader(k2, obj[k2]);
           }
         });
       }
@@ -46780,29 +46783,29 @@ var require_logic = __commonJS({
       }
       var jsonLogic2 = {};
       var operations = {
-        "==": function(a, b) {
-          return a == b;
+        "==": function(a, b2) {
+          return a == b2;
         },
-        "===": function(a, b) {
-          return a === b;
+        "===": function(a, b2) {
+          return a === b2;
         },
-        "!=": function(a, b) {
-          return a != b;
+        "!=": function(a, b2) {
+          return a != b2;
         },
-        "!==": function(a, b) {
-          return a !== b;
+        "!==": function(a, b2) {
+          return a !== b2;
         },
-        ">": function(a, b) {
-          return a > b;
+        ">": function(a, b2) {
+          return a > b2;
         },
-        ">=": function(a, b) {
-          return a >= b;
+        ">=": function(a, b2) {
+          return a >= b2;
         },
-        "<": function(a, b, c) {
-          return c === void 0 ? a < b : a < b && b < c;
+        "<": function(a, b2, c) {
+          return c === void 0 ? a < b2 : a < b2 && b2 < c;
         },
-        "<=": function(a, b, c) {
-          return c === void 0 ? a <= b : a <= b && b <= c;
+        "<=": function(a, b2, c) {
+          return c === void 0 ? a <= b2 : a <= b2 && b2 <= c;
         },
         "!!": function(a) {
           return jsonLogic2.truthy(a);
@@ -46810,17 +46813,17 @@ var require_logic = __commonJS({
         "!": function(a) {
           return !jsonLogic2.truthy(a);
         },
-        "%": function(a, b) {
-          return a % b;
+        "%": function(a, b2) {
+          return a % b2;
         },
         "log": function(a) {
           console.log(a);
           return a;
         },
-        "in": function(a, b) {
-          if (!b || typeof b.indexOf === "undefined")
+        "in": function(a, b2) {
+          if (!b2 || typeof b2.indexOf === "undefined")
             return false;
-          return b.indexOf(a) !== -1;
+          return b2.indexOf(a) !== -1;
         },
         "cat": function() {
           return Array.prototype.join.call(arguments, "");
@@ -46833,24 +46836,24 @@ var require_logic = __commonJS({
           return String(source).substr(start, end);
         },
         "+": function() {
-          return Array.prototype.reduce.call(arguments, function(a, b) {
-            return parseFloat(a, 10) + parseFloat(b, 10);
+          return Array.prototype.reduce.call(arguments, function(a, b2) {
+            return parseFloat(a, 10) + parseFloat(b2, 10);
           }, 0);
         },
         "*": function() {
-          return Array.prototype.reduce.call(arguments, function(a, b) {
-            return parseFloat(a, 10) * parseFloat(b, 10);
+          return Array.prototype.reduce.call(arguments, function(a, b2) {
+            return parseFloat(a, 10) * parseFloat(b2, 10);
           });
         },
-        "-": function(a, b) {
-          if (b === void 0) {
+        "-": function(a, b2) {
+          if (b2 === void 0) {
             return -a;
           } else {
-            return a - b;
+            return a - b2;
           }
         },
-        "/": function(a, b) {
-          return a / b;
+        "/": function(a, b2) {
+          return a / b2;
         },
         "min": function() {
           return Math.min.apply(this, arguments);
@@ -46859,12 +46862,12 @@ var require_logic = __commonJS({
           return Math.max.apply(this, arguments);
         },
         "merge": function() {
-          return Array.prototype.reduce.call(arguments, function(a, b) {
-            return a.concat(b);
+          return Array.prototype.reduce.call(arguments, function(a, b2) {
+            return a.concat(b2);
           }, []);
         },
-        "var": function(a, b) {
-          var not_found = b === void 0 ? null : b;
+        "var": function(a, b2) {
+          var not_found = b2 === void 0 ? null : b2;
           var data = this;
           if (typeof a === "undefined" || a === "" || a === null) {
             return data;
@@ -47154,9 +47157,9 @@ var require_on_headers = __commonJS({
     function setHeadersFromObject(res, headers) {
       var keys = Object.keys(headers);
       for (var i = 0; i < keys.length; i++) {
-        var k = keys[i];
-        if (k)
-          res.setHeader(k, headers[k]);
+        var k2 = keys[i];
+        if (k2)
+          res.setHeader(k2, headers[k2]);
       }
     }
     function setWriteHeadHeaders(statusCode) {
@@ -47224,7 +47227,7 @@ var require_response_time = __commonJS({
 var require_strict_uri_encode = __commonJS({
   "node_modules/strict-uri-encode/index.js"(exports, module2) {
     "use strict";
-    module2.exports = (str) => encodeURIComponent(str).replace(/[!'()*]/g, (x) => `%${x.charCodeAt(0).toString(16).toUpperCase()}`);
+    module2.exports = (str) => encodeURIComponent(str).replace(/[!'()*]/g, (x2) => `%${x2.charCodeAt(0).toString(16).toUpperCase()}`);
   }
 });
 
@@ -47515,7 +47518,7 @@ var require_query_string = __commonJS({
         return input.sort();
       }
       if (typeof input === "object") {
-        return keysSorter(Object.keys(input)).sort((a, b) => Number(a) - Number(b)).map((key) => input[key]);
+        return keysSorter(Object.keys(input)).sort((a, b2) => Number(a) - Number(b2)).map((key) => input[key]);
       }
       return input;
     }
@@ -47580,8 +47583,8 @@ var require_query_string = __commonJS({
       for (const key of Object.keys(ret)) {
         const value = ret[key];
         if (typeof value === "object" && value !== null) {
-          for (const k of Object.keys(value)) {
-            value[k] = parseValue(value[k], options);
+          for (const k2 of Object.keys(value)) {
+            value[k2] = parseValue(value[k2], options);
           }
         } else {
           ret[key] = parseValue(value, options);
@@ -47640,7 +47643,7 @@ var require_query_string = __commonJS({
           return value.reduce(formatter(key), []).join("&");
         }
         return encode(key, options) + "=" + encode(value, options);
-      }).filter((x) => x.length > 0).join("&");
+      }).filter((x2) => x2.length > 0).join("&");
     };
     exports.parseUrl = (url, options) => {
       options = Object.assign({
@@ -47782,2040 +47785,1303 @@ var require_glob_to_regexp = __commonJS({
   }
 });
 
-// node_modules/marked/lib/marked.cjs
-var require_marked = __commonJS({
-  "node_modules/marked/lib/marked.cjs"(exports) {
-    "use strict";
-    function _getDefaults() {
-      return {
-        async: false,
-        breaks: false,
-        extensions: null,
-        gfm: true,
-        hooks: null,
-        pedantic: false,
-        renderer: null,
-        silent: false,
-        tokenizer: null,
-        walkTokens: null
-      };
-    }
-    exports.defaults = _getDefaults();
-    function changeDefaults(newDefaults) {
-      exports.defaults = newDefaults;
-    }
-    var escapeTest = /[&<>"']/;
-    var escapeReplace = new RegExp(escapeTest.source, "g");
-    var escapeTestNoEncode = /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/;
-    var escapeReplaceNoEncode = new RegExp(escapeTestNoEncode.source, "g");
-    var escapeReplacements = {
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;"
-    };
-    var getEscapeReplacement = (ch) => escapeReplacements[ch];
-    function escape$1(html2, encode) {
-      if (encode) {
-        if (escapeTest.test(html2)) {
-          return html2.replace(escapeReplace, getEscapeReplacement);
-        }
-      } else {
-        if (escapeTestNoEncode.test(html2)) {
-          return html2.replace(escapeReplaceNoEncode, getEscapeReplacement);
-        }
-      }
-      return html2;
-    }
-    var caret = /(^|[^\[])\^/g;
-    function edit(regex, opt) {
-      let source = typeof regex === "string" ? regex : regex.source;
-      opt = opt || "";
-      const obj = {
-        replace: (name, val) => {
-          let valSource = typeof val === "string" ? val : val.source;
-          valSource = valSource.replace(caret, "$1");
-          source = source.replace(name, valSource);
-          return obj;
-        },
-        getRegex: () => {
-          return new RegExp(source, opt);
-        }
-      };
-      return obj;
-    }
-    function cleanUrl(href) {
+// node_modules/marked/lib/marked.esm.js
+var marked_esm_exports = {};
+__export(marked_esm_exports, {
+  Hooks: () => S,
+  Lexer: () => x,
+  Marked: () => B,
+  Parser: () => b,
+  Renderer: () => P,
+  TextRenderer: () => $,
+  Tokenizer: () => y,
+  defaults: () => T,
+  getDefaults: () => L,
+  lexer: () => jt,
+  marked: () => d,
+  options: () => Dt,
+  parse: () => Qt,
+  parseInline: () => Nt,
+  parser: () => Ft,
+  setOptions: () => Ht,
+  use: () => Zt,
+  walkTokens: () => Gt
+});
+function L() {
+  return { async: false, breaks: false, extensions: null, gfm: true, hooks: null, pedantic: false, renderer: null, silent: false, tokenizer: null, walkTokens: null };
+}
+function Z(u3) {
+  T = u3;
+}
+function k(u3, e = "") {
+  let t = typeof u3 == "string" ? u3 : u3.source, n = { replace: (r, i) => {
+    let s = typeof i == "string" ? i : i.source;
+    return s = s.replace(m.caret, "$1"), t = t.replace(r, s), n;
+  }, getRegex: () => new RegExp(t, e) };
+  return n;
+}
+function w(u3, e) {
+  if (e) {
+    if (m.escapeTest.test(u3))
+      return u3.replace(m.escapeReplace, ke);
+  } else if (m.escapeTestNoEncode.test(u3))
+    return u3.replace(m.escapeReplaceNoEncode, ke);
+  return u3;
+}
+function X(u3) {
+  try {
+    u3 = encodeURI(u3).replace(m.percentDecode, "%");
+  } catch (e) {
+    return null;
+  }
+  return u3;
+}
+function J(u3, e) {
+  var _a2;
+  let t = u3.replace(m.findPipe, (i, s, a) => {
+    let o = false, l = s;
+    for (; --l >= 0 && a[l] === "\\"; )
+      o = !o;
+    return o ? "|" : " |";
+  }), n = t.split(m.splitPipe), r = 0;
+  if (n[0].trim() || n.shift(), n.length > 0 && !((_a2 = n.at(-1)) == null ? void 0 : _a2.trim()) && n.pop(), e)
+    if (n.length > e)
+      n.splice(e);
+    else
+      for (; n.length < e; )
+        n.push("");
+  for (; r < n.length; r++)
+    n[r] = n[r].trim().replace(m.slashPipe, "|");
+  return n;
+}
+function z(u3, e, t) {
+  let n = u3.length;
+  if (n === 0)
+    return "";
+  let r = 0;
+  for (; r < n; ) {
+    let i = u3.charAt(n - r - 1);
+    if (i === e && !t)
+      r++;
+    else if (i !== e && t)
+      r++;
+    else
+      break;
+  }
+  return u3.slice(0, n - r);
+}
+function de(u3, e) {
+  if (u3.indexOf(e[1]) === -1)
+    return -1;
+  let t = 0;
+  for (let n = 0; n < u3.length; n++)
+    if (u3[n] === "\\")
+      n++;
+    else if (u3[n] === e[0])
+      t++;
+    else if (u3[n] === e[1] && (t--, t < 0))
+      return n;
+  return t > 0 ? -2 : -1;
+}
+function ge(u3, e, t, n, r) {
+  let i = e.href, s = e.title || null, a = u3[1].replace(r.other.outputLinkReplace, "$1");
+  n.state.inLink = true;
+  let o = { type: u3[0].charAt(0) === "!" ? "image" : "link", raw: t, href: i, title: s, text: a, tokens: n.inlineTokens(a) };
+  return n.state.inLink = false, o;
+}
+function Je(u3, e, t) {
+  let n = u3.match(t.other.indentCodeCompensation);
+  if (n === null)
+    return e;
+  let r = n[1];
+  return e.split(`
+`).map((i) => {
+    let s = i.match(t.other.beginningSpace);
+    if (s === null)
+      return i;
+    let [a] = s;
+    return a.length >= r.length ? i.slice(r.length) : i;
+  }).join(`
+`);
+}
+function d(u3, e) {
+  return _.parse(u3, e);
+}
+var T, C, me, m, xe, be, Re, I, Te, N, re, se, Oe, Q, we, F, ye, Pe, v, j, Se, ie, $e, U, te, _e, Le, Me, ze, oe, Ae, D, K, ae, Ce, le, Ie, Ee, Be, ue, qe, ve, pe, De, He, Ze, Ge, Ne, Qe, Fe, q, je, ce, he, Ue, ne, W, Ke, G, We, E, M, Xe, ke, y, x, P, $, b, _a, S, B, _, Dt, Ht, Zt, Gt, Nt, Qt, Ft, jt;
+var init_marked_esm = __esm({
+  "node_modules/marked/lib/marked.esm.js"() {
+    T = L();
+    C = { exec: () => null };
+    me = (() => {
       try {
-        href = encodeURI(href).replace(/%25/g, "%");
+        return !!new RegExp("(?<=1)(?<!1)");
       } catch (e) {
-        return null;
+        return false;
       }
-      return href;
-    }
-    var noopTest = { exec: () => null };
-    function splitCells(tableRow, count) {
-      const row = tableRow.replace(/\|/g, (match, offset, str) => {
-        let escaped = false;
-        let curr = offset;
-        while (--curr >= 0 && str[curr] === "\\")
-          escaped = !escaped;
-        if (escaped) {
-          return "|";
-        } else {
-          return " |";
-        }
-      }), cells = row.split(/ \|/);
-      let i = 0;
-      if (!cells[0].trim()) {
-        cells.shift();
-      }
-      if (cells.length > 0 && !cells[cells.length - 1].trim()) {
-        cells.pop();
-      }
-      if (count) {
-        if (cells.length > count) {
-          cells.splice(count);
-        } else {
-          while (cells.length < count)
-            cells.push("");
-        }
-      }
-      for (; i < cells.length; i++) {
-        cells[i] = cells[i].trim().replace(/\\\|/g, "|");
-      }
-      return cells;
-    }
-    function rtrim(str, c, invert) {
-      const l = str.length;
-      if (l === 0) {
-        return "";
-      }
-      let suffLen = 0;
-      while (suffLen < l) {
-        const currChar = str.charAt(l - suffLen - 1);
-        if (currChar === c && !invert) {
-          suffLen++;
-        } else if (currChar !== c && invert) {
-          suffLen++;
-        } else {
-          break;
-        }
-      }
-      return str.slice(0, l - suffLen);
-    }
-    function findClosingBracket(str, b) {
-      if (str.indexOf(b[1]) === -1) {
-        return -1;
-      }
-      let level = 0;
-      for (let i = 0; i < str.length; i++) {
-        if (str[i] === "\\") {
-          i++;
-        } else if (str[i] === b[0]) {
-          level++;
-        } else if (str[i] === b[1]) {
-          level--;
-          if (level < 0) {
-            return i;
-          }
-        }
-      }
-      return -1;
-    }
-    function outputLink(cap, link2, raw, lexer2) {
-      const href = link2.href;
-      const title = link2.title ? escape$1(link2.title) : null;
-      const text = cap[1].replace(/\\([\[\]])/g, "$1");
-      if (cap[0].charAt(0) !== "!") {
-        lexer2.state.inLink = true;
-        const token = {
-          type: "link",
-          raw,
-          href,
-          title,
-          text,
-          tokens: lexer2.inlineTokens(text)
-        };
-        lexer2.state.inLink = false;
-        return token;
-      }
-      return {
-        type: "image",
-        raw,
-        href,
-        title,
-        text: escape$1(text)
-      };
-    }
-    function indentCodeCompensation(raw, text) {
-      const matchIndentToCode = raw.match(/^(\s+)(?:```)/);
-      if (matchIndentToCode === null) {
-        return text;
-      }
-      const indentToCode = matchIndentToCode[1];
-      return text.split("\n").map((node) => {
-        const matchIndentInNode = node.match(/^\s+/);
-        if (matchIndentInNode === null) {
-          return node;
-        }
-        const [indentInNode] = matchIndentInNode;
-        if (indentInNode.length >= indentToCode.length) {
-          return node.slice(indentToCode.length);
-        }
-        return node;
-      }).join("\n");
-    }
-    var _Tokenizer = class {
-      constructor(options2) {
+    })();
+    m = { codeRemoveIndent: /^(?: {1,4}| {0,3}\t)/gm, outputLinkReplace: /\\([\[\]])/g, indentCodeCompensation: /^(\s+)(?:```)/, beginningSpace: /^\s+/, endingHash: /#$/, startingSpaceChar: /^ /, endingSpaceChar: / $/, nonSpaceChar: /[^ ]/, newLineCharGlobal: /\n/g, tabCharGlobal: /\t/g, multipleSpaceGlobal: /\s+/g, blankLine: /^[ \t]*$/, doubleBlankLine: /\n[ \t]*\n[ \t]*$/, blockquoteStart: /^ {0,3}>/, blockquoteSetextReplace: /\n {0,3}((?:=+|-+) *)(?=\n|$)/g, blockquoteSetextReplace2: /^ {0,3}>[ \t]?/gm, listReplaceTabs: /^\t+/, listReplaceNesting: /^ {1,4}(?=( {4})*[^ ])/g, listIsTask: /^\[[ xX]\] +\S/, listReplaceTask: /^\[[ xX]\] +/, listTaskCheckbox: /\[[ xX]\]/, anyLine: /\n.*\n/, hrefBrackets: /^<(.*)>$/, tableDelimiter: /[:|]/, tableAlignChars: /^\||\| *$/g, tableRowBlankLine: /\n[ \t]*$/, tableAlignRight: /^ *-+: *$/, tableAlignCenter: /^ *:-+: *$/, tableAlignLeft: /^ *:-+ *$/, startATag: /^<a /i, endATag: /^<\/a>/i, startPreScriptTag: /^<(pre|code|kbd|script)(\s|>)/i, endPreScriptTag: /^<\/(pre|code|kbd|script)(\s|>)/i, startAngleBracket: /^</, endAngleBracket: />$/, pedanticHrefTitle: /^([^'"]*[^\s])\s+(['"])(.*)\2/, unicodeAlphaNumeric: /[\p{L}\p{N}]/u, escapeTest: /[&<>"']/, escapeReplace: /[&<>"']/g, escapeTestNoEncode: /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/, escapeReplaceNoEncode: /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/g, unescapeTest: /&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/ig, caret: /(^|[^\[])\^/g, percentDecode: /%25/g, findPipe: /\|/g, splitPipe: / \|/, slashPipe: /\\\|/g, carriageReturn: /\r\n|\r/g, spaceLine: /^ +$/gm, notSpaceStart: /^\S*/, endingNewline: /\n$/, listItemRegex: (u3) => new RegExp(`^( {0,3}${u3})((?:[	 ][^\\n]*)?(?:\\n|$))`), nextBulletRegex: (u3) => new RegExp(`^ {0,${Math.min(3, u3 - 1)}}(?:[*+-]|\\d{1,9}[.)])((?:[ 	][^\\n]*)?(?:\\n|$))`), hrRegex: (u3) => new RegExp(`^ {0,${Math.min(3, u3 - 1)}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`), fencesBeginRegex: (u3) => new RegExp(`^ {0,${Math.min(3, u3 - 1)}}(?:\`\`\`|~~~)`), headingBeginRegex: (u3) => new RegExp(`^ {0,${Math.min(3, u3 - 1)}}#`), htmlBeginRegex: (u3) => new RegExp(`^ {0,${Math.min(3, u3 - 1)}}<(?:[a-z].*>|!--)`, "i") };
+    xe = /^(?:[ \t]*(?:\n|$))+/;
+    be = /^((?: {4}| {0,3}\t)[^\n]+(?:\n(?:[ \t]*(?:\n|$))*)?)+/;
+    Re = /^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/;
+    I = /^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/;
+    Te = /^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/;
+    N = /(?:[*+-]|\d{1,9}[.)])/;
+    re = /^(?!bull |blockCode|fences|blockquote|heading|html|table)((?:.|\n(?!\s*?\n|bull |blockCode|fences|blockquote|heading|html|table))+?)\n {0,3}(=+|-+) *(?:\n+|$)/;
+    se = k(re).replace(/bull/g, N).replace(/blockCode/g, /(?: {4}| {0,3}\t)/).replace(/fences/g, / {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g, / {0,3}>/).replace(/heading/g, / {0,3}#{1,6}/).replace(/html/g, / {0,3}<[^\n>]+>\n/).replace(/\|table/g, "").getRegex();
+    Oe = k(re).replace(/bull/g, N).replace(/blockCode/g, /(?: {4}| {0,3}\t)/).replace(/fences/g, / {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g, / {0,3}>/).replace(/heading/g, / {0,3}#{1,6}/).replace(/html/g, / {0,3}<[^\n>]+>\n/).replace(/table/g, / {0,3}\|?(?:[:\- ]*\|)+[\:\- ]*\n/).getRegex();
+    Q = /^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/;
+    we = /^[^\n]+/;
+    F = /(?!\s*\])(?:\\[\s\S]|[^\[\]\\])+/;
+    ye = k(/^ {0,3}\[(label)\]: *(?:\n[ \t]*)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n[ \t]*)?| *\n[ \t]*)(title))? *(?:\n+|$)/).replace("label", F).replace("title", /(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/).getRegex();
+    Pe = k(/^( {0,3}bull)([ \t][^\n]+?)?(?:\n|$)/).replace(/bull/g, N).getRegex();
+    v = "address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|search|section|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul";
+    j = /<!--(?:-?>|[\s\S]*?(?:-->|$))/;
+    Se = k("^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$))", "i").replace("comment", j).replace("tag", v).replace("attribute", / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex();
+    ie = k(Q).replace("hr", I).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("|table", "").replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", v).getRegex();
+    $e = k(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/).replace("paragraph", ie).getRegex();
+    U = { blockquote: $e, code: be, def: ye, fences: Re, heading: Te, hr: I, html: Se, lheading: se, list: Pe, newline: xe, paragraph: ie, table: C, text: we };
+    te = k("^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)").replace("hr", I).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("blockquote", " {0,3}>").replace("code", "(?: {4}| {0,3}	)[^\\n]").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", v).getRegex();
+    _e = __spreadProps(__spreadValues({}, U), { lheading: Oe, table: te, paragraph: k(Q).replace("hr", I).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("table", te).replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", v).getRegex() });
+    Le = __spreadProps(__spreadValues({}, U), { html: k(`^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:"[^"]*"|'[^']*'|\\s[^'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))`).replace("comment", j).replace(/tag/g, "(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(), def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/, heading: /^(#{1,6})(.*)(?:\n+|$)/, fences: C, lheading: /^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/, paragraph: k(Q).replace("hr", I).replace("heading", ` *#{1,6} *[^
+]`).replace("lheading", se).replace("|table", "").replace("blockquote", " {0,3}>").replace("|fences", "").replace("|list", "").replace("|html", "").replace("|tag", "").getRegex() });
+    Me = /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/;
+    ze = /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/;
+    oe = /^( {2,}|\\)\n(?!\s*$)/;
+    Ae = /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/;
+    D = /[\p{P}\p{S}]/u;
+    K = /[\s\p{P}\p{S}]/u;
+    ae = /[^\s\p{P}\p{S}]/u;
+    Ce = k(/^((?![*_])punctSpace)/, "u").replace(/punctSpace/g, K).getRegex();
+    le = /(?!~)[\p{P}\p{S}]/u;
+    Ie = /(?!~)[\s\p{P}\p{S}]/u;
+    Ee = /(?:[^\s\p{P}\p{S}]|~)/u;
+    Be = k(/link|precode-code|html/, "g").replace("link", /\[(?:[^\[\]`]|(?<a>`+)[^`]+\k<a>(?!`))*?\]\((?:\\[\s\S]|[^\\\(\)]|\((?:\\[\s\S]|[^\\\(\)])*\))*\)/).replace("precode-", me ? "(?<!`)()" : "(^^|[^`])").replace("code", /(?<b>`+)[^`]+\k<b>(?!`)/).replace("html", /<(?! )[^<>]*?>/).getRegex();
+    ue = /^(?:\*+(?:((?!\*)punct)|[^\s*]))|^_+(?:((?!_)punct)|([^\s_]))/;
+    qe = k(ue, "u").replace(/punct/g, D).getRegex();
+    ve = k(ue, "u").replace(/punct/g, le).getRegex();
+    pe = "^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)punct(\\*+)(?=[\\s]|$)|notPunctSpace(\\*+)(?!\\*)(?=punctSpace|$)|(?!\\*)punctSpace(\\*+)(?=notPunctSpace)|[\\s](\\*+)(?!\\*)(?=punct)|(?!\\*)punct(\\*+)(?!\\*)(?=punct)|notPunctSpace(\\*+)(?=notPunctSpace)";
+    De = k(pe, "gu").replace(/notPunctSpace/g, ae).replace(/punctSpace/g, K).replace(/punct/g, D).getRegex();
+    He = k(pe, "gu").replace(/notPunctSpace/g, Ee).replace(/punctSpace/g, Ie).replace(/punct/g, le).getRegex();
+    Ze = k("^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)punct(_+)(?=[\\s]|$)|notPunctSpace(_+)(?!_)(?=punctSpace|$)|(?!_)punctSpace(_+)(?=notPunctSpace)|[\\s](_+)(?!_)(?=punct)|(?!_)punct(_+)(?!_)(?=punct)", "gu").replace(/notPunctSpace/g, ae).replace(/punctSpace/g, K).replace(/punct/g, D).getRegex();
+    Ge = k(/\\(punct)/, "gu").replace(/punct/g, D).getRegex();
+    Ne = k(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace("scheme", /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace("email", /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex();
+    Qe = k(j).replace("(?:-->|$)", "-->").getRegex();
+    Fe = k("^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>").replace("comment", Qe).replace("attribute", /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex();
+    q = /(?:\[(?:\\[\s\S]|[^\[\]\\])*\]|\\[\s\S]|`+[^`]*?`+(?!`)|[^\[\]\\`])*?/;
+    je = k(/^!?\[(label)\]\(\s*(href)(?:(?:[ \t]*(?:\n[ \t]*)?)(title))?\s*\)/).replace("label", q).replace("href", /<(?:\\.|[^\n<>\\])+>|[^ \t\n\x00-\x1f]*/).replace("title", /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex();
+    ce = k(/^!?\[(label)\]\[(ref)\]/).replace("label", q).replace("ref", F).getRegex();
+    he = k(/^!?\[(ref)\](?:\[\])?/).replace("ref", F).getRegex();
+    Ue = k("reflink|nolink(?!\\()", "g").replace("reflink", ce).replace("nolink", he).getRegex();
+    ne = /[hH][tT][tT][pP][sS]?|[fF][tT][pP]/;
+    W = { _backpedal: C, anyPunctuation: Ge, autolink: Ne, blockSkip: Be, br: oe, code: ze, del: C, emStrongLDelim: qe, emStrongRDelimAst: De, emStrongRDelimUnd: Ze, escape: Me, link: je, nolink: he, punctuation: Ce, reflink: ce, reflinkSearch: Ue, tag: Fe, text: Ae, url: C };
+    Ke = __spreadProps(__spreadValues({}, W), { link: k(/^!?\[(label)\]\((.*?)\)/).replace("label", q).getRegex(), reflink: k(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label", q).getRegex() });
+    G = __spreadProps(__spreadValues({}, W), { emStrongRDelimAst: He, emStrongLDelim: ve, url: k(/^((?:protocol):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/).replace("protocol", ne).replace("email", /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(), _backpedal: /(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/, del: /^(~~?)(?=[^\s~])((?:\\[\s\S]|[^\\])*?(?:\\[\s\S]|[^\s~\\]))\1(?=[^~]|$)/, text: k(/^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|protocol:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/).replace("protocol", ne).getRegex() });
+    We = __spreadProps(__spreadValues({}, G), { br: k(oe).replace("{2,}", "*").getRegex(), text: k(G.text).replace("\\b_", "\\b_| {2,}\\n").replace(/\{2,\}/g, "*").getRegex() });
+    E = { normal: U, gfm: _e, pedantic: Le };
+    M = { normal: W, gfm: G, breaks: We, pedantic: Ke };
+    Xe = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+    ke = (u3) => Xe[u3];
+    y = class {
+      constructor(e) {
         __publicField(this, "options");
         __publicField(this, "rules");
         __publicField(this, "lexer");
-        this.options = options2 || exports.defaults;
+        this.options = e || T;
       }
-      space(src) {
-        const cap = this.rules.block.newline.exec(src);
-        if (cap && cap[0].length > 0) {
-          return {
-            type: "space",
-            raw: cap[0]
-          };
+      space(e) {
+        let t = this.rules.block.newline.exec(e);
+        if (t && t[0].length > 0)
+          return { type: "space", raw: t[0] };
+      }
+      code(e) {
+        let t = this.rules.block.code.exec(e);
+        if (t) {
+          let n = t[0].replace(this.rules.other.codeRemoveIndent, "");
+          return { type: "code", raw: t[0], codeBlockStyle: "indented", text: this.options.pedantic ? n : z(n, `
+`) };
         }
       }
-      code(src) {
-        const cap = this.rules.block.code.exec(src);
-        if (cap) {
-          const text = cap[0].replace(/^(?: {1,4}| {0,3}\t)/gm, "");
-          return {
-            type: "code",
-            raw: cap[0],
-            codeBlockStyle: "indented",
-            text: !this.options.pedantic ? rtrim(text, "\n") : text
-          };
+      fences(e) {
+        let t = this.rules.block.fences.exec(e);
+        if (t) {
+          let n = t[0], r = Je(n, t[3] || "", this.rules);
+          return { type: "code", raw: n, lang: t[2] ? t[2].trim().replace(this.rules.inline.anyPunctuation, "$1") : t[2], text: r };
         }
       }
-      fences(src) {
-        const cap = this.rules.block.fences.exec(src);
-        if (cap) {
-          const raw = cap[0];
-          const text = indentCodeCompensation(raw, cap[3] || "");
-          return {
-            type: "code",
-            raw,
-            lang: cap[2] ? cap[2].trim().replace(this.rules.inline.anyPunctuation, "$1") : cap[2],
-            text
-          };
-        }
-      }
-      heading(src) {
-        const cap = this.rules.block.heading.exec(src);
-        if (cap) {
-          let text = cap[2].trim();
-          if (/#$/.test(text)) {
-            const trimmed = rtrim(text, "#");
-            if (this.options.pedantic) {
-              text = trimmed.trim();
-            } else if (!trimmed || / $/.test(trimmed)) {
-              text = trimmed.trim();
-            }
+      heading(e) {
+        let t = this.rules.block.heading.exec(e);
+        if (t) {
+          let n = t[2].trim();
+          if (this.rules.other.endingHash.test(n)) {
+            let r = z(n, "#");
+            (this.options.pedantic || !r || this.rules.other.endingSpaceChar.test(r)) && (n = r.trim());
           }
-          return {
-            type: "heading",
-            raw: cap[0],
-            depth: cap[1].length,
-            text,
-            tokens: this.lexer.inline(text)
-          };
+          return { type: "heading", raw: t[0], depth: t[1].length, text: n, tokens: this.lexer.inline(n) };
         }
       }
-      hr(src) {
-        const cap = this.rules.block.hr.exec(src);
-        if (cap) {
-          return {
-            type: "hr",
-            raw: rtrim(cap[0], "\n")
-          };
-        }
+      hr(e) {
+        let t = this.rules.block.hr.exec(e);
+        if (t)
+          return { type: "hr", raw: z(t[0], `
+`) };
       }
-      blockquote(src) {
-        const cap = this.rules.block.blockquote.exec(src);
-        if (cap) {
-          let lines = rtrim(cap[0], "\n").split("\n");
-          let raw = "";
-          let text = "";
-          const tokens = [];
-          while (lines.length > 0) {
-            let inBlockquote = false;
-            const currentLines = [];
-            let i;
-            for (i = 0; i < lines.length; i++) {
-              if (/^ {0,3}>/.test(lines[i])) {
-                currentLines.push(lines[i]);
-                inBlockquote = true;
-              } else if (!inBlockquote) {
-                currentLines.push(lines[i]);
-              } else {
+      blockquote(e) {
+        let t = this.rules.block.blockquote.exec(e);
+        if (t) {
+          let n = z(t[0], `
+`).split(`
+`), r = "", i = "", s = [];
+          for (; n.length > 0; ) {
+            let a = false, o = [], l;
+            for (l = 0; l < n.length; l++)
+              if (this.rules.other.blockquoteStart.test(n[l]))
+                o.push(n[l]), a = true;
+              else if (!a)
+                o.push(n[l]);
+              else
                 break;
-              }
-            }
-            lines = lines.slice(i);
-            const currentRaw = currentLines.join("\n");
-            const currentText = currentRaw.replace(/\n {0,3}((?:=+|-+) *)(?=\n|$)/g, "\n    $1").replace(/^ {0,3}>[ \t]?/gm, "");
-            raw = raw ? `${raw}
-${currentRaw}` : currentRaw;
-            text = text ? `${text}
-${currentText}` : currentText;
-            const top = this.lexer.state.top;
-            this.lexer.state.top = true;
-            this.lexer.blockTokens(currentText, tokens, true);
-            this.lexer.state.top = top;
-            if (lines.length === 0) {
+            n = n.slice(l);
+            let p = o.join(`
+`), c = p.replace(this.rules.other.blockquoteSetextReplace, `
+    $1`).replace(this.rules.other.blockquoteSetextReplace2, "");
+            r = r ? `${r}
+${p}` : p, i = i ? `${i}
+${c}` : c;
+            let g = this.lexer.state.top;
+            if (this.lexer.state.top = true, this.lexer.blockTokens(c, s, true), this.lexer.state.top = g, n.length === 0)
               break;
-            }
-            const lastToken = tokens[tokens.length - 1];
-            if ((lastToken == null ? void 0 : lastToken.type) === "code") {
+            let h = s.at(-1);
+            if ((h == null ? void 0 : h.type) === "code")
               break;
-            } else if ((lastToken == null ? void 0 : lastToken.type) === "blockquote") {
-              const oldToken = lastToken;
-              const newText = oldToken.raw + "\n" + lines.join("\n");
-              const newToken = this.blockquote(newText);
-              tokens[tokens.length - 1] = newToken;
-              raw = raw.substring(0, raw.length - oldToken.raw.length) + newToken.raw;
-              text = text.substring(0, text.length - oldToken.text.length) + newToken.text;
+            if ((h == null ? void 0 : h.type) === "blockquote") {
+              let R = h, f = R.raw + `
+` + n.join(`
+`), O = this.blockquote(f);
+              s[s.length - 1] = O, r = r.substring(0, r.length - R.raw.length) + O.raw, i = i.substring(0, i.length - R.text.length) + O.text;
               break;
-            } else if ((lastToken == null ? void 0 : lastToken.type) === "list") {
-              const oldToken = lastToken;
-              const newText = oldToken.raw + "\n" + lines.join("\n");
-              const newToken = this.list(newText);
-              tokens[tokens.length - 1] = newToken;
-              raw = raw.substring(0, raw.length - lastToken.raw.length) + newToken.raw;
-              text = text.substring(0, text.length - oldToken.raw.length) + newToken.raw;
-              lines = newText.substring(tokens[tokens.length - 1].raw.length).split("\n");
+            } else if ((h == null ? void 0 : h.type) === "list") {
+              let R = h, f = R.raw + `
+` + n.join(`
+`), O = this.list(f);
+              s[s.length - 1] = O, r = r.substring(0, r.length - h.raw.length) + O.raw, i = i.substring(0, i.length - R.raw.length) + O.raw, n = f.substring(s.at(-1).raw.length).split(`
+`);
               continue;
             }
           }
-          return {
-            type: "blockquote",
-            raw,
-            tokens,
-            text
-          };
+          return { type: "blockquote", raw: r, tokens: s, text: i };
         }
       }
-      list(src) {
-        let cap = this.rules.block.list.exec(src);
-        if (cap) {
-          let bull = cap[1].trim();
-          const isordered = bull.length > 1;
-          const list2 = {
-            type: "list",
-            raw: "",
-            ordered: isordered,
-            start: isordered ? +bull.slice(0, -1) : "",
-            loose: false,
-            items: []
-          };
-          bull = isordered ? `\\d{1,9}\\${bull.slice(-1)}` : `\\${bull}`;
-          if (this.options.pedantic) {
-            bull = isordered ? bull : "[*+-]";
-          }
-          const itemRegex = new RegExp(`^( {0,3}${bull})((?:[	 ][^\\n]*)?(?:\\n|$))`);
-          let endsWithBlankLine = false;
-          while (src) {
-            let endEarly = false;
-            let raw = "";
-            let itemContents = "";
-            if (!(cap = itemRegex.exec(src))) {
+      list(e) {
+        var _a2, _b;
+        let t = this.rules.block.list.exec(e);
+        if (t) {
+          let n = t[1].trim(), r = n.length > 1, i = { type: "list", raw: "", ordered: r, start: r ? +n.slice(0, -1) : "", loose: false, items: [] };
+          n = r ? `\\d{1,9}\\${n.slice(-1)}` : `\\${n}`, this.options.pedantic && (n = r ? n : "[*+-]");
+          let s = this.rules.other.listItemRegex(n), a = false;
+          for (; e; ) {
+            let l = false, p = "", c = "";
+            if (!(t = s.exec(e)) || this.rules.block.hr.test(e))
               break;
-            }
-            if (this.rules.block.hr.test(src)) {
-              break;
-            }
-            raw = cap[0];
-            src = src.substring(raw.length);
-            let line = cap[2].split("\n", 1)[0].replace(/^\t+/, (t) => " ".repeat(3 * t.length));
-            let nextLine = src.split("\n", 1)[0];
-            let blankLine = !line.trim();
-            let indent = 0;
-            if (this.options.pedantic) {
-              indent = 2;
-              itemContents = line.trimStart();
-            } else if (blankLine) {
-              indent = cap[1].length + 1;
-            } else {
-              indent = cap[2].search(/[^ ]/);
-              indent = indent > 4 ? 1 : indent;
-              itemContents = line.slice(indent);
-              indent += cap[1].length;
-            }
-            if (blankLine && /^[ \t]*$/.test(nextLine)) {
-              raw += nextLine + "\n";
-              src = src.substring(nextLine.length + 1);
-              endEarly = true;
-            }
-            if (!endEarly) {
-              const nextBulletRegex = new RegExp(`^ {0,${Math.min(3, indent - 1)}}(?:[*+-]|\\d{1,9}[.)])((?:[ 	][^\\n]*)?(?:\\n|$))`);
-              const hrRegex = new RegExp(`^ {0,${Math.min(3, indent - 1)}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`);
-              const fencesBeginRegex = new RegExp(`^ {0,${Math.min(3, indent - 1)}}(?:\`\`\`|~~~)`);
-              const headingBeginRegex = new RegExp(`^ {0,${Math.min(3, indent - 1)}}#`);
-              const htmlBeginRegex = new RegExp(`^ {0,${Math.min(3, indent - 1)}}<(?:[a-z].*>|!--)`, "i");
-              while (src) {
-                const rawLine = src.split("\n", 1)[0];
-                let nextLineWithoutTabs;
-                nextLine = rawLine;
-                if (this.options.pedantic) {
-                  nextLine = nextLine.replace(/^ {1,4}(?=( {4})*[^ ])/g, "  ");
-                  nextLineWithoutTabs = nextLine;
-                } else {
-                  nextLineWithoutTabs = nextLine.replace(/\t/g, "    ");
-                }
-                if (fencesBeginRegex.test(nextLine)) {
+            p = t[0], e = e.substring(p.length);
+            let g = t[2].split(`
+`, 1)[0].replace(this.rules.other.listReplaceTabs, (O) => " ".repeat(3 * O.length)), h = e.split(`
+`, 1)[0], R = !g.trim(), f = 0;
+            if (this.options.pedantic ? (f = 2, c = g.trimStart()) : R ? f = t[1].length + 1 : (f = t[2].search(this.rules.other.nonSpaceChar), f = f > 4 ? 1 : f, c = g.slice(f), f += t[1].length), R && this.rules.other.blankLine.test(h) && (p += h + `
+`, e = e.substring(h.length + 1), l = true), !l) {
+              let O = this.rules.other.nextBulletRegex(f), V = this.rules.other.hrRegex(f), Y = this.rules.other.fencesBeginRegex(f), ee = this.rules.other.headingBeginRegex(f), fe = this.rules.other.htmlBeginRegex(f);
+              for (; e; ) {
+                let H = e.split(`
+`, 1)[0], A;
+                if (h = H, this.options.pedantic ? (h = h.replace(this.rules.other.listReplaceNesting, "  "), A = h) : A = h.replace(this.rules.other.tabCharGlobal, "    "), Y.test(h) || ee.test(h) || fe.test(h) || O.test(h) || V.test(h))
                   break;
-                }
-                if (headingBeginRegex.test(nextLine)) {
-                  break;
-                }
-                if (htmlBeginRegex.test(nextLine)) {
-                  break;
-                }
-                if (nextBulletRegex.test(nextLine)) {
-                  break;
-                }
-                if (hrRegex.test(nextLine)) {
-                  break;
-                }
-                if (nextLineWithoutTabs.search(/[^ ]/) >= indent || !nextLine.trim()) {
-                  itemContents += "\n" + nextLineWithoutTabs.slice(indent);
-                } else {
-                  if (blankLine) {
+                if (A.search(this.rules.other.nonSpaceChar) >= f || !h.trim())
+                  c += `
+` + A.slice(f);
+                else {
+                  if (R || g.replace(this.rules.other.tabCharGlobal, "    ").search(this.rules.other.nonSpaceChar) >= 4 || Y.test(g) || ee.test(g) || V.test(g))
                     break;
-                  }
-                  if (line.replace(/\t/g, "    ").search(/[^ ]/) >= 4) {
-                    break;
-                  }
-                  if (fencesBeginRegex.test(line)) {
-                    break;
-                  }
-                  if (headingBeginRegex.test(line)) {
-                    break;
-                  }
-                  if (hrRegex.test(line)) {
-                    break;
-                  }
-                  itemContents += "\n" + nextLine;
+                  c += `
+` + h;
                 }
-                if (!blankLine && !nextLine.trim()) {
-                  blankLine = true;
-                }
-                raw += rawLine + "\n";
-                src = src.substring(rawLine.length + 1);
-                line = nextLineWithoutTabs.slice(indent);
+                !R && !h.trim() && (R = true), p += H + `
+`, e = e.substring(H.length + 1), g = A.slice(f);
               }
             }
-            if (!list2.loose) {
-              if (endsWithBlankLine) {
-                list2.loose = true;
-              } else if (/\n[ \t]*\n[ \t]*$/.test(raw)) {
-                endsWithBlankLine = true;
+            i.loose || (a ? i.loose = true : this.rules.other.doubleBlankLine.test(p) && (a = true)), i.items.push({ type: "list_item", raw: p, task: !!this.options.gfm && this.rules.other.listIsTask.test(c), loose: false, text: c, tokens: [] }), i.raw += p;
+          }
+          let o = i.items.at(-1);
+          if (o)
+            o.raw = o.raw.trimEnd(), o.text = o.text.trimEnd();
+          else
+            return;
+          i.raw = i.raw.trimEnd();
+          for (let l of i.items) {
+            if (this.lexer.state.top = false, l.tokens = this.lexer.blockTokens(l.text, []), l.task) {
+              if (l.text = l.text.replace(this.rules.other.listReplaceTask, ""), ((_a2 = l.tokens[0]) == null ? void 0 : _a2.type) === "text" || ((_b = l.tokens[0]) == null ? void 0 : _b.type) === "paragraph") {
+                l.tokens[0].raw = l.tokens[0].raw.replace(this.rules.other.listReplaceTask, ""), l.tokens[0].text = l.tokens[0].text.replace(this.rules.other.listReplaceTask, "");
+                for (let c = this.lexer.inlineQueue.length - 1; c >= 0; c--)
+                  if (this.rules.other.listIsTask.test(this.lexer.inlineQueue[c].src)) {
+                    this.lexer.inlineQueue[c].src = this.lexer.inlineQueue[c].src.replace(this.rules.other.listReplaceTask, "");
+                    break;
+                  }
+              }
+              let p = this.rules.other.listTaskCheckbox.exec(l.raw);
+              if (p) {
+                let c = { type: "checkbox", raw: p[0] + " ", checked: p[0] !== "[ ]" };
+                l.checked = c.checked, i.loose ? l.tokens[0] && ["paragraph", "text"].includes(l.tokens[0].type) && "tokens" in l.tokens[0] && l.tokens[0].tokens ? (l.tokens[0].raw = c.raw + l.tokens[0].raw, l.tokens[0].text = c.raw + l.tokens[0].text, l.tokens[0].tokens.unshift(c)) : l.tokens.unshift({ type: "paragraph", raw: c.raw, text: c.raw, tokens: [c] }) : l.tokens.unshift(c);
               }
             }
-            let istask = null;
-            let ischecked;
-            if (this.options.gfm) {
-              istask = /^\[[ xX]\] /.exec(itemContents);
-              if (istask) {
-                ischecked = istask[0] !== "[ ] ";
-                itemContents = itemContents.replace(/^\[[ xX]\] +/, "");
-              }
-            }
-            list2.items.push({
-              type: "list_item",
-              raw,
-              task: !!istask,
-              checked: ischecked,
-              loose: false,
-              text: itemContents,
-              tokens: []
-            });
-            list2.raw += raw;
-          }
-          list2.items[list2.items.length - 1].raw = list2.items[list2.items.length - 1].raw.trimEnd();
-          list2.items[list2.items.length - 1].text = list2.items[list2.items.length - 1].text.trimEnd();
-          list2.raw = list2.raw.trimEnd();
-          for (let i = 0; i < list2.items.length; i++) {
-            this.lexer.state.top = false;
-            list2.items[i].tokens = this.lexer.blockTokens(list2.items[i].text, []);
-            if (!list2.loose) {
-              const spacers = list2.items[i].tokens.filter((t) => t.type === "space");
-              const hasMultipleLineBreaks = spacers.length > 0 && spacers.some((t) => /\n.*\n/.test(t.raw));
-              list2.loose = hasMultipleLineBreaks;
+            if (!i.loose) {
+              let p = l.tokens.filter((g) => g.type === "space"), c = p.length > 0 && p.some((g) => this.rules.other.anyLine.test(g.raw));
+              i.loose = c;
             }
           }
-          if (list2.loose) {
-            for (let i = 0; i < list2.items.length; i++) {
-              list2.items[i].loose = true;
+          if (i.loose)
+            for (let l of i.items) {
+              l.loose = true;
+              for (let p of l.tokens)
+                p.type === "text" && (p.type = "paragraph");
             }
-          }
-          return list2;
+          return i;
         }
       }
-      html(src) {
-        const cap = this.rules.block.html.exec(src);
-        if (cap) {
-          const token = {
-            type: "html",
-            block: true,
-            raw: cap[0],
-            pre: cap[1] === "pre" || cap[1] === "script" || cap[1] === "style",
-            text: cap[0]
-          };
-          return token;
+      html(e) {
+        let t = this.rules.block.html.exec(e);
+        if (t)
+          return { type: "html", block: true, raw: t[0], pre: t[1] === "pre" || t[1] === "script" || t[1] === "style", text: t[0] };
+      }
+      def(e) {
+        let t = this.rules.block.def.exec(e);
+        if (t) {
+          let n = t[1].toLowerCase().replace(this.rules.other.multipleSpaceGlobal, " "), r = t[2] ? t[2].replace(this.rules.other.hrefBrackets, "$1").replace(this.rules.inline.anyPunctuation, "$1") : "", i = t[3] ? t[3].substring(1, t[3].length - 1).replace(this.rules.inline.anyPunctuation, "$1") : t[3];
+          return { type: "def", tag: n, raw: t[0], href: r, title: i };
         }
       }
-      def(src) {
-        const cap = this.rules.block.def.exec(src);
-        if (cap) {
-          const tag2 = cap[1].toLowerCase().replace(/\s+/g, " ");
-          const href = cap[2] ? cap[2].replace(/^<(.*)>$/, "$1").replace(this.rules.inline.anyPunctuation, "$1") : "";
-          const title = cap[3] ? cap[3].substring(1, cap[3].length - 1).replace(this.rules.inline.anyPunctuation, "$1") : cap[3];
-          return {
-            type: "def",
-            tag: tag2,
-            raw: cap[0],
-            href,
-            title
-          };
-        }
-      }
-      table(src) {
-        const cap = this.rules.block.table.exec(src);
-        if (!cap) {
+      table(e) {
+        var _a2;
+        let t = this.rules.block.table.exec(e);
+        if (!t || !this.rules.other.tableDelimiter.test(t[2]))
           return;
-        }
-        if (!/[:|]/.test(cap[2])) {
-          return;
-        }
-        const headers = splitCells(cap[1]);
-        const aligns = cap[2].replace(/^\||\| *$/g, "").split("|");
-        const rows = cap[3] && cap[3].trim() ? cap[3].replace(/\n[ \t]*$/, "").split("\n") : [];
-        const item = {
-          type: "table",
-          raw: cap[0],
-          header: [],
-          align: [],
-          rows: []
-        };
-        if (headers.length !== aligns.length) {
-          return;
-        }
-        for (const align of aligns) {
-          if (/^ *-+: *$/.test(align)) {
-            item.align.push("right");
-          } else if (/^ *:-+: *$/.test(align)) {
-            item.align.push("center");
-          } else if (/^ *:-+ *$/.test(align)) {
-            item.align.push("left");
-          } else {
-            item.align.push(null);
-          }
-        }
-        for (let i = 0; i < headers.length; i++) {
-          item.header.push({
-            text: headers[i],
-            tokens: this.lexer.inline(headers[i]),
-            header: true,
-            align: item.align[i]
-          });
-        }
-        for (const row of rows) {
-          item.rows.push(splitCells(row, item.header.length).map((cell, i) => {
-            return {
-              text: cell,
-              tokens: this.lexer.inline(cell),
-              header: false,
-              align: item.align[i]
-            };
-          }));
-        }
-        return item;
-      }
-      lheading(src) {
-        const cap = this.rules.block.lheading.exec(src);
-        if (cap) {
-          return {
-            type: "heading",
-            raw: cap[0],
-            depth: cap[2].charAt(0) === "=" ? 1 : 2,
-            text: cap[1],
-            tokens: this.lexer.inline(cap[1])
-          };
+        let n = J(t[1]), r = t[2].replace(this.rules.other.tableAlignChars, "").split("|"), i = ((_a2 = t[3]) == null ? void 0 : _a2.trim()) ? t[3].replace(this.rules.other.tableRowBlankLine, "").split(`
+`) : [], s = { type: "table", raw: t[0], header: [], align: [], rows: [] };
+        if (n.length === r.length) {
+          for (let a of r)
+            this.rules.other.tableAlignRight.test(a) ? s.align.push("right") : this.rules.other.tableAlignCenter.test(a) ? s.align.push("center") : this.rules.other.tableAlignLeft.test(a) ? s.align.push("left") : s.align.push(null);
+          for (let a = 0; a < n.length; a++)
+            s.header.push({ text: n[a], tokens: this.lexer.inline(n[a]), header: true, align: s.align[a] });
+          for (let a of i)
+            s.rows.push(J(a, s.header.length).map((o, l) => ({ text: o, tokens: this.lexer.inline(o), header: false, align: s.align[l] })));
+          return s;
         }
       }
-      paragraph(src) {
-        const cap = this.rules.block.paragraph.exec(src);
-        if (cap) {
-          const text = cap[1].charAt(cap[1].length - 1) === "\n" ? cap[1].slice(0, -1) : cap[1];
-          return {
-            type: "paragraph",
-            raw: cap[0],
-            text,
-            tokens: this.lexer.inline(text)
-          };
+      lheading(e) {
+        let t = this.rules.block.lheading.exec(e);
+        if (t)
+          return { type: "heading", raw: t[0], depth: t[2].charAt(0) === "=" ? 1 : 2, text: t[1], tokens: this.lexer.inline(t[1]) };
+      }
+      paragraph(e) {
+        let t = this.rules.block.paragraph.exec(e);
+        if (t) {
+          let n = t[1].charAt(t[1].length - 1) === `
+` ? t[1].slice(0, -1) : t[1];
+          return { type: "paragraph", raw: t[0], text: n, tokens: this.lexer.inline(n) };
         }
       }
-      text(src) {
-        const cap = this.rules.block.text.exec(src);
-        if (cap) {
-          return {
-            type: "text",
-            raw: cap[0],
-            text: cap[0],
-            tokens: this.lexer.inline(cap[0])
-          };
-        }
+      text(e) {
+        let t = this.rules.block.text.exec(e);
+        if (t)
+          return { type: "text", raw: t[0], text: t[0], tokens: this.lexer.inline(t[0]) };
       }
-      escape(src) {
-        const cap = this.rules.inline.escape.exec(src);
-        if (cap) {
-          return {
-            type: "escape",
-            raw: cap[0],
-            text: escape$1(cap[1])
-          };
-        }
+      escape(e) {
+        let t = this.rules.inline.escape.exec(e);
+        if (t)
+          return { type: "escape", raw: t[0], text: t[1] };
       }
-      tag(src) {
-        const cap = this.rules.inline.tag.exec(src);
-        if (cap) {
-          if (!this.lexer.state.inLink && /^<a /i.test(cap[0])) {
-            this.lexer.state.inLink = true;
-          } else if (this.lexer.state.inLink && /^<\/a>/i.test(cap[0])) {
-            this.lexer.state.inLink = false;
-          }
-          if (!this.lexer.state.inRawBlock && /^<(pre|code|kbd|script)(\s|>)/i.test(cap[0])) {
-            this.lexer.state.inRawBlock = true;
-          } else if (this.lexer.state.inRawBlock && /^<\/(pre|code|kbd|script)(\s|>)/i.test(cap[0])) {
-            this.lexer.state.inRawBlock = false;
-          }
-          return {
-            type: "html",
-            raw: cap[0],
-            inLink: this.lexer.state.inLink,
-            inRawBlock: this.lexer.state.inRawBlock,
-            block: false,
-            text: cap[0]
-          };
-        }
+      tag(e) {
+        let t = this.rules.inline.tag.exec(e);
+        if (t)
+          return !this.lexer.state.inLink && this.rules.other.startATag.test(t[0]) ? this.lexer.state.inLink = true : this.lexer.state.inLink && this.rules.other.endATag.test(t[0]) && (this.lexer.state.inLink = false), !this.lexer.state.inRawBlock && this.rules.other.startPreScriptTag.test(t[0]) ? this.lexer.state.inRawBlock = true : this.lexer.state.inRawBlock && this.rules.other.endPreScriptTag.test(t[0]) && (this.lexer.state.inRawBlock = false), { type: "html", raw: t[0], inLink: this.lexer.state.inLink, inRawBlock: this.lexer.state.inRawBlock, block: false, text: t[0] };
       }
-      link(src) {
-        const cap = this.rules.inline.link.exec(src);
-        if (cap) {
-          const trimmedUrl = cap[2].trim();
-          if (!this.options.pedantic && /^</.test(trimmedUrl)) {
-            if (!/>$/.test(trimmedUrl)) {
+      link(e) {
+        let t = this.rules.inline.link.exec(e);
+        if (t) {
+          let n = t[2].trim();
+          if (!this.options.pedantic && this.rules.other.startAngleBracket.test(n)) {
+            if (!this.rules.other.endAngleBracket.test(n))
               return;
-            }
-            const rtrimSlash = rtrim(trimmedUrl.slice(0, -1), "\\");
-            if ((trimmedUrl.length - rtrimSlash.length) % 2 === 0) {
+            let s = z(n.slice(0, -1), "\\");
+            if ((n.length - s.length) % 2 === 0)
               return;
-            }
           } else {
-            const lastParenIndex = findClosingBracket(cap[2], "()");
-            if (lastParenIndex > -1) {
-              const start = cap[0].indexOf("!") === 0 ? 5 : 4;
-              const linkLen = start + cap[1].length + lastParenIndex;
-              cap[2] = cap[2].substring(0, lastParenIndex);
-              cap[0] = cap[0].substring(0, linkLen).trim();
-              cap[3] = "";
+            let s = de(t[2], "()");
+            if (s === -2)
+              return;
+            if (s > -1) {
+              let o = (t[0].indexOf("!") === 0 ? 5 : 4) + t[1].length + s;
+              t[2] = t[2].substring(0, s), t[0] = t[0].substring(0, o).trim(), t[3] = "";
             }
           }
-          let href = cap[2];
-          let title = "";
+          let r = t[2], i = "";
           if (this.options.pedantic) {
-            const link2 = /^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(href);
-            if (link2) {
-              href = link2[1];
-              title = link2[3];
-            }
-          } else {
-            title = cap[3] ? cap[3].slice(1, -1) : "";
-          }
-          href = href.trim();
-          if (/^</.test(href)) {
-            if (this.options.pedantic && !/>$/.test(trimmedUrl)) {
-              href = href.slice(1);
-            } else {
-              href = href.slice(1, -1);
-            }
-          }
-          return outputLink(cap, {
-            href: href ? href.replace(this.rules.inline.anyPunctuation, "$1") : href,
-            title: title ? title.replace(this.rules.inline.anyPunctuation, "$1") : title
-          }, cap[0], this.lexer);
+            let s = this.rules.other.pedanticHrefTitle.exec(r);
+            s && (r = s[1], i = s[3]);
+          } else
+            i = t[3] ? t[3].slice(1, -1) : "";
+          return r = r.trim(), this.rules.other.startAngleBracket.test(r) && (this.options.pedantic && !this.rules.other.endAngleBracket.test(n) ? r = r.slice(1) : r = r.slice(1, -1)), ge(t, { href: r && r.replace(this.rules.inline.anyPunctuation, "$1"), title: i && i.replace(this.rules.inline.anyPunctuation, "$1") }, t[0], this.lexer, this.rules);
         }
       }
-      reflink(src, links) {
-        let cap;
-        if ((cap = this.rules.inline.reflink.exec(src)) || (cap = this.rules.inline.nolink.exec(src))) {
-          const linkString = (cap[2] || cap[1]).replace(/\s+/g, " ");
-          const link2 = links[linkString.toLowerCase()];
-          if (!link2) {
-            const text = cap[0].charAt(0);
-            return {
-              type: "text",
-              raw: text,
-              text
-            };
+      reflink(e, t) {
+        let n;
+        if ((n = this.rules.inline.reflink.exec(e)) || (n = this.rules.inline.nolink.exec(e))) {
+          let r = (n[2] || n[1]).replace(this.rules.other.multipleSpaceGlobal, " "), i = t[r.toLowerCase()];
+          if (!i) {
+            let s = n[0].charAt(0);
+            return { type: "text", raw: s, text: s };
           }
-          return outputLink(cap, link2, cap[0], this.lexer);
+          return ge(n, i, n[0], this.lexer, this.rules);
         }
       }
-      emStrong(src, maskedSrc, prevChar = "") {
-        let match = this.rules.inline.emStrongLDelim.exec(src);
-        if (!match)
+      emStrong(e, t, n = "") {
+        let r = this.rules.inline.emStrongLDelim.exec(e);
+        if (!r || r[3] && n.match(this.rules.other.unicodeAlphaNumeric))
           return;
-        if (match[3] && prevChar.match(/[\p{L}\p{N}]/u))
-          return;
-        const nextChar = match[1] || match[2] || "";
-        if (!nextChar || !prevChar || this.rules.inline.punctuation.exec(prevChar)) {
-          const lLength = [...match[0]].length - 1;
-          let rDelim, rLength, delimTotal = lLength, midDelimTotal = 0;
-          const endReg = match[0][0] === "*" ? this.rules.inline.emStrongRDelimAst : this.rules.inline.emStrongRDelimUnd;
-          endReg.lastIndex = 0;
-          maskedSrc = maskedSrc.slice(-1 * src.length + lLength);
-          while ((match = endReg.exec(maskedSrc)) != null) {
-            rDelim = match[1] || match[2] || match[3] || match[4] || match[5] || match[6];
-            if (!rDelim)
+        if (!(r[1] || r[2] || "") || !n || this.rules.inline.punctuation.exec(n)) {
+          let s = [...r[0]].length - 1, a, o, l = s, p = 0, c = r[0][0] === "*" ? this.rules.inline.emStrongRDelimAst : this.rules.inline.emStrongRDelimUnd;
+          for (c.lastIndex = 0, t = t.slice(-1 * e.length + s); (r = c.exec(t)) != null; ) {
+            if (a = r[1] || r[2] || r[3] || r[4] || r[5] || r[6], !a)
               continue;
-            rLength = [...rDelim].length;
-            if (match[3] || match[4]) {
-              delimTotal += rLength;
+            if (o = [...a].length, r[3] || r[4]) {
+              l += o;
               continue;
-            } else if (match[5] || match[6]) {
-              if (lLength % 3 && !((lLength + rLength) % 3)) {
-                midDelimTotal += rLength;
-                continue;
-              }
-            }
-            delimTotal -= rLength;
-            if (delimTotal > 0)
+            } else if ((r[5] || r[6]) && s % 3 && !((s + o) % 3)) {
+              p += o;
               continue;
-            rLength = Math.min(rLength, rLength + delimTotal + midDelimTotal);
-            const lastCharLength = [...match[0]][0].length;
-            const raw = src.slice(0, lLength + match.index + lastCharLength + rLength);
-            if (Math.min(lLength, rLength) % 2) {
-              const text2 = raw.slice(1, -1);
-              return {
-                type: "em",
-                raw,
-                text: text2,
-                tokens: this.lexer.inlineTokens(text2)
-              };
             }
-            const text = raw.slice(2, -2);
-            return {
-              type: "strong",
-              raw,
-              text,
-              tokens: this.lexer.inlineTokens(text)
-            };
-          }
-        }
-      }
-      codespan(src) {
-        const cap = this.rules.inline.code.exec(src);
-        if (cap) {
-          let text = cap[2].replace(/\n/g, " ");
-          const hasNonSpaceChars = /[^ ]/.test(text);
-          const hasSpaceCharsOnBothEnds = /^ /.test(text) && / $/.test(text);
-          if (hasNonSpaceChars && hasSpaceCharsOnBothEnds) {
-            text = text.substring(1, text.length - 1);
-          }
-          text = escape$1(text, true);
-          return {
-            type: "codespan",
-            raw: cap[0],
-            text
-          };
-        }
-      }
-      br(src) {
-        const cap = this.rules.inline.br.exec(src);
-        if (cap) {
-          return {
-            type: "br",
-            raw: cap[0]
-          };
-        }
-      }
-      del(src) {
-        const cap = this.rules.inline.del.exec(src);
-        if (cap) {
-          return {
-            type: "del",
-            raw: cap[0],
-            text: cap[2],
-            tokens: this.lexer.inlineTokens(cap[2])
-          };
-        }
-      }
-      autolink(src) {
-        const cap = this.rules.inline.autolink.exec(src);
-        if (cap) {
-          let text, href;
-          if (cap[2] === "@") {
-            text = escape$1(cap[1]);
-            href = "mailto:" + text;
-          } else {
-            text = escape$1(cap[1]);
-            href = text;
-          }
-          return {
-            type: "link",
-            raw: cap[0],
-            text,
-            href,
-            tokens: [
-              {
-                type: "text",
-                raw: text,
-                text
-              }
-            ]
-          };
-        }
-      }
-      url(src) {
-        var _a, _b;
-        let cap;
-        if (cap = this.rules.inline.url.exec(src)) {
-          let text, href;
-          if (cap[2] === "@") {
-            text = escape$1(cap[0]);
-            href = "mailto:" + text;
-          } else {
-            let prevCapZero;
-            do {
-              prevCapZero = cap[0];
-              cap[0] = (_b = (_a = this.rules.inline._backpedal.exec(cap[0])) == null ? void 0 : _a[0]) != null ? _b : "";
-            } while (prevCapZero !== cap[0]);
-            text = escape$1(cap[0]);
-            if (cap[1] === "www.") {
-              href = "http://" + cap[0];
-            } else {
-              href = cap[0];
+            if (l -= o, l > 0)
+              continue;
+            o = Math.min(o, o + l + p);
+            let g = [...r[0]][0].length, h = e.slice(0, s + r.index + g + o);
+            if (Math.min(s, o) % 2) {
+              let f = h.slice(1, -1);
+              return { type: "em", raw: h, text: f, tokens: this.lexer.inlineTokens(f) };
             }
+            let R = h.slice(2, -2);
+            return { type: "strong", raw: h, text: R, tokens: this.lexer.inlineTokens(R) };
           }
-          return {
-            type: "link",
-            raw: cap[0],
-            text,
-            href,
-            tokens: [
-              {
-                type: "text",
-                raw: text,
-                text
-              }
-            ]
-          };
         }
       }
-      inlineText(src) {
-        const cap = this.rules.inline.text.exec(src);
-        if (cap) {
-          let text;
-          if (this.lexer.state.inRawBlock) {
-            text = cap[0];
-          } else {
-            text = escape$1(cap[0]);
+      codespan(e) {
+        let t = this.rules.inline.code.exec(e);
+        if (t) {
+          let n = t[2].replace(this.rules.other.newLineCharGlobal, " "), r = this.rules.other.nonSpaceChar.test(n), i = this.rules.other.startingSpaceChar.test(n) && this.rules.other.endingSpaceChar.test(n);
+          return r && i && (n = n.substring(1, n.length - 1)), { type: "codespan", raw: t[0], text: n };
+        }
+      }
+      br(e) {
+        let t = this.rules.inline.br.exec(e);
+        if (t)
+          return { type: "br", raw: t[0] };
+      }
+      del(e) {
+        let t = this.rules.inline.del.exec(e);
+        if (t)
+          return { type: "del", raw: t[0], text: t[2], tokens: this.lexer.inlineTokens(t[2]) };
+      }
+      autolink(e) {
+        let t = this.rules.inline.autolink.exec(e);
+        if (t) {
+          let n, r;
+          return t[2] === "@" ? (n = t[1], r = "mailto:" + n) : (n = t[1], r = n), { type: "link", raw: t[0], text: n, href: r, tokens: [{ type: "text", raw: n, text: n }] };
+        }
+      }
+      url(e) {
+        var _a2, _b;
+        let t;
+        if (t = this.rules.inline.url.exec(e)) {
+          let n, r;
+          if (t[2] === "@")
+            n = t[0], r = "mailto:" + n;
+          else {
+            let i;
+            do
+              i = t[0], t[0] = (_b = (_a2 = this.rules.inline._backpedal.exec(t[0])) == null ? void 0 : _a2[0]) != null ? _b : "";
+            while (i !== t[0]);
+            n = t[0], t[1] === "www." ? r = "http://" + t[0] : r = t[0];
           }
-          return {
-            type: "text",
-            raw: cap[0],
-            text
-          };
+          return { type: "link", raw: t[0], text: n, href: r, tokens: [{ type: "text", raw: n, text: n }] };
+        }
+      }
+      inlineText(e) {
+        let t = this.rules.inline.text.exec(e);
+        if (t) {
+          let n = this.lexer.state.inRawBlock;
+          return { type: "text", raw: t[0], text: t[0], escaped: n };
         }
       }
     };
-    var newline = /^(?:[ \t]*(?:\n|$))+/;
-    var blockCode = /^((?: {4}| {0,3}\t)[^\n]+(?:\n(?:[ \t]*(?:\n|$))*)?)+/;
-    var fences = /^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/;
-    var hr = /^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/;
-    var heading = /^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/;
-    var bullet = /(?:[*+-]|\d{1,9}[.)])/;
-    var lheading = edit(/^(?!bull |blockCode|fences|blockquote|heading|html)((?:.|\n(?!\s*?\n|bull |blockCode|fences|blockquote|heading|html))+?)\n {0,3}(=+|-+) *(?:\n+|$)/).replace(/bull/g, bullet).replace(/blockCode/g, /(?: {4}| {0,3}\t)/).replace(/fences/g, / {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g, / {0,3}>/).replace(/heading/g, / {0,3}#{1,6}/).replace(/html/g, / {0,3}<[^\n>]+>\n/).getRegex();
-    var _paragraph = /^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/;
-    var blockText = /^[^\n]+/;
-    var _blockLabel = /(?!\s*\])(?:\\.|[^\[\]\\])+/;
-    var def = edit(/^ {0,3}\[(label)\]: *(?:\n[ \t]*)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n[ \t]*)?| *\n[ \t]*)(title))? *(?:\n+|$)/).replace("label", _blockLabel).replace("title", /(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/).getRegex();
-    var list = edit(/^( {0,3}bull)([ \t][^\n]+?)?(?:\n|$)/).replace(/bull/g, bullet).getRegex();
-    var _tag = "address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|search|section|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul";
-    var _comment = /<!--(?:-?>|[\s\S]*?(?:-->|$))/;
-    var html = edit("^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n[ 	]*)+\\n|$))", "i").replace("comment", _comment).replace("tag", _tag).replace("attribute", / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex();
-    var paragraph = edit(_paragraph).replace("hr", hr).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("|table", "").replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", _tag).getRegex();
-    var blockquote = edit(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/).replace("paragraph", paragraph).getRegex();
-    var blockNormal = {
-      blockquote,
-      code: blockCode,
-      def,
-      fences,
-      heading,
-      hr,
-      html,
-      lheading,
-      list,
-      newline,
-      paragraph,
-      table: noopTest,
-      text: blockText
-    };
-    var gfmTable = edit("^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)").replace("hr", hr).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("blockquote", " {0,3}>").replace("code", "(?: {4}| {0,3}	)[^\\n]").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", _tag).getRegex();
-    var blockGfm = __spreadProps(__spreadValues({}, blockNormal), {
-      table: gfmTable,
-      paragraph: edit(_paragraph).replace("hr", hr).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("table", gfmTable).replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", _tag).getRegex()
-    });
-    var blockPedantic = __spreadProps(__spreadValues({}, blockNormal), {
-      html: edit(`^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:"[^"]*"|'[^']*'|\\s[^'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))`).replace("comment", _comment).replace(/tag/g, "(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(),
-      def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,
-      heading: /^(#{1,6})(.*)(?:\n+|$)/,
-      fences: noopTest,
-      lheading: /^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,
-      paragraph: edit(_paragraph).replace("hr", hr).replace("heading", " *#{1,6} *[^\n]").replace("lheading", lheading).replace("|table", "").replace("blockquote", " {0,3}>").replace("|fences", "").replace("|list", "").replace("|html", "").replace("|tag", "").getRegex()
-    });
-    var escape2 = /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/;
-    var inlineCode = /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/;
-    var br = /^( {2,}|\\)\n(?!\s*$)/;
-    var inlineText = /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/;
-    var _punctuation = "\\p{P}\\p{S}";
-    var punctuation = edit(/^((?![*_])[\spunctuation])/, "u").replace(/punctuation/g, _punctuation).getRegex();
-    var blockSkip = /\[[^[\]]*?\]\((?:\\.|[^\\\(\)]|\((?:\\.|[^\\\(\)])*\))*\)|`[^`]*?`|<[^<>]*?>/g;
-    var emStrongLDelim = edit(/^(?:\*+(?:((?!\*)[punct])|[^\s*]))|^_+(?:((?!_)[punct])|([^\s_]))/, "u").replace(/punct/g, _punctuation).getRegex();
-    var emStrongRDelimAst = edit("^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)[punct](\\*+)(?=[\\s]|$)|[^punct\\s](\\*+)(?!\\*)(?=[punct\\s]|$)|(?!\\*)[punct\\s](\\*+)(?=[^punct\\s])|[\\s](\\*+)(?!\\*)(?=[punct])|(?!\\*)[punct](\\*+)(?!\\*)(?=[punct])|[^punct\\s](\\*+)(?=[^punct\\s])", "gu").replace(/punct/g, _punctuation).getRegex();
-    var emStrongRDelimUnd = edit("^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)[punct](_+)(?=[\\s]|$)|[^punct\\s](_+)(?!_)(?=[punct\\s]|$)|(?!_)[punct\\s](_+)(?=[^punct\\s])|[\\s](_+)(?!_)(?=[punct])|(?!_)[punct](_+)(?!_)(?=[punct])", "gu").replace(/punct/g, _punctuation).getRegex();
-    var anyPunctuation = edit(/\\([punct])/, "gu").replace(/punct/g, _punctuation).getRegex();
-    var autolink = edit(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace("scheme", /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace("email", /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex();
-    var _inlineComment = edit(_comment).replace("(?:-->|$)", "-->").getRegex();
-    var tag = edit("^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>").replace("comment", _inlineComment).replace("attribute", /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex();
-    var _inlineLabel = /(?:\[(?:\\.|[^\[\]\\])*\]|\\.|`[^`]*`|[^\[\]\\`])*?/;
-    var link = edit(/^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/).replace("label", _inlineLabel).replace("href", /<(?:\\.|[^\n<>\\])+>|[^\s\x00-\x1f]*/).replace("title", /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex();
-    var reflink = edit(/^!?\[(label)\]\[(ref)\]/).replace("label", _inlineLabel).replace("ref", _blockLabel).getRegex();
-    var nolink = edit(/^!?\[(ref)\](?:\[\])?/).replace("ref", _blockLabel).getRegex();
-    var reflinkSearch = edit("reflink|nolink(?!\\()", "g").replace("reflink", reflink).replace("nolink", nolink).getRegex();
-    var inlineNormal = {
-      _backpedal: noopTest,
-      anyPunctuation,
-      autolink,
-      blockSkip,
-      br,
-      code: inlineCode,
-      del: noopTest,
-      emStrongLDelim,
-      emStrongRDelimAst,
-      emStrongRDelimUnd,
-      escape: escape2,
-      link,
-      nolink,
-      punctuation,
-      reflink,
-      reflinkSearch,
-      tag,
-      text: inlineText,
-      url: noopTest
-    };
-    var inlinePedantic = __spreadProps(__spreadValues({}, inlineNormal), {
-      link: edit(/^!?\[(label)\]\((.*?)\)/).replace("label", _inlineLabel).getRegex(),
-      reflink: edit(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label", _inlineLabel).getRegex()
-    });
-    var inlineGfm = __spreadProps(__spreadValues({}, inlineNormal), {
-      escape: edit(escape2).replace("])", "~|])").getRegex(),
-      url: edit(/^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/, "i").replace("email", /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(),
-      _backpedal: /(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,
-      del: /^(~~?)(?=[^\s~])((?:\\.|[^\\])*?(?:\\.|[^\s~\\]))\1(?=[^~]|$)/,
-      text: /^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/
-    });
-    var inlineBreaks = __spreadProps(__spreadValues({}, inlineGfm), {
-      br: edit(br).replace("{2,}", "*").getRegex(),
-      text: edit(inlineGfm.text).replace("\\b_", "\\b_| {2,}\\n").replace(/\{2,\}/g, "*").getRegex()
-    });
-    var block = {
-      normal: blockNormal,
-      gfm: blockGfm,
-      pedantic: blockPedantic
-    };
-    var inline = {
-      normal: inlineNormal,
-      gfm: inlineGfm,
-      breaks: inlineBreaks,
-      pedantic: inlinePedantic
-    };
-    var _Lexer = class {
-      constructor(options2) {
+    x = class u {
+      constructor(e) {
         __publicField(this, "tokens");
         __publicField(this, "options");
         __publicField(this, "state");
-        __publicField(this, "tokenizer");
         __publicField(this, "inlineQueue");
-        this.tokens = [];
-        this.tokens.links = Object.create(null);
-        this.options = options2 || exports.defaults;
-        this.options.tokenizer = this.options.tokenizer || new _Tokenizer();
-        this.tokenizer = this.options.tokenizer;
-        this.tokenizer.options = this.options;
-        this.tokenizer.lexer = this;
-        this.inlineQueue = [];
-        this.state = {
-          inLink: false,
-          inRawBlock: false,
-          top: true
-        };
-        const rules = {
-          block: block.normal,
-          inline: inline.normal
-        };
-        if (this.options.pedantic) {
-          rules.block = block.pedantic;
-          rules.inline = inline.pedantic;
-        } else if (this.options.gfm) {
-          rules.block = block.gfm;
-          if (this.options.breaks) {
-            rules.inline = inline.breaks;
-          } else {
-            rules.inline = inline.gfm;
-          }
-        }
-        this.tokenizer.rules = rules;
+        __publicField(this, "tokenizer");
+        this.tokens = [], this.tokens.links = Object.create(null), this.options = e || T, this.options.tokenizer = this.options.tokenizer || new y(), this.tokenizer = this.options.tokenizer, this.tokenizer.options = this.options, this.tokenizer.lexer = this, this.inlineQueue = [], this.state = { inLink: false, inRawBlock: false, top: true };
+        let t = { other: m, block: E.normal, inline: M.normal };
+        this.options.pedantic ? (t.block = E.pedantic, t.inline = M.pedantic) : this.options.gfm && (t.block = E.gfm, this.options.breaks ? t.inline = M.breaks : t.inline = M.gfm), this.tokenizer.rules = t;
       }
       static get rules() {
-        return {
-          block,
-          inline
-        };
+        return { block: E, inline: M };
       }
-      static lex(src, options2) {
-        const lexer2 = new _Lexer(options2);
-        return lexer2.lex(src);
+      static lex(e, t) {
+        return new u(t).lex(e);
       }
-      static lexInline(src, options2) {
-        const lexer2 = new _Lexer(options2);
-        return lexer2.inlineTokens(src);
+      static lexInline(e, t) {
+        return new u(t).inlineTokens(e);
       }
-      lex(src) {
-        src = src.replace(/\r\n|\r/g, "\n");
-        this.blockTokens(src, this.tokens);
-        for (let i = 0; i < this.inlineQueue.length; i++) {
-          const next = this.inlineQueue[i];
-          this.inlineTokens(next.src, next.tokens);
+      lex(e) {
+        e = e.replace(m.carriageReturn, `
+`), this.blockTokens(e, this.tokens);
+        for (let t = 0; t < this.inlineQueue.length; t++) {
+          let n = this.inlineQueue[t];
+          this.inlineTokens(n.src, n.tokens);
         }
-        this.inlineQueue = [];
-        return this.tokens;
+        return this.inlineQueue = [], this.tokens;
       }
-      blockTokens(src, tokens = [], lastParagraphClipped = false) {
-        if (this.options.pedantic) {
-          src = src.replace(/\t/g, "    ").replace(/^ +$/gm, "");
-        }
-        let token;
-        let lastToken;
-        let cutSrc;
-        while (src) {
-          if (this.options.extensions && this.options.extensions.block && this.options.extensions.block.some((extTokenizer) => {
-            if (token = extTokenizer.call({ lexer: this }, src, tokens)) {
-              src = src.substring(token.raw.length);
-              tokens.push(token);
-              return true;
-            }
-            return false;
-          })) {
+      blockTokens(e, t = [], n = false) {
+        var _a2, _b, _c;
+        for (this.options.pedantic && (e = e.replace(m.tabCharGlobal, "    ").replace(m.spaceLine, "")); e; ) {
+          let r;
+          if ((_b = (_a2 = this.options.extensions) == null ? void 0 : _a2.block) == null ? void 0 : _b.some((s) => (r = s.call({ lexer: this }, e, t)) ? (e = e.substring(r.raw.length), t.push(r), true) : false))
+            continue;
+          if (r = this.tokenizer.space(e)) {
+            e = e.substring(r.raw.length);
+            let s = t.at(-1);
+            r.raw.length === 1 && s !== void 0 ? s.raw += `
+` : t.push(r);
             continue;
           }
-          if (token = this.tokenizer.space(src)) {
-            src = src.substring(token.raw.length);
-            if (token.raw.length === 1 && tokens.length > 0) {
-              tokens[tokens.length - 1].raw += "\n";
-            } else {
-              tokens.push(token);
-            }
+          if (r = this.tokenizer.code(e)) {
+            e = e.substring(r.raw.length);
+            let s = t.at(-1);
+            (s == null ? void 0 : s.type) === "paragraph" || (s == null ? void 0 : s.type) === "text" ? (s.raw += (s.raw.endsWith(`
+`) ? "" : `
+`) + r.raw, s.text += `
+` + r.text, this.inlineQueue.at(-1).src = s.text) : t.push(r);
             continue;
           }
-          if (token = this.tokenizer.code(src)) {
-            src = src.substring(token.raw.length);
-            lastToken = tokens[tokens.length - 1];
-            if (lastToken && (lastToken.type === "paragraph" || lastToken.type === "text")) {
-              lastToken.raw += "\n" + token.raw;
-              lastToken.text += "\n" + token.text;
-              this.inlineQueue[this.inlineQueue.length - 1].src = lastToken.text;
-            } else {
-              tokens.push(token);
-            }
+          if (r = this.tokenizer.fences(e)) {
+            e = e.substring(r.raw.length), t.push(r);
             continue;
           }
-          if (token = this.tokenizer.fences(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (r = this.tokenizer.heading(e)) {
+            e = e.substring(r.raw.length), t.push(r);
             continue;
           }
-          if (token = this.tokenizer.heading(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (r = this.tokenizer.hr(e)) {
+            e = e.substring(r.raw.length), t.push(r);
             continue;
           }
-          if (token = this.tokenizer.hr(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (r = this.tokenizer.blockquote(e)) {
+            e = e.substring(r.raw.length), t.push(r);
             continue;
           }
-          if (token = this.tokenizer.blockquote(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (r = this.tokenizer.list(e)) {
+            e = e.substring(r.raw.length), t.push(r);
             continue;
           }
-          if (token = this.tokenizer.list(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (r = this.tokenizer.html(e)) {
+            e = e.substring(r.raw.length), t.push(r);
             continue;
           }
-          if (token = this.tokenizer.html(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (r = this.tokenizer.def(e)) {
+            e = e.substring(r.raw.length);
+            let s = t.at(-1);
+            (s == null ? void 0 : s.type) === "paragraph" || (s == null ? void 0 : s.type) === "text" ? (s.raw += (s.raw.endsWith(`
+`) ? "" : `
+`) + r.raw, s.text += `
+` + r.raw, this.inlineQueue.at(-1).src = s.text) : this.tokens.links[r.tag] || (this.tokens.links[r.tag] = { href: r.href, title: r.title }, t.push(r));
             continue;
           }
-          if (token = this.tokenizer.def(src)) {
-            src = src.substring(token.raw.length);
-            lastToken = tokens[tokens.length - 1];
-            if (lastToken && (lastToken.type === "paragraph" || lastToken.type === "text")) {
-              lastToken.raw += "\n" + token.raw;
-              lastToken.text += "\n" + token.raw;
-              this.inlineQueue[this.inlineQueue.length - 1].src = lastToken.text;
-            } else if (!this.tokens.links[token.tag]) {
-              this.tokens.links[token.tag] = {
-                href: token.href,
-                title: token.title
-              };
-            }
+          if (r = this.tokenizer.table(e)) {
+            e = e.substring(r.raw.length), t.push(r);
             continue;
           }
-          if (token = this.tokenizer.table(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (r = this.tokenizer.lheading(e)) {
+            e = e.substring(r.raw.length), t.push(r);
             continue;
           }
-          if (token = this.tokenizer.lheading(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          let i = e;
+          if ((_c = this.options.extensions) == null ? void 0 : _c.startBlock) {
+            let s = 1 / 0, a = e.slice(1), o;
+            this.options.extensions.startBlock.forEach((l) => {
+              o = l.call({ lexer: this }, a), typeof o == "number" && o >= 0 && (s = Math.min(s, o));
+            }), s < 1 / 0 && s >= 0 && (i = e.substring(0, s + 1));
+          }
+          if (this.state.top && (r = this.tokenizer.paragraph(i))) {
+            let s = t.at(-1);
+            n && (s == null ? void 0 : s.type) === "paragraph" ? (s.raw += (s.raw.endsWith(`
+`) ? "" : `
+`) + r.raw, s.text += `
+` + r.text, this.inlineQueue.pop(), this.inlineQueue.at(-1).src = s.text) : t.push(r), n = i.length !== e.length, e = e.substring(r.raw.length);
             continue;
           }
-          cutSrc = src;
-          if (this.options.extensions && this.options.extensions.startBlock) {
-            let startIndex = Infinity;
-            const tempSrc = src.slice(1);
-            let tempStart;
-            this.options.extensions.startBlock.forEach((getStartIndex) => {
-              tempStart = getStartIndex.call({ lexer: this }, tempSrc);
-              if (typeof tempStart === "number" && tempStart >= 0) {
-                startIndex = Math.min(startIndex, tempStart);
-              }
-            });
-            if (startIndex < Infinity && startIndex >= 0) {
-              cutSrc = src.substring(0, startIndex + 1);
-            }
-          }
-          if (this.state.top && (token = this.tokenizer.paragraph(cutSrc))) {
-            lastToken = tokens[tokens.length - 1];
-            if (lastParagraphClipped && (lastToken == null ? void 0 : lastToken.type) === "paragraph") {
-              lastToken.raw += "\n" + token.raw;
-              lastToken.text += "\n" + token.text;
-              this.inlineQueue.pop();
-              this.inlineQueue[this.inlineQueue.length - 1].src = lastToken.text;
-            } else {
-              tokens.push(token);
-            }
-            lastParagraphClipped = cutSrc.length !== src.length;
-            src = src.substring(token.raw.length);
+          if (r = this.tokenizer.text(e)) {
+            e = e.substring(r.raw.length);
+            let s = t.at(-1);
+            (s == null ? void 0 : s.type) === "text" ? (s.raw += (s.raw.endsWith(`
+`) ? "" : `
+`) + r.raw, s.text += `
+` + r.text, this.inlineQueue.pop(), this.inlineQueue.at(-1).src = s.text) : t.push(r);
             continue;
           }
-          if (token = this.tokenizer.text(src)) {
-            src = src.substring(token.raw.length);
-            lastToken = tokens[tokens.length - 1];
-            if (lastToken && lastToken.type === "text") {
-              lastToken.raw += "\n" + token.raw;
-              lastToken.text += "\n" + token.text;
-              this.inlineQueue.pop();
-              this.inlineQueue[this.inlineQueue.length - 1].src = lastToken.text;
-            } else {
-              tokens.push(token);
-            }
-            continue;
-          }
-          if (src) {
-            const errMsg = "Infinite loop on byte: " + src.charCodeAt(0);
+          if (e) {
+            let s = "Infinite loop on byte: " + e.charCodeAt(0);
             if (this.options.silent) {
-              console.error(errMsg);
+              console.error(s);
               break;
-            } else {
-              throw new Error(errMsg);
-            }
+            } else
+              throw new Error(s);
           }
         }
-        this.state.top = true;
-        return tokens;
+        return this.state.top = true, t;
       }
-      inline(src, tokens = []) {
-        this.inlineQueue.push({ src, tokens });
-        return tokens;
+      inline(e, t = []) {
+        return this.inlineQueue.push({ src: e, tokens: t }), t;
       }
-      inlineTokens(src, tokens = []) {
-        let token, lastToken, cutSrc;
-        let maskedSrc = src;
-        let match;
-        let keepPrevChar, prevChar;
+      inlineTokens(e, t = []) {
+        var _a2, _b, _c, _d, _e2, _f;
+        let n = e, r = null;
         if (this.tokens.links) {
-          const links = Object.keys(this.tokens.links);
-          if (links.length > 0) {
-            while ((match = this.tokenizer.rules.inline.reflinkSearch.exec(maskedSrc)) != null) {
-              if (links.includes(match[0].slice(match[0].lastIndexOf("[") + 1, -1))) {
-                maskedSrc = maskedSrc.slice(0, match.index) + "[" + "a".repeat(match[0].length - 2) + "]" + maskedSrc.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex);
-              }
-            }
-          }
+          let o = Object.keys(this.tokens.links);
+          if (o.length > 0)
+            for (; (r = this.tokenizer.rules.inline.reflinkSearch.exec(n)) != null; )
+              o.includes(r[0].slice(r[0].lastIndexOf("[") + 1, -1)) && (n = n.slice(0, r.index) + "[" + "a".repeat(r[0].length - 2) + "]" + n.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex));
         }
-        while ((match = this.tokenizer.rules.inline.blockSkip.exec(maskedSrc)) != null) {
-          maskedSrc = maskedSrc.slice(0, match.index) + "[" + "a".repeat(match[0].length - 2) + "]" + maskedSrc.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);
-        }
-        while ((match = this.tokenizer.rules.inline.anyPunctuation.exec(maskedSrc)) != null) {
-          maskedSrc = maskedSrc.slice(0, match.index) + "++" + maskedSrc.slice(this.tokenizer.rules.inline.anyPunctuation.lastIndex);
-        }
-        while (src) {
-          if (!keepPrevChar) {
-            prevChar = "";
-          }
-          keepPrevChar = false;
-          if (this.options.extensions && this.options.extensions.inline && this.options.extensions.inline.some((extTokenizer) => {
-            if (token = extTokenizer.call({ lexer: this }, src, tokens)) {
-              src = src.substring(token.raw.length);
-              tokens.push(token);
-              return true;
-            }
-            return false;
-          })) {
+        for (; (r = this.tokenizer.rules.inline.anyPunctuation.exec(n)) != null; )
+          n = n.slice(0, r.index) + "++" + n.slice(this.tokenizer.rules.inline.anyPunctuation.lastIndex);
+        let i;
+        for (; (r = this.tokenizer.rules.inline.blockSkip.exec(n)) != null; )
+          i = r[2] ? r[2].length : 0, n = n.slice(0, r.index + i) + "[" + "a".repeat(r[0].length - i - 2) + "]" + n.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);
+        n = (_c = (_b = (_a2 = this.options.hooks) == null ? void 0 : _a2.emStrongMask) == null ? void 0 : _b.call({ lexer: this }, n)) != null ? _c : n;
+        let s = false, a = "";
+        for (; e; ) {
+          s || (a = ""), s = false;
+          let o;
+          if ((_e2 = (_d = this.options.extensions) == null ? void 0 : _d.inline) == null ? void 0 : _e2.some((p) => (o = p.call({ lexer: this }, e, t)) ? (e = e.substring(o.raw.length), t.push(o), true) : false))
+            continue;
+          if (o = this.tokenizer.escape(e)) {
+            e = e.substring(o.raw.length), t.push(o);
             continue;
           }
-          if (token = this.tokenizer.escape(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (o = this.tokenizer.tag(e)) {
+            e = e.substring(o.raw.length), t.push(o);
             continue;
           }
-          if (token = this.tokenizer.tag(src)) {
-            src = src.substring(token.raw.length);
-            lastToken = tokens[tokens.length - 1];
-            if (lastToken && token.type === "text" && lastToken.type === "text") {
-              lastToken.raw += token.raw;
-              lastToken.text += token.text;
-            } else {
-              tokens.push(token);
-            }
+          if (o = this.tokenizer.link(e)) {
+            e = e.substring(o.raw.length), t.push(o);
             continue;
           }
-          if (token = this.tokenizer.link(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (o = this.tokenizer.reflink(e, this.tokens.links)) {
+            e = e.substring(o.raw.length);
+            let p = t.at(-1);
+            o.type === "text" && (p == null ? void 0 : p.type) === "text" ? (p.raw += o.raw, p.text += o.text) : t.push(o);
             continue;
           }
-          if (token = this.tokenizer.reflink(src, this.tokens.links)) {
-            src = src.substring(token.raw.length);
-            lastToken = tokens[tokens.length - 1];
-            if (lastToken && token.type === "text" && lastToken.type === "text") {
-              lastToken.raw += token.raw;
-              lastToken.text += token.text;
-            } else {
-              tokens.push(token);
-            }
+          if (o = this.tokenizer.emStrong(e, n, a)) {
+            e = e.substring(o.raw.length), t.push(o);
             continue;
           }
-          if (token = this.tokenizer.emStrong(src, maskedSrc, prevChar)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (o = this.tokenizer.codespan(e)) {
+            e = e.substring(o.raw.length), t.push(o);
             continue;
           }
-          if (token = this.tokenizer.codespan(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (o = this.tokenizer.br(e)) {
+            e = e.substring(o.raw.length), t.push(o);
             continue;
           }
-          if (token = this.tokenizer.br(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (o = this.tokenizer.del(e)) {
+            e = e.substring(o.raw.length), t.push(o);
             continue;
           }
-          if (token = this.tokenizer.del(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (o = this.tokenizer.autolink(e)) {
+            e = e.substring(o.raw.length), t.push(o);
             continue;
           }
-          if (token = this.tokenizer.autolink(src)) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          if (!this.state.inLink && (o = this.tokenizer.url(e))) {
+            e = e.substring(o.raw.length), t.push(o);
             continue;
           }
-          if (!this.state.inLink && (token = this.tokenizer.url(src))) {
-            src = src.substring(token.raw.length);
-            tokens.push(token);
+          let l = e;
+          if ((_f = this.options.extensions) == null ? void 0 : _f.startInline) {
+            let p = 1 / 0, c = e.slice(1), g;
+            this.options.extensions.startInline.forEach((h) => {
+              g = h.call({ lexer: this }, c), typeof g == "number" && g >= 0 && (p = Math.min(p, g));
+            }), p < 1 / 0 && p >= 0 && (l = e.substring(0, p + 1));
+          }
+          if (o = this.tokenizer.inlineText(l)) {
+            e = e.substring(o.raw.length), o.raw.slice(-1) !== "_" && (a = o.raw.slice(-1)), s = true;
+            let p = t.at(-1);
+            (p == null ? void 0 : p.type) === "text" ? (p.raw += o.raw, p.text += o.text) : t.push(o);
             continue;
           }
-          cutSrc = src;
-          if (this.options.extensions && this.options.extensions.startInline) {
-            let startIndex = Infinity;
-            const tempSrc = src.slice(1);
-            let tempStart;
-            this.options.extensions.startInline.forEach((getStartIndex) => {
-              tempStart = getStartIndex.call({ lexer: this }, tempSrc);
-              if (typeof tempStart === "number" && tempStart >= 0) {
-                startIndex = Math.min(startIndex, tempStart);
-              }
-            });
-            if (startIndex < Infinity && startIndex >= 0) {
-              cutSrc = src.substring(0, startIndex + 1);
-            }
-          }
-          if (token = this.tokenizer.inlineText(cutSrc)) {
-            src = src.substring(token.raw.length);
-            if (token.raw.slice(-1) !== "_") {
-              prevChar = token.raw.slice(-1);
-            }
-            keepPrevChar = true;
-            lastToken = tokens[tokens.length - 1];
-            if (lastToken && lastToken.type === "text") {
-              lastToken.raw += token.raw;
-              lastToken.text += token.text;
-            } else {
-              tokens.push(token);
-            }
-            continue;
-          }
-          if (src) {
-            const errMsg = "Infinite loop on byte: " + src.charCodeAt(0);
+          if (e) {
+            let p = "Infinite loop on byte: " + e.charCodeAt(0);
             if (this.options.silent) {
-              console.error(errMsg);
+              console.error(p);
               break;
-            } else {
-              throw new Error(errMsg);
-            }
+            } else
+              throw new Error(p);
           }
         }
-        return tokens;
+        return t;
       }
     };
-    var _Renderer = class {
-      constructor(options2) {
+    P = class {
+      constructor(e) {
         __publicField(this, "options");
         __publicField(this, "parser");
-        this.options = options2 || exports.defaults;
+        this.options = e || T;
       }
-      space(token) {
+      space(e) {
         return "";
       }
-      code({ text, lang, escaped }) {
-        var _a;
-        const langString = (_a = (lang || "").match(/^\S*/)) == null ? void 0 : _a[0];
-        const code = text.replace(/\n$/, "") + "\n";
-        if (!langString) {
-          return "<pre><code>" + (escaped ? code : escape$1(code, true)) + "</code></pre>\n";
-        }
-        return '<pre><code class="language-' + escape$1(langString) + '">' + (escaped ? code : escape$1(code, true)) + "</code></pre>\n";
+      code({ text: e, lang: t, escaped: n }) {
+        var _a2;
+        let r = (_a2 = (t || "").match(m.notSpaceStart)) == null ? void 0 : _a2[0], i = e.replace(m.endingNewline, "") + `
+`;
+        return r ? '<pre><code class="language-' + w(r) + '">' + (n ? i : w(i, true)) + `</code></pre>
+` : "<pre><code>" + (n ? i : w(i, true)) + `</code></pre>
+`;
       }
-      blockquote({ tokens }) {
-        const body = this.parser.parse(tokens);
+      blockquote({ tokens: e }) {
         return `<blockquote>
-${body}</blockquote>
+${this.parser.parse(e)}</blockquote>
 `;
       }
-      html({ text }) {
-        return text;
+      html({ text: e }) {
+        return e;
       }
-      heading({ tokens, depth }) {
-        return `<h${depth}>${this.parser.parseInline(tokens)}</h${depth}>
+      def(e) {
+        return "";
+      }
+      heading({ tokens: e, depth: t }) {
+        return `<h${t}>${this.parser.parseInline(e)}</h${t}>
 `;
       }
-      hr(token) {
-        return "<hr>\n";
-      }
-      list(token) {
-        const ordered = token.ordered;
-        const start = token.start;
-        let body = "";
-        for (let j = 0; j < token.items.length; j++) {
-          const item = token.items[j];
-          body += this.listitem(item);
-        }
-        const type = ordered ? "ol" : "ul";
-        const startAttr = ordered && start !== 1 ? ' start="' + start + '"' : "";
-        return "<" + type + startAttr + ">\n" + body + "</" + type + ">\n";
-      }
-      listitem(item) {
-        let itemBody = "";
-        if (item.task) {
-          const checkbox = this.checkbox({ checked: !!item.checked });
-          if (item.loose) {
-            if (item.tokens.length > 0 && item.tokens[0].type === "paragraph") {
-              item.tokens[0].text = checkbox + " " + item.tokens[0].text;
-              if (item.tokens[0].tokens && item.tokens[0].tokens.length > 0 && item.tokens[0].tokens[0].type === "text") {
-                item.tokens[0].tokens[0].text = checkbox + " " + item.tokens[0].tokens[0].text;
-              }
-            } else {
-              item.tokens.unshift({
-                type: "text",
-                raw: checkbox + " ",
-                text: checkbox + " "
-              });
-            }
-          } else {
-            itemBody += checkbox + " ";
-          }
-        }
-        itemBody += this.parser.parse(item.tokens, !!item.loose);
-        return `<li>${itemBody}</li>
+      hr(e) {
+        return `<hr>
 `;
       }
-      checkbox({ checked }) {
-        return "<input " + (checked ? 'checked="" ' : "") + 'disabled="" type="checkbox">';
-      }
-      paragraph({ tokens }) {
-        return `<p>${this.parser.parseInline(tokens)}</p>
+      list(e) {
+        let t = e.ordered, n = e.start, r = "";
+        for (let a = 0; a < e.items.length; a++) {
+          let o = e.items[a];
+          r += this.listitem(o);
+        }
+        let i = t ? "ol" : "ul", s = t && n !== 1 ? ' start="' + n + '"' : "";
+        return "<" + i + s + `>
+` + r + "</" + i + `>
 `;
       }
-      table(token) {
-        let header = "";
-        let cell = "";
-        for (let j = 0; j < token.header.length; j++) {
-          cell += this.tablecell(token.header[j]);
-        }
-        header += this.tablerow({ text: cell });
-        let body = "";
-        for (let j = 0; j < token.rows.length; j++) {
-          const row = token.rows[j];
-          cell = "";
-          for (let k = 0; k < row.length; k++) {
-            cell += this.tablecell(row[k]);
-          }
-          body += this.tablerow({ text: cell });
-        }
-        if (body)
-          body = `<tbody>${body}</tbody>`;
-        return "<table>\n<thead>\n" + header + "</thead>\n" + body + "</table>\n";
+      listitem(e) {
+        return `<li>${this.parser.parse(e.tokens)}</li>
+`;
       }
-      tablerow({ text }) {
+      checkbox({ checked: e }) {
+        return "<input " + (e ? 'checked="" ' : "") + 'disabled="" type="checkbox"> ';
+      }
+      paragraph({ tokens: e }) {
+        return `<p>${this.parser.parseInline(e)}</p>
+`;
+      }
+      table(e) {
+        let t = "", n = "";
+        for (let i = 0; i < e.header.length; i++)
+          n += this.tablecell(e.header[i]);
+        t += this.tablerow({ text: n });
+        let r = "";
+        for (let i = 0; i < e.rows.length; i++) {
+          let s = e.rows[i];
+          n = "";
+          for (let a = 0; a < s.length; a++)
+            n += this.tablecell(s[a]);
+          r += this.tablerow({ text: n });
+        }
+        return r && (r = `<tbody>${r}</tbody>`), `<table>
+<thead>
+` + t + `</thead>
+` + r + `</table>
+`;
+      }
+      tablerow({ text: e }) {
         return `<tr>
-${text}</tr>
+${e}</tr>
 `;
       }
-      tablecell(token) {
-        const content = this.parser.parseInline(token.tokens);
-        const type = token.header ? "th" : "td";
-        const tag2 = token.align ? `<${type} align="${token.align}">` : `<${type}>`;
-        return tag2 + content + `</${type}>
+      tablecell(e) {
+        let t = this.parser.parseInline(e.tokens), n = e.header ? "th" : "td";
+        return (e.align ? `<${n} align="${e.align}">` : `<${n}>`) + t + `</${n}>
 `;
       }
-      strong({ tokens }) {
-        return `<strong>${this.parser.parseInline(tokens)}</strong>`;
+      strong({ tokens: e }) {
+        return `<strong>${this.parser.parseInline(e)}</strong>`;
       }
-      em({ tokens }) {
-        return `<em>${this.parser.parseInline(tokens)}</em>`;
+      em({ tokens: e }) {
+        return `<em>${this.parser.parseInline(e)}</em>`;
       }
-      codespan({ text }) {
-        return `<code>${text}</code>`;
+      codespan({ text: e }) {
+        return `<code>${w(e, true)}</code>`;
       }
-      br(token) {
+      br(e) {
         return "<br>";
       }
-      del({ tokens }) {
-        return `<del>${this.parser.parseInline(tokens)}</del>`;
+      del({ tokens: e }) {
+        return `<del>${this.parser.parseInline(e)}</del>`;
       }
-      link({ href, title, tokens }) {
-        const text = this.parser.parseInline(tokens);
-        const cleanHref = cleanUrl(href);
-        if (cleanHref === null) {
-          return text;
-        }
-        href = cleanHref;
-        let out = '<a href="' + href + '"';
-        if (title) {
-          out += ' title="' + title + '"';
-        }
-        out += ">" + text + "</a>";
-        return out;
+      link({ href: e, title: t, tokens: n }) {
+        let r = this.parser.parseInline(n), i = X(e);
+        if (i === null)
+          return r;
+        e = i;
+        let s = '<a href="' + e + '"';
+        return t && (s += ' title="' + w(t) + '"'), s += ">" + r + "</a>", s;
       }
-      image({ href, title, text }) {
-        const cleanHref = cleanUrl(href);
-        if (cleanHref === null) {
-          return text;
-        }
-        href = cleanHref;
-        let out = `<img src="${href}" alt="${text}"`;
-        if (title) {
-          out += ` title="${title}"`;
-        }
-        out += ">";
-        return out;
+      image({ href: e, title: t, text: n, tokens: r }) {
+        r && (n = this.parser.parseInline(r, this.parser.textRenderer));
+        let i = X(e);
+        if (i === null)
+          return w(n);
+        e = i;
+        let s = `<img src="${e}" alt="${n}"`;
+        return t && (s += ` title="${w(t)}"`), s += ">", s;
       }
-      text(token) {
-        return "tokens" in token && token.tokens ? this.parser.parseInline(token.tokens) : token.text;
+      text(e) {
+        return "tokens" in e && e.tokens ? this.parser.parseInline(e.tokens) : "escaped" in e && e.escaped ? e.text : w(e.text);
       }
     };
-    var _TextRenderer = class {
-      strong({ text }) {
-        return text;
+    $ = class {
+      strong({ text: e }) {
+        return e;
       }
-      em({ text }) {
-        return text;
+      em({ text: e }) {
+        return e;
       }
-      codespan({ text }) {
-        return text;
+      codespan({ text: e }) {
+        return e;
       }
-      del({ text }) {
-        return text;
+      del({ text: e }) {
+        return e;
       }
-      html({ text }) {
-        return text;
+      html({ text: e }) {
+        return e;
       }
-      text({ text }) {
-        return text;
+      text({ text: e }) {
+        return e;
       }
-      link({ text }) {
-        return "" + text;
+      link({ text: e }) {
+        return "" + e;
       }
-      image({ text }) {
-        return "" + text;
+      image({ text: e }) {
+        return "" + e;
       }
       br() {
         return "";
       }
+      checkbox({ raw: e }) {
+        return e;
+      }
     };
-    var _Parser = class {
-      constructor(options2) {
+    b = class u2 {
+      constructor(e) {
         __publicField(this, "options");
         __publicField(this, "renderer");
         __publicField(this, "textRenderer");
-        this.options = options2 || exports.defaults;
-        this.options.renderer = this.options.renderer || new _Renderer();
-        this.renderer = this.options.renderer;
-        this.renderer.options = this.options;
-        this.renderer.parser = this;
-        this.textRenderer = new _TextRenderer();
+        this.options = e || T, this.options.renderer = this.options.renderer || new P(), this.renderer = this.options.renderer, this.renderer.options = this.options, this.renderer.parser = this, this.textRenderer = new $();
       }
-      static parse(tokens, options2) {
-        const parser2 = new _Parser(options2);
-        return parser2.parse(tokens);
+      static parse(e, t) {
+        return new u2(t).parse(e);
       }
-      static parseInline(tokens, options2) {
-        const parser2 = new _Parser(options2);
-        return parser2.parseInline(tokens);
+      static parseInline(e, t) {
+        return new u2(t).parseInline(e);
       }
-      parse(tokens, top = true) {
-        let out = "";
-        for (let i = 0; i < tokens.length; i++) {
-          const anyToken = tokens[i];
-          if (this.options.extensions && this.options.extensions.renderers && this.options.extensions.renderers[anyToken.type]) {
-            const genericToken = anyToken;
-            const ret = this.options.extensions.renderers[genericToken.type].call({ parser: this }, genericToken);
-            if (ret !== false || !["space", "hr", "heading", "code", "table", "blockquote", "list", "html", "paragraph", "text"].includes(genericToken.type)) {
-              out += ret || "";
+      parse(e) {
+        var _a2, _b;
+        let t = "";
+        for (let n = 0; n < e.length; n++) {
+          let r = e[n];
+          if ((_b = (_a2 = this.options.extensions) == null ? void 0 : _a2.renderers) == null ? void 0 : _b[r.type]) {
+            let s = r, a = this.options.extensions.renderers[s.type].call({ parser: this }, s);
+            if (a !== false || !["space", "hr", "heading", "code", "table", "blockquote", "list", "html", "def", "paragraph", "text"].includes(s.type)) {
+              t += a || "";
               continue;
             }
           }
-          const token = anyToken;
-          switch (token.type) {
+          let i = r;
+          switch (i.type) {
             case "space": {
-              out += this.renderer.space(token);
-              continue;
+              t += this.renderer.space(i);
+              break;
             }
             case "hr": {
-              out += this.renderer.hr(token);
-              continue;
+              t += this.renderer.hr(i);
+              break;
             }
             case "heading": {
-              out += this.renderer.heading(token);
-              continue;
+              t += this.renderer.heading(i);
+              break;
             }
             case "code": {
-              out += this.renderer.code(token);
-              continue;
+              t += this.renderer.code(i);
+              break;
             }
             case "table": {
-              out += this.renderer.table(token);
-              continue;
+              t += this.renderer.table(i);
+              break;
             }
             case "blockquote": {
-              out += this.renderer.blockquote(token);
-              continue;
+              t += this.renderer.blockquote(i);
+              break;
             }
             case "list": {
-              out += this.renderer.list(token);
-              continue;
+              t += this.renderer.list(i);
+              break;
             }
-            case "html": {
-              out += this.renderer.html(token);
-              continue;
-            }
-            case "paragraph": {
-              out += this.renderer.paragraph(token);
-              continue;
-            }
-            case "text": {
-              let textToken = token;
-              let body = this.renderer.text(textToken);
-              while (i + 1 < tokens.length && tokens[i + 1].type === "text") {
-                textToken = tokens[++i];
-                body += "\n" + this.renderer.text(textToken);
-              }
-              if (top) {
-                out += this.renderer.paragraph({
-                  type: "paragraph",
-                  raw: body,
-                  text: body,
-                  tokens: [{ type: "text", raw: body, text: body }]
-                });
-              } else {
-                out += body;
-              }
-              continue;
-            }
-            default: {
-              const errMsg = 'Token with "' + token.type + '" type was not found.';
-              if (this.options.silent) {
-                console.error(errMsg);
-                return "";
-              } else {
-                throw new Error(errMsg);
-              }
-            }
-          }
-        }
-        return out;
-      }
-      parseInline(tokens, renderer) {
-        renderer = renderer || this.renderer;
-        let out = "";
-        for (let i = 0; i < tokens.length; i++) {
-          const anyToken = tokens[i];
-          if (this.options.extensions && this.options.extensions.renderers && this.options.extensions.renderers[anyToken.type]) {
-            const ret = this.options.extensions.renderers[anyToken.type].call({ parser: this }, anyToken);
-            if (ret !== false || !["escape", "html", "link", "image", "strong", "em", "codespan", "br", "del", "text"].includes(anyToken.type)) {
-              out += ret || "";
-              continue;
-            }
-          }
-          const token = anyToken;
-          switch (token.type) {
-            case "escape": {
-              out += renderer.text(token);
+            case "checkbox": {
+              t += this.renderer.checkbox(i);
               break;
             }
             case "html": {
-              out += renderer.html(token);
+              t += this.renderer.html(i);
+              break;
+            }
+            case "def": {
+              t += this.renderer.def(i);
+              break;
+            }
+            case "paragraph": {
+              t += this.renderer.paragraph(i);
+              break;
+            }
+            case "text": {
+              t += this.renderer.text(i);
+              break;
+            }
+            default: {
+              let s = 'Token with "' + i.type + '" type was not found.';
+              if (this.options.silent)
+                return console.error(s), "";
+              throw new Error(s);
+            }
+          }
+        }
+        return t;
+      }
+      parseInline(e, t = this.renderer) {
+        var _a2, _b;
+        let n = "";
+        for (let r = 0; r < e.length; r++) {
+          let i = e[r];
+          if ((_b = (_a2 = this.options.extensions) == null ? void 0 : _a2.renderers) == null ? void 0 : _b[i.type]) {
+            let a = this.options.extensions.renderers[i.type].call({ parser: this }, i);
+            if (a !== false || !["escape", "html", "link", "image", "strong", "em", "codespan", "br", "del", "text"].includes(i.type)) {
+              n += a || "";
+              continue;
+            }
+          }
+          let s = i;
+          switch (s.type) {
+            case "escape": {
+              n += t.text(s);
+              break;
+            }
+            case "html": {
+              n += t.html(s);
               break;
             }
             case "link": {
-              out += renderer.link(token);
+              n += t.link(s);
               break;
             }
             case "image": {
-              out += renderer.image(token);
+              n += t.image(s);
+              break;
+            }
+            case "checkbox": {
+              n += t.checkbox(s);
               break;
             }
             case "strong": {
-              out += renderer.strong(token);
+              n += t.strong(s);
               break;
             }
             case "em": {
-              out += renderer.em(token);
+              n += t.em(s);
               break;
             }
             case "codespan": {
-              out += renderer.codespan(token);
+              n += t.codespan(s);
               break;
             }
             case "br": {
-              out += renderer.br(token);
+              n += t.br(s);
               break;
             }
             case "del": {
-              out += renderer.del(token);
+              n += t.del(s);
               break;
             }
             case "text": {
-              out += renderer.text(token);
+              n += t.text(s);
               break;
             }
             default: {
-              const errMsg = 'Token with "' + token.type + '" type was not found.';
-              if (this.options.silent) {
-                console.error(errMsg);
-                return "";
-              } else {
-                throw new Error(errMsg);
-              }
+              let a = 'Token with "' + s.type + '" type was not found.';
+              if (this.options.silent)
+                return console.error(a), "";
+              throw new Error(a);
             }
           }
         }
-        return out;
+        return n;
       }
     };
-    var _Hooks = class {
-      constructor(options2) {
+    S = (_a = class {
+      constructor(e) {
         __publicField(this, "options");
         __publicField(this, "block");
-        this.options = options2 || exports.defaults;
+        this.options = e || T;
       }
-      preprocess(markdown) {
-        return markdown;
+      preprocess(e) {
+        return e;
       }
-      postprocess(html2) {
-        return html2;
+      postprocess(e) {
+        return e;
       }
-      processAllTokens(tokens) {
-        return tokens;
+      processAllTokens(e) {
+        return e;
+      }
+      emStrongMask(e) {
+        return e;
       }
       provideLexer() {
-        return this.block ? _Lexer.lex : _Lexer.lexInline;
+        return this.block ? x.lex : x.lexInline;
       }
       provideParser() {
-        return this.block ? _Parser.parse : _Parser.parseInline;
+        return this.block ? b.parse : b.parseInline;
       }
-    };
-    __publicField(_Hooks, "passThroughHooks", new Set([
-      "preprocess",
-      "postprocess",
-      "processAllTokens"
-    ]));
-    var Marked = class {
-      constructor(...args) {
-        __publicField(this, "defaults", _getDefaults());
+    }, __publicField(_a, "passThroughHooks", new Set(["preprocess", "postprocess", "processAllTokens", "emStrongMask"])), __publicField(_a, "passThroughHooksRespectAsync", new Set(["preprocess", "postprocess", "processAllTokens"])), _a);
+    B = class {
+      constructor(...e) {
+        __publicField(this, "defaults", L());
         __publicField(this, "options", this.setOptions);
         __publicField(this, "parse", this.parseMarkdown(true));
         __publicField(this, "parseInline", this.parseMarkdown(false));
-        __publicField(this, "Parser", _Parser);
-        __publicField(this, "Renderer", _Renderer);
-        __publicField(this, "TextRenderer", _TextRenderer);
-        __publicField(this, "Lexer", _Lexer);
-        __publicField(this, "Tokenizer", _Tokenizer);
-        __publicField(this, "Hooks", _Hooks);
-        this.use(...args);
+        __publicField(this, "Parser", b);
+        __publicField(this, "Renderer", P);
+        __publicField(this, "TextRenderer", $);
+        __publicField(this, "Lexer", x);
+        __publicField(this, "Tokenizer", y);
+        __publicField(this, "Hooks", S);
+        this.use(...e);
       }
-      walkTokens(tokens, callback) {
-        var _a, _b;
-        let values = [];
-        for (const token of tokens) {
-          values = values.concat(callback.call(this, token));
-          switch (token.type) {
+      walkTokens(e, t) {
+        var _a2, _b;
+        let n = [];
+        for (let r of e)
+          switch (n = n.concat(t.call(this, r)), r.type) {
             case "table": {
-              const tableToken = token;
-              for (const cell of tableToken.header) {
-                values = values.concat(this.walkTokens(cell.tokens, callback));
-              }
-              for (const row of tableToken.rows) {
-                for (const cell of row) {
-                  values = values.concat(this.walkTokens(cell.tokens, callback));
-                }
-              }
+              let i = r;
+              for (let s of i.header)
+                n = n.concat(this.walkTokens(s.tokens, t));
+              for (let s of i.rows)
+                for (let a of s)
+                  n = n.concat(this.walkTokens(a.tokens, t));
               break;
             }
             case "list": {
-              const listToken = token;
-              values = values.concat(this.walkTokens(listToken.items, callback));
+              let i = r;
+              n = n.concat(this.walkTokens(i.items, t));
               break;
             }
             default: {
-              const genericToken = token;
-              if ((_b = (_a = this.defaults.extensions) == null ? void 0 : _a.childTokens) == null ? void 0 : _b[genericToken.type]) {
-                this.defaults.extensions.childTokens[genericToken.type].forEach((childTokens) => {
-                  const tokens2 = genericToken[childTokens].flat(Infinity);
-                  values = values.concat(this.walkTokens(tokens2, callback));
-                });
-              } else if (genericToken.tokens) {
-                values = values.concat(this.walkTokens(genericToken.tokens, callback));
-              }
+              let i = r;
+              ((_b = (_a2 = this.defaults.extensions) == null ? void 0 : _a2.childTokens) == null ? void 0 : _b[i.type]) ? this.defaults.extensions.childTokens[i.type].forEach((s) => {
+                let a = i[s].flat(1 / 0);
+                n = n.concat(this.walkTokens(a, t));
+              }) : i.tokens && (n = n.concat(this.walkTokens(i.tokens, t)));
             }
           }
-        }
-        return values;
+        return n;
       }
-      use(...args) {
-        const extensions = this.defaults.extensions || { renderers: {}, childTokens: {} };
-        args.forEach((pack) => {
-          const opts = __spreadValues({}, pack);
-          opts.async = this.defaults.async || opts.async || false;
-          if (pack.extensions) {
-            pack.extensions.forEach((ext) => {
-              if (!ext.name) {
-                throw new Error("extension name required");
-              }
-              if ("renderer" in ext) {
-                const prevRenderer = extensions.renderers[ext.name];
-                if (prevRenderer) {
-                  extensions.renderers[ext.name] = function(...args2) {
-                    let ret = ext.renderer.apply(this, args2);
-                    if (ret === false) {
-                      ret = prevRenderer.apply(this, args2);
-                    }
-                    return ret;
-                  };
-                } else {
-                  extensions.renderers[ext.name] = ext.renderer;
-                }
-              }
-              if ("tokenizer" in ext) {
-                if (!ext.level || ext.level !== "block" && ext.level !== "inline") {
-                  throw new Error("extension level must be 'block' or 'inline'");
-                }
-                const extLevel = extensions[ext.level];
-                if (extLevel) {
-                  extLevel.unshift(ext.tokenizer);
-                } else {
-                  extensions[ext.level] = [ext.tokenizer];
-                }
-                if (ext.start) {
-                  if (ext.level === "block") {
-                    if (extensions.startBlock) {
-                      extensions.startBlock.push(ext.start);
-                    } else {
-                      extensions.startBlock = [ext.start];
-                    }
-                  } else if (ext.level === "inline") {
-                    if (extensions.startInline) {
-                      extensions.startInline.push(ext.start);
-                    } else {
-                      extensions.startInline = [ext.start];
-                    }
-                  }
-                }
-              }
-              if ("childTokens" in ext && ext.childTokens) {
-                extensions.childTokens[ext.name] = ext.childTokens;
-              }
-            });
-            opts.extensions = extensions;
-          }
-          if (pack.renderer) {
-            const renderer = this.defaults.renderer || new _Renderer(this.defaults);
-            for (const prop in pack.renderer) {
-              if (!(prop in renderer)) {
-                throw new Error(`renderer '${prop}' does not exist`);
-              }
-              if (["options", "parser"].includes(prop)) {
+      use(...e) {
+        let t = this.defaults.extensions || { renderers: {}, childTokens: {} };
+        return e.forEach((n) => {
+          let r = __spreadValues({}, n);
+          if (r.async = this.defaults.async || r.async || false, n.extensions && (n.extensions.forEach((i) => {
+            if (!i.name)
+              throw new Error("extension name required");
+            if ("renderer" in i) {
+              let s = t.renderers[i.name];
+              s ? t.renderers[i.name] = function(...a) {
+                let o = i.renderer.apply(this, a);
+                return o === false && (o = s.apply(this, a)), o;
+              } : t.renderers[i.name] = i.renderer;
+            }
+            if ("tokenizer" in i) {
+              if (!i.level || i.level !== "block" && i.level !== "inline")
+                throw new Error("extension level must be 'block' or 'inline'");
+              let s = t[i.level];
+              s ? s.unshift(i.tokenizer) : t[i.level] = [i.tokenizer], i.start && (i.level === "block" ? t.startBlock ? t.startBlock.push(i.start) : t.startBlock = [i.start] : i.level === "inline" && (t.startInline ? t.startInline.push(i.start) : t.startInline = [i.start]));
+            }
+            "childTokens" in i && i.childTokens && (t.childTokens[i.name] = i.childTokens);
+          }), r.extensions = t), n.renderer) {
+            let i = this.defaults.renderer || new P(this.defaults);
+            for (let s in n.renderer) {
+              if (!(s in i))
+                throw new Error(`renderer '${s}' does not exist`);
+              if (["options", "parser"].includes(s))
                 continue;
-              }
-              const rendererProp = prop;
-              const rendererFunc = pack.renderer[rendererProp];
-              const prevRenderer = renderer[rendererProp];
-              renderer[rendererProp] = (...args2) => {
-                let ret = rendererFunc.apply(renderer, args2);
-                if (ret === false) {
-                  ret = prevRenderer.apply(renderer, args2);
-                }
-                return ret || "";
+              let a = s, o = n.renderer[a], l = i[a];
+              i[a] = (...p) => {
+                let c = o.apply(i, p);
+                return c === false && (c = l.apply(i, p)), c || "";
               };
             }
-            opts.renderer = renderer;
+            r.renderer = i;
           }
-          if (pack.tokenizer) {
-            const tokenizer = this.defaults.tokenizer || new _Tokenizer(this.defaults);
-            for (const prop in pack.tokenizer) {
-              if (!(prop in tokenizer)) {
-                throw new Error(`tokenizer '${prop}' does not exist`);
-              }
-              if (["options", "rules", "lexer"].includes(prop)) {
+          if (n.tokenizer) {
+            let i = this.defaults.tokenizer || new y(this.defaults);
+            for (let s in n.tokenizer) {
+              if (!(s in i))
+                throw new Error(`tokenizer '${s}' does not exist`);
+              if (["options", "rules", "lexer"].includes(s))
                 continue;
-              }
-              const tokenizerProp = prop;
-              const tokenizerFunc = pack.tokenizer[tokenizerProp];
-              const prevTokenizer = tokenizer[tokenizerProp];
-              tokenizer[tokenizerProp] = (...args2) => {
-                let ret = tokenizerFunc.apply(tokenizer, args2);
-                if (ret === false) {
-                  ret = prevTokenizer.apply(tokenizer, args2);
-                }
-                return ret;
+              let a = s, o = n.tokenizer[a], l = i[a];
+              i[a] = (...p) => {
+                let c = o.apply(i, p);
+                return c === false && (c = l.apply(i, p)), c;
               };
             }
-            opts.tokenizer = tokenizer;
+            r.tokenizer = i;
           }
-          if (pack.hooks) {
-            const hooks = this.defaults.hooks || new _Hooks();
-            for (const prop in pack.hooks) {
-              if (!(prop in hooks)) {
-                throw new Error(`hook '${prop}' does not exist`);
-              }
-              if (["options", "block"].includes(prop)) {
+          if (n.hooks) {
+            let i = this.defaults.hooks || new S();
+            for (let s in n.hooks) {
+              if (!(s in i))
+                throw new Error(`hook '${s}' does not exist`);
+              if (["options", "block"].includes(s))
                 continue;
-              }
-              const hooksProp = prop;
-              const hooksFunc = pack.hooks[hooksProp];
-              const prevHook = hooks[hooksProp];
-              if (_Hooks.passThroughHooks.has(prop)) {
-                hooks[hooksProp] = (arg) => {
-                  if (this.defaults.async) {
-                    return Promise.resolve(hooksFunc.call(hooks, arg)).then((ret2) => {
-                      return prevHook.call(hooks, ret2);
-                    });
-                  }
-                  const ret = hooksFunc.call(hooks, arg);
-                  return prevHook.call(hooks, ret);
-                };
-              } else {
-                hooks[hooksProp] = (...args2) => {
-                  let ret = hooksFunc.apply(hooks, args2);
-                  if (ret === false) {
-                    ret = prevHook.apply(hooks, args2);
-                  }
-                  return ret;
-                };
-              }
+              let a = s, o = n.hooks[a], l = i[a];
+              S.passThroughHooks.has(s) ? i[a] = (p) => {
+                if (this.defaults.async && S.passThroughHooksRespectAsync.has(s))
+                  return (() => __async(this, null, function* () {
+                    let g = yield o.call(i, p);
+                    return l.call(i, g);
+                  }))();
+                let c = o.call(i, p);
+                return l.call(i, c);
+              } : i[a] = (...p) => {
+                if (this.defaults.async)
+                  return (() => __async(this, null, function* () {
+                    let g = yield o.apply(i, p);
+                    return g === false && (g = yield l.apply(i, p)), g;
+                  }))();
+                let c = o.apply(i, p);
+                return c === false && (c = l.apply(i, p)), c;
+              };
             }
-            opts.hooks = hooks;
+            r.hooks = i;
           }
-          if (pack.walkTokens) {
-            const walkTokens2 = this.defaults.walkTokens;
-            const packWalktokens = pack.walkTokens;
-            opts.walkTokens = function(token) {
-              let values = [];
-              values.push(packWalktokens.call(this, token));
-              if (walkTokens2) {
-                values = values.concat(walkTokens2.call(this, token));
-              }
-              return values;
+          if (n.walkTokens) {
+            let i = this.defaults.walkTokens, s = n.walkTokens;
+            r.walkTokens = function(a) {
+              let o = [];
+              return o.push(s.call(this, a)), i && (o = o.concat(i.call(this, a))), o;
             };
           }
-          this.defaults = __spreadValues(__spreadValues({}, this.defaults), opts);
-        });
-        return this;
+          this.defaults = __spreadValues(__spreadValues({}, this.defaults), r);
+        }), this;
       }
-      setOptions(opt) {
-        this.defaults = __spreadValues(__spreadValues({}, this.defaults), opt);
-        return this;
+      setOptions(e) {
+        return this.defaults = __spreadValues(__spreadValues({}, this.defaults), e), this;
       }
-      lexer(src, options2) {
-        return _Lexer.lex(src, options2 != null ? options2 : this.defaults);
+      lexer(e, t) {
+        return x.lex(e, t != null ? t : this.defaults);
       }
-      parser(tokens, options2) {
-        return _Parser.parse(tokens, options2 != null ? options2 : this.defaults);
+      parser(e, t) {
+        return b.parse(e, t != null ? t : this.defaults);
       }
-      parseMarkdown(blockType) {
-        const parse2 = (src, options2) => {
-          const origOpt = __spreadValues({}, options2);
-          const opt = __spreadValues(__spreadValues({}, this.defaults), origOpt);
-          const throwError = this.onError(!!opt.silent, !!opt.async);
-          if (this.defaults.async === true && origOpt.async === false) {
-            return throwError(new Error("marked(): The async option was set to true by an extension. Remove async: false from the parse options object to return a Promise."));
-          }
-          if (typeof src === "undefined" || src === null) {
-            return throwError(new Error("marked(): input parameter is undefined or null"));
-          }
-          if (typeof src !== "string") {
-            return throwError(new Error("marked(): input parameter is of type " + Object.prototype.toString.call(src) + ", string expected"));
-          }
-          if (opt.hooks) {
-            opt.hooks.options = opt;
-            opt.hooks.block = blockType;
-          }
-          const lexer2 = opt.hooks ? opt.hooks.provideLexer() : blockType ? _Lexer.lex : _Lexer.lexInline;
-          const parser2 = opt.hooks ? opt.hooks.provideParser() : blockType ? _Parser.parse : _Parser.parseInline;
-          if (opt.async) {
-            return Promise.resolve(opt.hooks ? opt.hooks.preprocess(src) : src).then((src2) => lexer2(src2, opt)).then((tokens) => opt.hooks ? opt.hooks.processAllTokens(tokens) : tokens).then((tokens) => opt.walkTokens ? Promise.all(this.walkTokens(tokens, opt.walkTokens)).then(() => tokens) : tokens).then((tokens) => parser2(tokens, opt)).then((html2) => opt.hooks ? opt.hooks.postprocess(html2) : html2).catch(throwError);
-          }
+      parseMarkdown(e) {
+        return (n, r) => {
+          let i = __spreadValues({}, r), s = __spreadValues(__spreadValues({}, this.defaults), i), a = this.onError(!!s.silent, !!s.async);
+          if (this.defaults.async === true && i.async === false)
+            return a(new Error("marked(): The async option was set to true by an extension. Remove async: false from the parse options object to return a Promise."));
+          if (typeof n > "u" || n === null)
+            return a(new Error("marked(): input parameter is undefined or null"));
+          if (typeof n != "string")
+            return a(new Error("marked(): input parameter is of type " + Object.prototype.toString.call(n) + ", string expected"));
+          if (s.hooks && (s.hooks.options = s, s.hooks.block = e), s.async)
+            return (() => __async(this, null, function* () {
+              let o = s.hooks ? yield s.hooks.preprocess(n) : n, p = yield (s.hooks ? yield s.hooks.provideLexer() : e ? x.lex : x.lexInline)(o, s), c = s.hooks ? yield s.hooks.processAllTokens(p) : p;
+              s.walkTokens && (yield Promise.all(this.walkTokens(c, s.walkTokens)));
+              let h = yield (s.hooks ? yield s.hooks.provideParser() : e ? b.parse : b.parseInline)(c, s);
+              return s.hooks ? yield s.hooks.postprocess(h) : h;
+            }))().catch(a);
           try {
-            if (opt.hooks) {
-              src = opt.hooks.preprocess(src);
-            }
-            let tokens = lexer2(src, opt);
-            if (opt.hooks) {
-              tokens = opt.hooks.processAllTokens(tokens);
-            }
-            if (opt.walkTokens) {
-              this.walkTokens(tokens, opt.walkTokens);
-            }
-            let html2 = parser2(tokens, opt);
-            if (opt.hooks) {
-              html2 = opt.hooks.postprocess(html2);
-            }
-            return html2;
-          } catch (e) {
-            return throwError(e);
+            s.hooks && (n = s.hooks.preprocess(n));
+            let l = (s.hooks ? s.hooks.provideLexer() : e ? x.lex : x.lexInline)(n, s);
+            s.hooks && (l = s.hooks.processAllTokens(l)), s.walkTokens && this.walkTokens(l, s.walkTokens);
+            let c = (s.hooks ? s.hooks.provideParser() : e ? b.parse : b.parseInline)(l, s);
+            return s.hooks && (c = s.hooks.postprocess(c)), c;
+          } catch (o) {
+            return a(o);
           }
         };
-        return parse2;
       }
-      onError(silent, async) {
-        return (e) => {
-          e.message += "\nPlease report this to https://github.com/markedjs/marked.";
-          if (silent) {
-            const msg = "<p>An error occurred:</p><pre>" + escape$1(e.message + "", true) + "</pre>";
-            if (async) {
-              return Promise.resolve(msg);
-            }
-            return msg;
+      onError(e, t) {
+        return (n) => {
+          if (n.message += `
+Please report this to https://github.com/markedjs/marked.`, e) {
+            let r = "<p>An error occurred:</p><pre>" + w(n.message + "", true) + "</pre>";
+            return t ? Promise.resolve(r) : r;
           }
-          if (async) {
-            return Promise.reject(e);
-          }
-          throw e;
+          if (t)
+            return Promise.reject(n);
+          throw n;
         };
       }
     };
-    var markedInstance = new Marked();
-    function marked(src, opt) {
-      return markedInstance.parse(src, opt);
-    }
-    marked.options = marked.setOptions = function(options2) {
-      markedInstance.setOptions(options2);
-      marked.defaults = markedInstance.defaults;
-      changeDefaults(marked.defaults);
-      return marked;
+    _ = new B();
+    d.options = d.setOptions = function(u3) {
+      return _.setOptions(u3), d.defaults = _.defaults, Z(d.defaults), d;
     };
-    marked.getDefaults = _getDefaults;
-    marked.defaults = exports.defaults;
-    marked.use = function(...args) {
-      markedInstance.use(...args);
-      marked.defaults = markedInstance.defaults;
-      changeDefaults(marked.defaults);
-      return marked;
+    d.getDefaults = L;
+    d.defaults = T;
+    d.use = function(...u3) {
+      return _.use(...u3), d.defaults = _.defaults, Z(d.defaults), d;
     };
-    marked.walkTokens = function(tokens, callback) {
-      return markedInstance.walkTokens(tokens, callback);
+    d.walkTokens = function(u3, e) {
+      return _.walkTokens(u3, e);
     };
-    marked.parseInline = markedInstance.parseInline;
-    marked.Parser = _Parser;
-    marked.parser = _Parser.parse;
-    marked.Renderer = _Renderer;
-    marked.TextRenderer = _TextRenderer;
-    marked.Lexer = _Lexer;
-    marked.lexer = _Lexer.lex;
-    marked.Tokenizer = _Tokenizer;
-    marked.Hooks = _Hooks;
-    marked.parse = marked;
-    var options = marked.options;
-    var setOptions = marked.setOptions;
-    var use = marked.use;
-    var walkTokens = marked.walkTokens;
-    var parseInline = marked.parseInline;
-    var parse = marked;
-    var parser = _Parser.parse;
-    var lexer = _Lexer.lex;
-    exports.Hooks = _Hooks;
-    exports.Lexer = _Lexer;
-    exports.Marked = Marked;
-    exports.Parser = _Parser;
-    exports.Renderer = _Renderer;
-    exports.TextRenderer = _TextRenderer;
-    exports.Tokenizer = _Tokenizer;
-    exports.getDefaults = _getDefaults;
-    exports.lexer = lexer;
-    exports.marked = marked;
-    exports.options = options;
-    exports.parse = parse;
-    exports.parseInline = parseInline;
-    exports.parser = parser;
-    exports.setOptions = setOptions;
-    exports.use = use;
-    exports.walkTokens = walkTokens;
+    d.parseInline = _.parseInline;
+    d.Parser = b;
+    d.parser = b.parse;
+    d.Renderer = P;
+    d.TextRenderer = $;
+    d.Lexer = x;
+    d.lexer = x.lex;
+    d.Tokenizer = y;
+    d.Hooks = S;
+    d.parse = d;
+    Dt = d.options;
+    Ht = d.setOptions;
+    Zt = d.use;
+    Gt = d.walkTokens;
+    Nt = d.parseInline;
+    Qt = d;
+    Ft = b.parse;
+    jt = x.lex;
   }
 });
 
@@ -50003,11 +49269,11 @@ var require_visit = __commonJS({
       return visitor;
     }
     function callVisitor(key, node, visitor, path2) {
-      var _a, _b, _c, _d, _e;
+      var _a2, _b, _c, _d, _e2;
       if (typeof visitor === "function")
         return visitor(key, node, path2);
       if (identity.isMap(node))
-        return (_a = visitor.Map) == null ? void 0 : _a.call(visitor, key, node, path2);
+        return (_a2 = visitor.Map) == null ? void 0 : _a2.call(visitor, key, node, path2);
       if (identity.isSeq(node))
         return (_b = visitor.Seq) == null ? void 0 : _b.call(visitor, key, node, path2);
       if (identity.isPair(node))
@@ -50015,7 +49281,7 @@ var require_visit = __commonJS({
       if (identity.isScalar(node))
         return (_d = visitor.Scalar) == null ? void 0 : _d.call(visitor, key, node, path2);
       if (identity.isAlias(node))
-        return (_e = visitor.Alias) == null ? void 0 : _e.call(visitor, key, node, path2);
+        return (_e2 = visitor.Alias) == null ? void 0 : _e2.call(visitor, key, node, path2);
       return void 0;
     }
     function replaceNode(key, path2, node) {
@@ -50273,13 +49539,13 @@ var require_applyReviver = __commonJS({
               val[i] = v1;
           }
         } else if (val instanceof Map) {
-          for (const k of Array.from(val.keys())) {
-            const v0 = val.get(k);
-            const v1 = applyReviver(reviver, val, k, v0);
+          for (const k2 of Array.from(val.keys())) {
+            const v0 = val.get(k2);
+            const v1 = applyReviver(reviver, val, k2, v0);
             if (v1 === void 0)
-              val.delete(k);
+              val.delete(k2);
             else if (v1 !== v0)
-              val.set(k, v1);
+              val.set(k2, v1);
           }
         } else if (val instanceof Set) {
           for (const v0 of Array.from(val)) {
@@ -50292,12 +49558,12 @@ var require_applyReviver = __commonJS({
             }
           }
         } else {
-          for (const [k, v0] of Object.entries(val)) {
-            const v1 = applyReviver(reviver, val, k, v0);
+          for (const [k2, v0] of Object.entries(val)) {
+            const v1 = applyReviver(reviver, val, k2, v0);
             if (v1 === void 0)
-              delete val[k];
+              delete val[k2];
             else if (v1 !== v0)
-              val[k] = v1;
+              val[k2] = v1;
           }
         }
       }
@@ -50314,7 +49580,7 @@ var require_toJS = __commonJS({
     var identity = require_identity();
     function toJS(value, arg, ctx) {
       if (Array.isArray(value))
-        return value.map((v, i) => toJS(v, String(i), ctx));
+        return value.map((v2, i) => toJS(v2, String(i), ctx));
       if (value && typeof value.toJSON === "function") {
         if (!ctx || !identity.hasAnchor(value))
           return value.toJSON(arg, ctx);
@@ -50525,27 +49791,27 @@ var require_createNode = __commonJS({
     var Scalar = require_Scalar();
     var defaultTagPrefix = "tag:yaml.org,2002:";
     function findTagObject(value, tagName, tags) {
-      var _a;
+      var _a2;
       if (tagName) {
         const match = tags.filter((t) => t.tag === tagName);
-        const tagObj = (_a = match.find((t) => !t.format)) != null ? _a : match[0];
+        const tagObj = (_a2 = match.find((t) => !t.format)) != null ? _a2 : match[0];
         if (!tagObj)
           throw new Error(`Tag ${tagName} not found`);
         return tagObj;
       }
       return tags.find((t) => {
-        var _a2;
-        return ((_a2 = t.identify) == null ? void 0 : _a2.call(t, value)) && !t.format;
+        var _a3;
+        return ((_a3 = t.identify) == null ? void 0 : _a3.call(t, value)) && !t.format;
       });
     }
     function createNode(value, tagName, ctx) {
-      var _a, _b, _c, _d;
+      var _a2, _b, _c, _d;
       if (identity.isDocument(value))
         value = value.contents;
       if (identity.isNode(value))
         return value;
       if (identity.isPair(value)) {
-        const map = (_b = (_a = ctx.schema[identity.MAP]).createNode) == null ? void 0 : _b.call(_a, ctx.schema, null, ctx);
+        const map = (_b = (_a2 = ctx.schema[identity.MAP]).createNode) == null ? void 0 : _b.call(_a2, ctx.schema, null, ctx);
         map.items.push(value);
         return map;
       }
@@ -50604,18 +49870,18 @@ var require_Collection = __commonJS({
     var identity = require_identity();
     var Node = require_Node();
     function collectionFromPath(schema, path2, value) {
-      let v = value;
+      let v2 = value;
       for (let i = path2.length - 1; i >= 0; --i) {
-        const k = path2[i];
-        if (typeof k === "number" && Number.isInteger(k) && k >= 0) {
+        const k2 = path2[i];
+        if (typeof k2 === "number" && Number.isInteger(k2) && k2 >= 0) {
           const a = [];
-          a[k] = v;
-          v = a;
+          a[k2] = v2;
+          v2 = a;
         } else {
-          v = new Map([[k, v]]);
+          v2 = new Map([[k2, v2]]);
         }
       }
-      return createNode.createNode(v, void 0, {
+      return createNode.createNode(v2, void 0, {
         aliasDuplicateObjects: false,
         keepUndefined: false,
         onAnchor: () => {
@@ -50805,12 +50071,12 @@ var require_foldFlowLines = __commonJS({
                 ch = text[i += 1];
                 overflow = true;
               }
-              const j = i > escEnd + 1 ? i - 2 : escStart - 1;
-              if (escapedFolds[j])
+              const j2 = i > escEnd + 1 ? i - 2 : escStart - 1;
+              if (escapedFolds[j2])
                 return text;
-              folds.push(j);
-              escapedFolds[j] = true;
-              end = j + endStep;
+              folds.push(j2);
+              escapedFolds[j2] = true;
+              end = j2 + endStep;
               split = void 0;
             } else {
               overflow = true;
@@ -51106,8 +50372,8 @@ ${indent}${start}${value}${end}`;
 ${indent}`);
       if (actualString) {
         const test = (tag) => {
-          var _a;
-          return tag.default && tag.tag !== "tag:yaml.org,2002:str" && ((_a = tag.test) == null ? void 0 : _a.test(str));
+          var _a2;
+          return tag.default && tag.tag !== "tag:yaml.org,2002:str" && ((_a2 = tag.test) == null ? void 0 : _a2.test(str));
         };
         const { compat, tags } = ctx.doc.schema;
         if (tags.some(test) || (compat == null ? void 0 : compat.some(test)))
@@ -51202,19 +50468,19 @@ var require_stringify2 = __commonJS({
       };
     }
     function getTagObject(tags, item) {
-      var _a, _b, _c, _d;
+      var _a2, _b, _c, _d;
       if (item.tag) {
         const match = tags.filter((t) => t.tag === item.tag);
         if (match.length > 0)
-          return (_a = match.find((t) => t.format === item.format)) != null ? _a : match[0];
+          return (_a2 = match.find((t) => t.format === item.format)) != null ? _a2 : match[0];
       }
       let tagObj = void 0;
       let obj;
       if (identity.isScalar(item)) {
         obj = item.value;
         let match = tags.filter((t) => {
-          var _a2;
-          return (_a2 = t.identify) == null ? void 0 : _a2.call(t, obj);
+          var _a3;
+          return (_a3 = t.identify) == null ? void 0 : _a3.call(t, obj);
         });
         if (match.length > 1) {
           const testMatch = match.filter((t) => t.test);
@@ -51233,7 +50499,7 @@ var require_stringify2 = __commonJS({
       return tagObj;
     }
     function stringifyProps(node, tagObj, { anchors: anchors$1, doc }) {
-      var _a;
+      var _a2;
       if (!doc.directives)
         return "";
       const props = [];
@@ -51242,19 +50508,19 @@ var require_stringify2 = __commonJS({
         anchors$1.add(anchor);
         props.push(`&${anchor}`);
       }
-      const tag = (_a = node.tag) != null ? _a : tagObj.default ? null : tagObj.tag;
+      const tag = (_a2 = node.tag) != null ? _a2 : tagObj.default ? null : tagObj.tag;
       if (tag)
         props.push(doc.directives.tagString(tag));
       return props.join(" ");
     }
     function stringify(item, ctx, onComment, onChompKeep) {
-      var _a, _b;
+      var _a2, _b;
       if (identity.isPair(item))
         return item.toString(ctx, onComment, onChompKeep);
       if (identity.isAlias(item)) {
         if (ctx.doc.directives)
           return item.toString(ctx);
-        if ((_a = ctx.resolvedAliases) == null ? void 0 : _a.has(item)) {
+        if ((_a2 = ctx.resolvedAliases) == null ? void 0 : _a2.has(item)) {
           throw new TypeError(`Cannot stringify circular structure without alias nodes`);
         } else {
           if (ctx.resolvedAliases)
@@ -51290,7 +50556,7 @@ var require_stringifyPair = __commonJS({
     var stringify = require_stringify2();
     var stringifyComment = require_stringifyComment();
     function stringifyPair({ key, value }, ctx, onComment, onChompKeep) {
-      var _a, _b;
+      var _a2, _b;
       const { allNullValues, doc, indent, indentStep, options: { commentString, indentSeq, simpleKeys } } = ctx;
       let keyComment = identity.isNode(key) && key.comment || null;
       if (simpleKeys) {
@@ -51382,7 +50648,7 @@ ${ctx.indent}`;
         const vs0 = valueStr[0];
         const nl0 = valueStr.indexOf("\n");
         const hasNewline = nl0 !== -1;
-        const flow = (_b = (_a = ctx.inFlow) != null ? _a : value.flow) != null ? _b : value.items.length === 0;
+        const flow = (_b = (_a2 = ctx.inFlow) != null ? _a2 : value.flow) != null ? _b : value.items.length === 0;
         if (hasNewline || !flow) {
           let hasPropsLine = false;
           if (hasNewline && (vs0 === "&" || vs0 === "!")) {
@@ -51567,9 +50833,9 @@ var require_Pair = __commonJS({
     var addPairToJSMap = require_addPairToJSMap();
     var identity = require_identity();
     function createPair(key, value, ctx) {
-      const k = createNode.createNode(key, void 0, ctx);
-      const v = createNode.createNode(value, void 0, ctx);
-      return new Pair(k, v);
+      const k2 = createNode.createNode(key, void 0, ctx);
+      const v2 = createNode.createNode(value, void 0, ctx);
+      return new Pair(k2, v2);
     }
     var Pair = class {
       constructor(key, value = null) {
@@ -51585,7 +50851,7 @@ var require_Pair = __commonJS({
           value = value.clone(schema);
         return new Pair(key, value);
       }
-      toJSON(_, ctx) {
+      toJSON(_2, ctx) {
         const pair = (ctx == null ? void 0 : ctx.mapAsMap) ? new Map() : {};
         return addPairToJSMap.addPairToJSMap(ctx, pair, this);
       }
@@ -51606,8 +50872,8 @@ var require_stringifyCollection = __commonJS({
     var stringify = require_stringify2();
     var stringifyComment = require_stringifyComment();
     function stringifyCollection(collection, ctx, options) {
-      var _a;
-      const flow = (_a = ctx.inFlow) != null ? _a : collection.flow;
+      var _a2;
+      const flow = (_a2 = ctx.inFlow) != null ? _a2 : collection.flow;
       const stringify2 = flow ? stringifyFlowCollection : stringifyBlockCollection;
       return stringify2(collection, ctx, options);
     }
@@ -51754,12 +51020,12 @@ var require_YAMLMap = __commonJS({
     var Pair = require_Pair();
     var Scalar = require_Scalar();
     function findPair(items, key) {
-      const k = identity.isScalar(key) ? key.value : key;
+      const k2 = identity.isScalar(key) ? key.value : key;
       for (const it of items) {
         if (identity.isPair(it)) {
-          if (it.key === key || it.key === k)
+          if (it.key === key || it.key === k2)
             return it;
-          if (identity.isScalar(it.key) && it.key.value === k)
+          if (identity.isScalar(it.key) && it.key.value === k2)
             return it;
         }
       }
@@ -51797,7 +51063,7 @@ var require_YAMLMap = __commonJS({
         return map;
       }
       add(pair, overwrite) {
-        var _a;
+        var _a2;
         let _pair;
         if (identity.isPair(pair))
           _pair = pair;
@@ -51806,7 +51072,7 @@ var require_YAMLMap = __commonJS({
         } else
           _pair = new Pair.Pair(pair.key, pair.value);
         const prev = findPair(this.items, _pair.key);
-        const sortEntries = (_a = this.schema) == null ? void 0 : _a.sortMapEntries;
+        const sortEntries = (_a2 = this.schema) == null ? void 0 : _a2.sortMapEntries;
         if (prev) {
           if (!overwrite)
             throw new Error(`Key ${_pair.key} already set`);
@@ -51832,10 +51098,10 @@ var require_YAMLMap = __commonJS({
         return del.length > 0;
       }
       get(key, keepScalar) {
-        var _a;
+        var _a2;
         const it = findPair(this.items, key);
         const node = it == null ? void 0 : it.value;
-        return (_a = !keepScalar && identity.isScalar(node) ? node.value : node) != null ? _a : void 0;
+        return (_a2 = !keepScalar && identity.isScalar(node) ? node.value : node) != null ? _a2 : void 0;
       }
       has(key) {
         return !!findPair(this.items, key);
@@ -51843,7 +51109,7 @@ var require_YAMLMap = __commonJS({
       set(key, value) {
         this.add(new Pair.Pair(key, value), true);
       }
-      toJSON(_, ctx, Type) {
+      toJSON(_2, ctx, Type) {
         const map = Type ? new Type() : (ctx == null ? void 0 : ctx.mapAsMap) ? new Map() : {};
         if (ctx == null ? void 0 : ctx.onCreate)
           ctx.onCreate(map);
@@ -51945,7 +51211,7 @@ var require_YAMLSeq = __commonJS({
         else
           this.items[idx] = value;
       }
-      toJSON(_, ctx) {
+      toJSON(_2, ctx) {
         const seq = [];
         if (ctx == null ? void 0 : ctx.onCreate)
           ctx.onCreate(seq);
@@ -52091,8 +51357,8 @@ var require_stringifyNumber = __commonJS({
           i = n.length;
           n += ".";
         }
-        let d = minFractionDigits - (n.length - i - 1);
-        while (d-- > 0)
+        let d2 = minFractionDigits - (n.length - i - 1);
+        while (d2-- > 0)
           n += "0";
       }
       return n;
@@ -52353,7 +51619,7 @@ var require_pairs = __commonJS({
     var Scalar = require_Scalar();
     var YAMLSeq = require_YAMLSeq();
     function resolvePairs(seq, onError) {
-      var _a;
+      var _a2;
       if (identity.isSeq(seq)) {
         for (let i = 0; i < seq.items.length; ++i) {
           let item = seq.items[i];
@@ -52367,7 +51633,7 @@ var require_pairs = __commonJS({
               pair.key.commentBefore = pair.key.commentBefore ? `${item.commentBefore}
 ${pair.key.commentBefore}` : item.commentBefore;
             if (item.comment) {
-              const cn = (_a = pair.value) != null ? _a : pair.key;
+              const cn = (_a2 = pair.value) != null ? _a2 : pair.key;
               cn.comment = cn.comment ? `${item.comment}
 ${cn.comment}` : item.comment;
             }
@@ -52442,9 +51708,9 @@ var require_omap = __commonJS({
         this.set = YAMLMap.YAMLMap.prototype.set.bind(this);
         this.tag = YAMLOMap.tag;
       }
-      toJSON(_, ctx) {
+      toJSON(_2, ctx) {
         if (!ctx)
-          return super.toJSON(_);
+          return super.toJSON(_2);
         const map = new Map();
         if (ctx == null ? void 0 : ctx.onCreate)
           ctx.onCreate(map);
@@ -52695,8 +51961,8 @@ var require_set = __commonJS({
           this.items.push(new Pair.Pair(key));
         }
       }
-      toJSON(_, ctx) {
-        return super.toJSON(_, ctx, Set);
+      toJSON(_2, ctx) {
+        return super.toJSON(_2, ctx, Set);
       }
       toString(ctx, onComment, onChompKeep) {
         if (!ctx)
@@ -52812,16 +52078,16 @@ var require_timestamp = __commonJS({
         let date = Date.UTC(year, month - 1, day, hour || 0, minute || 0, second || 0, millisec);
         const tz = match[8];
         if (tz && tz !== "Z") {
-          let d = parseSexagesimal(tz, false);
-          if (Math.abs(d) < 30)
-            d *= 60;
-          date -= 6e4 * d;
+          let d2 = parseSexagesimal(tz, false);
+          if (Math.abs(d2) < 30)
+            d2 *= 60;
+          date -= 6e4 * d2;
         }
         return new Date(date);
       },
       stringify: ({ value }) => {
-        var _a;
-        return (_a = value == null ? void 0 : value.toISOString().replace(/(T00:00:00)?\.000Z$/, "")) != null ? _a : "";
+        var _a2;
+        return (_a2 = value == null ? void 0 : value.toISOString().replace(/(T00:00:00)?\.000Z$/, "")) != null ? _a2 : "";
       }
     };
     exports.floatTime = floatTime;
@@ -52977,7 +52243,7 @@ var require_Schema = __commonJS({
     var seq = require_seq();
     var string = require_string();
     var tags = require_tags();
-    var sortMapEntriesByKey = (a, b) => a.key < b.key ? -1 : a.key > b.key ? 1 : 0;
+    var sortMapEntriesByKey = (a, b2) => a.key < b2.key ? -1 : a.key > b2.key ? 1 : 0;
     var Schema = class {
       constructor({ compat, customTags, merge, resolveKnownTags, schema, sortMapEntries, toStringDefaults }) {
         this.compat = Array.isArray(compat) ? tags.getTags(compat, "compat") : compat ? tags.getTags(null, compat) : null;
@@ -53008,7 +52274,7 @@ var require_stringifyDocument = __commonJS({
     var stringify = require_stringify2();
     var stringifyComment = require_stringifyComment();
     function stringifyDocument(doc, options) {
-      var _a;
+      var _a2;
       const lines = [];
       let hasDirectives = options.directives === true;
       if (options.directives !== false && doc.directives) {
@@ -53053,7 +52319,7 @@ var require_stringifyDocument = __commonJS({
       } else {
         lines.push(stringify.stringify(doc.contents, ctx));
       }
-      if ((_a = doc.directives) == null ? void 0 : _a.docEnd) {
+      if ((_a2 = doc.directives) == null ? void 0 : _a2.docEnd) {
         if (doc.comment) {
           const cs = commentString(doc.comment);
           if (cs.includes("\n")) {
@@ -53169,7 +52435,7 @@ var require_Document = __commonJS({
           value = replacer.call({ "": value }, "", value);
           _replacer = replacer;
         } else if (Array.isArray(replacer)) {
-          const keyToStr = (v) => typeof v === "number" || v instanceof String || v instanceof Number;
+          const keyToStr = (v2) => typeof v2 === "number" || v2 instanceof String || v2 instanceof Number;
           const asStr = replacer.filter(keyToStr).map(String);
           if (asStr.length > 0)
             replacer = replacer.concat(asStr);
@@ -53196,9 +52462,9 @@ var require_Document = __commonJS({
         return node;
       }
       createPair(key, value, options = {}) {
-        const k = this.createNode(key, null, options);
-        const v = this.createNode(value, null, options);
-        return new Pair.Pair(k, v);
+        const k2 = this.createNode(key, null, options);
+        const v2 = this.createNode(value, null, options);
+        return new Pair.Pair(k2, v2);
       }
       delete(key) {
         return assertCollection(this.contents) ? this.contents.delete(key) : false;
@@ -53585,7 +52851,7 @@ var require_util_map_includes = __commonJS({
       const { uniqueKeys } = ctx.options;
       if (uniqueKeys === false)
         return false;
-      const isEqual = typeof uniqueKeys === "function" ? uniqueKeys : (a, b) => a === b || identity.isScalar(a) && identity.isScalar(b) && a.value === b.value;
+      const isEqual = typeof uniqueKeys === "function" ? uniqueKeys : (a, b2) => a === b2 || identity.isScalar(a) && identity.isScalar(b2) && a.value === b2.value;
       return items.some((pair) => isEqual(pair.key, search));
     }
     exports.mapIncludes = mapIncludes;
@@ -53604,8 +52870,8 @@ var require_resolve_block_map = __commonJS({
     var utilMapIncludes = require_util_map_includes();
     var startColMsg = "All mapping items must start at the same column";
     function resolveBlockMap({ composeNode, composeEmptyNode }, ctx, bm, onError, tag) {
-      var _a, _b;
-      const NodeClass = (_a = tag == null ? void 0 : tag.nodeClass) != null ? _a : YAMLMap.YAMLMap;
+      var _a2, _b;
+      const NodeClass = (_a2 = tag == null ? void 0 : tag.nodeClass) != null ? _a2 : YAMLMap.YAMLMap;
       const map = new NodeClass(ctx.schema);
       if (ctx.atRoot)
         ctx.atRoot = false;
@@ -53709,8 +52975,8 @@ var require_resolve_block_seq = __commonJS({
     var resolveProps = require_resolve_props();
     var utilFlowIndentCheck = require_util_flow_indent_check();
     function resolveBlockSeq({ composeNode, composeEmptyNode }, ctx, bs, onError, tag) {
-      var _a;
-      const NodeClass = (_a = tag == null ? void 0 : tag.nodeClass) != null ? _a : YAMLSeq.YAMLSeq;
+      var _a2;
+      const NodeClass = (_a2 = tag == null ? void 0 : tag.nodeClass) != null ? _a2 : YAMLSeq.YAMLSeq;
       const seq = new NodeClass(ctx.schema);
       if (ctx.atRoot)
         ctx.atRoot = false;
@@ -53811,10 +53077,10 @@ var require_resolve_flow_collection = __commonJS({
     var blockMsg = "Block collections are not allowed within flow collections";
     var isBlock = (token) => token && (token.type === "block-map" || token.type === "block-seq");
     function resolveFlowCollection({ composeNode, composeEmptyNode }, ctx, fc, onError, tag) {
-      var _a, _b;
+      var _a2, _b;
       const isMap = fc.start.source === "{";
       const fcName = isMap ? "flow map" : "flow sequence";
-      const NodeClass = (_a = tag == null ? void 0 : tag.nodeClass) != null ? _a : isMap ? YAMLMap.YAMLMap : YAMLSeq.YAMLSeq;
+      const NodeClass = (_a2 = tag == null ? void 0 : tag.nodeClass) != null ? _a2 : isMap ? YAMLMap.YAMLMap : YAMLSeq.YAMLSeq;
       const coll = new NodeClass(ctx.schema);
       coll.flow = true;
       const atRoot = ctx.atRoot;
@@ -53958,16 +53224,16 @@ var require_resolve_flow_collection = __commonJS({
         }
       }
       const expectedEnd = isMap ? "}" : "]";
-      const [ce, ...ee] = fc.end;
+      const [ce2, ...ee] = fc.end;
       let cePos = offset;
-      if (ce && ce.source === expectedEnd)
-        cePos = ce.offset + ce.source.length;
+      if (ce2 && ce2.source === expectedEnd)
+        cePos = ce2.offset + ce2.source.length;
       else {
         const name = fcName[0].toUpperCase() + fcName.substring(1);
         const msg = atRoot ? `${name} must end with a ${expectedEnd}` : `${name} in block collection must be sufficiently indented and end with a ${expectedEnd}`;
         onError(offset, atRoot ? "MISSING_CHAR" : "BAD_INDENT", msg);
-        if (ce && ce.source.length !== 1)
-          ee.unshift(ce);
+        if (ce2 && ce2.source.length !== 1)
+          ee.unshift(ce2);
       }
       if (ee.length > 0) {
         const end = resolveEnd.resolveEnd(ee, cePos, ctx.options.strict, onError);
@@ -54010,7 +53276,7 @@ var require_compose_collection = __commonJS({
       return coll;
     }
     function composeCollection(CN, ctx, token, props, onError) {
-      var _a, _b, _c;
+      var _a2, _b, _c;
       const tagToken = props.tag;
       const tagName = !tagToken ? null : ctx.directives.tagName(tagToken.source, (msg) => onError(tagToken, "TAG_RESOLVE_FAILED", msg));
       if (token.type === "block-seq") {
@@ -54033,7 +53299,7 @@ var require_compose_collection = __commonJS({
           tag = kt;
         } else {
           if (kt) {
-            onError(tagToken, "BAD_COLLECTION_TYPE", `${kt.tag} used for ${expType} collection, but expects ${(_a = kt.collection) != null ? _a : "scalar"}`, true);
+            onError(tagToken, "BAD_COLLECTION_TYPE", `${kt.tag} used for ${expType} collection, but expects ${(_a2 = kt.collection) != null ? _a2 : "scalar"}`, true);
           } else {
             onError(tagToken, "TAG_RESOLVE_FAILED", `Unresolved tag: ${tagName}`, true);
           }
@@ -54223,8 +53489,8 @@ var require_resolve_block_scalar = __commonJS({
     function splitLines(source) {
       const split = source.split(/\n( *)/);
       const first = split[0];
-      const m = first.match(/^( *)/);
-      const line0 = (m == null ? void 0 : m[1]) ? [m[1], first.slice(m[1].length)] : ["", first];
+      const m2 = first.match(/^( *)/);
+      const line0 = (m2 == null ? void 0 : m2[1]) ? [m2[1], first.slice(m2[1].length)] : ["", first];
       const lines = [line0];
       for (let i = 1; i < split.length; i += 2)
         lines.push([split[i], split[i + 1]]);
@@ -54268,12 +53534,12 @@ var require_resolve_flow_scalar = __commonJS({
           };
       }
       const valueEnd = offset + source.length;
-      const re = resolveEnd.resolveEnd(end, valueEnd, strict, onError);
+      const re2 = resolveEnd.resolveEnd(end, valueEnd, strict, onError);
       return {
         value,
         type: _type,
-        comment: re.comment,
-        range: [offset, valueEnd, re.offset]
+        comment: re2.comment,
+        range: [offset, valueEnd, re2.offset]
       };
     }
     function plainValue(source, onError) {
@@ -54309,7 +53575,7 @@ var require_resolve_flow_scalar = __commonJS({
       return foldLines(source.slice(1, -1)).replace(/''/g, "'");
     }
     function foldLines(source) {
-      var _a;
+      var _a2;
       let first, line;
       try {
         first = new RegExp("(.*?)(?<![ 	])[ 	]*\r?\n", "sy");
@@ -54340,7 +53606,7 @@ var require_resolve_flow_scalar = __commonJS({
       const last = /[ \t]*(.*)/sy;
       last.lastIndex = pos;
       match = last.exec(source);
-      return res + sep + ((_a = match == null ? void 0 : match[1]) != null ? _a : "");
+      return res + sep + ((_a2 = match == null ? void 0 : match[1]) != null ? _a2 : "");
     }
     function doubleQuotedValue(source, onError) {
       let res = "";
@@ -54481,7 +53747,7 @@ var require_compose_scalar = __commonJS({
       return scalar;
     }
     function findScalarTagByName(schema, value, tagName, tagToken, onError) {
-      var _a;
+      var _a2;
       if (tagName === "!")
         return schema[identity.SCALAR];
       const matchWithTest = [];
@@ -54494,7 +53760,7 @@ var require_compose_scalar = __commonJS({
         }
       }
       for (const tag of matchWithTest)
-        if ((_a = tag.test) == null ? void 0 : _a.test(value))
+        if ((_a2 = tag.test) == null ? void 0 : _a2.test(value))
           return tag;
       const kt = schema.knownTags[tagName];
       if (kt && !kt.collection) {
@@ -54505,16 +53771,16 @@ var require_compose_scalar = __commonJS({
       return schema[identity.SCALAR];
     }
     function findScalarTagByTest({ atKey, directives, schema }, value, token, onError) {
-      var _a;
+      var _a2;
       const tag = schema.tags.find((tag2) => {
-        var _a2;
-        return (tag2.default === true || atKey && tag2.default === "key") && ((_a2 = tag2.test) == null ? void 0 : _a2.test(value));
+        var _a3;
+        return (tag2.default === true || atKey && tag2.default === "key") && ((_a3 = tag2.test) == null ? void 0 : _a3.test(value));
       }) || schema[identity.SCALAR];
       if (schema.compat) {
-        const compat = (_a = schema.compat.find((tag2) => {
-          var _a2;
-          return tag2.default && ((_a2 = tag2.test) == null ? void 0 : _a2.test(value));
-        })) != null ? _a : schema[identity.SCALAR];
+        const compat = (_a2 = schema.compat.find((tag2) => {
+          var _a3;
+          return tag2.default && ((_a3 = tag2.test) == null ? void 0 : _a3.test(value));
+        })) != null ? _a2 : schema[identity.SCALAR];
         if (tag.tag !== compat.tag) {
           const ts = directives.tagString(tag.tag);
           const cs = directives.tagString(compat.tag);
@@ -54648,10 +53914,10 @@ var require_compose_node = __commonJS({
       if (alias.source.endsWith(":"))
         onError(offset + source.length - 1, "BAD_ALIAS", "Alias ending in : is ambiguous", true);
       const valueEnd = offset + source.length;
-      const re = resolveEnd.resolveEnd(end, valueEnd, options.strict, onError);
-      alias.range = [offset, valueEnd, re.offset];
-      if (re.comment)
-        alias.comment = re.comment;
+      const re2 = resolveEnd.resolveEnd(end, valueEnd, options.strict, onError);
+      alias.range = [offset, valueEnd, re2.offset];
+      if (re2.comment)
+        alias.comment = re2.comment;
       return alias;
     }
     exports.composeEmptyNode = composeEmptyNode;
@@ -54692,10 +53958,10 @@ var require_compose_doc = __commonJS({
       }
       doc.contents = value ? composeNode.composeNode(ctx, value, props, onError) : composeNode.composeEmptyNode(ctx, props.end, start, null, props, onError);
       const contentEnd = doc.contents.range[2];
-      const re = resolveEnd.resolveEnd(end, contentEnd, false, onError);
-      if (re.comment)
-        doc.comment = re.comment;
-      doc.range = [offset, contentEnd, re.offset];
+      const re2 = resolveEnd.resolveEnd(end, contentEnd, false, onError);
+      if (re2.comment)
+        doc.comment = re2.comment;
+      doc.range = [offset, contentEnd, re2.offset];
       return doc;
     }
     exports.composeDoc = composeDoc;
@@ -54722,7 +53988,7 @@ var require_composer = __commonJS({
       return [offset, offset + (typeof source === "string" ? source.length : 1)];
     }
     function parsePrelude(prelude) {
-      var _a;
+      var _a2;
       let comment = "";
       let atComment = false;
       let afterEmptyLine = false;
@@ -54735,7 +54001,7 @@ var require_composer = __commonJS({
             afterEmptyLine = false;
             break;
           case "%":
-            if (((_a = prelude[i + 1]) == null ? void 0 : _a[0]) !== "#")
+            if (((_a2 = prelude[i + 1]) == null ? void 0 : _a2[0]) !== "#")
               i += 1;
             atComment = false;
             break;
@@ -54920,7 +54186,7 @@ var require_cst_scalar = __commonJS({
       return null;
     }
     function createScalarToken(value, context) {
-      var _a;
+      var _a2;
       const { implicitKey = false, indent, inFlow = false, offset = -1, type = "PLAIN" } = context;
       const source = stringifyString.stringifyString({ type, value }, {
         implicitKey,
@@ -54928,15 +54194,15 @@ var require_cst_scalar = __commonJS({
         inFlow,
         options: { blockQuote: true, lineWidth: -1 }
       });
-      const end = (_a = context.end) != null ? _a : [
+      const end = (_a2 = context.end) != null ? _a2 : [
         { type: "newline", offset: -1, indent, source: "\n" }
       ];
       switch (source[0]) {
         case "|":
         case ">": {
-          const he = source.indexOf("\n");
-          const head = source.substring(0, he);
-          const body = source.substring(he + 1) + "\n";
+          const he2 = source.indexOf("\n");
+          const head = source.substring(0, he2);
+          const body = source.substring(he2 + 1) + "\n";
           const props = [
             { type: "block-scalar-header", offset, indent, source: head }
           ];
@@ -54997,9 +54263,9 @@ var require_cst_scalar = __commonJS({
       }
     }
     function setBlockScalarValue(token, source) {
-      const he = source.indexOf("\n");
-      const head = source.substring(0, he);
-      const body = source.substring(he + 1) + "\n";
+      const he2 = source.indexOf("\n");
+      const head = source.substring(0, he2);
+      const body = source.substring(he2 + 1) + "\n";
       if (token.type === "block-scalar") {
         const header = token.props[0];
         if (header.type !== "block-scalar-header")
@@ -55339,7 +54605,7 @@ var require_lexer = __commonJS({
         this.pos = 0;
       }
       *lex(source, incomplete = false) {
-        var _a;
+        var _a2;
         if (source) {
           if (typeof source !== "string")
             throw TypeError("source is not a string");
@@ -55347,7 +54613,7 @@ var require_lexer = __commonJS({
           this.lineEndPos = null;
         }
         this.atEnd = !incomplete;
-        let next = (_a = this.next) != null ? _a : "stream";
+        let next = (_a2 = this.next) != null ? _a2 : "stream";
         while (next && (incomplete || this.hasChars(1)))
           next = yield* this.parseNext(next);
       }
@@ -55942,13 +55208,13 @@ var require_parser = __commonJS({
       }
     }
     function getPrevProps(parent) {
-      var _a;
+      var _a2;
       switch (parent.type) {
         case "document":
           return parent.start;
         case "block-map": {
           const it = parent.items[parent.items.length - 1];
-          return (_a = it.sep) != null ? _a : it.start;
+          return (_a2 = it.sep) != null ? _a2 : it.start;
         }
         case "block-seq":
           return parent.items[parent.items.length - 1].start;
@@ -55957,7 +55223,7 @@ var require_parser = __commonJS({
       }
     }
     function getFirstKeyStartProps(prev) {
-      var _a;
+      var _a2;
       if (prev.length === 0)
         return [];
       let i = prev.length;
@@ -55972,7 +55238,7 @@ var require_parser = __commonJS({
               break loop;
           }
         }
-      while (((_a = prev[++i]) == null ? void 0 : _a.type) === "space") {
+      while (((_a2 = prev[++i]) == null ? void 0 : _a2.type) === "space") {
       }
       return prev.splice(i, prev.length);
     }
@@ -56298,7 +55564,7 @@ var require_parser = __commonJS({
         }
       }
       *blockMap(map) {
-        var _a;
+        var _a2;
         const it = map.items[map.items.length - 1];
         switch (this.type) {
           case "newline":
@@ -56325,7 +55591,7 @@ var require_parser = __commonJS({
             } else {
               if (this.atIndentedComment(it.start, map.indent)) {
                 const prev = map.items[map.items.length - 2];
-                const end = (_a = prev == null ? void 0 : prev.value) == null ? void 0 : _a.end;
+                const end = (_a2 = prev == null ? void 0 : prev.value) == null ? void 0 : _a2.end;
                 if (Array.isArray(end)) {
                   Array.prototype.push.apply(end, it.start);
                   end.push(this.sourceToken);
@@ -56493,7 +55759,7 @@ var require_parser = __commonJS({
         yield* this.step();
       }
       *blockSequence(seq) {
-        var _a;
+        var _a2;
         const it = seq.items[seq.items.length - 1];
         switch (this.type) {
           case "newline":
@@ -56514,7 +55780,7 @@ var require_parser = __commonJS({
             else {
               if (this.atIndentedComment(it.start, seq.indent)) {
                 const prev = seq.items[seq.items.length - 2];
-                const end = (_a = prev == null ? void 0 : prev.value) == null ? void 0 : _a.end;
+                const end = (_a2 = prev == null ? void 0 : prev.value) == null ? void 0 : _a2.end;
                 if (Array.isArray(end)) {
                   Array.prototype.push.apply(end, it.start);
                   end.push(this.sourceToken);
@@ -56824,7 +56090,7 @@ var require_public_api = __commonJS({
       return doc.toJS(Object.assign({ reviver: _reviver }, options));
     }
     function stringify(value, replacer, options) {
-      var _a;
+      var _a2;
       let _replacer = null;
       if (typeof replacer === "function" || Array.isArray(replacer)) {
         _replacer = replacer;
@@ -56838,7 +56104,7 @@ var require_public_api = __commonJS({
         options = indent < 1 ? void 0 : indent > 8 ? { indent: 8 } : { indent };
       }
       if (value === void 0) {
-        const { keepUndefined } = (_a = options != null ? options : replacer) != null ? _a : {};
+        const { keepUndefined } = (_a2 = options != null ? options : replacer) != null ? _a2 : {};
         if (!keepUndefined)
           return void 0;
       }
@@ -56920,7 +56186,7 @@ var require_constants = __commonJS({
       "paragraph",
       "image"
     ];
-    exports.CAN_INCLUDE_BLOCK_REFERENCE = ["paragraph", "list_item"];
+    exports.CAN_INCLUDE_BLOCK_REFERENCE = ["paragraph", "list_item", "table"];
   }
 });
 
@@ -56928,41 +56194,41 @@ var require_constants = __commonJS({
 var require_map2 = __commonJS({
   "node_modules/markdown-patch/dist/map.js"(exports) {
     "use strict";
-    var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m, k);
-      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+    var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m2, k2, k22) {
+      if (k22 === void 0)
+        k22 = k2;
+      var desc = Object.getOwnPropertyDescriptor(m2, k2);
+      if (!desc || ("get" in desc ? !m2.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m[k];
+          return m2[k2];
         } };
       }
-      Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
-      o[k2] = m[k];
+      Object.defineProperty(o, k22, desc);
+    } : function(o, m2, k2, k22) {
+      if (k22 === void 0)
+        k22 = k2;
+      o[k22] = m2[k2];
     });
-    var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
-      Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
-      o["default"] = v;
+    var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v2) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v2 });
+    } : function(o, v2) {
+      o["default"] = v2;
     });
     var __importStar = exports && exports.__importStar || function(mod) {
       if (mod && mod.__esModule)
         return mod;
       var result = {};
       if (mod != null) {
-        for (var k in mod)
-          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-            __createBinding(result, mod, k);
+        for (var k2 in mod)
+          if (k2 !== "default" && Object.prototype.hasOwnProperty.call(mod, k2))
+            __createBinding(result, mod, k2);
       }
       __setModuleDefault(result, mod);
       return result;
     };
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.getDocumentMap = void 0;
-    var marked = __importStar(require_marked());
+    var marked = __importStar((init_marked_esm(), marked_esm_exports));
     var yaml_1 = require_dist();
     var constants_js_1 = require_constants();
     function getHeadingPositions(document2, tokens, contentOffset) {
@@ -57032,7 +56298,7 @@ var require_map2 = __commonJS({
       let endContent = 0;
       let endMarker = 0;
       marked.walkTokens(tokens, (token) => {
-        const blockReferenceRegex = /(?:\s+|^)\^([a-zA-Z0-9_-]+)\s*$/;
+        const blockReferenceRegex = /[^\S\r\n]*\^([a-zA-Z0-9_-]+)\s*$/;
         startContent = document2.indexOf(token.raw, startContent);
         const match = blockReferenceRegex.exec(token.raw);
         endContent = startContent + (match ? match.index : token.raw.length);
@@ -57098,7 +56364,7 @@ var require_map2 = __commonJS({
         frontmatter
       };
     }
-    var getDocumentMap = (document2) => {
+    var getDocumentMap2 = (document2) => {
       const { frontmatter, contentOffset, content } = preProcess(document2);
       const lexer = new marked.Lexer();
       const tokens = lexer.lex(content);
@@ -57111,7 +56377,7 @@ var require_map2 = __commonJS({
         lineEnding
       };
     };
-    exports.getDocumentMap = getDocumentMap;
+    exports.getDocumentMap = getDocumentMap2;
   }
 });
 
@@ -57134,11 +56400,17 @@ var require_typeGuards = __commonJS({
   "node_modules/markdown-patch/dist/typeGuards.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    exports.isStringArray = isStringArray;
     exports.isStringArrayArray = isStringArrayArray;
     exports.isAppendableFrontmatterType = isAppendableFrontmatterType;
     exports.isString = isString;
     exports.isDictionary = isDictionary;
     exports.isList = isList;
+    function isStringArray(obj) {
+      if (!Array.isArray(obj))
+        return false;
+      return obj.every((item) => typeof item === "string");
+    }
     function isStringArrayArray(obj) {
       if (!Array.isArray(obj))
         return false;
@@ -57163,34 +56435,34 @@ var require_typeGuards = __commonJS({
 var require_patch = __commonJS({
   "node_modules/markdown-patch/dist/patch.js"(exports) {
     "use strict";
-    var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m, k);
-      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+    var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m2, k2, k22) {
+      if (k22 === void 0)
+        k22 = k2;
+      var desc = Object.getOwnPropertyDescriptor(m2, k2);
+      if (!desc || ("get" in desc ? !m2.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m[k];
+          return m2[k2];
         } };
       }
-      Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
-      o[k2] = m[k];
+      Object.defineProperty(o, k22, desc);
+    } : function(o, m2, k2, k22) {
+      if (k22 === void 0)
+        k22 = k2;
+      o[k22] = m2[k2];
     });
-    var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
-      Object.defineProperty(o, "default", { enumerable: true, value: v });
-    } : function(o, v) {
-      o["default"] = v;
+    var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v2) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v2 });
+    } : function(o, v2) {
+      o["default"] = v2;
     });
     var __importStar = exports && exports.__importStar || function(mod) {
       if (mod && mod.__esModule)
         return mod;
       var result = {};
       if (mod != null) {
-        for (var k in mod)
-          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-            __createBinding(result, mod, k);
+        for (var k2 in mod)
+          if (k2 !== "default" && Object.prototype.hasOwnProperty.call(mod, k2))
+            __createBinding(result, mod, k2);
       }
       __setModuleDefault(result, mod);
       return result;
@@ -57198,7 +56470,7 @@ var require_patch = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.applyPatch = exports.TablePartsNotFound = exports.MergeNotPossible = exports.PatchError = exports.PatchFailed = exports.PatchFailureReason = void 0;
     var map_js_1 = require_map2();
-    var marked = __importStar(require_marked());
+    var marked = __importStar((init_marked_esm(), marked_esm_exports));
     var yaml = __importStar(require_dist());
     var types_js_1 = require_types2();
     var typeGuards_js_1 = require_typeGuards();
@@ -57271,8 +56543,12 @@ var require_patch = __commonJS({
       try {
         const table = _getTableData(document2, target);
         const tableRows = [table.headerParts];
-        if ((0, typeGuards_js_1.isStringArrayArray)(instruction.content)) {
-          for (const row of instruction.content) {
+        let content = instruction.content;
+        if ((0, typeGuards_js_1.isStringArray)(content)) {
+          content = [content];
+        }
+        if ((0, typeGuards_js_1.isStringArrayArray)(content)) {
+          for (const row of content) {
             if (row.length !== table.token.header.length || typeof row === "string") {
               throw new PatchFailed2(PatchFailureReason.TableContentIncorrectColumnCount, instruction, target);
             }
@@ -57294,8 +56570,12 @@ var require_patch = __commonJS({
       try {
         const table = _getTableData(document2, target);
         const tableRows = [table.headerParts];
-        if ((0, typeGuards_js_1.isStringArrayArray)(instruction.content)) {
-          for (const row of instruction.content) {
+        let content = instruction.content;
+        if ((0, typeGuards_js_1.isStringArray)(content)) {
+          content = [content];
+        }
+        if ((0, typeGuards_js_1.isStringArrayArray)(content)) {
+          for (const row of content) {
             if (row.length !== table.token.header.length || typeof row === "string") {
               throw new PatchFailed2(PatchFailureReason.TableContentIncorrectColumnCount, instruction, target);
             }
@@ -57318,8 +56598,12 @@ var require_patch = __commonJS({
       try {
         const table = _getTableData(document2, target);
         const tableRows = [table.headerParts, table.contentParts];
-        if ((0, typeGuards_js_1.isStringArrayArray)(instruction.content)) {
-          for (const row of instruction.content) {
+        let content = instruction.content;
+        if ((0, typeGuards_js_1.isStringArray)(content)) {
+          content = [content];
+        }
+        if ((0, typeGuards_js_1.isStringArrayArray)(content)) {
+          for (const row of content) {
             if (row.length !== table.token.header.length || typeof row === "string") {
               throw new PatchFailed2(PatchFailureReason.TableContentIncorrectColumnCount, instruction, target);
             }
@@ -57365,10 +56649,10 @@ var require_patch = __commonJS({
       }
     };
     var addTargetHeading = (document2, instruction, map) => {
-      var _a, _b;
+      var _a2, _b;
       const elements = [];
       let bestTarget = map.heading[""];
-      for (const element of (_a = instruction.target) != null ? _a : []) {
+      for (const element of (_a2 = instruction.target) != null ? _a2 : []) {
         const possibleMatch = map.heading[[...elements, element].join("")];
         if (possibleMatch) {
           elements.push(element);
@@ -57506,28 +56790,28 @@ ${yaml.stringify(frontmatter).trimEnd()}
 var require_dist2 = __commonJS({
   "node_modules/markdown-patch/dist/index.js"(exports) {
     "use strict";
-    var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m, k);
-      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+    var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m2, k2, k22) {
+      if (k22 === void 0)
+        k22 = k2;
+      var desc = Object.getOwnPropertyDescriptor(m2, k2);
+      if (!desc || ("get" in desc ? !m2.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() {
-          return m[k];
+          return m2[k2];
         } };
       }
-      Object.defineProperty(o, k2, desc);
-    } : function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
-      o[k2] = m[k];
+      Object.defineProperty(o, k22, desc);
+    } : function(o, m2, k2, k22) {
+      if (k22 === void 0)
+        k22 = k2;
+      o[k22] = m2[k2];
     });
-    var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-      for (var p in m)
+    var __exportStar = exports && exports.__exportStar || function(m2, exports2) {
+      for (var p in m2)
         if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-          __createBinding(exports2, m, p);
+          __createBinding(exports2, m2, p);
     };
     Object.defineProperty(exports, "__esModule", { value: true });
-    exports.applyPatch = exports.TablePartsNotFound = exports.PatchError = exports.PatchFailed = exports.PatchFailureReason = void 0;
+    exports.getDocumentMap = exports.applyPatch = exports.TablePartsNotFound = exports.PatchError = exports.PatchFailed = exports.PatchFailureReason = void 0;
     var patch_js_1 = require_patch();
     Object.defineProperty(exports, "PatchFailureReason", { enumerable: true, get: function() {
       return patch_js_1.PatchFailureReason;
@@ -57543,6 +56827,10 @@ var require_dist2 = __commonJS({
     } });
     Object.defineProperty(exports, "applyPatch", { enumerable: true, get: function() {
       return patch_js_1.applyPatch;
+    } });
+    var map_js_1 = require_map2();
+    Object.defineProperty(exports, "getDocumentMap", { enumerable: true, get: function() {
+      return map_js_1.getDocumentMap;
     } });
     __exportStar(require_types2(), exports);
   }
@@ -57580,6 +56868,7 @@ var ErrorCode;
 (function(ErrorCode2) {
   ErrorCode2[ErrorCode2["TextContentEncodingRequired"] = 40010] = "TextContentEncodingRequired";
   ErrorCode2[ErrorCode2["ContentTypeSpecificationRequired"] = 40011] = "ContentTypeSpecificationRequired";
+  ErrorCode2[ErrorCode2["InvalidContentType"] = 40012] = "InvalidContentType";
   ErrorCode2[ErrorCode2["InvalidContentForContentType"] = 40015] = "InvalidContentForContentType";
   ErrorCode2[ErrorCode2["InvalidContentInsertionPositionValue"] = 40050] = "InvalidContentInsertionPositionValue";
   ErrorCode2[ErrorCode2["MissingHeadingHeader"] = 40051] = "MissingHeadingHeader";
@@ -57592,10 +56881,12 @@ var ErrorCode;
   ErrorCode2[ErrorCode2["PeriodIsNotEnabled"] = 40060] = "PeriodIsNotEnabled";
   ErrorCode2[ErrorCode2["InvalidFilterQuery"] = 40070] = "InvalidFilterQuery";
   ErrorCode2[ErrorCode2["PatchFailed"] = 40080] = "PatchFailed";
+  ErrorCode2[ErrorCode2["InvalidSearch"] = 40090] = "InvalidSearch";
   ErrorCode2[ErrorCode2["ApiKeyAuthorizationRequired"] = 40101] = "ApiKeyAuthorizationRequired";
   ErrorCode2[ErrorCode2["PeriodDoesNotExist"] = 40460] = "PeriodDoesNotExist";
   ErrorCode2[ErrorCode2["PeriodicNoteDoesNotExist"] = 40461] = "PeriodicNoteDoesNotExist";
   ErrorCode2[ErrorCode2["RequestMethodValidOnlyForFiles"] = 40510] = "RequestMethodValidOnlyForFiles";
+  ErrorCode2[ErrorCode2["ErrorPreparingSimpleSearch"] = 50010] = "ErrorPreparingSimpleSearch";
 })(ErrorCode || (ErrorCode = {}));
 
 // src/utils.ts
@@ -57628,8 +56919,8 @@ function findHeadingBoundary(fileCache, headingPath) {
   return null;
 }
 function getSplicePosition(fileLines, heading, insert, ignoreNewLines) {
-  var _a, _b;
-  let splicePosition = insert === false ? (_b = (_a = heading.end) == null ? void 0 : _a.line) != null ? _b : fileLines.length : heading.start.line + 1;
+  var _a2, _b;
+  let splicePosition = insert === false ? (_b = (_a2 = heading.end) == null ? void 0 : _a2.line) != null ? _b : fileLines.length : heading.start.line + 1;
   if (!ignoreNewLines || insert) {
     return splicePosition;
   }
@@ -57677,6 +56968,7 @@ var DEFAULT_SETTINGS = {
 var ERROR_CODE_MESSAGES = {
   [ErrorCode.ApiKeyAuthorizationRequired]: "Authorization required.  Find your API Key in the 'Local REST API' section of your Obsidian settings.",
   [ErrorCode.ContentTypeSpecificationRequired]: "Content-Type header required; this API accepts data in multiple content-types and you must indicate the content-type of your request body via the Content-Type header.",
+  [ErrorCode.InvalidContentType]: "Unknown or invalid Content-Type specified in Content-Type header.",
   [ErrorCode.InvalidContentInsertionPositionValue]: "Invalid 'Content-Insertion-Position' header value.",
   [ErrorCode.InvalidContentForContentType]: "Your request body could not be processed as the content-type specified in your Content-Type header.",
   [ErrorCode.InvalidHeadingHeader]: "No heading in specified file could be found matching the heading specified in 'Heading' header.",
@@ -57692,13 +56984,16 @@ var ERROR_CODE_MESSAGES = {
   [ErrorCode.MissingTargetHeader]: "No 'Target' header was provided.",
   [ErrorCode.MissingOperation]: "No 'Operation' header was provided.",
   [ErrorCode.InvalidOperation]: "The 'Operation' header you provided was invalid.",
-  [ErrorCode.PatchFailed]: "The patch you provided could not be applied to the target content."
+  [ErrorCode.PatchFailed]: "The patch you provided could not be applied to the target content.",
+  [ErrorCode.InvalidSearch]: "The search query you provided is not valid.",
+  [ErrorCode.ErrorPreparingSimpleSearch]: "Error encountered while calling Obsidian `prepareSimpleSearch` API."
 };
 var ContentTypes;
 (function(ContentTypes2) {
   ContentTypes2["json"] = "application/json";
   ContentTypes2["markdown"] = "text/markdown";
   ContentTypes2["olrapiNoteJson"] = "application/vnd.olrapi.note+json";
+  ContentTypes2["olrapiDocumentMap"] = "application/vnd.olrapi.document-map+json";
   ContentTypes2["jsonLogic"] = "application/vnd.olrapi.jsonlogic+json";
   ContentTypes2["dataviewDql"] = "application/vnd.olrapi.dataview.dql+txt";
 })(ContentTypes || (ContentTypes = {}));
@@ -57728,7 +57023,7 @@ var LocalRestApiPublicApi = class {
 };
 
 // docs/openapi.yaml
-var openapi_default = 'components:\n  schemas:\n    Error:\n      properties:\n        errorCode:\n          description: |\n            A 5-digit error code uniquely identifying this particular type of error.\n          example: 40149\n          type: "number"\n        message:\n          description: "Message describing the error."\n          example: "A brief description of the error."\n          type: "string"\n      type: "object"\n    NoteJson:\n      properties:\n        content:\n          type: "string"\n        frontmatter:\n          type: "object"\n        path:\n          type: "string"\n        stat:\n          properties:\n            ctime:\n              type: "number"\n            mtime:\n              type: "number"\n            size:\n              type: "number"\n          required:\n            - "ctime"\n            - "mtime"\n            - "size"\n          type: "object"\n        tags:\n          items:\n            type: "string"\n          type: "array"\n      required:\n        - "tags"\n        - "frontmatter"\n        - "stat"\n        - "path"\n        - "content"\n      type: "object"\n  securitySchemes:\n    apiKeyAuth:\n      description: |\n        Find your API Key in your Obsidian settings\n        in the "Local REST API" section under "Plugins".\n      scheme: "bearer"\n      type: "http"\ninfo:\n  description: |\n    You can use this interface for trying out your Local REST API in Obsidian.\n    \n    Before trying the below tools, you will want to make sure you press the "Authorize" button below and provide the API Key you are shown when you open the "Local REST API" section of your Obsidian settings.  All requests to the API require a valid API Key; so you won\'t get very far without doing that.\n    \n    When using this tool you may see browser security warnings due to your browser not trusting the self-signed certificate the plugin will generate on its first run.  If you do, you can make those errors disappear by adding the certificate as a "Trusted Certificate" in your browser or operating system\'s settings.\n  title: "Local REST API for Obsidian"\n  version: "1.0"\nopenapi: "3.0.2"\npaths:\n  /:\n    get:\n      description: |\n        Returns basic details about the server as well as your authentication status.\n        \n        This is the only API request that does *not* require authentication.\n      responses:\n        "200":\n          content:\n            application/json:\n              schema:\n                properties:\n                  authenticated:\n                    description: "Is your current request authenticated?"\n                    type: "boolean"\n                  ok:\n                    description: "\'OK\'"\n                    type: "string"\n                  service:\n                    description: "\'Obsidian Local REST API\'"\n                    type: "string"\n                  versions:\n                    properties:\n                      obsidian:\n                        description: "Obsidian plugin API version"\n                        type: "string"\n                      self:\n                        description: "Plugin version."\n                        type: "string"\n                    type: "object"\n                type: "object"\n          description: "Success"\n      summary: |\n        Returns basic details about the server.\n      tags:\n        - "System"\n  /active/:\n    delete:\n      parameters: []\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "File does not exist."\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Deletes the currently-active file in Obsidian.\n      tags:\n        - "Active File"\n    get:\n      description: |\n        Returns the content of the currently active file in Obsidian.\n        \n        If you specify the header `Accept: application/vnd.olrapi.note+json`, will return a JSON representation of your note including parsed tag and frontmatter data as well as filesystem metadata.  See "responses" below for details.\n      parameters: []\n      responses:\n        "200":\n          content:\n            "application/vnd.olrapi.note+json":\n              schema:\n                "$ref": "#/components/schemas/NoteJson"\n            text/markdown:\n              schema:\n                example: |\n                  # This is my document\n                  \n                  something else here\n                type: "string"\n          description: "Success"\n        "404":\n          description: "File does not exist"\n      summary: |\n        Return the content of the active file open in Obsidian.\n      tags:\n        - "Active File"\n    patch:\n      description: |\n        Inserts content into the currently-open note relative to a heading, block refeerence, or frontmatter field within that document.\n        \n        Allows you to modify the content relative to a heading, block reference, or frontmatter field in your document.\n        \n        Note that this API was changed in Version 3.0 of this extension and the earlier PATCH API is now deprecated. Requests made using the previous version of this API will continue to work until Version 4.0 is released.  See https://github.com/coddingtonbear/obsidian-local-rest-api/wiki/Changes-to-PATCH-requests-between-versions-2.0-and-3.0 for more details and migration instructions.\n        \n        # Examples\n        \n        All of the below examples assume you have a document that looks like\n        this:\n        \n        ```markdown\n        ---\n        alpha: 1\n        beta: test\n        delta:\n        zeta: 1\n        yotta: 1\n        gamma:\n        - one\n        - two\n        ---\n        \n        # Heading 1\n        \n        This is the content for heading one\n        \n        Also references some [[#^484ef2]]\n        \n        ## Subheading 1:1\n        Content for Subheading 1:1\n        \n        ### Subsubheading 1:1:1\n        \n        ### Subsubheading 1:1:2\n        \n        Testing how block references work for a table.[[#^2c7cfa]]\n        Some content for Subsubheading 1:1:2\n        \n        More random text.\n        \n        ^2d9b4a\n        \n        ## Subheading 1:2\n        \n        Content for Subheading 1:2.\n        \n        some content with a block reference ^484ef2\n        \n        ## Subheading 1:3\n        | City         | Population |\n        | ------------ | ---------- |\n        | Seattle, WA  | 8          |\n        | Portland, OR | 4          |\n        \n        ^2c7cfa\n        ```\n        \n        ## Append Content Below a Heading\n        \n        If you wanted to append the content "Hello" below "Subheading 1:1:1" under "Heading 1",\n        you could send a request with the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `heading`\n        - `Target`: `Heading 1::Subheading 1:1:1`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append Content to a Block Reference\n        \n        If you wanted to append the content "Hello" below the block referenced by\n        "2d9b4a" above ("More random text."), you could send the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `block`\n        - `Target`: `2d9b4a`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Add a Row to a Table Referenced by a Block Reference\n        \n        If you wanted to add a new city ("Chicago, IL") and population ("16") pair to the table above\n        referenced by the block reference `2c7cfa`, you could send the following\n        headers:\n        \n        - `Operation`: `append`\n        - `TargetType`: `block`\n        - `Target`: `2c7cfa`\n        - `Content-Type`: `application/json`\n        - with the request body: `[["Chicago, IL", "16"]]`\n        \n        The use of a `Content-Type` of `application/json` allows the API\n        to infer that member of your array represents rows and columns of your\n        to append to the referenced table.  You can of course just use a\n        `Content-Type` of `text/markdown`, but in such a case you\'ll have to\n        format your table row manually instead of letting the library figure\n        it out for you.\n        \n        You also have the option of using `prepend` (in which case, your new\n        row would be the first -- right below the table heading) or `replace` (in which\n        case all rows except the table heading would be replaced by the new row(s)\n        you supplied).\n        \n        ## Setting a Frontmatter Field\n        \n        If you wanted to set the frontmatter field `alpha` to `2`, you could\n        send the following headers:\n        \n        - `Operation`: `replace`\n        - `TargetType`: `frontmatter`\n        - `Target`: `beep`\n        - with the request body `2`\n        \n        If you\'re setting a frontmatter field that might not already exist\n        you may want to use the `Create-Target-If-Missing` header so the\n        new frontmatter field is created and set to your specified value\n        if it doesn\'t already exist.\n        \n        You may find using a `Content-Type` of `application/json` to be\n        particularly useful in the case of frontmatter since frontmatter\n        fields\' values are JSON data, and the API can be smarter about\n        interpreting yoru `prepend` or `append` requests if you specify\n        your data as JSON (particularly when appending, for example,\n        list items).\n      parameters:\n        - description: "Patch operation to perform"\n          in: "header"\n          name: "Operation"\n          required: true\n          schema:\n            enum:\n              - "append"\n              - "prepend"\n              - "replace"\n            type: "string"\n        - description: "Type of target to patch"\n          in: "header"\n          name: "Target-Type"\n          required: true\n          schema:\n            enum:\n              - "heading"\n              - "block"\n              - "frontmatter"\n            type: "string"\n        - description: "Delimiter to use for nested targets (i.e. Headings)"\n          in: "header"\n          name: "Target-Delimiter"\n          required: false\n          schema:\n            default: "::"\n            type: "string"\n        - description: |\n            Target to patch; this value can be URL-Encoded and *must*\n            be URL-Encoded if it includes non-ASCII characters.\n          in: "header"\n          name: "Target"\n          required: true\n          schema:\n            type: "string"\n        - description: "Trim whitespace from Target before applying patch?"\n          in: "header"\n          name: "Trim-Target-Whitespace"\n          required: false\n          schema:\n            default: "false"\n            enum:\n              - "true"\n              - "false"\n            type: "string"\n      requestBody:\n        content:\n          application/json:\n            schema:\n              example: "[\'one\', \'two\']"\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to insert."\n        required: true\n      responses:\n        "200":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request; see response message for details."\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Does not exist"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Partially update content in the currently open note.\n      tags:\n        - "Active File"\n    post:\n      description: |\n        Appends content to the end of the currently-open note.\n        \n        If you would like to insert text relative to a particular heading instead of appending to the end of the file, see \'patch\'.\n      parameters: []\n      requestBody:\n        content:\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to append."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Append content to the active file open in Obsidian.\n      tags:\n        - "Active File"\n    put:\n      parameters: []\n      requestBody:\n        content:\n          "*/*":\n            schema:\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content of the file you would like to upload."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Incoming file could not be processed.  Make sure you have specified a reasonable file name, and make sure you have set a reasonable \'Content-Type\' header; if you are uploading a note, \'text/markdown\' is likely the right choice.\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Update the content of the active file open in Obsidian.\n      tags:\n        - "Active File"\n  /commands/:\n    get:\n      responses:\n        "200":\n          content:\n            application/json:\n              example:\n                commands:\n                  - id: "global-search:open"\n                    name: "Search: Search in all files"\n                  - id: "graph:open"\n                    name: "Graph view: Open graph view"\n              schema:\n                properties:\n                  commands:\n                    items:\n                      properties:\n                        id:\n                          type: "string"\n                        name:\n                          type: "string"\n                      type: "object"\n                    type: "array"\n                type: "object"\n          description: "A list of available commands."\n      summary: |\n        Get a list of available commands.\n      tags:\n        - "Commands"\n  "/commands/{commandId}/":\n    post:\n      parameters:\n        - description: "The id of the command to execute"\n          in: "path"\n          name: "commandId"\n          required: true\n          schema:\n            type: "string"\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "The command you specified does not exist."\n      summary: |\n        Execute a command.\n      tags:\n        - "Commands"\n  /obsidian-local-rest-api.crt:\n    get:\n      responses:\n        "200":\n          description: "Success"\n      summary: |\n        Returns the certificate in use by this API.\n      tags:\n        - "System"\n  "/open/{filename}":\n    post:\n      description: |\n        Note: Obsidian will create a new document at the path you have\n        specified if such a document did not already exist.\n      parameters:\n        - description: |\n            Path to the file to return (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n        - description: "Open this as a new leaf?"\n          in: "query"\n          name: "newLeaf"\n          required: false\n          schema:\n            type: "boolean"\n      responses:\n        "200":\n          description: "Success"\n      summary: |\n        Open the specified document in the Obsidian user interface.\n      tags:\n        - "Open"\n  /openapi.yaml:\n    get:\n      responses:\n        "200":\n          description: "Success"\n      summary: |\n        Returns OpenAPI YAML document describing the capabilities of this API.\n      tags:\n        - "System"\n  "/periodic/{period}/":\n    delete:\n      parameters:\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "File does not exist."\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Delete the current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n    get:\n      parameters:\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      responses:\n        "200":\n          content:\n            "application/vnd.olrapi.note+json":\n              schema:\n                "$ref": "#/components/schemas/NoteJson"\n            text/markdown:\n              schema:\n                example: |\n                  # This is my document\n                  \n                  something else here\n                type: "string"\n          description: "Success"\n        "404":\n          description: "File does not exist"\n      summary: |\n        Get current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n    patch:\n      description: |\n        Inserts content into the current periodic note for the specified period relative to a heading, block refeerence, or frontmatter field within that document.\n        \n        Allows you to modify the content relative to a heading, block reference, or frontmatter field in your document.\n        \n        Note that this API was changed in Version 3.0 of this extension and the earlier PATCH API is now deprecated. Requests made using the previous version of this API will continue to work until Version 4.0 is released.  See https://github.com/coddingtonbear/obsidian-local-rest-api/wiki/Changes-to-PATCH-requests-between-versions-2.0-and-3.0 for more details and migration instructions.\n        \n        # Examples\n        \n        All of the below examples assume you have a document that looks like\n        this:\n        \n        ```markdown\n        ---\n        alpha: 1\n        beta: test\n        delta:\n        zeta: 1\n        yotta: 1\n        gamma:\n        - one\n        - two\n        ---\n        \n        # Heading 1\n        \n        This is the content for heading one\n        \n        Also references some [[#^484ef2]]\n        \n        ## Subheading 1:1\n        Content for Subheading 1:1\n        \n        ### Subsubheading 1:1:1\n        \n        ### Subsubheading 1:1:2\n        \n        Testing how block references work for a table.[[#^2c7cfa]]\n        Some content for Subsubheading 1:1:2\n        \n        More random text.\n        \n        ^2d9b4a\n        \n        ## Subheading 1:2\n        \n        Content for Subheading 1:2.\n        \n        some content with a block reference ^484ef2\n        \n        ## Subheading 1:3\n        | City         | Population |\n        | ------------ | ---------- |\n        | Seattle, WA  | 8          |\n        | Portland, OR | 4          |\n        \n        ^2c7cfa\n        ```\n        \n        ## Append Content Below a Heading\n        \n        If you wanted to append the content "Hello" below "Subheading 1:1:1" under "Heading 1",\n        you could send a request with the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `heading`\n        - `Target`: `Heading 1::Subheading 1:1:1`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append Content to a Block Reference\n        \n        If you wanted to append the content "Hello" below the block referenced by\n        "2d9b4a" above ("More random text."), you could send the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `block`\n        - `Target`: `2d9b4a`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Add a Row to a Table Referenced by a Block Reference\n        \n        If you wanted to add a new city ("Chicago, IL") and population ("16") pair to the table above\n        referenced by the block reference `2c7cfa`, you could send the following\n        headers:\n        \n        - `Operation`: `append`\n        - `TargetType`: `block`\n        - `Target`: `2c7cfa`\n        - `Content-Type`: `application/json`\n        - with the request body: `[["Chicago, IL", "16"]]`\n        \n        The use of a `Content-Type` of `application/json` allows the API\n        to infer that member of your array represents rows and columns of your\n        to append to the referenced table.  You can of course just use a\n        `Content-Type` of `text/markdown`, but in such a case you\'ll have to\n        format your table row manually instead of letting the library figure\n        it out for you.\n        \n        You also have the option of using `prepend` (in which case, your new\n        row would be the first -- right below the table heading) or `replace` (in which\n        case all rows except the table heading would be replaced by the new row(s)\n        you supplied).\n        \n        ## Setting a Frontmatter Field\n        \n        If you wanted to set the frontmatter field `alpha` to `2`, you could\n        send the following headers:\n        \n        - `Operation`: `replace`\n        - `TargetType`: `frontmatter`\n        - `Target`: `beep`\n        - with the request body `2`\n        \n        If you\'re setting a frontmatter field that might not already exist\n        you may want to use the `Create-Target-If-Missing` header so the\n        new frontmatter field is created and set to your specified value\n        if it doesn\'t already exist.\n        \n        You may find using a `Content-Type` of `application/json` to be\n        particularly useful in the case of frontmatter since frontmatter\n        fields\' values are JSON data, and the API can be smarter about\n        interpreting yoru `prepend` or `append` requests if you specify\n        your data as JSON (particularly when appending, for example,\n        list items).\n      parameters:\n        - description: "Patch operation to perform"\n          in: "header"\n          name: "Operation"\n          required: true\n          schema:\n            enum:\n              - "append"\n              - "prepend"\n              - "replace"\n            type: "string"\n        - description: "Type of target to patch"\n          in: "header"\n          name: "Target-Type"\n          required: true\n          schema:\n            enum:\n              - "heading"\n              - "block"\n              - "frontmatter"\n            type: "string"\n        - description: "Delimiter to use for nested targets (i.e. Headings)"\n          in: "header"\n          name: "Target-Delimiter"\n          required: false\n          schema:\n            default: "::"\n            type: "string"\n        - description: |\n            Target to patch; this value can be URL-Encoded and *must*\n            be URL-Encoded if it includes non-ASCII characters.\n          in: "header"\n          name: "Target"\n          required: true\n          schema:\n            type: "string"\n        - description: "Trim whitespace from Target before applying patch?"\n          in: "header"\n          name: "Trim-Target-Whitespace"\n          required: false\n          schema:\n            default: "false"\n            enum:\n              - "true"\n              - "false"\n            type: "string"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          application/json:\n            schema:\n              example: "[\'one\', \'two\']"\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to insert."\n        required: true\n      responses:\n        "200":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request; see response message for details."\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Does not exist"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Partially update content in the current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n    post:\n      description: |\n        Note that this will create the relevant periodic note if necessary.\n      parameters:\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to append."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Append content to the current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n    put:\n      parameters:\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          "*/*":\n            schema:\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content of the file you would like to upload."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Incoming file could not be processed.  Make sure you have specified a reasonable file name, and make sure you have set a reasonable \'Content-Type\' header; if you are uploading a note, \'text/markdown\' is likely the right choice.\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Update the content of the current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n  "/periodic/{period}/{year}/{month}/{day}/":\n    delete:\n      description: |\n        Deletes the periodic note for the specified period.\n      parameters:\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "File does not exist."\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Delete the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n    get:\n      parameters:\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      responses:\n        "200":\n          content:\n            "application/vnd.olrapi.note+json":\n              schema:\n                "$ref": "#/components/schemas/NoteJson"\n            text/markdown:\n              schema:\n                example: |\n                  # This is my document\n                  \n                  something else here\n                type: "string"\n          description: "Success"\n        "404":\n          description: "File does not exist"\n      summary: |\n        Get the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n    patch:\n      description: |\n        Inserts content into a periodic note relative to a heading, block refeerence, or frontmatter field within that document.\n        \n        Allows you to modify the content relative to a heading, block reference, or frontmatter field in your document.\n        \n        Note that this API was changed in Version 3.0 of this extension and the earlier PATCH API is now deprecated. Requests made using the previous version of this API will continue to work until Version 4.0 is released.  See https://github.com/coddingtonbear/obsidian-local-rest-api/wiki/Changes-to-PATCH-requests-between-versions-2.0-and-3.0 for more details and migration instructions.\n        \n        # Examples\n        \n        All of the below examples assume you have a document that looks like\n        this:\n        \n        ```markdown\n        ---\n        alpha: 1\n        beta: test\n        delta:\n        zeta: 1\n        yotta: 1\n        gamma:\n        - one\n        - two\n        ---\n        \n        # Heading 1\n        \n        This is the content for heading one\n        \n        Also references some [[#^484ef2]]\n        \n        ## Subheading 1:1\n        Content for Subheading 1:1\n        \n        ### Subsubheading 1:1:1\n        \n        ### Subsubheading 1:1:2\n        \n        Testing how block references work for a table.[[#^2c7cfa]]\n        Some content for Subsubheading 1:1:2\n        \n        More random text.\n        \n        ^2d9b4a\n        \n        ## Subheading 1:2\n        \n        Content for Subheading 1:2.\n        \n        some content with a block reference ^484ef2\n        \n        ## Subheading 1:3\n        | City         | Population |\n        | ------------ | ---------- |\n        | Seattle, WA  | 8          |\n        | Portland, OR | 4          |\n        \n        ^2c7cfa\n        ```\n        \n        ## Append Content Below a Heading\n        \n        If you wanted to append the content "Hello" below "Subheading 1:1:1" under "Heading 1",\n        you could send a request with the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `heading`\n        - `Target`: `Heading 1::Subheading 1:1:1`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append Content to a Block Reference\n        \n        If you wanted to append the content "Hello" below the block referenced by\n        "2d9b4a" above ("More random text."), you could send the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `block`\n        - `Target`: `2d9b4a`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Add a Row to a Table Referenced by a Block Reference\n        \n        If you wanted to add a new city ("Chicago, IL") and population ("16") pair to the table above\n        referenced by the block reference `2c7cfa`, you could send the following\n        headers:\n        \n        - `Operation`: `append`\n        - `TargetType`: `block`\n        - `Target`: `2c7cfa`\n        - `Content-Type`: `application/json`\n        - with the request body: `[["Chicago, IL", "16"]]`\n        \n        The use of a `Content-Type` of `application/json` allows the API\n        to infer that member of your array represents rows and columns of your\n        to append to the referenced table.  You can of course just use a\n        `Content-Type` of `text/markdown`, but in such a case you\'ll have to\n        format your table row manually instead of letting the library figure\n        it out for you.\n        \n        You also have the option of using `prepend` (in which case, your new\n        row would be the first -- right below the table heading) or `replace` (in which\n        case all rows except the table heading would be replaced by the new row(s)\n        you supplied).\n        \n        ## Setting a Frontmatter Field\n        \n        If you wanted to set the frontmatter field `alpha` to `2`, you could\n        send the following headers:\n        \n        - `Operation`: `replace`\n        - `TargetType`: `frontmatter`\n        - `Target`: `beep`\n        - with the request body `2`\n        \n        If you\'re setting a frontmatter field that might not already exist\n        you may want to use the `Create-Target-If-Missing` header so the\n        new frontmatter field is created and set to your specified value\n        if it doesn\'t already exist.\n        \n        You may find using a `Content-Type` of `application/json` to be\n        particularly useful in the case of frontmatter since frontmatter\n        fields\' values are JSON data, and the API can be smarter about\n        interpreting yoru `prepend` or `append` requests if you specify\n        your data as JSON (particularly when appending, for example,\n        list items).\n      parameters:\n        - description: "Patch operation to perform"\n          in: "header"\n          name: "Operation"\n          required: true\n          schema:\n            enum:\n              - "append"\n              - "prepend"\n              - "replace"\n            type: "string"\n        - description: "Type of target to patch"\n          in: "header"\n          name: "Target-Type"\n          required: true\n          schema:\n            enum:\n              - "heading"\n              - "block"\n              - "frontmatter"\n            type: "string"\n        - description: "Delimiter to use for nested targets (i.e. Headings)"\n          in: "header"\n          name: "Target-Delimiter"\n          required: false\n          schema:\n            default: "::"\n            type: "string"\n        - description: |\n            Target to patch; this value can be URL-Encoded and *must*\n            be URL-Encoded if it includes non-ASCII characters.\n          in: "header"\n          name: "Target"\n          required: true\n          schema:\n            type: "string"\n        - description: "Trim whitespace from Target before applying patch?"\n          in: "header"\n          name: "Trim-Target-Whitespace"\n          required: false\n          schema:\n            default: "false"\n            enum:\n              - "true"\n              - "false"\n            type: "string"\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          application/json:\n            schema:\n              example: "[\'one\', \'two\']"\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to insert."\n        required: true\n      responses:\n        "200":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request; see response message for details."\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Does not exist"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Partially update content in the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n    post:\n      description: |\n        This will create the relevant periodic note if necessary.\n      parameters:\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to append."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Append content to the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n    put:\n      parameters:\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          "*/*":\n            schema:\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content of the file you would like to upload."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Incoming file could not be processed.  Make sure you have specified a reasonable file name, and make sure you have set a reasonable \'Content-Type\' header; if you are uploading a note, \'text/markdown\' is likely the right choice.\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Update the content of the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n  /search/:\n    post:\n      description: |\n        Evaluates a provided query against each file in your vault.\n        \n        This endpoint supports multiple query formats.  Your query should be specified in your request\'s body, and will be interpreted according to the `Content-type` header you specify from the below options.Additional query formats may be added in the future.\n        \n        # Dataview DQL (`application/vnd.olrapi.dataview.dql+txt`)\n        \n        Accepts a `TABLE`-type Dataview query as a text string.  See [Dataview](https://blacksmithgu.github.io/obsidian-dataview/query/queries/)\'s query documentation for information on how to construct a query.\n        \n        # JsonLogic (`application/vnd.olrapi.jsonlogic+json`)\n        \n        Accepts a JsonLogic query specified as JSON.  See [JsonLogic](https://jsonlogic.com/operations.html)\'s documentation for information about the base set of operators available, but in addition to those operators the following operators are available:\n        \n        - `glob: [PATTERN, VALUE]`: Returns `true` if a string matches a glob pattern.  E.g.: `{"glob": ["*.foo", "bar.foo"]}` is `true` and `{"glob": ["*.bar", "bar.foo"]}` is `false`.\n        - `regexp: [PATTERN, VALUE]`: Returns `true` if a string matches a regular expression.  E.g.: `{"regexp": [".*\\.foo", "bar.foo"]` is `true` and `{"regexp": [".*\\.bar", "bar.foo"]}` is `false`.\n        \n        Returns only non-falsy results.  "Non-falsy" here treats the following values as "falsy":\n        \n        - `false`\n        - `null` or `undefined`\n        - `0`\n        - `[]`\n        - `{}`\n        \n        Files are represented as an object having the schema described\n        in the Schema named \'NoteJson\' at the bottom of this page.\n        Understanding the shape of a JSON object from a schema can be\n        tricky; so you may find it helpful to examine the generated metadata\n        for individual files in your vault to understand exactly what values\n        are returned.  To see that, access the `GET` `/vault/{filePath}`\n        route setting the header:\n        `Accept: application/vnd.olrapi.note+json`.  See examples below\n        for working examples of queries performing common search operations.\n      requestBody:\n        content:\n          "application/vnd.olrapi.dataview.dql+txt":\n            examples:\n              find_fields_by_tag:\n                summary: "List data from files having the #game tag."\n                value: |\n                  TABLE\n                    time-played AS "Time Played",\n                    length AS "Length",\n                    rating AS "Rating"\n                  FROM #game\n                  SORT rating DESC\n            schema:\n              externalDocs:\n                url: "https://blacksmithgu.github.io/obsidian-dataview/query/queries/"\n              type: "object"\n          "application/vnd.olrapi.jsonlogic+json":\n            examples:\n              find_by_frontmatter_url_glob:\n                summary: "Find notes having URL or a matching URL glob frontmatter field."\n                value: |\n                  {\n                    "or": [\n                      {"===": [{"var": "frontmatter.url"}, "https://myurl.com/some/path/"]},\n                      {"glob": [{"var": "frontmatter.url-glob"}, "https://myurl.com/some/path/"]}\n                    ]\n                  }\n              find_by_frontmatter_value:\n                summary: "Find notes having a certain frontmatter field value."\n                value: |\n                  {\n                    "==": [\n                      {"var": "frontmatter.myField"},\n                      "myValue"\n                    ]\n                  }\n              find_by_tag:\n                summary: "Find notes having a certain tag"\n                value: |\n                  {\n                    "in": [\n                      "myTag",\n                      {"var": "tags"}\n                    ]\n                  }\n            schema:\n              externalDocs:\n                url: "https://jsonlogic.com/operations.html"\n              type: "object"\n        required: true\n      responses:\n        "200":\n          content:\n            application/json:\n              schema:\n                items:\n                  properties:\n                    filename:\n                      description: "Path to the matching file"\n                      type: "string"\n                    result:\n                      oneOf:\n                        - type: "string"\n                        - type: "number"\n                        - type: "array"\n                        - type: "object"\n                        - type: "boolean"\n                  required:\n                    - "filename"\n                    - "result"\n                  type: "object"\n                type: "array"\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Bad request.  Make sure you have specified an acceptable\n            Content-Type for your search query.\n      summary: |\n        Search for documents matching a specified search query\n      tags:\n        - "Search"\n  /search/simple/:\n    post:\n      parameters:\n        - description: "Your search query"\n          in: "query"\n          name: "query"\n          required: true\n          schema:\n            type: "string"\n        - description: "How much context to return around the matching string"\n          in: "query"\n          name: "contextLength"\n          required: false\n          schema:\n            default: 100\n            type: "number"\n      responses:\n        "200":\n          content:\n            application/json:\n              schema:\n                items:\n                  properties:\n                    filename:\n                      description: "Path to the matching file"\n                      type: "string"\n                    matches:\n                      items:\n                        properties:\n                          context:\n                            type: "string"\n                          match:\n                            properties:\n                              end:\n                                type: "number"\n                              start:\n                                type: "number"\n                            required:\n                              - "start"\n                              - "end"\n                            type: "object"\n                        required:\n                          - "match"\n                          - "context"\n                        type: "object"\n                      type: "array"\n                    score:\n                      type: "number"\n                  type: "object"\n                type: "array"\n          description: "Success"\n      summary: |\n        Search for documents matching a specified text query\n      tags:\n        - "Search"\n  /vault/:\n    get:\n      description: |\n        Lists files in the root directory of your vault.\n        \n        Note: that this is exactly the same API endpoint as the below "List files that exist in the specified directory." and exists here only due to a quirk of this particular interactive tool.\n      responses:\n        "200":\n          content:\n            application/json:\n              example:\n                files:\n                  - "mydocument.md"\n                  - "somedirectory/"\n              schema:\n                properties:\n                  files:\n                    items:\n                      type: "string"\n                    type: "array"\n                type: "object"\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Directory does not exist"\n      summary: |\n        List files that exist in the root of your vault.\n      tags:\n        - "Vault Directories"\n  "/vault/{filename}":\n    delete:\n      parameters:\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "File does not exist."\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Delete a particular file in your vault.\n      tags:\n        - "Vault Files"\n    get:\n      description: |\n        Returns the content of the file at the specified path in your vault should the file exist.\n        \n        If you specify the header `Accept: application/vnd.olrapi.note+json`, will return a JSON representation of your note including parsed tag and frontmatter data as well as filesystem metadata.  See "responses" below for details.\n      parameters:\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      responses:\n        "200":\n          content:\n            "application/vnd.olrapi.note+json":\n              schema:\n                "$ref": "#/components/schemas/NoteJson"\n            text/markdown:\n              schema:\n                example: |\n                  # This is my document\n                  \n                  something else here\n                type: "string"\n          description: "Success"\n        "404":\n          description: "File does not exist"\n      summary: |\n        Return the content of a single file in your vault.\n      tags:\n        - "Vault Files"\n    patch:\n      description: |\n        Inserts content into an existing note relative to a heading, block refeerence, or frontmatter field within that document.\n        \n        Allows you to modify the content relative to a heading, block reference, or frontmatter field in your document.\n        \n        Note that this API was changed in Version 3.0 of this extension and the earlier PATCH API is now deprecated. Requests made using the previous version of this API will continue to work until Version 4.0 is released.  See https://github.com/coddingtonbear/obsidian-local-rest-api/wiki/Changes-to-PATCH-requests-between-versions-2.0-and-3.0 for more details and migration instructions.\n        \n        # Examples\n        \n        All of the below examples assume you have a document that looks like\n        this:\n        \n        ```markdown\n        ---\n        alpha: 1\n        beta: test\n        delta:\n        zeta: 1\n        yotta: 1\n        gamma:\n        - one\n        - two\n        ---\n        \n        # Heading 1\n        \n        This is the content for heading one\n        \n        Also references some [[#^484ef2]]\n        \n        ## Subheading 1:1\n        Content for Subheading 1:1\n        \n        ### Subsubheading 1:1:1\n        \n        ### Subsubheading 1:1:2\n        \n        Testing how block references work for a table.[[#^2c7cfa]]\n        Some content for Subsubheading 1:1:2\n        \n        More random text.\n        \n        ^2d9b4a\n        \n        ## Subheading 1:2\n        \n        Content for Subheading 1:2.\n        \n        some content with a block reference ^484ef2\n        \n        ## Subheading 1:3\n        | City         | Population |\n        | ------------ | ---------- |\n        | Seattle, WA  | 8          |\n        | Portland, OR | 4          |\n        \n        ^2c7cfa\n        ```\n        \n        ## Append Content Below a Heading\n        \n        If you wanted to append the content "Hello" below "Subheading 1:1:1" under "Heading 1",\n        you could send a request with the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `heading`\n        - `Target`: `Heading 1::Subheading 1:1:1`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append Content to a Block Reference\n        \n        If you wanted to append the content "Hello" below the block referenced by\n        "2d9b4a" above ("More random text."), you could send the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `block`\n        - `Target`: `2d9b4a`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Add a Row to a Table Referenced by a Block Reference\n        \n        If you wanted to add a new city ("Chicago, IL") and population ("16") pair to the table above\n        referenced by the block reference `2c7cfa`, you could send the following\n        headers:\n        \n        - `Operation`: `append`\n        - `TargetType`: `block`\n        - `Target`: `2c7cfa`\n        - `Content-Type`: `application/json`\n        - with the request body: `[["Chicago, IL", "16"]]`\n        \n        The use of a `Content-Type` of `application/json` allows the API\n        to infer that member of your array represents rows and columns of your\n        to append to the referenced table.  You can of course just use a\n        `Content-Type` of `text/markdown`, but in such a case you\'ll have to\n        format your table row manually instead of letting the library figure\n        it out for you.\n        \n        You also have the option of using `prepend` (in which case, your new\n        row would be the first -- right below the table heading) or `replace` (in which\n        case all rows except the table heading would be replaced by the new row(s)\n        you supplied).\n        \n        ## Setting a Frontmatter Field\n        \n        If you wanted to set the frontmatter field `alpha` to `2`, you could\n        send the following headers:\n        \n        - `Operation`: `replace`\n        - `TargetType`: `frontmatter`\n        - `Target`: `beep`\n        - with the request body `2`\n        \n        If you\'re setting a frontmatter field that might not already exist\n        you may want to use the `Create-Target-If-Missing` header so the\n        new frontmatter field is created and set to your specified value\n        if it doesn\'t already exist.\n        \n        You may find using a `Content-Type` of `application/json` to be\n        particularly useful in the case of frontmatter since frontmatter\n        fields\' values are JSON data, and the API can be smarter about\n        interpreting yoru `prepend` or `append` requests if you specify\n        your data as JSON (particularly when appending, for example,\n        list items).\n      parameters:\n        - description: "Patch operation to perform"\n          in: "header"\n          name: "Operation"\n          required: true\n          schema:\n            enum:\n              - "append"\n              - "prepend"\n              - "replace"\n            type: "string"\n        - description: "Type of target to patch"\n          in: "header"\n          name: "Target-Type"\n          required: true\n          schema:\n            enum:\n              - "heading"\n              - "block"\n              - "frontmatter"\n            type: "string"\n        - description: "Delimiter to use for nested targets (i.e. Headings)"\n          in: "header"\n          name: "Target-Delimiter"\n          required: false\n          schema:\n            default: "::"\n            type: "string"\n        - description: |\n            Target to patch; this value can be URL-Encoded and *must*\n            be URL-Encoded if it includes non-ASCII characters.\n          in: "header"\n          name: "Target"\n          required: true\n          schema:\n            type: "string"\n        - description: "Trim whitespace from Target before applying patch?"\n          in: "header"\n          name: "Trim-Target-Whitespace"\n          required: false\n          schema:\n            default: "false"\n            enum:\n              - "true"\n              - "false"\n            type: "string"\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      requestBody:\n        content:\n          application/json:\n            schema:\n              example: "[\'one\', \'two\']"\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to insert."\n        required: true\n      responses:\n        "200":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request; see response message for details."\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Does not exist"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Partially update content in an existing note.\n      tags:\n        - "Vault Files"\n    post:\n      description: |\n        Appends content to the end of an existing note. If the specified file does not yet exist, it will be created as an empty file.\n        \n        If you would like to insert text relative to a particular heading, block reference, or frontmatter field instead of appending to the end of the file, see \'patch\'.\n      parameters:\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      requestBody:\n        content:\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to append."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Append content to a new or existing file.\n      tags:\n        - "Vault Files"\n    put:\n      description: |\n        Creates a new file in your vault or updates the content of an existing one if the specified file already exists.\n      parameters:\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      requestBody:\n        content:\n          "*/*":\n            schema:\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content of the file you would like to upload."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Incoming file could not be processed.  Make sure you have specified a reasonable file name, and make sure you have set a reasonable \'Content-Type\' header; if you are uploading a note, \'text/markdown\' is likely the right choice.\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Create a new file in your vault or update the content of an existing one.\n      tags:\n        - "Vault Files"\n  "/vault/{pathToDirectory}/":\n    get:\n      parameters:\n        - description: |\n            Path to list files from (relative to your vault root).  Note that empty directories will not be returned.\n            \n            Note: this particular interactive tool requires that you provide an argument for this field, but the API itself will allow you to list the root folder of your vault. If you would like to try listing content in the root of your vault using this interactive tool, use the above "List files that exist in the root of your vault" form above.\n          in: "path"\n          name: "pathToDirectory"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      responses:\n        "200":\n          content:\n            application/json:\n              example:\n                files:\n                  - "mydocument.md"\n                  - "somedirectory/"\n              schema:\n                properties:\n                  files:\n                    items:\n                      type: "string"\n                    type: "array"\n                type: "object"\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Directory does not exist"\n      summary: |\n        List files that exist in the specified directory.\n      tags:\n        - "Vault Directories"\nsecurity:\n  - apiKeyAuth: []\nservers:\n  - description: "HTTPS (Secure Mode)"\n    url: "https://{host}:{port}"\n    variables:\n      host:\n        default: "127.0.0.1"\n        description: "Binding host"\n      port:\n        default: "27124"\n        description: "HTTPS port"\n  - description: "HTTP (Insecure Mode)"\n    url: "http://{host}:{port}"\n    variables:\n      host:\n        default: "127.0.0.1"\n        description: "Binding host"\n      port:\n        default: "27123"\n        description: "HTTP port"\n';
+var openapi_default = 'components:\n  schemas:\n    Error:\n      properties:\n        errorCode:\n          description: |\n            A 5-digit error code uniquely identifying this particular type of error.\n          example: 40149\n          type: "number"\n        message:\n          description: "Message describing the error."\n          example: "A brief description of the error."\n          type: "string"\n      type: "object"\n    NoteJson:\n      properties:\n        content:\n          type: "string"\n        frontmatter:\n          type: "object"\n        path:\n          type: "string"\n        stat:\n          properties:\n            ctime:\n              type: "number"\n            mtime:\n              type: "number"\n            size:\n              type: "number"\n          required:\n            - "ctime"\n            - "mtime"\n            - "size"\n          type: "object"\n        tags:\n          items:\n            type: "string"\n          type: "array"\n      required:\n        - "tags"\n        - "frontmatter"\n        - "stat"\n        - "path"\n        - "content"\n      type: "object"\n  securitySchemes:\n    apiKeyAuth:\n      description: |\n        Find your API Key in your Obsidian settings\n        in the "Local REST API" section under "Plugins".\n      scheme: "bearer"\n      type: "http"\ninfo:\n  description: |\n    You can use this interface for trying out your Local REST API in Obsidian.\n    \n    Before trying the below tools, you will want to make sure you press the "Authorize" button below and provide the API Key you are shown when you open the "Local REST API" section of your Obsidian settings.  All requests to the API require a valid API Key; so you won\'t get very far without doing that.\n    \n    When using this tool you may see browser security warnings due to your browser not trusting the self-signed certificate the plugin will generate on its first run.  If you do, you can make those errors disappear by adding the certificate as a "Trusted Certificate" in your browser or operating system\'s settings.\n  title: "Local REST API for Obsidian"\n  version: "1.0"\nopenapi: "3.0.2"\npaths:\n  /:\n    get:\n      description: |\n        Returns basic details about the server as well as your authentication status.\n        \n        This is the only API request that does *not* require authentication.\n      responses:\n        "200":\n          content:\n            application/json:\n              schema:\n                properties:\n                  authenticated:\n                    description: "Is your current request authenticated?"\n                    type: "boolean"\n                  ok:\n                    description: "\'OK\'"\n                    type: "string"\n                  service:\n                    description: "\'Obsidian Local REST API\'"\n                    type: "string"\n                  versions:\n                    properties:\n                      obsidian:\n                        description: "Obsidian plugin API version"\n                        type: "string"\n                      self:\n                        description: "Plugin version."\n                        type: "string"\n                    type: "object"\n                type: "object"\n          description: "Success"\n      summary: |\n        Returns basic details about the server.\n      tags:\n        - "System"\n  /active/:\n    delete:\n      parameters: []\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "File does not exist."\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Deletes the currently-active file in Obsidian.\n      tags:\n        - "Active File"\n    get:\n      description: |\n        Returns the content of the currently active file in Obsidian.\n        \n        If you specify the header `Accept: application/vnd.olrapi.note+json`, will return a JSON representation of your note including parsed tag and frontmatter data as well as filesystem metadata.  See "responses" below for details.\n      parameters: []\n      responses:\n        "200":\n          content:\n            "application/vnd.olrapi.document-map+json":\n              schema:\n                properties:\n                  blocks:\n                    example:\n                      - "^blockref1"\n                      - "^anotherBlockRef"\n                    items:\n                      type: "string"\n                    type: "array"\n                  frontmatterFields:\n                    example:\n                      - "title"\n                      - "tags"\n                      - "dateCreated"\n                    items:\n                      type: "string"\n                    type: "array"\n                  headings:\n                    example:\n                      - "# Heading 1"\n                      - "## Heading 2"\n                    items:\n                      type: "string"\n                    type: "array"\n                type: "object"\n            "application/vnd.olrapi.note+json":\n              schema:\n                "$ref": "#/components/schemas/NoteJson"\n            text/markdown:\n              schema:\n                example: |\n                  # This is my document\n                  \n                  something else here\n                type: "string"\n          description: "Success"\n        "404":\n          description: "File does not exist"\n      summary: |\n        Return the content of the active file open in Obsidian.\n      tags:\n        - "Active File"\n    patch:\n      description: |\n        Inserts content into the currently-open note relative to a heading, block refeerence, or frontmatter field within that document.\n        \n        Allows you to modify the content relative to a heading, block reference, or frontmatter field in your document.\n        \n        Note that this API was changed in Version 3.0 of this extension and the earlier PATCH API is now deprecated. Requests made using the previous version of this API will continue to work until Version 4.0 is released.  See https://github.com/coddingtonbear/obsidian-local-rest-api/wiki/Changes-to-PATCH-requests-between-versions-2.0-and-3.0 for more details and migration instructions.\n        \n        # Examples\n        \n        All of the below examples assume you have a document that looks like\n        this:\n        \n        ```markdown\n        ---\n        alpha: 1\n        beta: test\n        delta:\n        zeta: 1\n        yotta: 1\n        gamma:\n        - one\n        - two\n        ---\n        \n        # Heading 1\n        \n        This is the content for heading one\n        \n        Also references some [[#^484ef2]]\n        \n        ## Subheading 1:1\n        Content for Subheading 1:1\n        \n        ### Subsubheading 1:1:1\n        \n        ### Subsubheading 1:1:2\n        \n        Testing how block references work for a table.[[#^2c7cfa]]\n        Some content for Subsubheading 1:1:2\n        \n        More random text.\n        \n        ^2d9b4a\n        \n        ## Subheading 1:2\n        \n        Content for Subheading 1:2.\n        \n        some content with a block reference ^484ef2\n        \n        ## Subheading 1:3\n        | City         | Population |\n        | ------------ | ---------- |\n        | Seattle, WA  | 8          |\n        | Portland, OR | 4          |\n        \n        ^2c7cfa\n        ```\n        \n        ## Append, Prepend, or Replace Content Below a Heading\n        \n        If you wanted to append the content "Hello" below "Subheading 1:1:1" under "Heading 1",\n        you could send a request with the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `heading`\n        - `Target`: `Heading 1::Subheading 1:1:1`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append, Prepend, or Replace Content to a Block Reference\n        \n        If you wanted to append the content "Hello" below the block referenced by\n        "2d9b4a" above ("More random text."), you could send the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `block`\n        - `Target`: `2d9b4a`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append, Prepend, or Replace a Row or Rows to/in a Table Referenced by a Block Reference\n        \n        If you wanted to add a new city ("Chicago, IL") and population ("16") pair to the table above\n        referenced by the block reference `2c7cfa`, you could send the following\n        headers:\n        \n        - `Operation`: `append`\n        - `TargetType`: `block`\n        - `Target`: `2c7cfa`\n        - `Content-Type`: `application/json`\n        - with the request body: `[["Chicago, IL", "16"]]`\n        \n        The use of a `Content-Type` of `application/json` allows the API\n        to infer that member of your array represents rows and columns of your\n        to append to the referenced table.  You can of course just use a\n        `Content-Type` of `text/markdown`, but in such a case you\'ll have to\n        format your table row manually instead of letting the library figure\n        it out for you.\n        \n        You also have the option of using `prepend` (in which case, your new\n        row would be the first -- right below the table heading) or `replace` (in which\n        case all rows except the table heading would be replaced by the new row(s)\n        you supplied).\n        \n        ## Setting a Frontmatter Field\n        \n        If you wanted to set the frontmatter field `alpha` to `2`, you could\n        send the following headers:\n        \n        - `Operation`: `replace`\n        - `TargetType`: `frontmatter`\n        - `Target`: `beep`\n        - with the request body `2`\n        \n        If you\'re setting a frontmatter field that might not already exist\n        you may want to use the `Create-Target-If-Missing` header so the\n        new frontmatter field is created and set to your specified value\n        if it doesn\'t already exist.\n        \n        You may find using a `Content-Type` of `application/json` to be\n        particularly useful in the case of frontmatter since frontmatter\n        fields\' values are JSON data, and the API can be smarter about\n        interpreting yoru `prepend` or `append` requests if you specify\n        your data as JSON (particularly when appending, for example,\n        list items).\n        \n        ## Identifying Patch Targets in a File\n        \n        You can issue a GET request to `/files/{path}` with an `Accept` header\n        of `application/vnd.olrapi.document-map+json` to get a JSON object\n        outlining what headings, block references, and frontmatter fields exist.\n      parameters:\n        - description: "Patch operation to perform"\n          in: "header"\n          name: "Operation"\n          required: true\n          schema:\n            enum:\n              - "append"\n              - "prepend"\n              - "replace"\n            type: "string"\n        - description: "Type of target to patch"\n          in: "header"\n          name: "Target-Type"\n          required: true\n          schema:\n            enum:\n              - "heading"\n              - "block"\n              - "frontmatter"\n            type: "string"\n        - description: "Delimiter to use for nested targets (i.e. Headings)"\n          in: "header"\n          name: "Target-Delimiter"\n          required: false\n          schema:\n            default: "::"\n            type: "string"\n        - description: |\n            Target to patch; this value can be URL-Encoded and *must*\n            be URL-Encoded if it includes non-ASCII characters.\n          in: "header"\n          name: "Target"\n          required: true\n          schema:\n            type: "string"\n        - description: "Trim whitespace from Target before applying patch?"\n          in: "header"\n          name: "Trim-Target-Whitespace"\n          required: false\n          schema:\n            default: "false"\n            enum:\n              - "true"\n              - "false"\n            type: "string"\n      requestBody:\n        content:\n          application/json:\n            schema:\n              example: "[\'one\', \'two\']"\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to insert."\n        required: true\n      responses:\n        "200":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request; see response message for details."\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Does not exist"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Partially update content in the currently open note.\n      tags:\n        - "Active File"\n    post:\n      description: |\n        Appends content to the end of the currently-open note.\n        \n        If you would like to insert text relative to a particular heading instead of appending to the end of the file, see \'patch\'.\n      parameters: []\n      requestBody:\n        content:\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to append."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Append content to the active file open in Obsidian.\n      tags:\n        - "Active File"\n    put:\n      parameters: []\n      requestBody:\n        content:\n          "*/*":\n            schema:\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content of the file you would like to upload."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Incoming file could not be processed.  Make sure you have specified a reasonable file name, and make sure you have set a reasonable \'Content-Type\' header; if you are uploading a note, \'text/markdown\' is likely the right choice.\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Update the content of the active file open in Obsidian.\n      tags:\n        - "Active File"\n  /commands/:\n    get:\n      responses:\n        "200":\n          content:\n            application/json:\n              example:\n                commands:\n                  - id: "global-search:open"\n                    name: "Search: Search in all files"\n                  - id: "graph:open"\n                    name: "Graph view: Open graph view"\n              schema:\n                properties:\n                  commands:\n                    items:\n                      properties:\n                        id:\n                          type: "string"\n                        name:\n                          type: "string"\n                      type: "object"\n                    type: "array"\n                type: "object"\n          description: "A list of available commands."\n      summary: |\n        Get a list of available commands.\n      tags:\n        - "Commands"\n  "/commands/{commandId}/":\n    post:\n      parameters:\n        - description: "The id of the command to execute"\n          in: "path"\n          name: "commandId"\n          required: true\n          schema:\n            type: "string"\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "The command you specified does not exist."\n      summary: |\n        Execute a command.\n      tags:\n        - "Commands"\n  /obsidian-local-rest-api.crt:\n    get:\n      responses:\n        "200":\n          description: "Success"\n      summary: |\n        Returns the certificate in use by this API.\n      tags:\n        - "System"\n  "/open/{filename}":\n    post:\n      description: |\n        Note: Obsidian will create a new document at the path you have\n        specified if such a document did not already exist.\n      parameters:\n        - description: |\n            Path to the file to return (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n        - description: "Open this as a new leaf?"\n          in: "query"\n          name: "newLeaf"\n          required: false\n          schema:\n            type: "boolean"\n      responses:\n        "200":\n          description: "Success"\n      summary: |\n        Open the specified document in the Obsidian user interface.\n      tags:\n        - "Open"\n  /openapi.yaml:\n    get:\n      responses:\n        "200":\n          description: "Success"\n      summary: |\n        Returns OpenAPI YAML document describing the capabilities of this API.\n      tags:\n        - "System"\n  "/periodic/{period}/":\n    delete:\n      parameters:\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "File does not exist."\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Delete the current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n    get:\n      parameters:\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      responses:\n        "200":\n          content:\n            "application/vnd.olrapi.document-map+json":\n              schema:\n                properties:\n                  blocks:\n                    example:\n                      - "^blockref1"\n                      - "^anotherBlockRef"\n                    items:\n                      type: "string"\n                    type: "array"\n                  frontmatterFields:\n                    example:\n                      - "title"\n                      - "tags"\n                      - "dateCreated"\n                    items:\n                      type: "string"\n                    type: "array"\n                  headings:\n                    example:\n                      - "# Heading 1"\n                      - "## Heading 2"\n                    items:\n                      type: "string"\n                    type: "array"\n                type: "object"\n            "application/vnd.olrapi.note+json":\n              schema:\n                "$ref": "#/components/schemas/NoteJson"\n            text/markdown:\n              schema:\n                example: |\n                  # This is my document\n                  \n                  something else here\n                type: "string"\n          description: "Success"\n        "404":\n          description: "File does not exist"\n      summary: |\n        Get current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n    patch:\n      description: |\n        Inserts content into the current periodic note for the specified period relative to a heading, block refeerence, or frontmatter field within that document.\n        \n        Allows you to modify the content relative to a heading, block reference, or frontmatter field in your document.\n        \n        Note that this API was changed in Version 3.0 of this extension and the earlier PATCH API is now deprecated. Requests made using the previous version of this API will continue to work until Version 4.0 is released.  See https://github.com/coddingtonbear/obsidian-local-rest-api/wiki/Changes-to-PATCH-requests-between-versions-2.0-and-3.0 for more details and migration instructions.\n        \n        # Examples\n        \n        All of the below examples assume you have a document that looks like\n        this:\n        \n        ```markdown\n        ---\n        alpha: 1\n        beta: test\n        delta:\n        zeta: 1\n        yotta: 1\n        gamma:\n        - one\n        - two\n        ---\n        \n        # Heading 1\n        \n        This is the content for heading one\n        \n        Also references some [[#^484ef2]]\n        \n        ## Subheading 1:1\n        Content for Subheading 1:1\n        \n        ### Subsubheading 1:1:1\n        \n        ### Subsubheading 1:1:2\n        \n        Testing how block references work for a table.[[#^2c7cfa]]\n        Some content for Subsubheading 1:1:2\n        \n        More random text.\n        \n        ^2d9b4a\n        \n        ## Subheading 1:2\n        \n        Content for Subheading 1:2.\n        \n        some content with a block reference ^484ef2\n        \n        ## Subheading 1:3\n        | City         | Population |\n        | ------------ | ---------- |\n        | Seattle, WA  | 8          |\n        | Portland, OR | 4          |\n        \n        ^2c7cfa\n        ```\n        \n        ## Append, Prepend, or Replace Content Below a Heading\n        \n        If you wanted to append the content "Hello" below "Subheading 1:1:1" under "Heading 1",\n        you could send a request with the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `heading`\n        - `Target`: `Heading 1::Subheading 1:1:1`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append, Prepend, or Replace Content to a Block Reference\n        \n        If you wanted to append the content "Hello" below the block referenced by\n        "2d9b4a" above ("More random text."), you could send the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `block`\n        - `Target`: `2d9b4a`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append, Prepend, or Replace a Row or Rows to/in a Table Referenced by a Block Reference\n        \n        If you wanted to add a new city ("Chicago, IL") and population ("16") pair to the table above\n        referenced by the block reference `2c7cfa`, you could send the following\n        headers:\n        \n        - `Operation`: `append`\n        - `TargetType`: `block`\n        - `Target`: `2c7cfa`\n        - `Content-Type`: `application/json`\n        - with the request body: `[["Chicago, IL", "16"]]`\n        \n        The use of a `Content-Type` of `application/json` allows the API\n        to infer that member of your array represents rows and columns of your\n        to append to the referenced table.  You can of course just use a\n        `Content-Type` of `text/markdown`, but in such a case you\'ll have to\n        format your table row manually instead of letting the library figure\n        it out for you.\n        \n        You also have the option of using `prepend` (in which case, your new\n        row would be the first -- right below the table heading) or `replace` (in which\n        case all rows except the table heading would be replaced by the new row(s)\n        you supplied).\n        \n        ## Setting a Frontmatter Field\n        \n        If you wanted to set the frontmatter field `alpha` to `2`, you could\n        send the following headers:\n        \n        - `Operation`: `replace`\n        - `TargetType`: `frontmatter`\n        - `Target`: `beep`\n        - with the request body `2`\n        \n        If you\'re setting a frontmatter field that might not already exist\n        you may want to use the `Create-Target-If-Missing` header so the\n        new frontmatter field is created and set to your specified value\n        if it doesn\'t already exist.\n        \n        You may find using a `Content-Type` of `application/json` to be\n        particularly useful in the case of frontmatter since frontmatter\n        fields\' values are JSON data, and the API can be smarter about\n        interpreting yoru `prepend` or `append` requests if you specify\n        your data as JSON (particularly when appending, for example,\n        list items).\n        \n        ## Identifying Patch Targets in a File\n        \n        You can issue a GET request to `/files/{path}` with an `Accept` header\n        of `application/vnd.olrapi.document-map+json` to get a JSON object\n        outlining what headings, block references, and frontmatter fields exist.\n      parameters:\n        - description: "Patch operation to perform"\n          in: "header"\n          name: "Operation"\n          required: true\n          schema:\n            enum:\n              - "append"\n              - "prepend"\n              - "replace"\n            type: "string"\n        - description: "Type of target to patch"\n          in: "header"\n          name: "Target-Type"\n          required: true\n          schema:\n            enum:\n              - "heading"\n              - "block"\n              - "frontmatter"\n            type: "string"\n        - description: "Delimiter to use for nested targets (i.e. Headings)"\n          in: "header"\n          name: "Target-Delimiter"\n          required: false\n          schema:\n            default: "::"\n            type: "string"\n        - description: |\n            Target to patch; this value can be URL-Encoded and *must*\n            be URL-Encoded if it includes non-ASCII characters.\n          in: "header"\n          name: "Target"\n          required: true\n          schema:\n            type: "string"\n        - description: "Trim whitespace from Target before applying patch?"\n          in: "header"\n          name: "Trim-Target-Whitespace"\n          required: false\n          schema:\n            default: "false"\n            enum:\n              - "true"\n              - "false"\n            type: "string"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          application/json:\n            schema:\n              example: "[\'one\', \'two\']"\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to insert."\n        required: true\n      responses:\n        "200":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request; see response message for details."\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Does not exist"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Partially update content in the current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n    post:\n      description: |\n        Note that this will create the relevant periodic note if necessary.\n      parameters:\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to append."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Append content to the current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n    put:\n      parameters:\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          "*/*":\n            schema:\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content of the file you would like to upload."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Incoming file could not be processed.  Make sure you have specified a reasonable file name, and make sure you have set a reasonable \'Content-Type\' header; if you are uploading a note, \'text/markdown\' is likely the right choice.\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Update the content of the current periodic note for the specified period.\n      tags:\n        - "Periodic Notes"\n  "/periodic/{period}/{year}/{month}/{day}/":\n    delete:\n      description: |\n        Deletes the periodic note for the specified period.\n      parameters:\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "File does not exist."\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Delete the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n    get:\n      parameters:\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      responses:\n        "200":\n          content:\n            "application/vnd.olrapi.document-map+json":\n              schema:\n                properties:\n                  blocks:\n                    example:\n                      - "^blockref1"\n                      - "^anotherBlockRef"\n                    items:\n                      type: "string"\n                    type: "array"\n                  frontmatterFields:\n                    example:\n                      - "title"\n                      - "tags"\n                      - "dateCreated"\n                    items:\n                      type: "string"\n                    type: "array"\n                  headings:\n                    example:\n                      - "# Heading 1"\n                      - "## Heading 2"\n                    items:\n                      type: "string"\n                    type: "array"\n                type: "object"\n            "application/vnd.olrapi.note+json":\n              schema:\n                "$ref": "#/components/schemas/NoteJson"\n            text/markdown:\n              schema:\n                example: |\n                  # This is my document\n                  \n                  something else here\n                type: "string"\n          description: "Success"\n        "404":\n          description: "File does not exist"\n      summary: |\n        Get the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n    patch:\n      description: |\n        Inserts content into a periodic note relative to a heading, block refeerence, or frontmatter field within that document.\n        \n        Allows you to modify the content relative to a heading, block reference, or frontmatter field in your document.\n        \n        Note that this API was changed in Version 3.0 of this extension and the earlier PATCH API is now deprecated. Requests made using the previous version of this API will continue to work until Version 4.0 is released.  See https://github.com/coddingtonbear/obsidian-local-rest-api/wiki/Changes-to-PATCH-requests-between-versions-2.0-and-3.0 for more details and migration instructions.\n        \n        # Examples\n        \n        All of the below examples assume you have a document that looks like\n        this:\n        \n        ```markdown\n        ---\n        alpha: 1\n        beta: test\n        delta:\n        zeta: 1\n        yotta: 1\n        gamma:\n        - one\n        - two\n        ---\n        \n        # Heading 1\n        \n        This is the content for heading one\n        \n        Also references some [[#^484ef2]]\n        \n        ## Subheading 1:1\n        Content for Subheading 1:1\n        \n        ### Subsubheading 1:1:1\n        \n        ### Subsubheading 1:1:2\n        \n        Testing how block references work for a table.[[#^2c7cfa]]\n        Some content for Subsubheading 1:1:2\n        \n        More random text.\n        \n        ^2d9b4a\n        \n        ## Subheading 1:2\n        \n        Content for Subheading 1:2.\n        \n        some content with a block reference ^484ef2\n        \n        ## Subheading 1:3\n        | City         | Population |\n        | ------------ | ---------- |\n        | Seattle, WA  | 8          |\n        | Portland, OR | 4          |\n        \n        ^2c7cfa\n        ```\n        \n        ## Append, Prepend, or Replace Content Below a Heading\n        \n        If you wanted to append the content "Hello" below "Subheading 1:1:1" under "Heading 1",\n        you could send a request with the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `heading`\n        - `Target`: `Heading 1::Subheading 1:1:1`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append, Prepend, or Replace Content to a Block Reference\n        \n        If you wanted to append the content "Hello" below the block referenced by\n        "2d9b4a" above ("More random text."), you could send the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `block`\n        - `Target`: `2d9b4a`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append, Prepend, or Replace a Row or Rows to/in a Table Referenced by a Block Reference\n        \n        If you wanted to add a new city ("Chicago, IL") and population ("16") pair to the table above\n        referenced by the block reference `2c7cfa`, you could send the following\n        headers:\n        \n        - `Operation`: `append`\n        - `TargetType`: `block`\n        - `Target`: `2c7cfa`\n        - `Content-Type`: `application/json`\n        - with the request body: `[["Chicago, IL", "16"]]`\n        \n        The use of a `Content-Type` of `application/json` allows the API\n        to infer that member of your array represents rows and columns of your\n        to append to the referenced table.  You can of course just use a\n        `Content-Type` of `text/markdown`, but in such a case you\'ll have to\n        format your table row manually instead of letting the library figure\n        it out for you.\n        \n        You also have the option of using `prepend` (in which case, your new\n        row would be the first -- right below the table heading) or `replace` (in which\n        case all rows except the table heading would be replaced by the new row(s)\n        you supplied).\n        \n        ## Setting a Frontmatter Field\n        \n        If you wanted to set the frontmatter field `alpha` to `2`, you could\n        send the following headers:\n        \n        - `Operation`: `replace`\n        - `TargetType`: `frontmatter`\n        - `Target`: `beep`\n        - with the request body `2`\n        \n        If you\'re setting a frontmatter field that might not already exist\n        you may want to use the `Create-Target-If-Missing` header so the\n        new frontmatter field is created and set to your specified value\n        if it doesn\'t already exist.\n        \n        You may find using a `Content-Type` of `application/json` to be\n        particularly useful in the case of frontmatter since frontmatter\n        fields\' values are JSON data, and the API can be smarter about\n        interpreting yoru `prepend` or `append` requests if you specify\n        your data as JSON (particularly when appending, for example,\n        list items).\n        \n        ## Identifying Patch Targets in a File\n        \n        You can issue a GET request to `/files/{path}` with an `Accept` header\n        of `application/vnd.olrapi.document-map+json` to get a JSON object\n        outlining what headings, block references, and frontmatter fields exist.\n      parameters:\n        - description: "Patch operation to perform"\n          in: "header"\n          name: "Operation"\n          required: true\n          schema:\n            enum:\n              - "append"\n              - "prepend"\n              - "replace"\n            type: "string"\n        - description: "Type of target to patch"\n          in: "header"\n          name: "Target-Type"\n          required: true\n          schema:\n            enum:\n              - "heading"\n              - "block"\n              - "frontmatter"\n            type: "string"\n        - description: "Delimiter to use for nested targets (i.e. Headings)"\n          in: "header"\n          name: "Target-Delimiter"\n          required: false\n          schema:\n            default: "::"\n            type: "string"\n        - description: |\n            Target to patch; this value can be URL-Encoded and *must*\n            be URL-Encoded if it includes non-ASCII characters.\n          in: "header"\n          name: "Target"\n          required: true\n          schema:\n            type: "string"\n        - description: "Trim whitespace from Target before applying patch?"\n          in: "header"\n          name: "Trim-Target-Whitespace"\n          required: false\n          schema:\n            default: "false"\n            enum:\n              - "true"\n              - "false"\n            type: "string"\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          application/json:\n            schema:\n              example: "[\'one\', \'two\']"\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to insert."\n        required: true\n      responses:\n        "200":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request; see response message for details."\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Does not exist"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Partially update content in the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n    post:\n      description: |\n        This will create the relevant periodic note if necessary.\n      parameters:\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to append."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Append content to the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n    put:\n      parameters:\n        - description: "The year of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "year"\n          required: true\n          schema:\n            type: "number"\n        - description: "The month (1-12) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "month"\n          required: true\n          schema:\n            type: "number"\n        - description: "The day (1-31) of the date for which you would like to grab a periodic note."\n          in: "path"\n          name: "day"\n          required: true\n          schema:\n            type: "number"\n        - description: "The name of the period for which you would like to grab a periodic note."\n          in: "path"\n          name: "period"\n          required: true\n          schema:\n            default: "daily"\n            enum:\n              - "daily"\n              - "weekly"\n              - "monthly"\n              - "quarterly"\n              - "yearly"\n            type: "string"\n      requestBody:\n        content:\n          "*/*":\n            schema:\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content of the file you would like to upload."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Incoming file could not be processed.  Make sure you have specified a reasonable file name, and make sure you have set a reasonable \'Content-Type\' header; if you are uploading a note, \'text/markdown\' is likely the right choice.\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Update the content of the periodic note for the specified period and date.\n      tags:\n        - "Periodic Notes"\n  /search/:\n    post:\n      description: |\n        Evaluates a provided query against each file in your vault.\n        \n        This endpoint supports multiple query formats.  Your query should be specified in your request\'s body, and will be interpreted according to the `Content-type` header you specify from the below options.Additional query formats may be added in the future.\n        \n        # Dataview DQL (`application/vnd.olrapi.dataview.dql+txt`)\n        \n        Accepts a `TABLE`-type Dataview query as a text string.  See [Dataview](https://blacksmithgu.github.io/obsidian-dataview/query/queries/)\'s query documentation for information on how to construct a query.\n        \n        # JsonLogic (`application/vnd.olrapi.jsonlogic+json`)\n        \n        Accepts a JsonLogic query specified as JSON.  See [JsonLogic](https://jsonlogic.com/operations.html)\'s documentation for information about the base set of operators available, but in addition to those operators the following operators are available:\n        \n        - `glob: [PATTERN, VALUE]`: Returns `true` if a string matches a glob pattern.  E.g.: `{"glob": ["*.foo", "bar.foo"]}` is `true` and `{"glob": ["*.bar", "bar.foo"]}` is `false`.\n        - `regexp: [PATTERN, VALUE]`: Returns `true` if a string matches a regular expression.  E.g.: `{"regexp": [".*\\.foo", "bar.foo"]` is `true` and `{"regexp": [".*\\.bar", "bar.foo"]}` is `false`.\n        \n        Returns only non-falsy results.  "Non-falsy" here treats the following values as "falsy":\n        \n        - `false`\n        - `null` or `undefined`\n        - `0`\n        - `[]`\n        - `{}`\n        \n        Files are represented as an object having the schema described\n        in the Schema named \'NoteJson\' at the bottom of this page.\n        Understanding the shape of a JSON object from a schema can be\n        tricky; so you may find it helpful to examine the generated metadata\n        for individual files in your vault to understand exactly what values\n        are returned.  To see that, access the `GET` `/vault/{filePath}`\n        route setting the header:\n        `Accept: application/vnd.olrapi.note+json`.  See examples below\n        for working examples of queries performing common search operations.\n      requestBody:\n        content:\n          "application/vnd.olrapi.dataview.dql+txt":\n            examples:\n              find_fields_by_tag:\n                summary: "List data from files having the #game tag."\n                value: |\n                  TABLE\n                    time-played AS "Time Played",\n                    length AS "Length",\n                    rating AS "Rating"\n                  FROM #game\n                  SORT rating DESC\n            schema:\n              externalDocs:\n                url: "https://blacksmithgu.github.io/obsidian-dataview/query/queries/"\n              type: "object"\n          "application/vnd.olrapi.jsonlogic+json":\n            examples:\n              find_by_frontmatter_url_glob:\n                summary: "Find notes having URL or a matching URL glob frontmatter field."\n                value: |\n                  {\n                    "or": [\n                      {"===": [{"var": "frontmatter.url"}, "https://myurl.com/some/path/"]},\n                      {"glob": [{"var": "frontmatter.url-glob"}, "https://myurl.com/some/path/"]}\n                    ]\n                  }\n              find_by_frontmatter_value:\n                summary: "Find notes having a certain frontmatter field value."\n                value: |\n                  {\n                    "==": [\n                      {"var": "frontmatter.myField"},\n                      "myValue"\n                    ]\n                  }\n              find_by_tag:\n                summary: "Find notes having a certain tag"\n                value: |\n                  {\n                    "in": [\n                      "myTag",\n                      {"var": "tags"}\n                    ]\n                  }\n            schema:\n              externalDocs:\n                url: "https://jsonlogic.com/operations.html"\n              type: "object"\n        required: true\n      responses:\n        "200":\n          content:\n            application/json:\n              schema:\n                items:\n                  properties:\n                    filename:\n                      description: "Path to the matching file"\n                      type: "string"\n                    result:\n                      oneOf:\n                        - type: "string"\n                        - type: "number"\n                        - items: {}\n                          type: "array"\n                        - type: "object"\n                        - type: "boolean"\n                  required:\n                    - "filename"\n                    - "result"\n                  type: "object"\n                type: "array"\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Bad request.  Make sure you have specified an acceptable\n            Content-Type for your search query.\n      summary: |\n        Search for documents matching a specified search query\n      tags:\n        - "Search"\n  /search/simple/:\n    post:\n      parameters:\n        - description: "Your search query"\n          in: "query"\n          name: "query"\n          required: true\n          schema:\n            type: "string"\n        - description: "How much context to return around the matching string"\n          in: "query"\n          name: "contextLength"\n          required: false\n          schema:\n            default: 100\n            type: "number"\n      responses:\n        "200":\n          content:\n            application/json:\n              schema:\n                items:\n                  properties:\n                    filename:\n                      description: "Path to the matching file"\n                      type: "string"\n                    matches:\n                      items:\n                        properties:\n                          context:\n                            type: "string"\n                          match:\n                            properties:\n                              end:\n                                type: "number"\n                              start:\n                                type: "number"\n                            required:\n                              - "start"\n                              - "end"\n                            type: "object"\n                        required:\n                          - "match"\n                          - "context"\n                        type: "object"\n                      type: "array"\n                    score:\n                      type: "number"\n                  type: "object"\n                type: "array"\n          description: "Success"\n      summary: |\n        Search for documents matching a specified text query\n      tags:\n        - "Search"\n  /vault/:\n    get:\n      description: |\n        Lists files in the root directory of your vault.\n        \n        Note: that this is exactly the same API endpoint as the below "List files that exist in the specified directory." and exists here only due to a quirk of this particular interactive tool.\n      responses:\n        "200":\n          content:\n            application/json:\n              example:\n                files:\n                  - "mydocument.md"\n                  - "somedirectory/"\n              schema:\n                properties:\n                  files:\n                    items:\n                      type: "string"\n                    type: "array"\n                type: "object"\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Directory does not exist"\n      summary: |\n        List files that exist in the root of your vault.\n      tags:\n        - "Vault Directories"\n  "/vault/{filename}":\n    delete:\n      parameters:\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      responses:\n        "204":\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "File does not exist."\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Delete a particular file in your vault.\n      tags:\n        - "Vault Files"\n    get:\n      description: |\n        Returns the content of the file at the specified path in your vault should the file exist.\n        \n        If you specify the header `Accept: application/vnd.olrapi.note+json`, will return a JSON representation of your note including parsed tag and frontmatter data as well as filesystem metadata.\n        \n        If you specify the header `Accept: application/vnd.olrapi.document-map+json`, will return a JSON object outlining what PATCH targets exist.  See "responses" below for details.\n      parameters:\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      responses:\n        "200":\n          content:\n            "application/vnd.olrapi.document-map+json":\n              schema:\n                properties:\n                  blocks:\n                    example:\n                      - "^blockref1"\n                      - "^anotherBlockRef"\n                    items:\n                      type: "string"\n                    type: "array"\n                  frontmatterFields:\n                    example:\n                      - "title"\n                      - "tags"\n                      - "dateCreated"\n                    items:\n                      type: "string"\n                    type: "array"\n                  headings:\n                    example:\n                      - "# Heading 1"\n                      - "## Heading 2"\n                    items:\n                      type: "string"\n                    type: "array"\n                type: "object"\n            "application/vnd.olrapi.note+json":\n              schema:\n                "$ref": "#/components/schemas/NoteJson"\n            text/markdown:\n              schema:\n                example: |\n                  # This is my document\n                  \n                  something else here\n                type: "string"\n          description: "Success"\n        "404":\n          description: "File does not exist"\n      summary: |\n        Return the content of a single file in your vault.\n      tags:\n        - "Vault Files"\n    patch:\n      description: |\n        Inserts content into an existing note relative to a heading, block refeerence, or frontmatter field within that document.\n        \n        Allows you to modify the content relative to a heading, block reference, or frontmatter field in your document.\n        \n        Note that this API was changed in Version 3.0 of this extension and the earlier PATCH API is now deprecated. Requests made using the previous version of this API will continue to work until Version 4.0 is released.  See https://github.com/coddingtonbear/obsidian-local-rest-api/wiki/Changes-to-PATCH-requests-between-versions-2.0-and-3.0 for more details and migration instructions.\n        \n        # Examples\n        \n        All of the below examples assume you have a document that looks like\n        this:\n        \n        ```markdown\n        ---\n        alpha: 1\n        beta: test\n        delta:\n        zeta: 1\n        yotta: 1\n        gamma:\n        - one\n        - two\n        ---\n        \n        # Heading 1\n        \n        This is the content for heading one\n        \n        Also references some [[#^484ef2]]\n        \n        ## Subheading 1:1\n        Content for Subheading 1:1\n        \n        ### Subsubheading 1:1:1\n        \n        ### Subsubheading 1:1:2\n        \n        Testing how block references work for a table.[[#^2c7cfa]]\n        Some content for Subsubheading 1:1:2\n        \n        More random text.\n        \n        ^2d9b4a\n        \n        ## Subheading 1:2\n        \n        Content for Subheading 1:2.\n        \n        some content with a block reference ^484ef2\n        \n        ## Subheading 1:3\n        | City         | Population |\n        | ------------ | ---------- |\n        | Seattle, WA  | 8          |\n        | Portland, OR | 4          |\n        \n        ^2c7cfa\n        ```\n        \n        ## Append, Prepend, or Replace Content Below a Heading\n        \n        If you wanted to append the content "Hello" below "Subheading 1:1:1" under "Heading 1",\n        you could send a request with the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `heading`\n        - `Target`: `Heading 1::Subheading 1:1:1`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append, Prepend, or Replace Content to a Block Reference\n        \n        If you wanted to append the content "Hello" below the block referenced by\n        "2d9b4a" above ("More random text."), you could send the following headers:\n        \n        - `Operation`: `append`\n        - `Target-Type`: `block`\n        - `Target`: `2d9b4a`\n        - with the request body: `Hello`\n        \n        The above would work just fine for `prepend` or `replace`, too, of course,\n        but with different results.\n        \n        ## Append, Prepend, or Replace a Row or Rows to/in a Table Referenced by a Block Reference\n        \n        If you wanted to add a new city ("Chicago, IL") and population ("16") pair to the table above\n        referenced by the block reference `2c7cfa`, you could send the following\n        headers:\n        \n        - `Operation`: `append`\n        - `TargetType`: `block`\n        - `Target`: `2c7cfa`\n        - `Content-Type`: `application/json`\n        - with the request body: `[["Chicago, IL", "16"]]`\n        \n        The use of a `Content-Type` of `application/json` allows the API\n        to infer that member of your array represents rows and columns of your\n        to append to the referenced table.  You can of course just use a\n        `Content-Type` of `text/markdown`, but in such a case you\'ll have to\n        format your table row manually instead of letting the library figure\n        it out for you.\n        \n        You also have the option of using `prepend` (in which case, your new\n        row would be the first -- right below the table heading) or `replace` (in which\n        case all rows except the table heading would be replaced by the new row(s)\n        you supplied).\n        \n        ## Setting a Frontmatter Field\n        \n        If you wanted to set the frontmatter field `alpha` to `2`, you could\n        send the following headers:\n        \n        - `Operation`: `replace`\n        - `TargetType`: `frontmatter`\n        - `Target`: `beep`\n        - with the request body `2`\n        \n        If you\'re setting a frontmatter field that might not already exist\n        you may want to use the `Create-Target-If-Missing` header so the\n        new frontmatter field is created and set to your specified value\n        if it doesn\'t already exist.\n        \n        You may find using a `Content-Type` of `application/json` to be\n        particularly useful in the case of frontmatter since frontmatter\n        fields\' values are JSON data, and the API can be smarter about\n        interpreting yoru `prepend` or `append` requests if you specify\n        your data as JSON (particularly when appending, for example,\n        list items).\n        \n        ## Identifying Patch Targets in a File\n        \n        You can issue a GET request to `/files/{path}` with an `Accept` header\n        of `application/vnd.olrapi.document-map+json` to get a JSON object\n        outlining what headings, block references, and frontmatter fields exist.\n      parameters:\n        - description: "Patch operation to perform"\n          in: "header"\n          name: "Operation"\n          required: true\n          schema:\n            enum:\n              - "append"\n              - "prepend"\n              - "replace"\n            type: "string"\n        - description: "Type of target to patch"\n          in: "header"\n          name: "Target-Type"\n          required: true\n          schema:\n            enum:\n              - "heading"\n              - "block"\n              - "frontmatter"\n            type: "string"\n        - description: "Delimiter to use for nested targets (i.e. Headings)"\n          in: "header"\n          name: "Target-Delimiter"\n          required: false\n          schema:\n            default: "::"\n            type: "string"\n        - description: |\n            Target to patch; this value can be URL-Encoded and *must*\n            be URL-Encoded if it includes non-ASCII characters.\n          in: "header"\n          name: "Target"\n          required: true\n          schema:\n            type: "string"\n        - description: "Trim whitespace from Target before applying patch?"\n          in: "header"\n          name: "Trim-Target-Whitespace"\n          required: false\n          schema:\n            default: "false"\n            enum:\n              - "true"\n              - "false"\n            type: "string"\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      requestBody:\n        content:\n          application/json:\n            schema:\n              example: "[\'one\', \'two\']"\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to insert."\n        required: true\n      responses:\n        "200":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request; see response message for details."\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Does not exist"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Partially update content in an existing note.\n      tags:\n        - "Vault Files"\n    post:\n      description: |\n        Appends content to the end of an existing note. If the specified file does not yet exist, it will be created as an empty file.\n        \n        If you would like to insert text relative to a particular heading, block reference, or frontmatter field instead of appending to the end of the file, see \'patch\'.\n      parameters:\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      requestBody:\n        content:\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content you would like to append."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Bad Request"\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Append content to a new or existing file.\n      tags:\n        - "Vault Files"\n    put:\n      description: |\n        Creates a new file in your vault or updates the content of an existing one if the specified file already exists.\n      parameters:\n        - description: |\n            Path to the relevant file (relative to your vault root).\n          in: "path"\n          name: "filename"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      requestBody:\n        content:\n          "*/*":\n            schema:\n              type: "string"\n          text/markdown:\n            schema:\n              example: |\n                # This is my document\n                \n                something else here\n              type: "string"\n        description: "Content of the file you would like to upload."\n        required: true\n      responses:\n        "204":\n          description: "Success"\n        "400":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Incoming file could not be processed.  Make sure you have specified a reasonable file name, and make sure you have set a reasonable \'Content-Type\' header; if you are uploading a note, \'text/markdown\' is likely the right choice.\n        "405":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: |\n            Your path references a directory instead of a file; this request method is valid only for updating files.\n      summary: |\n        Create a new file in your vault or update the content of an existing one.\n      tags:\n        - "Vault Files"\n  "/vault/{pathToDirectory}/":\n    get:\n      parameters:\n        - description: |\n            Path to list files from (relative to your vault root).  Note that empty directories will not be returned.\n            \n            Note: this particular interactive tool requires that you provide an argument for this field, but the API itself will allow you to list the root folder of your vault. If you would like to try listing content in the root of your vault using this interactive tool, use the above "List files that exist in the root of your vault" form above.\n          in: "path"\n          name: "pathToDirectory"\n          required: true\n          schema:\n            format: "path"\n            type: "string"\n      responses:\n        "200":\n          content:\n            application/json:\n              example:\n                files:\n                  - "mydocument.md"\n                  - "somedirectory/"\n              schema:\n                properties:\n                  files:\n                    items:\n                      type: "string"\n                    type: "array"\n                type: "object"\n          description: "Success"\n        "404":\n          content:\n            application/json:\n              schema:\n                "$ref": "#/components/schemas/Error"\n          description: "Directory does not exist"\n      summary: |\n        List files that exist in the specified directory.\n      tags:\n        - "Vault Directories"\nsecurity:\n  - apiKeyAuth: []\nservers:\n  - description: "HTTPS (Secure Mode)"\n    url: "https://{host}:{port}"\n    variables:\n      host:\n        default: "127.0.0.1"\n        description: "Binding host"\n      port:\n        default: "27124"\n        description: "HTTPS port"\n  - description: "HTTP (Insecure Mode)"\n    url: "http://{host}:{port}"\n    variables:\n      host:\n        default: "127.0.0.1"\n        description: "Binding host"\n      port:\n        default: "27123"\n        description: "HTTP port"\n';
 
 // src/requestHandler.ts
 var RequestHandler = class {
@@ -57781,8 +57076,8 @@ var RequestHandler = class {
     return api;
   }
   requestIsAuthenticated(req) {
-    var _a;
-    const authorizationHeader = req.get((_a = this.settings.authorizationHeaderName) != null ? _a : "Authorization");
+    var _a2;
+    const authorizationHeader = req.get((_a2 = this.settings.authorizationHeaderName) != null ? _a2 : "Authorization");
     if (authorizationHeader === `Bearer ${this.settings.apiKey}`) {
       return true;
     }
@@ -57804,11 +57099,22 @@ var RequestHandler = class {
       next();
     });
   }
+  getDocumentMapObject(file) {
+    return __async(this, null, function* () {
+      const content = yield this.app.vault.adapter.read(file.path);
+      const documentMap = (0, import_markdown_patch.getDocumentMap)(content);
+      return {
+        headings: Object.keys(documentMap.heading).filter((h) => h).map((h) => h.split("").join("::")),
+        blocks: Object.keys(documentMap.block),
+        frontmatterFields: Object.keys(documentMap.frontmatter)
+      };
+    });
+  }
   getFileMetadataObject(file) {
     return __async(this, null, function* () {
-      var _a, _b, _c;
+      var _a2, _b, _c;
       const cache = this.app.metadataCache.getFileCache(file);
-      const frontmatter = __spreadValues({}, (_a = cache.frontmatter) != null ? _a : {});
+      const frontmatter = __spreadValues({}, (_a2 = cache.frontmatter) != null ? _a2 : {});
       delete frontmatter.position;
       const directTags = (_c = ((_b = cache.tags) != null ? _b : []).filter((tag) => tag).map((tag) => tag.tag)) != null ? _c : [];
       const frontmatterTags = Array.isArray(frontmatter.tags) ? frontmatter.tags : [];
@@ -57906,6 +57212,11 @@ var RequestHandler = class {
             const file = this.app.vault.getAbstractFileByPath(path2);
             res.setHeader("Content-Type", ContentTypes.olrapiNoteJson);
             res.send(JSON.stringify(yield this.getFileMetadataObject(file), null, 2));
+            return;
+          } else if (req.headers.accept === ContentTypes.olrapiDocumentMap) {
+            const file = this.app.vault.getAbstractFileByPath(path2);
+            res.setHeader("Content-Type", ContentTypes.olrapiNoteJson);
+            res.send(JSON.stringify(yield this.getDocumentMapObject(file), null, 2));
             return;
           }
           res.send(Buffer.from(content));
@@ -58389,24 +57700,53 @@ var RequestHandler = class {
   }
   searchSimplePost(req, res) {
     return __async(this, null, function* () {
-      var _a;
       const results = [];
       const query = req.query.query;
-      const contextLength = (_a = parseInt(req.query.contextLength, 10)) != null ? _a : 100;
-      const search = (0, import_obsidian.prepareSimpleSearch)(query);
+      if (!(typeof query === "string")) {
+        return this.returnCannedResponse(res, {
+          message: "A single '?query=' parameter is required.",
+          errorCode: ErrorCode.InvalidSearch
+        });
+      }
+      const contextLengthRaw = parseInt(req.query.contextLength, 10);
+      const contextLength = Number.isNaN(contextLengthRaw) ? 100 : contextLengthRaw;
+      let search;
+      try {
+        search = (0, import_obsidian.prepareSimpleSearch)(query);
+      } catch (e) {
+        console.error("Could not prepare simple search: ", e);
+        return this.returnCannedResponse(res, {
+          message: `${e}`,
+          errorCode: ErrorCode.ErrorPreparingSimpleSearch
+        });
+      }
       for (const file of this.app.vault.getMarkdownFiles()) {
         const cachedContents = yield this.app.vault.cachedRead(file);
-        const result = search(cachedContents);
+        const filenamePrefix = file.basename + "\n\n";
+        const result = search(filenamePrefix + cachedContents);
+        const positionOffset = filenamePrefix.length;
         if (result) {
           const contextMatches = [];
           for (const match of result.matches) {
-            contextMatches.push({
-              match: {
-                start: match[0],
-                end: match[1]
-              },
-              context: cachedContents.slice(Math.max(match[0] - contextLength, 0), match[1] + contextLength)
-            });
+            if (match[0] < positionOffset && match[1] <= positionOffset) {
+              contextMatches.push({
+                match: {
+                  start: match[0],
+                  end: Math.min(match[1], file.basename.length),
+                  source: "filename"
+                },
+                context: file.basename
+              });
+            } else if (match[0] >= positionOffset) {
+              contextMatches.push({
+                match: {
+                  start: match[0] - positionOffset,
+                  end: match[1] - positionOffset,
+                  source: "content"
+                },
+                context: cachedContents.slice(Math.max(match[0] - positionOffset - contextLength, 0), match[1] - positionOffset + contextLength)
+              });
+            }
           }
           results.push({
             filename: file.path,
@@ -58415,7 +57755,7 @@ var RequestHandler = class {
           });
         }
       }
-      results.sort((a, b) => a.score > b.score ? 1 : -1);
+      results.sort((a, b2) => a.score > b2.score ? 1 : -1);
       res.json(results);
     });
   }
@@ -58477,9 +57817,14 @@ var RequestHandler = class {
         })
       };
       const contentType = req.headers["content-type"];
-      if (!handlers[contentType]) {
+      if (!contentType) {
         this.returnCannedResponse(res, {
           errorCode: ErrorCode.ContentTypeSpecificationRequired
+        });
+        return;
+      } else if (!handlers[contentType]) {
+        this.returnCannedResponse(res, {
+          errorCode: ErrorCode.InvalidContentType
         });
         return;
       }
@@ -58720,12 +58065,12 @@ var LocalRestApi = class extends import_obsidian2.Plugin {
     };
   }
   _refreshServerState() {
-    var _a, _b, _c, _d, _e;
+    var _a2, _b, _c, _d, _e2;
     if (this.secureServer) {
       this.secureServer.close();
       this.secureServer = null;
     }
-    if ((_a = this.settings.enableSecureServer) != null ? _a : true) {
+    if ((_a2 = this.settings.enableSecureServer) != null ? _a2 : true) {
       this.secureServer = https.createServer({
         key: this.settings.crypto.privateKey,
         cert: this.settings.crypto.cert
@@ -58740,7 +58085,7 @@ var LocalRestApi = class extends import_obsidian2.Plugin {
     if (this.settings.enableInsecureServer) {
       this.insecureServer = http2.createServer(this.requestHandler.api);
       this.insecureServer.listen(this.settings.insecurePort, (_d = this.settings.bindingHost) != null ? _d : DefaultBindingHost);
-      console.log(`[REST API] Listening on http://${(_e = this.settings.bindingHost) != null ? _e : DefaultBindingHost}:${this.settings.insecurePort}/`);
+      console.log(`[REST API] Listening on http://${(_e2 = this.settings.bindingHost) != null ? _e2 : DefaultBindingHost}:${this.settings.insecurePort}/`);
     }
   }
   onunload() {
@@ -58769,7 +58114,7 @@ var LocalRestApiSettingTab = class extends import_obsidian2.PluginSettingTab {
     this.plugin = plugin;
   }
   display() {
-    var _a;
+    var _a2;
     const { containerEl } = this;
     containerEl.replaceChildren();
     const parsedCertificate = import_node_forge2.default.pki.certificateFromPem(this.plugin.settings.crypto.cert);
@@ -58861,7 +58206,7 @@ var LocalRestApiSettingTab = class extends import_obsidian2.PluginSettingTab {
     });
     apiKeyDiv.createEl("pre", {
       text: `GET /vault/ HTTP/1.1
-${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorization"}: Bearer ${this.plugin.settings.apiKey}`
+${(_a2 = this.plugin.settings.authorizationHeaderName) != null ? _a2 : "Authorization"}: Bearer ${this.plugin.settings.apiKey}`
     });
     const seeMore = apiKeyDiv.createEl("p");
     seeMore.innerHTML = `
@@ -58984,7 +58329,7 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
           but may find it useful to turn this switch off for
           troubleshooting.
         `).addToggle((cb) => {
-        var _a2;
+        var _a3;
         return cb.onChange((value) => {
           const originalValue = this.plugin.settings.enableSecureServer;
           this.plugin.settings.enableSecureServer = value;
@@ -58993,7 +58338,7 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
           if (value !== originalValue) {
             this.display();
           }
-        }).setValue((_a2 = this.plugin.settings.enableSecureServer) != null ? _a2 : true);
+        }).setValue((_a3 = this.plugin.settings.enableSecureServer) != null ? _a3 : true);
       });
       new import_obsidian2.Setting(containerEl).setName("Encrypted (HTTPS) Server Port").setDesc("This configures the port on which your REST API will listen for HTTPS connections.  It is recommended that you leave this port with its default setting as tools integrating with this API may expect the default port to be in use.  Under no circumstances is it recommended that you expose this service directly to the internet.").addText((cb) => cb.onChange((value) => {
         this.plugin.settings.port = parseInt(value, 10);
@@ -59041,7 +58386,7 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
         this.plugin.refreshServerState();
       }).setValue(this.plugin.settings.crypto.privateKey));
       new import_obsidian2.Setting(containerEl).setName("Authorization Header").addText((cb) => {
-        var _a2;
+        var _a3;
         cb.onChange((value) => {
           if (value !== DefaultBearerTokenHeaderName) {
             this.plugin.settings.authorizationHeaderName = value;
@@ -59050,10 +58395,10 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
           }
           this.plugin.saveSettings();
           this.plugin.refreshServerState();
-        }).setValue((_a2 = this.plugin.settings.authorizationHeaderName) != null ? _a2 : DefaultBearerTokenHeaderName);
+        }).setValue((_a3 = this.plugin.settings.authorizationHeaderName) != null ? _a3 : DefaultBearerTokenHeaderName);
       });
       new import_obsidian2.Setting(containerEl).setName("Binding Host").addText((cb) => {
-        var _a2;
+        var _a3;
         cb.onChange((value) => {
           if (value !== DefaultBindingHost) {
             this.plugin.settings.bindingHost = value;
@@ -59062,7 +58407,7 @@ ${(_a = this.plugin.settings.authorizationHeaderName) != null ? _a : "Authorizat
           }
           this.plugin.saveSettings();
           this.plugin.refreshServerState();
-        }).setValue((_a2 = this.plugin.settings.bindingHost) != null ? _a2 : DefaultBindingHost);
+        }).setValue((_a3 = this.plugin.settings.bindingHost) != null ? _a3 : DefaultBindingHost);
       });
     }
   }
