@@ -58,4 +58,10 @@ used to train on a massive text dataset to produce a pretrained model (Encoder o
 **Natural Language Processing**:  Is a field focused in processing human language, Enabling machines to understand and generate text, audio and video.
 ![[Pasted image 20260113114749.png]]
 **Applications**:
-- Senti
+- Sentiment Analysis.
+- Translation.
+- Question answering.
+- Information retrieval.
+
+**Sources To Learn**:
+
