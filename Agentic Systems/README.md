@@ -5,7 +5,7 @@ This directory will be a  knowledge reference for `Agentic Systems`, Sharing tea
 ## Prerequisites 
 
 ### 1. ML
-![[Pasted image 20260113103946.png]]
+![[Pasted image 20260113112932.png]]
 **Machine Learning (ML)**: Is a subset of AI in which system learns patterns from data instead of being explicitly programmed.
 
 **Applications**:
