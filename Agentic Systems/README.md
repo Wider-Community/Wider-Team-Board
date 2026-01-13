@@ -34,7 +34,7 @@ This directory will be a  knowledge reference for `Agentic Systems`, Sharing tea
 ### 3. Transformers
 **Transformers**: Are a **neural network architecture**  presented in (2017) "Attention is all you need".
 used to train on a massive text dataset to produce a pretrained model (Encoder or Decoder or Both).
-![[Pasted image 20260113111530.png]]
+![[Pasted image 20260113114600.png]]
 **Applications**:
 - Encoder:
 	- Text Embeddings (Semantic Search)
