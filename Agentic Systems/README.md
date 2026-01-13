@@ -5,7 +5,7 @@ This directory will be a  knowledge reference for `Agentic Systems`, Sharing tea
 ## Prerequisites 
 
 ### 1. ML
-![[assets/ml.png]]
+![ml-pipeline](assets/ml.png)
 **Machine Learning (ML)**: Is a subset of AI in which system learns patterns from data instead of being explicitly programmed.
 
 **Applications**:
@@ -18,7 +18,7 @@ This directory will be a  knowledge reference for `Agentic Systems`, Sharing tea
 2. [Machine Learning Complete Course (Arabic)](https://www.youtube.com/watch?v=GJ9-u3ySTmQ)
 
 ### 2. DL
-![[dl.png]]
+![dl-pipeline](assets/dl.png)
 **Deep Learning (DL)** : Is a subset of Machine learning uses **neural networks with many layers** to automatically learn features.
 
 **Applications**: 
@@ -34,7 +34,7 @@ This directory will be a  knowledge reference for `Agentic Systems`, Sharing tea
 ### 3. Transformers
 **Transformers**: Are a **neural network architecture**  presented in (2017) "Attention is all you need".
 used to train on a massive text dataset to produce a pretrained model (Encoder or Decoder or Both).
-![[transformer.png]]
+![transformers](assets/transformer.png)
 **Applications**:
 - Encoder:
 	- Text Embeddings (Semantic Search)
@@ -56,7 +56,7 @@ used to train on a massive text dataset to produce a pretrained model (Encoder o
 
 ### 4. NLP
 **Natural Language Processing**:  Is a field focused in processing human language, Enabling machines to understand and generate text, audio and video.
-![[nlp.png]]
+![nlp](assets/nlp.png)
 **Applications**:
 - Sentiment Analysis.
 - Translation.
