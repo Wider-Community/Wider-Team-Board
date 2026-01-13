@@ -1,20 +1,31 @@
 ## Overview
-this directory will be a  knowledge reference for Agentic Systems, Sharing team knowledge and open-source code with diagrams, explaining various concepts and common problems in real-world, from this knowledge reference you will be able to learn agentic systems from the beginning to deploy your Agentic workflow. 
+This directory will be a  knowledge reference for `Agentic Systems`, Sharing team knowledge and open-source code with diagrams, explaining various concepts and common problems in real-world, from this knowledge reference you will be able to learn agentic systems from the beginning to deploy your Agentic workflow into production. 
 
 ----------------
-## You must Know
+## Prerequisites 
 
 ### 1. ML
 ![[Pasted image 20260113103946.png]]
 **Machine Learning (ML)**: Is a subset of AI in which system learns patterns from data instead of being explicitly programmed.
+
 **Applications**:
 - Email Spam Detection.
 - Customers Groups Clustering.
 - Recommendation systems
+
 **Sources To Learn:**
 1. [Machine Learning Specialization By Andrew Ng.](https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI)
 2. [Machine Learning Complete Course (Arabic)](https://www.youtube.com/watch?v=GJ9-u3ySTmQ)
 
 ### 2. DL
 ![[Pasted image 20260113105218.png]]
-**Deep Learning (DL)**
+**Deep Learning (DL)** : Is a subset of Machine learning uses **neural networks with many layers** to automatically learn features.
+
+**Applications**: 
+- Image recognition
+- Speech recognition
+
+**Sources To Learn:**
+
+1. [Deep Learning Crash Course](https://www.youtube.com/watch?v=VyWAvY2CF9c)
+2. 
