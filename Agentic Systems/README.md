@@ -18,7 +18,7 @@ This directory will be a  knowledge reference for `Agentic Systems`, Sharing tea
 2. [Machine Learning Complete Course (Arabic)](https://www.youtube.com/watch?v=GJ9-u3ySTmQ)
 
 ### 2. DL
-![[Pasted image 20260113105218.png]]
+![[Pasted image 20260113113813.png]]
 **Deep Learning (DL)** : Is a subset of Machine learning uses **neural networks with many layers** to automatically learn features.
 
 **Applications**: 
