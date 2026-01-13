@@ -50,4 +50,9 @@ used to train on a massive text dataset to produce a pretrained model (Encoder o
 
 **Sources To Learn**:
 1. [Transformers by Abu Bakr Soliman](https://www.youtube.com/watch?v=6JGzwI2pNfo&t=3303s)
-2. [Transformers by](https://www.youtube.com/playlist?list=PLyhJeMedQd9R7u-Dcgh1Zs-DjrAecEPm-)
+2. [Transformers by Ahmed ibrahim](https://www.youtube.com/playlist?list=PLyhJeMedQd9R7u-Dcgh1Zs-DjrAecEPm-)
+3. [Transformers Visualized by 3Blue1Brown ](https://www.youtube.com/watch?v=wjZofJX0v4M&t=263s)
+4. [Transformers by Stanford](https://www.youtube.com/watch?v=Ub3GoFaUcds)
+
+### 4. NLP
+**Natural Language Processing**:  Is a field focused in processing human language, Enabling machines to understand and generate text, audio and video.
