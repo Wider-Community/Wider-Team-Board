@@ -71,5 +71,7 @@ used to train on a massive text dataset to produce a pretrained model (Encoder o
 **Sources To Learn**:
 1. [NLP by codebasics](https://youtube.com/playlist?list=PLeo1K3hjS3uuvuAXhYjV2lMEShq2UYSwX&si=uUqYpO3jFc8F1QqJ)
 2. [NLP by Ahmed Ibrahim](https://youtube.com/playlist?list=PLyhJeMedQd9Sra0zQp655r7yssu468fie&si=kY6yopeU5kIaW20r)
-3. 
+3. [NLP by edureka](https://www.youtube.com/watch?v=Rj-OtK2n5jU&t=5240s)
+
+
 
