@@ -56,3 +56,6 @@ used to train on a massive text dataset to produce a pretrained model (Encoder o
 
 ### 4. NLP
 **Natural Language Processing**:  Is a field focused in processing human language, Enabling machines to understand and generate text, audio and video.
+![[Pasted image 20260113114749.png]]
+**Applications**:
+- Senti
