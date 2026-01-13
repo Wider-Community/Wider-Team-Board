@@ -28,4 +28,8 @@ This directory will be a  knowledge reference for `Agentic Systems`, Sharing tea
 **Sources To Learn:**
 
 1. [Deep Learning Crash Course](https://www.youtube.com/watch?v=VyWAvY2CF9c)
-2. 
+2. [Deep Learning Full Course by edureka](https://www.youtube.com/watch?v=DooxDIRAkPA)
+3. [Introduction to Artificial Neural Networks and Deep Learning (Arabic)](https://youtube.com/playlist?list=PLhx4zaYkEjI9kTHTV34iQqRcFoO8RvuxV&si=MqKodIpmhOPSbm60)
+
+### 3. Transfo
+
