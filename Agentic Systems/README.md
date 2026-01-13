@@ -1,6 +1,7 @@
 ## Overview
 this directory will be a  knowledge reference for Agentic Systems, Sharing team knowledge and open-source code with diagrams, explaining various concepts and common problems in real-world, from this knowledge reference you will be able to learn agentic systems from the beginning to deploy your Agentic workflow. 
 
+----------------
 ## You must Know
 
 ### 1. ML
@@ -11,4 +12,9 @@ this directory will be a  knowledge reference for Agentic Systems, Sharing team 
 - Customers Groups Clustering.
 - Recommendation systems
 **Sources To Learn:**
-1. 
+1. [Machine Learning Specialization By Andrew Ng.](https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI)
+2. [Machine Learning Complete Course (Arabic)](https://www.youtube.com/watch?v=GJ9-u3ySTmQ)
+
+### 2. DL
+![[Pasted image 20260113105218.png]]
+**Deep Learning (DL)**
