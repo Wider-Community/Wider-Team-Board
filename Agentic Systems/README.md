@@ -31,5 +31,5 @@ This directory will be a  knowledge reference for `Agentic Systems`, Sharing tea
 2. [Deep Learning Full Course by edureka](https://www.youtube.com/watch?v=DooxDIRAkPA)
 3. [Introduction to Artificial Neural Networks and Deep Learning (Arabic)](https://youtube.com/playlist?list=PLhx4zaYkEjI9kTHTV34iQqRcFoO8RvuxV&si=MqKodIpmhOPSbm60)
 
-### 3. Transfo
-
+### 3. Transformers
+**Transformers**: Are a **neural network architecture**  presented in (2017) "Attention is all you need".
