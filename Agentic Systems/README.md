@@ -2,7 +2,7 @@
 This directory will be a  knowledge reference for `Agentic Systems`, Sharing team knowledge and open-source code with diagrams, explaining various concepts and common problems in real-world, from this knowledge reference you will be able to learn agentic systems from the beginning to deploy your Agentic workflow into production. 
 
 
-> *Note: When you start to solve a real-world problem you don't use LLMs as a default solution, You need to find an optimal and easy approach first, it can be rule-based, or ML, or DL, if it's too complex you can start to use LLMs.*
+> ***Note:** When addressing a real-world problem, LLMs should not be the default choice. Start by identifying the simplest and most effective solution—such as a rule-based system, traditional ML, or deep learning. Only consider LLMs when the problem’s complexity genuinely requires them.*
 
 ----------------
 ## Prerequisites 
