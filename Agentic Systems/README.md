@@ -37,4 +37,17 @@ used to train on a massive text dataset to produce a pretrained model (Encoder o
 ![[Pasted image 20260113111530.png]]
 **Applications**:
 - Encoder:
--
+	- Text Embeddings (Semantic Search)
+	- Token labeling (NER).
+	- Classification.
+	- Example : BERT Model
+- Decoder:
+	- Predict next word.
+	- Language models like GPT
+- Encoder + Decoder:
+	- Text summarization 
+	- Translation 
+
+**Sources To Learn**:
+1. [Transformers by Abu Bakr Soliman](https://www.youtube.com/watch?v=6JGzwI2pNfo&t=3303s)
+2. [Transformers by](https://www.youtube.com/playlist?list=PLyhJeMedQd9R7u-Dcgh1Zs-DjrAecEPm-)
