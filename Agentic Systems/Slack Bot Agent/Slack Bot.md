@@ -10,9 +10,16 @@ this will be a guide to configure your own `slack bot` using python and add it t
  - Enter your **App Name** and pick a **Workspace**.
 
 ## 2. Configure Scopes 
-**Bot token scopes**: this scope give the bot permissions on your **Workspace** like 
-- reading 
-- writing
-- managing
+1. **Bot token scopes**: this scope give the bot permissions on your **Workspace** like 
+	- reading 
+	- writing
+	- managing
 ![](slack2.png)
 *For now I will use only app_mentions:read*
+
+1. **User token scopes**: this score give use permission to control your bot like:
+	1. Adding to channel
+	2. removing from channel
+	3. mention
+	4. direct messages.
+![[slack3.png]]
