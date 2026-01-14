@@ -42,8 +42,6 @@ The agent operates primarily through **Slack channels, threads, and DMs**, actin
 - Generates a **daily standup summary**
     
 
-Inspired by existing tools like Geekbot, but designed to be **customizable and LLM-driven**.
-
 ---
 
 ### 2. Daily Updates Collection
