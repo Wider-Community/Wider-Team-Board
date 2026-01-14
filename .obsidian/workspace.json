@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Agentic Systems/README.md",
+                "file": "Agentic Systems/Slack Bot Agent/Slack Bot.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Slack Bot"
             }
           }
         ]
@@ -173,12 +173,16 @@
   },
   "active": "11563e701a060038",
   "lastOpenFiles": [
+    "Agentic Systems/assets/slack1.png",
+    "Agentic Systems/Slack Bot Agent/Slack Bot.md",
+    "Agentic Systems/assets/Untitled.md",
+    "Agentic Systems/README.md",
+    "Agentic Systems/Slack Bot Agent",
     "Agentic Systems/assets/nlp.png",
     "Agentic Systems/assets/nlp.png",
     "Agentic Systems/assets/transformer.png",
     "Agentic Systems/assets/dl.png",
     "Agentic Systems/assets/ml.png",
-    "Agentic Systems/README.md",
     "Agentic Systems/assets/Pasted image 20260113112932.png",
     "Agentic Systems/assets/Pasted image 20260113111530.png",
     "Agentic Systems/assets/Pasted image 20260113105218.png",
@@ -205,7 +209,6 @@
     "Untitled.md",
     "Untitled.canvas",
     "Untitled.base",
-    "Simple Program Flowchart.canvas.tmp.4904.1764585233579",
     "Phase 4 - Testing/Accuracy, Quality Test.md",
     "Phase 3 - Implementation/Utitlites.md",
     "Phase 3 - Implementation/Secondary Models.md",
@@ -220,8 +223,6 @@
     "AI_AGENT_IMPLEMENTATION_PROMPT.md",
     "Phase 1 - Requirement Analysis/Expected Outputs.md",
     "Phase 1 - Requirement Analysis/System Inputs.md",
-    "Phase 1 - Requirement Analysis/Project Goal.md",
-    "Phase 2 - System Design/Data Processing Flow Design.md",
     "New canvas.canvas",
     "ProcessWorkflow (1).canvas",
     "ProcessWorkflow.canvas",
