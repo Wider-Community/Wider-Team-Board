@@ -30,7 +30,7 @@ Automation enhanced with **AI models** for perception or prediction.
 - Example: Auto-classifying emails, OCR → rules → action
     
 
-**
+*Like spam detection classifier. when an email is received it classify it automatically without telling you. it just happens in the background in a fixed steps*
 
 ---
 
@@ -61,6 +61,8 @@ A **structured sequence of tasks** with defined transitions.
     
 - Example: DAGs, BPMN, Airflow pipelines
     
+
+**Like a customer support email, responsible for answering user query from the company database or provided knowledge base. it process th**
 
 ---
 
