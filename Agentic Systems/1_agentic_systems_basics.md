@@ -1,6 +1,6 @@
 # Overview
 
-This 
+This will be your start point to understand Agentic System, you need to understand each concept in this file, use any sources you need.
 
 ---
 
@@ -13,7 +13,9 @@ Rule-based execution of predefined steps.
 - Follows fixed logic (if-this-then-that)
     
 - Example: Cron jobs, RPA scripts, ETL pipelines
-    
+
+
+*Like turning on/off a led, you just need to click the button and the electricity will flow into the wire to turn on your led*
 
 ---
 
@@ -27,6 +29,8 @@ Automation enhanced with **AI models** for perception or prediction.
     
 - Example: Auto-classifying emails, OCR → rules → action
     
+
+**
 
 ---
 
@@ -71,25 +75,3 @@ A system composed of **one or more AI agents** orchestrated together.
 - Dynamic control flow (not fixed like workflows)
     
 
----
-
-### **One-line Comparison**
-
-- **Workflow** → fixed path
-    
-- **Automation** → rule execution
-    
-- **AI Automation** → rules + AI
-    
-- **AI Agent** → autonomous decision-maker
-    
-- **Agentic System** → coordinated intelligent agents
-    
-
-If you want, I can also give:
-
-- a **diagram**
-    
-- a **real-world example**
-    
-- or a **comparison table for interviews**
