@@ -14,6 +14,7 @@ this will be a guide to configure your own `slack bot` using python and add it t
 	- reading 
 	- writing
 	- managing
+
 ![](../assets/slack2.png)
 *For now I will use only app_mentions:read*
 
