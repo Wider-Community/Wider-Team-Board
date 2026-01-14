@@ -145,8 +145,12 @@ The agent operates primarily through **Slack channels, threads, and DMs**, actin
 - Managers needing async visibility without micromanagement
     
 ------
-## Agent Workflow
-....
+## Workflow Design
+
+
+![](assets/design.png)
+
+
 
 --------
 ## Project Structure
