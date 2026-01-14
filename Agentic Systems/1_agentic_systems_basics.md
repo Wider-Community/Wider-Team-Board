@@ -62,7 +62,7 @@ A **structured sequence of tasks** with defined transitions.
 - Example: DAGs, BPMN, Airflow pipelines
     
 
-**Like a customer support email, responsible for answering user query from the company database or provided knowledge base. it process th**
+**Like a customer support email, responsible for answering user queries from the company database or provided knowledge base. it process this job in a fixed steps or a fixed rules.**
 
 ---
 
@@ -77,3 +77,4 @@ A system composed of **one or more AI agents** orchestrated together.
 - Dynamic control flow (not fixed like workflows)
     
 
+**A system we can't predict the output of it, and can't know the path which it will take. The AI Agents decide which path to take to solve the problem, AI Decide what to do**
