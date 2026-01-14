@@ -6,7 +6,7 @@ this will be a guide to configure your own `slack bot` using python and add it t
 ## 1. Create a slack app
 
 - Go to [slack.api applications](https://api.slack.com/apps)
-- Click create New App
+- Click Create New App
 
  ![create new app](../assets/slack1.png)
  
@@ -43,7 +43,7 @@ this will be a guide to configure your own `slack bot` using python and add it t
 **Event Subscriptions** Allows you to send `events` to your python code.
 when user interacts with the bot in the slack workspace it will send an `event` to your python code.
 - Turn on `Enable Events`
-- **Add bot User Event**: choose `app_mention`
+- **Add bot User Event**: choose `app_mention`:read
 
 ## 5. Install to workspace
 
