@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Agentic Systems/Slack Bot Agent/Slack Bot.md",
+                "file": "Agentic Systems/Slack Bot Agent/2_SlackBot_Scripting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Slack Bot"
+              "title": "2_SlackBot_Scripting"
             }
           }
         ]
@@ -171,10 +171,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fa01ce4909253051",
+  "active": "6501bd31cc4c3d20",
   "lastOpenFiles": [
+    "Agentic Systems/Slack Bot Agent/1_SlackBot_Configurations.md",
+    "Agentic Systems/Slack Bot Agent/2_SlackBot_Scripting.md",
     "Pasted.md",
-    "Agentic Systems/Slack Bot Agent/Slack Bot.md",
     "Agentic Systems/assets/slack7.png",
     "Agentic Systems/assets/slack6.png",
     "Agentic Systems/assets/slack5.png",
@@ -223,7 +224,6 @@
     "Phase 1 - Requirement Analysis/Functional Requirements.md",
     "AI_AGENT_IMPLEMENTATION_PROMPT.md",
     "Phase 1 - Requirement Analysis/Expected Outputs.md",
-    "Phase 1 - Requirement Analysis/System Inputs.md",
     "New canvas.canvas",
     "ProcessWorkflow (1).canvas",
     "ProcessWorkflow.canvas",

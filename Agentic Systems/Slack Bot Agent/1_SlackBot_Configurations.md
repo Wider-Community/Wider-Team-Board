@@ -43,4 +43,6 @@ When you are done with installation you will get an `Bot User OAuth Token` which
 - go to `Basic information` in the top of your **Settings**
 - Generate an **App-Level Token**
 ![](../assets/slack7.png)
-**Now you are done**
+**Now you are done** 🥳
+- you must have : `Bot User OAuth Token` and `App-Level token`
+
