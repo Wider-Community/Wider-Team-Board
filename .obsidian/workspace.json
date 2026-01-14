@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Agentic Systems/Slack Bot Agent/README.md",
+                "file": "Agentic Systems/1_agentic_systems_basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "1_agentic_systems_basics"
             }
           }
         ]
@@ -173,9 +173,10 @@
   },
   "active": "6501bd31cc4c3d20",
   "lastOpenFiles": [
+    "Agentic Systems/Slack Bot Agent/README.md",
+    "Agentic Systems/1_agentic_systems_basics.md",
     "Agentic Systems/Slack Bot Agent/1_SlackBot_Configurations.md",
     "Agentic Systems/assets/design.png",
-    "Agentic Systems/Slack Bot Agent/README.md",
     "Agentic Systems/Slack Bot Agent/2_SlackBot_Scripting.md",
     "Pasted.md",
     "Agentic Systems/assets/slack7.png",
@@ -191,7 +192,6 @@
     "Agentic Systems/assets/nlp.png",
     "Agentic Systems/assets/nlp.png",
     "Agentic Systems/assets",
-    "Agentic Systems/Untitled.md",
     "Agentic Systems",
     "Onboarding Materials.md",
     "GetStartedAQWUM.md",
