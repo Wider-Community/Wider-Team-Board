@@ -36,3 +36,11 @@ when user interacts with the bot in the slack workspace it will send an `event` 
 
 ## 5. Install to workspace
 **After finishing these configurations you will need to install your bot to your workspace**
+![](../assets/slack6.png)
+When you are done with installation you will get an `Bot User OAuth Token` which we will use it to handle events in python.
+
+## Create App Token
+- go to `Basic information` in the top of your **Settings**
+- Generate an **App-Level Token**
+![](../assets/slack7.png)
+**Now you are done**

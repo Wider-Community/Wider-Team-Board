@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5eaab28f30f98afd",
+        "id": "01b97d39fe06f68b",
         "type": "tabs",
         "children": [
           {
-            "id": "11563e701a060038",
+            "id": "6501bd31cc4c3d20",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,10 +171,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "11563e701a060038",
+  "active": "fa01ce4909253051",
   "lastOpenFiles": [
-    "Agentic Systems/assets/slack5.png",
+    "Pasted.md",
     "Agentic Systems/Slack Bot Agent/Slack Bot.md",
+    "Agentic Systems/assets/slack7.png",
+    "Agentic Systems/assets/slack6.png",
+    "Agentic Systems/assets/slack5.png",
     "Agentic Systems/assets/slack4.png",
     "Agentic Systems/assets/slack3.png",
     "Agentic Systems/assets/slack2.png",
@@ -185,8 +188,6 @@
     "Agentic Systems/assets/nlp.png",
     "Agentic Systems/assets/nlp.png",
     "Agentic Systems/assets/transformer.png",
-    "Agentic Systems/assets/dl.png",
-    "Agentic Systems/assets/ml.png",
     "Agentic Systems/assets",
     "Agentic Systems/Untitled.md",
     "Agentic Systems",
