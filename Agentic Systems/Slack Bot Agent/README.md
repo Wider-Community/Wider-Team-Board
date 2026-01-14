@@ -148,7 +148,7 @@ The agent operates primarily through **Slack channels, threads, and DMs**, actin
 ## Workflow Design
 
 
-![](assets/design.png)
+![](../assets/design.png)
 
 
 
