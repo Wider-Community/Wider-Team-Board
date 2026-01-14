@@ -24,7 +24,15 @@ this will be a guide to configure your own `slack bot` using python and add it t
 	4. direct messages.
 ![](../assets/slack3.png)
 
-## 3. Event Subscriptions
+## 3. Socket Mode
+![](../assets/slack5.png)
+**Enable Socket Mode** : to make your bot interact with outer script using events.
+## 4. Event Subscriptions
 ![](../assets/slack4.png)
 **Event Subscriptions** Allows you to send `events` to your python code.
-when user interacts with the bot in the slack workspace it will send an event to your python code.
+when user interacts with the bot in the slack workspace it will send an `event` to your python code.
+- Turn on `Enable Events`
+- **Add bot User Event**: choose `app_mention`
+
+## 5. Install to workspace
+**After finishing these configurations you will need to install your bot to your workspace**
