@@ -101,7 +101,23 @@ Classifier
  └─ General Chat Agent
 ```
 
-**Your RAG system already uses this pattern.**
+**Code**
+
+```python
+graph.add_node("classify", classify_query)
+
+graph.add_conditional_edges(
+    "classify",
+    route_query,
+    {
+        "document": "retrieve_docs",
+        "sql": "query_sql",
+        "general": "generate_answer"
+    }
+)
+```
+
+
 
 ---
 
@@ -126,6 +142,25 @@ Planner:
 
 Executor:
 → Step 1 → Step 2 → Step 3
+```
+
+**Code**
+
+```python
+def planner(state):
+    state["plan"] = ["step1", "step2"]
+    return state
+
+def executor(state):
+    state["plan"].pop(0)
+    return state
+
+graph.add_conditional_edges(
+    "executor",
+    lambda s: len(s["plan"]) > 0,
+    {True: "executor", False: END}
+)
+
 ```
 
 **Used in**
@@ -167,6 +202,19 @@ Executor:
 - Data analysis agents
     
 
+**Code**
+
+```python
+from langgraph.prebuilt import ToolNode
+
+tool_node = ToolNode(tools)
+
+graph.add_node("llm", llm_call)
+graph.add_node("tools", tool_node)
+
+graph.add_edge("tools", "llm")
+```
+
 **Example tools**
 
 - Vector DB
@@ -200,6 +248,14 @@ Coordinator
  ├─ Research Agent
  ├─ Analysis Agent
  ├─ Writer Agent
+```
+
+**Code**
+
+```python
+graph.add_node("research", research_agent)
+graph.add_node("analysis", analysis_agent)
+graph.add_node("writer", writer_agent)
 ```
 
 **Used in**
@@ -239,6 +295,13 @@ Coordinator
 Answer → Critic → Revised Answer
 ```
 
+**Code**
+
+```python
+graph.add_edge("answer", "critic")
+graph.add_edge("critic", "answer")
+```
+
 ---
 
 ## 7. Reflection / Self-Improvement Pattern
@@ -260,6 +323,13 @@ Answer → Critic → Revised Answer
     
 - Code generation
     
+
+**Code**
+
+```python
+graph.add_node("reflect", reflect_node)
+graph.add_edge("generate", "reflect")
+```
 
 ---
 
@@ -297,6 +367,15 @@ Store Memory
 - Long-running agents
     
 
+**Code**
+
+```python
+class State(TypedDict):
+    question: str
+    memory: str
+
+```
+
 ---
 
 ## 9. Event-Driven Agent (Reactive Systems)
@@ -317,6 +396,12 @@ Event → Agent → Action
     
 - DevOps bots
     
+
+**Code**
+
+```python
+graph.invoke({"event": "file_uploaded"})
+```
 
 ---
 
