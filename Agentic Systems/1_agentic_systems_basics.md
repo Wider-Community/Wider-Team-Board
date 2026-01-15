@@ -2,6 +2,8 @@
 
 This will be your start point to understand Agentic System, you need to understand each concept in this file, use any sources you need.
 
+****
+
 ---
 
 ### 1) **Automation**
