@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Agentic Systems/3_workflow_design_patterns.md",
+                "file": "Agentic Systems/4_output_parser.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3_workflow_design_patterns"
+              "title": "4_output_parser"
             }
           }
         ]
@@ -173,9 +173,9 @@
   },
   "active": "6501bd31cc4c3d20",
   "lastOpenFiles": [
-    "Agentic Systems/4_output_parser.md",
     "Agentic Systems/3_workflow_design_patterns.md",
     "Agentic Systems/2_create_your_first_agent.md",
+    "Agentic Systems/4_output_parser.md",
     "Agentic Systems/1_agentic_systems_basics.md",
     "Agentic Systems/Slack Bot Agent/README.md",
     "Agentic Systems/Slack Bot Agent/1_SlackBot_Configurations.md",

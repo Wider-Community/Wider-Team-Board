@@ -427,6 +427,14 @@ graph.invoke({"event": "file_uploaded"})
 - Legal systems
     
 
+**Code**
+
+```python
+def wait_for_human(state):
+    input("Approve?")
+    return state
+```
+
 ---
 
 ## 11. DAG / Graph-Based Agent Workflow (LangGraph Style)
@@ -503,13 +511,3 @@ Answer
 ## Final Mental Model
 
 > **Agentic systems = Reasoning + Tools + Memory + Control Flow**
-
-If you want, I can:
-
-- Map these patterns to **LangGraph**
-    
-- Show **code templates**
-    
-- Design an **enterprise-grade agent architecture**
-    
-- Explain **Agent-to-Agent (A2A)** workflows in detail
