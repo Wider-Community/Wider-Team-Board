@@ -35,6 +35,27 @@ Agentic system workflow patterns describe **how multiple AI agents (or one agent
 User → LLM → Search Tool → LLM → Answer
 ```
 
+**Code**
+
+```python
+def llm_node(state):
+    return state
+
+def tool_node(state):
+    return state
+
+graph.add_node("llm", llm_node)
+graph.add_node("tool", tool_node)
+
+graph.add_conditional_edges(
+    "llm",
+    should_use_tool,
+    {True: "tool", False: END}
+)
+graph.add_edge("tool", "llm")
+
+```
+
 **Pros**
 
 - Simple
