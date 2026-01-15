@@ -171,10 +171,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fa01ce4909253051",
+  "active": "6501bd31cc4c3d20",
   "lastOpenFiles": [
-    "Agentic Systems/2_create_your_first_agent.md",
+    "Agentic Systems/4_output_parser.md",
     "Agentic Systems/3_workflow_design_patterns.md",
+    "Agentic Systems/2_create_your_first_agent.md",
     "Agentic Systems/1_agentic_systems_basics.md",
     "Agentic Systems/Slack Bot Agent/README.md",
     "Agentic Systems/Slack Bot Agent/1_SlackBot_Configurations.md",
@@ -223,7 +224,6 @@
     "Phase 2 - System Design/ML Pipeline Design.md",
     "Phase 2 - System Design/API & Interface Design.md",
     "Phase 2 - System Design/Core Module 1 - Data Ingestion.md",
-    "Phase 1 - Requirement Analysis/Non Functional Requirements.md",
     "New canvas.canvas",
     "ProcessWorkflow (1).canvas",
     "ProcessWorkflow.canvas",
