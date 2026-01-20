@@ -105,5 +105,15 @@ Read this to understand the product requirements.
 
 [Click-Here](https://drive.google.com/file/d/1EKuS37vfkfSMeC0mLYgwA1nXTeOYnqFF/view?usp=sharing)
 
+### Mujarrad Explained
+[Watch-From-Here](https://drive.google.com/file/d/1X9ZnJTFO11SCIaC7uimTjsblDnBhBom5/view)
+
+### Writing requirements technique
+[Watch-From-Here](https://drive.google.com/file/d/18AoHx-DIcxbQspgIF4P36T4pLtdbi0dD/view?usp=drivesdk)
+
+### Mujarrad Agents
+[Watch-From-Here](https://drive.google.com/file/d/1_gEoR92jxp5jssN0im0RIKwkzcz7aE4G/view?usp=sharing)
+
 ### Repository
-[Mujarrad-Repo](https://github.com/ProductMasterz/Mujarrad-Documentation)
+[Mujarrad-Decomuntation](https://github.com/ProductMasterz/Mujarrad-Documentation)
+
