@@ -117,7 +117,14 @@ Read this to understand the product requirements.
 ### Features Map
 [Click-Here](https://omarhamdy.notion.site/Features-Map-82914fe038ae46df9ef897cd85f5aead)
 
+### Mujarrad | Data Architecture and Application Discussion
+[Click-Here](https://drive.google.com/file/d/1z0X-ECfx_Bsc8z3FQ0DM4z5Z6EuOhtG8/view?usp=drive_link)
+### Mujarrad Workshop
+[Click-Here](https://drive.google.com/file/d/1ii430KhscCPA6KctkE8b6QdO79Acnp_L/view?usp=drive_link)
 ### Repository
 [Mujarrad-Decomuntation](https://github.com/ProductMasterz/Mujarrad-Documentation)
+----
+### Open Source Project Based Resources
+- [QUD & Abstract Logic Experience Frontend](https://github.com/pixlcore/xyops)
 
 
