@@ -11,17 +11,14 @@
             "id": "6501bd31cc4c3d20",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Template SDLC.canvas",
-                "viewState": {
-                  "x": -3531.3681490933145,
-                  "y": -1076.2992535571675,
-                  "zoom": -0.5911042438568923
-                }
+                "file": "Agentic Systems/Slack Bot Agent/2_SlackBot_Scripting.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Template SDLC"
+              "icon": "lucide-file",
+              "title": "2_SlackBot_Scripting"
             }
           }
         ]
@@ -176,8 +173,9 @@
   },
   "active": "6501bd31cc4c3d20",
   "lastOpenFiles": [
-    "Template SDLC 1.canvas",
+    "Agentic Systems/Slack Bot Agent/1_SlackBot_Configurations.md",
     "Template SDLC.canvas",
+    "Template SDLC 1.canvas",
     "Agentic Systems/6_LLMs_calculations.md",
     "Agentic Systems/5_agent_memory.md",
     "Agentic Systems/4_output_parser.md",
@@ -185,7 +183,6 @@
     "Agentic Systems/2_coding_basics.md",
     "Agentic Systems/1_agentic_systems_basics.md",
     "Agentic Systems/Slack Bot Agent/2_SlackBot_Scripting.md",
-    "Agentic Systems/Slack Bot Agent/1_SlackBot_Configurations.md",
     "Agentic Systems/Slack Bot Agent/README.md",
     "Agentic Systems/assets/design.png",
     "Pasted.md",
