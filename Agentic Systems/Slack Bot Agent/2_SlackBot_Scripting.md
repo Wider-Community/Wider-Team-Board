@@ -43,3 +43,4 @@ slack_handler = SocketModeHandler(
 slack_handler.start()
 ```
 
+**Now when ever the user mentioned the bot it will replay back with hello @user**
