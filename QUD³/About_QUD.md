@@ -19,10 +19,12 @@ Access the demo videos organized by category:
 * [**The Solution**](https://drive.google.com/drive/folders/1Kei3Okt1iYNfions2SKMlTcNJp7s3ldx?usp=drive_link)
 
 ---
+* [كيف نقل القرآن إلينا ](https://www.youtube.com/watch?v=bpC3fFwx_iM) 
+---
 
 ### 🤝 Join the Team
 Ready to contribute? Please fill out the skills form below so we can assign tasks effectively.
 
-👉 [Fill out the Skills Form](https://tally.so/r/OD4Loa)
+👉 [Fill out the Skills Form](https://tally.so/r/OD4Lo
 
 ---
