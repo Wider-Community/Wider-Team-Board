@@ -1,0 +1,3 @@
+- Slack commands (!help, !info, !add_team,...)
+- Some commands will be followed with a structured text.
+- Some commands will be followed with files to extract information from.

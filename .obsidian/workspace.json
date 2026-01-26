@@ -11,14 +11,17 @@
             "id": "6501bd31cc4c3d20",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Agentic Systems/Slack Bot Agent/README.md",
-                "mode": "source",
-                "source": false
+                "file": "Agentic Systems/Slack Bot Agent/Slack Agent SDLC.canvas",
+                "viewState": {
+                  "x": -3333.303695624683,
+                  "y": -1113.7172228857826,
+                  "zoom": -0.257770910523559
+                }
               },
-              "icon": "lucide-file",
-              "title": "README"
+              "icon": "lucide-layout-dashboard",
+              "title": "Slack Agent SDLC"
             }
           }
         ]
@@ -173,12 +176,16 @@
   },
   "active": "6501bd31cc4c3d20",
   "lastOpenFiles": [
+    "Phase 1/Expected Outputs.md",
+    "Phase 1/System Inputs.md",
+    "Phase 1/Project Goal.md",
+    "Phase 1",
+    "Template SDLC.canvas",
+    "Agentic Systems/Slack Bot Agent/Slack Agent SDLC.canvas",
+    "Agentic Systems/Slack Bot Agent/README.md",
     "Agentic Systems/1_agentic_systems_basics.md",
     "Agentic Systems/Slack Bot Agent/1_SlackBot_Configurations.md",
     "Agentic Systems/Slack Bot Agent/2_SlackBot_Scripting.md",
-    "Agentic Systems/Slack Bot Agent/README.md",
-    "Template SDLC.canvas",
-    "Template SDLC 1.canvas",
     "Agentic Systems/6_LLMs_calculations.md",
     "Agentic Systems/5_agent_memory.md",
     "Agentic Systems/4_output_parser.md",
@@ -217,13 +224,10 @@
     "Simple Program Flowchart.canvas",
     "Untitled.md",
     "Untitled.canvas",
-    "Untitled.base",
     "Phase 4 - Testing/Accuracy, Quality Test.md",
     "Phase 3 - Implementation/Utitlites.md",
     "Phase 3 - Implementation/Secondary Models.md",
     "Phase 3 - Implementation/Primary Model Integration.md",
-    "Phase 3 - Implementation/Data Preprocessing.md",
-    "Phase 3 - Implementation/Additional Features.md",
     "New canvas.canvas",
     "ProcessWorkflow (1).canvas",
     "ProcessWorkflow.canvas",
