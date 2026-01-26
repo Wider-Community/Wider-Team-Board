@@ -1,7 +1,14 @@
 ### QUD
 - An experimental research project exploring the separation, formalization, and simulation of Quranic data layers.
 - The goal is to decompose existing Quranic datasets into independent, well-defined layers with clear schemas and relationships.
+
+---
+
+### Relevant work 
+
 - [QUD presentation](https://drive.google.com/drive/folders/139m9Fnz-36geB4rUySy8q1blNKcxgFUZ)
+- [المعلم القرآني](https://github.com/obadx/quran-muaalem)
+- [علوم القرآن](https://github.com/h9-tec/uloom-quran)
 
 ### 🎥 QUD Core Demo Videos
 
@@ -12,10 +19,12 @@ Access the demo videos organized by category:
 * [**The Solution**](https://drive.google.com/drive/folders/1Kei3Okt1iYNfions2SKMlTcNJp7s3ldx?usp=drive_link)
 
 ---
+* [كيف نقل القرآن إلينا ](https://www.youtube.com/watch?v=bpC3fFwx_iM) 
+---
 
 ### 🤝 Join the Team
 Ready to contribute? Please fill out the skills form below so we can assign tasks effectively.
 
-👉 [Fill out the Skills Form](https://tally.so/r/OD4Loa)
+👉 [Fill out the Skills Form](https://tally.so/r/OD4Lo
 
 ---

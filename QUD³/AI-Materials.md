@@ -97,7 +97,7 @@ This introductory resource covers the fundamentals of machine learning, artifici
 | -------------- | -------------------------------------------------- |
 | Video Tutorial | https://youtu.be/VvzKd7wdjMM?si=t35wBd1ymoQA6GTD   |
 
-### 🔗 Machine Learning 
+### 🔗 Machine Learning (detailed classical ML)
 https://www.youtube.com/watch?v=mRUgi0Be2ds&list=PL5JZLxl_tFCcgAv9x2eXeX0_2TLRMnHUg 
 ---
 

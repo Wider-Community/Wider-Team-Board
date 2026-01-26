@@ -5,6 +5,7 @@ Welcome to the team! This guide will help you get started with all the tools and
 ---
 
 ## 📋 Table of Contents
+- [🧱 Mujarrad Induction](#-mujarrad-induction)
 - [📱 Communication - Slack](#-communication---slack)
 - [🎨 Collaboration - FigJam](#-collaboration---figjam)
 - [📝 Knowledge Management - Obsidian](#-knowledge-management---obsidian)
@@ -16,6 +17,25 @@ Welcome to the team! This guide will help you get started with all the tools and
 - [🐛 Debugging](#-debugging)
 - [📊 Project Management - GitHub Projects](#-project-management---github-projects)
 - [🔢 Mathematics for AI](#-mathematics-for-ai)
+
+---
+
+## 🧱 Mujarrad Induction
+
+Before diving into our tools, please watch this induction video to understand the core philosophy behind Mujarrad.
+
+Mujarrad is built on a **"Powder vs. Cement"** philosophy. Unlike most tools which are like **Cement** (rigid and hard to change), Mujarrad is designed to be like **Powder** (flexible and easy to reshape), allowing anyone to build complex systems without writing code.
+
+It relies on three magic concepts:
+- **Nodes**: Individual pieces of information (like a Task or Person) that float freely rather than sitting in rigid tables.
+- **Relationships**: The "wires" that connect nodes to give them context and meaning.
+- **Modes**: Different ways to view and interact with the same node (e.g., Edit, Graph, View).
+
+### 🔗 Resources & Links
+| Resource           | Link                                                                   |
+| ------------------ | ---------------------------------------------------------------------- |
+| Mujarrad Explained | https://drive.google.com/file/d/1A1jqAn-zR7_ZcC5YLpelb3DuC8fehPfs/view |
+
 
 ---
 
