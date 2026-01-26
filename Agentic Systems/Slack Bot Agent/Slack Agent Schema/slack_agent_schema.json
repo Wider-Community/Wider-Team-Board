@@ -1,0 +1,562 @@
+{
+  "project": "Slack Agent - Async Team Coordination Assistant",
+  "created_at": "2026-01-26",
+  "version": "1.0.0",
+  "databases": [
+    {
+      "name": "Workspaces",
+      "description": "Slack workspaces where the agent is installed",
+      "properties": [
+        {
+          "name": "Workspace ID",
+          "type": "title",
+          "description": "Unique identifier for workspace"
+        },
+        {
+          "name": "Workspace Name",
+          "type": "text",
+          "description": "Human-readable workspace name"
+        },
+        {
+          "name": "Domain",
+          "type": "url",
+          "description": "Slack workspace domain"
+        },
+        {
+          "name": "Installed At",
+          "type": "date",
+          "description": "Installation timestamp"
+        },
+        {
+          "name": "Is Active",
+          "type": "checkbox",
+          "description": "Active status"
+        },
+        {
+          "name": "Plan Type",
+          "type": "select",
+          "options": [
+            "Free",
+            "Pro",
+            "Enterprise"
+          ]
+        },
+        {
+          "name": "Settings",
+          "type": "text",
+          "description": "JSON configuration"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "description": "Team members and their profiles across workspaces",
+      "properties": [
+        {
+          "name": "User ID",
+          "type": "title"
+        },
+        {
+          "name": "Slack User ID",
+          "type": "text"
+        },
+        {
+          "name": "Display Name",
+          "type": "text"
+        },
+        {
+          "name": "Email",
+          "type": "email"
+        },
+        {
+          "name": "Timezone",
+          "type": "text"
+        },
+        {
+          "name": "Is Active",
+          "type": "checkbox"
+        },
+        {
+          "name": "Joined At",
+          "type": "date"
+        },
+        {
+          "name": "Role",
+          "type": "select",
+          "options": [
+            "Member",
+            "Manager",
+            "Admin",
+            "Bot"
+          ]
+        },
+        {
+          "name": "Last Active",
+          "type": "date"
+        },
+        {
+          "name": "Preferences",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "Channels",
+      "description": "Slack channels monitored by the agent",
+      "properties": [
+        {
+          "name": "Channel ID",
+          "type": "title"
+        },
+        {
+          "name": "Slack Channel ID",
+          "type": "text"
+        },
+        {
+          "name": "Channel Name",
+          "type": "text"
+        },
+        {
+          "name": "Channel Type",
+          "type": "select",
+          "options": [
+            "Public",
+            "Private",
+            "DM"
+          ]
+        },
+        {
+          "name": "Is Monitored",
+          "type": "checkbox"
+        },
+        {
+          "name": "Created At",
+          "type": "date"
+        },
+        {
+          "name": "Monitoring Config",
+          "type": "text"
+        },
+        {
+          "name": "Standup Enabled",
+          "type": "checkbox"
+        },
+        {
+          "name": "Summary Enabled",
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "name": "Standups",
+      "description": "Daily async standup instances and their configurations",
+      "properties": [
+        {
+          "name": "Standup ID",
+          "type": "title"
+        },
+        {
+          "name": "Standup Date",
+          "type": "date"
+        },
+        {
+          "name": "Status",
+          "type": "select",
+          "options": [
+            "Scheduled",
+            "In Progress",
+            "Completed",
+            "Cancelled"
+          ]
+        },
+        {
+          "name": "Triggered At",
+          "type": "date"
+        },
+        {
+          "name": "Completed At",
+          "type": "date"
+        },
+        {
+          "name": "Response Count",
+          "type": "number"
+        },
+        {
+          "name": "Summary",
+          "type": "text"
+        },
+        {
+          "name": "Questions",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "Standup Responses",
+      "description": "Individual user responses to daily standups",
+      "properties": [
+        {
+          "name": "Response ID",
+          "type": "title"
+        },
+        {
+          "name": "Submitted At",
+          "type": "date"
+        },
+        {
+          "name": "Response Text",
+          "type": "text"
+        },
+        {
+          "name": "Status",
+          "type": "select",
+          "options": [
+            "Pending",
+            "Submitted",
+            "Skipped",
+            "Late"
+          ]
+        },
+        {
+          "name": "What Worked On",
+          "type": "text"
+        },
+        {
+          "name": "What's Next",
+          "type": "text"
+        },
+        {
+          "name": "Blockers",
+          "type": "text"
+        },
+        {
+          "name": "Has Blockers",
+          "type": "checkbox"
+        },
+        {
+          "name": "Follow Up Needed",
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "description": "Action items and tasks tracked from conversations",
+      "properties": [
+        {
+          "name": "Task ID",
+          "type": "title"
+        },
+        {
+          "name": "Task Description",
+          "type": "text"
+        },
+        {
+          "name": "Status",
+          "type": "select",
+          "options": [
+            "Open",
+            "In Progress",
+            "Blocked",
+            "Completed",
+            "Cancelled"
+          ]
+        },
+        {
+          "name": "Priority",
+          "type": "select",
+          "options": [
+            "Low",
+            "Medium",
+            "High",
+            "Urgent"
+          ]
+        },
+        {
+          "name": "Created At",
+          "type": "date"
+        },
+        {
+          "name": "Due Date",
+          "type": "date"
+        },
+        {
+          "name": "Completed At",
+          "type": "date"
+        },
+        {
+          "name": "Is Blocked",
+          "type": "checkbox"
+        },
+        {
+          "name": "Last Reminder",
+          "type": "date"
+        },
+        {
+          "name": "Reminder Count",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "Threads",
+      "description": "Conversation threads monitored by the agent",
+      "properties": [
+        {
+          "name": "Thread ID",
+          "type": "title"
+        },
+        {
+          "name": "Slack Thread TS",
+          "type": "text"
+        },
+        {
+          "name": "Started At",
+          "type": "date"
+        },
+        {
+          "name": "Last Activity",
+          "type": "date"
+        },
+        {
+          "name": "Message Count",
+          "type": "number"
+        },
+        {
+          "name": "Participant Count",
+          "type": "number"
+        },
+        {
+          "name": "Has Summary",
+          "type": "checkbox"
+        },
+        {
+          "name": "Status",
+          "type": "select",
+          "options": [
+            "Active",
+            "Idle",
+            "Resolved",
+            "Archived"
+          ]
+        },
+        {
+          "name": "Has Decision",
+          "type": "checkbox"
+        },
+        {
+          "name": "Has Tasks",
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "name": "Messages",
+      "description": "Individual messages from monitored channels and threads",
+      "properties": [
+        {
+          "name": "Message ID",
+          "type": "title"
+        },
+        {
+          "name": "Slack Message TS",
+          "type": "text"
+        },
+        {
+          "name": "Message Text",
+          "type": "text"
+        },
+        {
+          "name": "Sent At",
+          "type": "date"
+        },
+        {
+          "name": "Message Type",
+          "type": "select",
+          "options": [
+            "User Message",
+            "Bot Message",
+            "System Message",
+            "Agent Response"
+          ]
+        },
+        {
+          "name": "Has Mentions",
+          "type": "checkbox"
+        },
+        {
+          "name": "Has Attachments",
+          "type": "checkbox"
+        },
+        {
+          "name": "Embedding Vector",
+          "type": "text"
+        },
+        {
+          "name": "Context Summary",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "Summaries",
+      "description": "Generated summaries of discussions and threads",
+      "properties": [
+        {
+          "name": "Summary ID",
+          "type": "title"
+        },
+        {
+          "name": "Summary Text",
+          "type": "text"
+        },
+        {
+          "name": "Created At",
+          "type": "date"
+        },
+        {
+          "name": "Summary Type",
+          "type": "select",
+          "options": [
+            "Thread Summary",
+            "Channel Summary",
+            "Daily Digest",
+            "Weekly Report"
+          ]
+        },
+        {
+          "name": "Key Points",
+          "type": "text"
+        },
+        {
+          "name": "Action Items",
+          "type": "text"
+        },
+        {
+          "name": "Decisions Made",
+          "type": "text"
+        },
+        {
+          "name": "Open Questions",
+          "type": "text"
+        },
+        {
+          "name": "Posted To Slack",
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "name": "Reminders",
+      "description": "Scheduled reminders and nudges for async coordination",
+      "properties": [
+        {
+          "name": "Reminder ID",
+          "type": "title"
+        },
+        {
+          "name": "Reminder Type",
+          "type": "select",
+          "options": [
+            "Standup Reminder",
+            "Task Follow-up",
+            "Question Follow-up",
+            "Escalation",
+            "General Nudge"
+          ]
+        },
+        {
+          "name": "Reminder Text",
+          "type": "text"
+        },
+        {
+          "name": "Scheduled For",
+          "type": "date"
+        },
+        {
+          "name": "Sent At",
+          "type": "date"
+        },
+        {
+          "name": "Status",
+          "type": "select",
+          "options": [
+            "Pending",
+            "Sent",
+            "Acknowledged",
+            "Dismissed",
+            "Failed"
+          ]
+        },
+        {
+          "name": "Attempts",
+          "type": "number"
+        },
+        {
+          "name": "Escalation Level",
+          "type": "select",
+          "options": [
+            "Normal",
+            "Warning",
+            "Urgent"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Decisions",
+      "description": "Key decisions captured from team discussions",
+      "properties": [
+        {
+          "name": "Decision ID",
+          "type": "title"
+        },
+        {
+          "name": "Decision Text",
+          "type": "text"
+        },
+        {
+          "name": "Made At",
+          "type": "date"
+        },
+        {
+          "name": "Decision Type",
+          "type": "select",
+          "options": [
+            "Technical",
+            "Product",
+            "Process",
+            "Resource",
+            "Strategic"
+          ]
+        },
+        {
+          "name": "Context",
+          "type": "text"
+        },
+        {
+          "name": "Impact",
+          "type": "select",
+          "options": [
+            "Low",
+            "Medium",
+            "High",
+            "Critical"
+          ]
+        },
+        {
+          "name": "Stakeholders",
+          "type": "text"
+        },
+        {
+          "name": "Is Implemented",
+          "type": "checkbox"
+        },
+        {
+          "name": "Related Tasks",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

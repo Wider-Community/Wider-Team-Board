@@ -11,17 +11,14 @@
             "id": "6501bd31cc4c3d20",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Agentic Systems/Slack Bot Agent/Slack Agent SDLC.canvas",
-                "viewState": {
-                  "x": -3333.303695624683,
-                  "y": -891.3300569533471,
-                  "zoom": -0.257770910523559
-                }
+                "file": "Agentic Systems/Slack Bot Agent/Slack Agent Schema/SCHEMA.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Slack Agent SDLC"
+              "icon": "lucide-file",
+              "title": "SCHEMA"
             }
           }
         ]
@@ -174,8 +171,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fa01ce4909253051",
+  "active": "6501bd31cc4c3d20",
   "lastOpenFiles": [
+    "Agentic Systems/Slack Bot Agent/Slack Agent SDLC.canvas",
+    "Agentic Systems/Slack Bot Agent/Slack Agent Schema/slack_agent_schema.json",
+    "Agentic Systems/Slack Bot Agent/Slack Agent Schema/Unconfirmed 280101.crdownload",
+    "Agentic Systems/Slack Bot Agent/Slack Agent Schema/slack_agent_schema.sql",
+    "Agentic Systems/Slack Bot Agent/Slack Agent Schema/Unconfirmed 629263.crdownload",
+    "Agentic Systems/Slack Bot Agent/Slack Agent Schema/SCHEMA.md",
+    "Agentic Systems/Slack Bot Agent/Slack Agent Schema/Unconfirmed 270331.crdownload",
     "Agentic Systems/Slack Bot Agent/Slack Agent Schema",
     "Phase 1/Non Functional Requirements.md",
     "Phase 1/Functional Requirements.md",
@@ -184,7 +188,6 @@
     "Phase 1/Project Goal.md",
     "Phase 1",
     "Template SDLC.canvas",
-    "Agentic Systems/Slack Bot Agent/Slack Agent SDLC.canvas",
     "Agentic Systems/Slack Bot Agent/README.md",
     "Agentic Systems/1_agentic_systems_basics.md",
     "Agentic Systems/Slack Bot Agent/1_SlackBot_Configurations.md",
@@ -213,21 +216,14 @@
     "Onboarding Materials.md",
     "GetStartedAQWUM.md",
     "README.md",
-    "README.md.tmp.8796.1766921496484",
     "Projects Database.md",
-    "Onboarding Materials.md.tmp.8796.1766920997327",
     "AI Materials.md",
     "Musghi-Mudawin-Mudrik.canvas",
     "Musghi-Mudrik-Mudawin-Requirements.md",
     "Multilingual AI Agent SDLC.canvas",
-    "AI Materials.md.tmp.24484.1765113626192",
-    "AI Materials.md.tmp.24484.1765113612029",
-    "Onboarding Materials.md.tmp.5924.1764865882763",
-    "Onboarding Materials.md.tmp.5924.1764865871525",
     "Simple Program Flowchart.canvas",
     "Untitled.md",
     "Untitled.canvas",
-    "Phase 4 - Testing/Accuracy, Quality Test.md",
     "New canvas.canvas",
     "ProcessWorkflow (1).canvas",
     "ProcessWorkflow.canvas",
