@@ -16,7 +16,7 @@
                 "file": "Agentic Systems/Slack Bot Agent/Slack Agent SDLC.canvas",
                 "viewState": {
                   "x": -3333.303695624683,
-                  "y": -1113.7172228857826,
+                  "y": -891.3300569533471,
                   "zoom": -0.257770910523559
                 }
               },
@@ -176,6 +176,7 @@
   },
   "active": "6501bd31cc4c3d20",
   "lastOpenFiles": [
+    "Phase 1/Functional Requirements.md",
     "Phase 1/Expected Outputs.md",
     "Phase 1/System Inputs.md",
     "Phase 1/Project Goal.md",
@@ -227,7 +228,6 @@
     "Phase 4 - Testing/Accuracy, Quality Test.md",
     "Phase 3 - Implementation/Utitlites.md",
     "Phase 3 - Implementation/Secondary Models.md",
-    "Phase 3 - Implementation/Primary Model Integration.md",
     "New canvas.canvas",
     "ProcessWorkflow (1).canvas",
     "ProcessWorkflow.canvas",
