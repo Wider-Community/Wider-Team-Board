@@ -3,7 +3,9 @@
     "allow": [
       "mcp__obsidian-vault__obsidian_list_files_in_dir",
       "Bash(mv:*)",
-      "mcp__obsidian-vault__obsidian_append_content"
+      "mcp__obsidian-vault__obsidian_append_content",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nvault backup: 2026-01-27 $(date +%H:%M:%S)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
