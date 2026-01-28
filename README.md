@@ -1,3 +1,9 @@
+# Wider Team Board
+
+Central knowledge base for the **Wider Community** team. This repository contains project documentation, onboarding resources, learning materials, and team integration guides for all members.
+
+---
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
