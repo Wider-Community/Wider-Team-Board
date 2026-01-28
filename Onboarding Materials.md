@@ -16,7 +16,6 @@ Welcome to the team! This guide will help you get started with all the tools and
 - [🤖 AI Coding Assistants](#-ai-coding-assistants)
 - [🐛 Debugging](#-debugging)
 - [📊 Project Management - GitHub Projects](#-project-management---github-projects)
-- [🔢 Mathematics for AI](#-mathematics-for-ai)
 
 ---
 
@@ -367,24 +366,6 @@ We use GitHub Projects for task tracking and sprint management.
 
 ---
 
-## 🔢 Mathematics for AI
-
-Understanding probability and statistics is fundamental for working with AI and machine learning models.
-
-### Why It Matters
-- Statistical foundations for understanding ML algorithms
-- Probability theory for decision-making under uncertainty
-- Data analysis and interpretation skills
-- Essential for understanding model performance metrics
-
-### 🔗 Resources & Links
-| Resource                              | Link                                         |
-| ------------------------------------- | -------------------------------------------- |
-| Seeing Theory (Visual Probability)    | https://github.com/seeingtheory/Seeing-Theory |
-| Statistics & Probability Course       | https://subasish.github.io/pages/course1/    |
-
-
----
 
 > **Last Updated:** 28-12-2025
 >
