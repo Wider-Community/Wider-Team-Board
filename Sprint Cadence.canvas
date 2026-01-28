@@ -1,0 +1,34 @@
+{
+	"nodes":[
+		{"id":"phase-execution-group","type":"group","x":-440,"y":-400,"width":1000,"height":440,"color":"1","label":"Execution Phase"},
+		{"id":"phase-presentation-group","type":"group","x":-220,"y":340,"width":640,"height":260,"color":"2","label":"Presentation Phase"},
+		{"id":"phase-review-group","type":"group","x":-220,"y":800,"width":640,"height":140,"color":"4","label":"Review Phase"},
+		{"id":"video-rules-group","type":"group","x":840,"y":340,"width":400,"height":190,"color":"6","label":"Video Requirements"},
+		{"id":"sprint-start","type":"text","text":"**Sprint Kickoff**\n2-week cycle begins","x":-400,"y":-325,"width":200,"height":60,"color":"1"},
+		{"id":"squad-prep","type":"text","text":"**Content Prep**\nSquad members collaborate","x":-180,"y":380,"width":200,"height":60,"color":"2"},
+		{"id":"video-record","type":"text","text":"**Record Video**\nComms lead or delegate","x":180,"y":380,"width":200,"height":60,"color":"2"},
+		{"id":"video-edit","type":"text","text":"**Edit & Montage**\nComms lead edits","x":-180,"y":500,"width":200,"height":60,"color":"2"},
+		{"id":"video-merge","type":"text","text":"**Merge Videos**\nOne video per sprint","x":180,"y":500,"width":200,"height":60,"color":"2"},
+		{"id":"task-execution","type":"text","text":"**Task Execution**\nWork, log progress, flag blockers","x":260,"y":-325,"width":220,"height":60,"color":"1"},
+		{"id":"leader-meeting","type":"text","text":"**Leader Meeting**\nCross-team alignment","x":260,"y":-100,"width":220,"height":60,"color":"1"},
+		{"id":"standup","type":"text","text":"**Bi-weekly Standup**\nTeam leader + team","x":-400,"y":-130,"width":200,"height":60,"color":"1"},
+		{"id":"next-sprint","type":"text","text":"**Next Sprint**","x":-360,"y":1040,"width":160,"height":50,"color":"3"},
+		{"id":"sprint-review","type":"text","text":"**6-Week Cycle Meeting** — All teams present sprint video","x":-180,"y":835,"width":560,"height":50,"color":"4"},
+		{"id":"duration-rule","type":"text","text":"**Min:** 8 min\n**Max:** 15 min\n**Total:** 5 videos","x":880,"y":380,"width":240,"height":80,"color":"6"},
+		{"id":"sprint-header","type":"text","text":"# Sprint Cadence","x":-720,"y":-800,"width":260,"height":50,"color":"6"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"sprint-header","fromSide":"bottom","toNode":"sprint-start","toSide":"top","color":"1","label":"Begin"},
+		{"id":"e2","fromNode":"sprint-start","fromSide":"right","toNode":"task-execution","toSide":"left","color":"1","label":"Teams start work"},
+		{"id":"e3","fromNode":"task-execution","fromSide":"bottom","toNode":"standup","toSide":"right","color":"1"},
+		{"id":"e4","fromNode":"standup","fromSide":"right","toNode":"leader-meeting","toSide":"left","color":"1","label":"Escalate"},
+		{"id":"e5","fromNode":"phase-execution-group","fromSide":"bottom","toNode":"phase-presentation-group","toSide":"top","color":"2","label":"Sprint ends"},
+		{"id":"e6","fromNode":"squad-prep","fromSide":"right","toNode":"video-record","toSide":"left","color":"2"},
+		{"id":"e7","fromNode":"video-record","fromSide":"bottom","toNode":"video-edit","toSide":"right","color":"2"},
+		{"id":"e8","fromNode":"video-edit","fromSide":"right","toNode":"video-merge","toSide":"left","color":"2"},
+		{"id":"e9","fromNode":"video-merge","fromSide":"right","toNode":"duration-rule","toSide":"left","color":"6","label":"Must meet"},
+		{"id":"e10","fromNode":"phase-presentation-group","fromSide":"bottom","toNode":"phase-review-group","toSide":"top","color":"4","label":"Video delivered"},
+		{"id":"e11","fromNode":"phase-review-group","fromSide":"bottom","toNode":"next-sprint","toSide":"top","color":"3"},
+		{"id":"e12","fromNode":"next-sprint","fromSide":"left","toNode":"phase-execution-group","toSide":"left","color":"3","label":"New cycle"}
+	]
+}
