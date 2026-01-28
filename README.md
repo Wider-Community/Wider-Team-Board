@@ -84,7 +84,7 @@ Wider-Team-Board-main/
 
 Curated learning paths for AI, ML, and NLP. 
 
-- **[AI Materials.md](AI%20Materials.md)** - general AI/ML learning resources for all teams
+- **[AI Materials.md](https://github.com/Wider-Community/Wider-Team-Board/blob/main/QUD%C2%B3/AI-Materials.md)** - general AI/ML learning resources for all teams
 
 **Topics covered:** Linear Algebra, Calculus, Introduction to ML/AI/NLP, Neural Networks, Deep Learning (CS231n), PyTorch, Deployment, Stanford CS224N (NLP/LLMs), and advanced research materials.
 
