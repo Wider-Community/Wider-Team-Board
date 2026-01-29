@@ -1,522 +1,388 @@
-# Wider Team - Internal Company Profile
+# Wider Team
 
-**Classification:** Internal Segment
-**Audience:** Team Members, New Hires, Leadership
-**Last Updated:** 2026-01-27
+## The Architects of the Ecosystem
 
 ---
 
-## Our Mission
+## What You've Joined
 
-Wider is not just a company. We are a **community company** building a network of interconnected environments designed to create and distribute real value. Our mission is to ensure that no one operates in isolation—that individuals become forces when connected to the right community, and that opportunities find people, not the other way around.
+You're not joining a company. Companies extract value from customers, pay employees for their time, and distribute profits to shareholders.
+
+You're joining the center of an ecosystem—one designed to create and distribute value in ways traditional organizations cannot. The Wider Team is the core around which everything else orbits. Not because we're more important than the members, partners, or clients. Because we carry the responsibility of making the system work for everyone.
+
+**We are the stewards of a different kind of economy.**
+
+---
+
+## Our Mission: The Community Company
+
+### What "Community Company" Means
+
+Traditional companies are extraction machines. They take value from participants—labor from employees, money from customers, opportunity from communities—and concentrate it among owners.
+
+Wider operates on a different principle: **Value-First.**
+
+Stakeholders experience benefits before Wider captures return. Members earn before platform fees are deducted. Clients see results before large commitments. Partners generate revenue before revenue share is extracted.
+
+This isn't idealism. It's architecture. The system is designed so that our success depends on their success. We cannot thrive unless they thrive first.
+
+**This creates loyalty that can't be bought and trust that can't be manufactured.**
 
 ### What We're Building
 
-We are constructing an intelligent ecosystem where:
-- Individuals, teams, and companies connect to opportunities through intelligent matching
-- Skills, contributions, and collaborations evolve into continuously growing portfolios
-- Digital assets compound value over time through reusability and tradeability
-- Trust, quality, and delivery translate directly into financial outcomes
-- Every participant experiences tangible benefits before Wider captures return
+An ecosystem where:
 
-### Our Philosophy: Community Company
+- Individuals become forces through community connection
+- Skills transform into verified, deployable capability
+- Digital assets compound value through reuse and trade
+- Trust translates directly into economic opportunity
+- Opportunities find people, not the other way around
 
-Traditional companies extract value from participants. Wider operates on a **Value-First** principle: stakeholders win first, and only after they recognize the value delivered does Wider earn revenue. This builds loyalty and fosters a culture of freedom, creativity, investment, and partnership.
-
----
-
-## The Wider Ecosystem: Overview for Team Context
-
-As team members, you operate at the center of a complex, multi-layered ecosystem. Understanding how all pieces connect is essential to your strategic work.
-
-### Core Environments
-
-1. **Wider Community**
-   The public-facing identity layer where individuals build dynamic portfolios, showcase contributions, and enter the ecosystem. The gateway to discovering our philosophy and value.
-
-2. **Wider Hub**
-   The B2B integration center where companies connect capabilities like components in a smart grid. Features structured capability pages and the Recommendation Engine for intelligent matching.
-
-3. **Wider Network**
-   The operational execution layer matching verified individuals and teams to missions based on skill, capacity, and quality standards. The curated workforce delivery engine.
-
-4. **Wider Marketplace**
-   The transaction layer for assets, products, deals, gigs, features, and projects. Distinguished by native validation and "Wider Prime" quality standards.
-
-5. **Wider Client Community Portal**
-   The primary client entry point providing visibility into network value, activity, and credibility while guiding engagement.
-
-6. **Wider Forum (Wider Talks)**
-   The knowledge engine validating value and measuring digital reputation through thought and production footprint.
-
-### Strategic Products
-
-- **Wider Labs:** Transforms community research into production-ready AI models and agentic solutions
-- **Wider Rise (Ventures & VCs):** Provides digital, human, and network capital to startups with validation-first investment
-- **Wider Smith:** Human development engine enabling multi-role fluidity and reputation-based career growth
-- **Wider Grow:** Developmental pathway from student to professional through empowered failure and non-linear growth
+We're building the forge where potential becomes power. The infrastructure where contribution compounds. The economy where quality and trust create tangible reward.
 
 ---
 
-## Governance & Authority Structure
+## The Philosophy We Live
 
-### Our Role: Wider Team as Economic Regulator
+### Zero Waste
 
-The Wider Team sits at the **center of the network's concentric governance layers**. We are the Core Team—the internal workforce and governance authority functioning as the ecosystem's executive, operational, and administrative backbone.
+Nothing created in the ecosystem should be discarded.
 
-### Our Responsibilities
+Every project teaches lessons that become methodology. Every failed startup reveals truths that inform the next attempt. Every contribution—large or small—adds to the collective capability.
 
-#### Strategic Management
-- Define ecosystem strategy, vision, and roadmap
-- Set pricing models across all revenue streams
-- Establish quality standards and KPIs for network participants
-- Design revenue-sharing structures that align incentives
-- Create and enforce dispute resolution mechanisms
+**We harvest everything.** A component built for one project becomes a licensed asset. A research paper becomes a commercialized product. A mentorship conversation becomes curriculum.
 
-#### Financial Governance
-- Oversee budget allocation across machines and network layers
-- Manage platform-wide revenue aggregation and reserves
-- Control risk through monitoring, audits, and financial controls
-- Regulate internal transfer pricing between machines
-- Ensure systemic stability and economic sustainability
+This isn't efficiency optimization. It's recognition that value exists everywhere—our job is to create the conditions for it to flow where it's needed.
 
-#### Regulatory Oversight
-- Act as the final decision-maker on all platform matters
-- Define rules for Credits and Points issuance and usage
-- Approve infrastructure investments and scaling decisions
-- Monitor machine-level performance and ROI
-- Enforce compliance with ecosystem standards
+### Zero Injustice
 
-### Authority Model
+Opportunity should be accessible to those willing to commit.
 
-**We hold absolute authority** as the central governance layer. Our decisions flow outward to:
-- Wider Interns (talent pipeline and learning layer)
-- Wider Volunteers (community moderation and trust-building)
-- Wider Network Members (certified value executors)
-- Wider Client Staff (demand initiators and capital providers)
-- Wider Hub Partners (regional/sectoral expansion operators)
+We don't filter people out before they've had a chance to prove themselves. We don't concentrate advantage among those who already have it. We don't design systems that reward gaming over genuine contribution.
 
-While authority flows outward, **value flows inward**—capital, opportunities, and trust return to the center through verified participation.
+**The Zero Injustice Rule:** Success is earned, but opportunity is guaranteed. If you commit, you will have the chance. What you make of that chance is up to you.
+
+### The Merciful System
+
+Traditional systems punish failure. They reject the unproven. They demand credentials before offering opportunity.
+
+Wider practices **merciful welcome.** We recognize that struggle is the path to capability. We appreciate failure as part of the journey. We provide resources before demanding results.
+
+When someone struggles, we don't ask "What's wrong with them?" We ask "What haven't we provided yet?"
 
 ---
 
-## Economic Model Essentials
+## The Smith: Our Core Metaphor
 
-Understanding our internal economy is fundamental to every team member's work. We operate a sophisticated dual-ledger system designed to reward contribution, sustain growth, and maintain trust.
+### Why We Call It "The Smith"
 
-### Dual Currency Mechanism
+A blacksmith doesn't reject metal for being unformed. The smith sees raw material and knows: with the right heat, the right hammering, the right shaping, this will become something powerful.
 
-#### Credits (Hard Currency)
-- **Nature:** Financial, auditable, monetary value
-- **How Acquired:** Purchased with cash or earned through high-value work
-- **Use Cases:**
-  - Paying platform fees
-  - Reserving compute hours and machine capacity
-  - Acquiring premium placements and visibility
-  - Redeeming goods and services
-- **Accounting Treatment:** Platform liability (deferred revenue) until redeemed
-- **Your Role:** Monitor issuance rules, approve pricing, manage reserves
+Our ecosystem is the forge. The people who enter are high-quality metal—talented, educated, capable, but unshaped. Our job is to create the conditions where they transform.
 
-#### Points (Soft Currency)
-- **Nature:** Behavioral, reputation-based, non-monetary
-- **How Acquired:** Awarded for ecosystem contributions (mentoring, moderating, peer reviews, knowledge sharing)
-- **Use Cases:**
-  - Unlocking governance participation
-  - Queue priority and routing preference
-  - Eligibility for grants, scholarships, and leadership roles
-  - Reputation and authority weighting
-- **Accounting Treatment:** Off-balance-sheet ecosystem metric
-- **Your Role:** Define scoring frameworks, set thresholds for rights and access
+**We don't fix people. We forge them.**
 
-#### The Golden Rule
-**Points never convert to Credits.** They influence *how* Credits flow (e.g., high points = lower fees, priority access) but maintain separate integrity to prevent gaming and preserve trust.
+Heating through exposure to real requirements. Hammering through practice under pressure. Shaping through mentorship and feedback. Tempering through verification that proves what they've become.
 
-### Activity-Based Costing (ABC) for Machines
+### The Team's Role in the Forge
 
-Each of our five internal machines operates as a **cost center** with:
+As Core Team, we don't do the forging ourselves. We build and maintain the forge.
 
-1. **Direct Costs:** Labor (salaries, stipends), compute (GPU hours), software licenses, operations
-2. **Allocated Costs:** Shared infrastructure (supercomputer, DevOps, security, governance)
-3. **Activity Metrics:** Measurable outputs (datasets, matches, placements, content assets, code modules)
-4. **Internal Transfer Prices:** Cost + 5-15% margin when machines serve each other
+- We design the systems that create heat
+- We establish the processes that provide hammering
+- We recruit the mentors who do the shaping
+- We build the verification systems that prove transformation
 
-#### Why This Matters
-- Forces strategic prioritization of internal resources
-- Prevents "free work" mentality that leads to inefficiency
-- Enables profitability analysis per machine
-- Reveals true economics of each capability unit
-
-### The Five Machines You Oversee
-
-| Machine | Core Function | Value Units Produced | Revenue Model |
-|---------|---------------|---------------------|---------------|
-| **Mujarrad** (Data Technology) | Collects, cleans, structures, governs data | Clean datasets, pipelines, data products | Data integration services, subscriptions |
-| **Recommendation Engine** | Matches members, teams, tasks, assets | Successful matches, routing conversions | Premium discovery, prioritized routing |
-| **People Machine** | Automates recruitment, evaluation, team formation | Qualified placements, team formations | Placement fees, outsourcing projects |
-| **Content Machine** | Produces marketing, training, branding content at scale | Approved content assets | Documentation, training packages, branding materials |
-| **Coding Machine** | Designs and delivers digital products, ERPs, automation | Deployable software modules | Milestone-based projects, maintenance agreements |
-
-**Your Responsibility:** Monitor utilization, approve capex, evaluate ROI, adjust internal pricing.
+**We are the keepers of the forge.** Its quality, its temperature, its ability to transform—these depend on our decisions.
 
 ---
 
-## How We Create Value: The Closed-Loop Economy
+## Our Position: Center of the Ecosystem
 
-### The Network Interaction Flow
+### The Governance Architecture
 
-1. **Core Team → Machines**
-   We allocate capital (FTE capacity, GPU hours, infrastructure) and set internal rates for compute, data, engineering, content.
+The Wider ecosystem operates in concentric layers. At the center: the Core Team. Radiating outward: Interns, Volunteers, Network Members, Client Staff, Hub Partners.
 
-2. **Machines → Network Members**
-   Machines supply standardized tools, automation, data, templates. Access is charged against project budgets via internal transfer pricing.
+**Authority flows outward.** Our decisions shape rules, standards, and systems that affect everyone in the ecosystem.
 
-3. **Network Members → Clients**
-   Members execute missions and deliver outcomes. Client payments fund the full economic stack: member compensation, machine usage, platform fees, performance incentives.
+**Value flows inward.** Capital, projects, and trust enter through the outer layers and circulate toward the center before redistributing.
 
-4. **Interns/Volunteers → System**
-   Generate non-monetary value (validation, moderation, support) in exchange for Points, learning, and future paid role eligibility.
+We sit at the intersection of these flows. We don't control them—we regulate them. We ensure value reaches where it's needed. We prevent extraction from concentrating unfairly. We maintain the conditions that make the ecosystem work.
 
-5. **Hub Partners → Local Markets**
-   Expand ecosystem regionally, collect subscription/transaction revenues, remit revenue share to Core Team while accessing shared infrastructure.
+### What This Position Requires
+
+**Strategic thinking across complex systems.**
+Every decision ripples through layers. A pricing change affects member earnings, client costs, partner margins, and ecosystem health. We must think in systems, not silos.
+
+**Financial discipline.**
+The ecosystem's sustainability depends on our stewardship. We manage reserves, balance liabilities, optimize machine economics. We can't be generous to one layer at the expense of system health.
+
+**Ethical clarity.**
+We will face hard decisions where short-term gain conflicts with long-term trust. We must choose trust. Every time. Because trust is the foundation everything else rests on.
+
+**Operational excellence.**
+The systems must work. Reliably. At scale. Under pressure. We're the ones who ensure they do.
+
+---
+
+## The Dual Currency System
+
+### Credits: Hard Currency
+
+Credits are financial value. Auditable, exchangeable, real.
+
+**How they're acquired:**
+- Purchased with cash
+- Earned through high-value work
+- Distributed as project payment
+
+**How they're used:**
+- Pay platform fees
+- Reserve compute resources
+- Acquire premium visibility
+- Redeem for goods and services
+- Withdraw as cash
+
+**Accounting treatment:**
+Credits are platform liability until redeemed. When someone buys Credits, we owe them value. When they redeem, we deliver it. This keeps us honest.
+
+### Points: Soft Currency
+
+Points are reputation value. Behavioral, trust-based, non-monetary.
+
+**How they're acquired:**
+- Awarded for mentoring
+- Earned through community contribution
+- Given for peer reviews and validation
+- Accumulated through knowledge sharing
+
+**How they're used:**
+- Unlock governance participation
+- Gain priority in opportunity routing
+- Qualify for grants and leadership roles
+- Influence authority weighting
+
+**Accounting treatment:**
+Points are off-balance-sheet ecosystem metrics. They're not financial liability—they're trust signals.
+
+### The Golden Rule
+
+**Points never convert to Credits.**
+
+This is essential. If Points could become Credits, people would game Point-earning activities for financial gain. The trust signals would become corrupted.
+
+Instead, Points influence how Credits flow. Higher Points mean lower fees. Better routing. First access to premium opportunities. Trust creates economic advantage without being reducible to money.
+
+**This separation is what makes the system work.**
+
+---
+
+## The Five Machines
+
+### Our Production Infrastructure
+
+The Wider ecosystem operates through five specialized machines—capability units that deliver value at scale.
+
+**Mujarrad (Data Technology)**
+Collects, cleans, structures, and governs data. Produces clean datasets, pipelines, data products. Revenue from integration services and subscriptions.
+
+**Recommendation Engine**
+Matches members to tasks, teams to projects, assets to needs. Produces successful matches and routing conversions. Revenue from premium discovery and prioritized routing.
+
+**People Machine**
+Automates recruitment, evaluation, and team formation. Produces qualified placements and team formations. Revenue from placement fees and outsourcing projects.
+
+**Content Machine**
+Produces marketing, training, and branding content at scale. Delivers approved content assets. Revenue from documentation, training packages, and branding materials.
+
+**Coding Machine**
+Designs and delivers digital products, ERPs, and automation. Produces deployable software modules. Revenue from milestone-based projects and maintenance agreements.
+
+### Activity-Based Costing
+
+Each machine operates as a cost center with:
+
+- **Direct costs**: Labor, compute, licenses, operations
+- **Allocated costs**: Shared infrastructure (supercomputer, DevOps, security)
+- **Activity metrics**: Measurable outputs tied to value creation
+- **Internal transfer prices**: Cost + margin when machines serve each other
+
+**Why this matters:**
+
+It forces strategic prioritization. Prevents "free work" mentality. Enables profitability analysis per machine. Reveals true economics of each capability unit.
+
+**Our responsibility:** Monitor utilization, approve investments, evaluate ROI, adjust internal pricing.
+
+---
+
+## How Value Flows
+
+### The Economic Loop
+
+1. **Capital enters** through client projects and member investments
+2. **Work is allocated** through machines and team coordination
+3. **Value is created** through member execution and machine assistance
+4. **Outcomes are verified** through milestones and client approval
+5. **Revenue is distributed** to members first, then machines, then platform
+6. **Reinvestment or withdrawal** completes the cycle
+
+The loop repeats. Each cycle strengthens the ecosystem. Reputation compounds. Capability accumulates. Trust deepens.
 
 ### Revenue Streams We Manage
 
-| Stream | Value Delivered | Revenue Mechanism |
-|--------|----------------|-------------------|
-| **Revenue Campaigns** | Mission-based initiatives solving challenges | Management/success fees after impact achieved |
-| **Spotlight Memberships** | Enhanced visibility and promotion | Recurring subscription fees |
-| **Contribution Service/Share** | Matchmaking and delivery support | Service fee from successful deliveries (contributors paid first) |
-| **Opportunity Discovery** | Analysis and shaping of potential projects | Success fees after opportunity converts to project |
-| **Multiplier Commission** | Coordinated micro-teams for bundled output | Commission embedded in bundled price after milestones |
-| **Licensing & IP** | External licensing of internal IP | Royalty/licensing revenue after creator payouts |
-| **Training & Capacity Building** | Certifications, internships, hands-on programs | Revenue share/fees after milestone completion |
-| **Compute & Data-Center Services** | Surplus capacity sales to external customers | Market-rate usage fees after successful utilization |
-| **Digital Transformation Consulting** | Advisory and implementation services | Outcome-based fees after improvements confirmed |
+| Stream | What It Is | How We Capture |
+|--------|-----------|----------------|
+| Revenue Campaigns | Mission-based initiatives | Success fees after impact |
+| Spotlight Memberships | Enhanced visibility | Recurring subscriptions |
+| Contribution Service | Matchmaking and delivery | Service fee from successful deliveries |
+| Opportunity Discovery | Shaping potential projects | Success fees after conversion |
+| Multiplier Commission | Coordinated micro-teams | Commission after milestones |
+| Licensing & IP | External licensing | Royalties after creator payouts |
+| Training Programs | Certifications and development | Revenue share after completion |
+| Compute Services | Surplus capacity sales | Usage fees after utilization |
+| Digital Transformation | Advisory and implementation | Outcome fees after confirmation |
 
-### Strategic Integration Models (Wider Hub)
-
-As team members, you may be involved in facilitating:
-
-- **Machine-Assisted Cost Reduction:** Using proprietary tools to deliver at fraction of market cost
-- **Capability R&D Acquisition:** Executing projects at-cost to develop new machine capabilities and IP
-- **Cost Aggregation & Shared Infrastructure:** Coordinating clients with overlapping resource needs to split capex
-- **Resource & Talent Syndication:** Facilitating partnerships between companies with similar high-cost needs
-- **Rights & Governance Protection:** Ensuring IP, legal rights, and financial interests are preserved
+**The pattern:** Revenue is recognized after value is delivered, not before.
 
 ---
 
-## Team Responsibilities by Function
+## Team Functions
 
-### Leadership & Strategy
-- Set long-term vision and annual strategic priorities
-- Approve major partnerships, investments, and market expansions
-- Define ecosystem-wide policies and governance frameworks
-- Represent Wider externally to investors, partners, regulators
+### What Each Part Does
 
-### Finance & Treasury
-- Manage Credits issuance, redemption, and liability tracking
-- Monitor revenue aggregation across all streams
-- Allocate budgets to machines and network initiatives
-- Maintain reserves for risk management and liquidity
-- Oversee internal transfer pricing and ABC implementation
+**Leadership & Strategy**
+Sets vision. Approves major decisions. Defines governance. Represents Wider externally.
 
-### Operations & Platform Management
-- Ensure uptime, security, and reliability of all environments
-- Coordinate machine operations and resource allocation
-- Monitor capacity utilization (compute, human, infrastructure)
-- Implement quality controls and delivery standards
-- Manage vendor relationships (cloud partners, tools, services)
+**Finance & Treasury**
+Manages Credits/Points ledger. Monitors revenue. Allocates budgets. Maintains reserves. Oversees internal pricing.
 
-### Product & Technology
-- Define product roadmaps for each environment and machine
-- Oversee Recommendation Engine model training and deployment
-- Manage supercomputer infrastructure and cloud partnerships
-- Drive AI/ML development through Wider Labs
-- Ensure technical integration across ecosystem components
+**Operations & Platform**
+Ensures uptime and reliability. Coordinates machine operations. Monitors capacity. Implements quality controls.
 
-### Community & Growth
-- Set community guidelines, moderation policies, and trust standards
-- Design Points reward structures for volunteer and intern contributions
-- Manage onboarding pathways for new members and clients
-- Coordinate meetups, campaigns, and ecosystem events
-- Measure and optimize member engagement and retention
+**Product & Technology**
+Defines product roadmaps. Oversees Recommendation Engine. Manages supercomputer infrastructure. Drives Wider Labs development.
 
-### Legal, Compliance & Risk
-- Establish dispute resolution mechanisms and enforce decisions
-- Ensure IP protection for internal and partner-created assets
-- Manage contracts with clients, partners, and vendors
-- Monitor regulatory compliance across operating regions
-- Implement risk controls for financial and operational exposure
+**Community & Growth**
+Sets community guidelines. Designs Points structures. Manages onboarding. Coordinates events. Measures engagement.
+
+**Legal & Compliance**
+Establishes dispute resolution. Protects IP. Manages contracts. Monitors compliance. Implements risk controls.
 
 ---
 
-## Compensation Model
+## What We Demand of Ourselves
 
-As Core Team members, you participate in a multi-dimensional compensation structure reflecting your central role and systemic risk.
+### The Standards We Hold
 
-### Components
+**Systems Thinking**
+Every decision affects the whole. We consider ripple effects before acting. We understand how layers connect.
 
-1. **Direct Financial Payment**
-   Competitive salaries commensurate with role, experience, and market rates.
+**Financial Discipline**
+The ecosystem's sustainability is our responsibility. We don't sacrifice long-term health for short-term gains.
 
-2. **Equity or Profit Sharing**
-   Ownership stake in the ecosystem's long-term value creation and success.
+**Ethical Clarity**
+When values conflict with revenue, values win. Trust is more valuable than any deal.
 
-3. **Long-Term Systemic Control**
-   Authority over strategic decisions, budget allocation, and governance direction.
+**Operational Excellence**
+Systems must work reliably at scale. We don't accept "good enough" when "excellent" is required.
 
-4. **Credits Allocation (Discretionary)**
-   Access to internal Credits for testing products, premium features, or resource reservation.
+**Mission Alignment**
+The ecosystem's purpose comes before individual or departmental optimization.
 
-5. **Points (Symbolic)**
-   While not primary compensation, Core Team members may accumulate Points through mentoring and knowledge sharing, reinforcing cultural values.
+### The Weight We Carry
 
-### Performance Evaluation
+Every pricing decision affects livelihoods. Every governance rule shapes opportunities. Every machine optimization unlocks or constrains possibility.
 
-Your impact is assessed through:
-- **Ecosystem KPIs:** Revenue growth, member/client retention, project success rates
-- **Machine Performance:** Utilization, cost recovery, ROI of machines under your oversight
-- **Financial Health:** Reserve levels, liability management, profitability by segment
-- **Network Quality:** Trust metrics, dispute resolution speed, compliance adherence
-- **Strategic Milestones:** Achievement of annual goals, successful product launches, partnership outcomes
+We are not neutral administrators. We are architects of an economic model that determines whether people thrive.
+
+**This is both the burden and the honor of the Core Team.**
 
 ---
 
-## Growth & Development Within Wider
+## The Culture We Build
 
-### Liquid Roles Philosophy
+### Four Principles
 
-Even as Core Team, Wider's **Liquid Roles** principle applies. You can:
-- Transition between functional areas (e.g., Finance → Product → Strategy)
-- Take on temporary leadership of specific initiatives or machines
-- Mentor interns and volunteers, deepening your Points-based reputation
-- Launch internal startups or products through Wider Labs/Ventures with team support
+**Value First**
+We reward tangible benefits that others can build upon. Revenue is captured after stakeholders recognize value.
 
-### Career Pathways
+**Natural Growth**
+Status rises through consistent participation and quality work, not shortcuts. Points are earned through verified contributions.
 
-- **Functional Leadership:** Head of Finance, Head of Operations, Chief Product Officer
-- **Machine Ownership:** Dedicated leadership of a specific machine (e.g., Mujarrad, Recommendation Engine)
-- **Strategic Advisory:** Senior strategy roles influencing long-term ecosystem direction
-- **Entrepreneurial Spin-Out:** Founding a startup within Wider Rise while maintaining team connection
-- **Regional/Sector Expansion:** Leading Hub Partner operations in new markets
+**Liquid Roles**
+Members transition fluidly between functions based on experience and opportunity. No rigid hierarchies.
 
-### Learning & Skill Development
+**Open Expansion**
+The environment scales across any field, industry, or region. Architecture is modular, machines are reusable.
 
-- **Access to Wider Smith Programs:** Participate in training cycles alongside community members
-- **Cross-Functional Rotation:** Temporary assignments to learn other team functions
-- **External Conferences & Training:** Budget allocated for professional development
-- **Mentorship from Founders/Advisors:** Direct access to ecosystem architects and external advisors
+### The Values Underneath
 
----
-
-## Key Metrics We Track
-
-As the governance layer, we monitor ecosystem health through:
-
-### Financial Metrics
-- Total Revenue (by stream)
-- Credits Issued vs. Redeemed (liability management)
-- Machine-Level P&L (direct + allocated costs, internal + external revenue)
-- Client Lifetime Value (LTV) and Customer Acquisition Cost (CAC)
-- Hub Partner Revenue Share and Contribution
-- Reserve Ratio and Liquidity Coverage
-
-### Operational Metrics
-- Network Member Utilization Rate (active vs. idle capacity)
-- Project Success Rate (milestone approval, on-time delivery, client satisfaction)
-- Machine Uptime and Compute Utilization
-- Internal Transfer Pricing Volume (inter-machine service requests)
-- Recommendation Engine Match Accuracy and Conversion Rate
-
-### Trust & Quality Metrics
-- Points Distribution (by persona, by activity type)
-- Member Reputation Scores (average, distribution, trend)
-- Dispute Volume and Resolution Time
-- Volunteer/Intern Progression to Paid Roles
-- Client Retention and Net Promoter Score (NPS)
-
-### Growth Metrics
-- New Member Onboarding (by week/month)
-- Client Acquisition (new organizations, repeat engagement)
-- Hub Partner Expansion (new regions, new sectors)
-- Digital Asset Creation and Reuse Rate
-- Wider Labs Product Launches and Adoption
-
-### Strategic Metrics
-- Market Penetration (target industries, geographies)
-- Competitive Positioning (vs. freelance platforms, agencies, consultancies)
-- Partnership Pipeline (universities, cloud providers, enterprises)
-- Innovation Index (new capabilities, machine upgrades, IP generation)
+- **Mission-Driven**: We exist to serve the ecosystem, not extract from it
+- **Transparency**: Financial and operational data flows openly
+- **Accountability**: Authority is paired with responsibility
+- **Experimentation**: Validation-first applies to our work too
+- **Humility**: We learn from the network
 
 ---
 
-## Culture & Principles
+## What You Receive
 
-These four principles guide every decision we make as the Core Team:
+### In Exchange for the Weight
 
-### 1. Value First
-We reward tangible benefits that others can build upon, rather than appearance, followers, or consumption. **Operationally:** Revenue is captured *after* stakeholders recognize value, not before.
+**Authority**
+Real decision-making power over systems that matter. Not bureaucratic management—actual shaping of the ecosystem's evolution.
 
-### 2. Natural Growth
-Status and reputation rise through consistent participation and quality work, not shortcuts or artificial influence. **Operationally:** Points are earned through verified contributions, Credits through delivered value.
+**Equity**
+Ownership stake in long-term value creation. Your work compounds into wealth as the ecosystem grows.
 
-### 3. Liquid Roles
-Members transition fluidly between functions (freelancer, employee, project leader, quality evaluator) based on experience and opportunity. **Operationally:** No rigid hierarchies; roles adapt to ecosystem needs.
+**Impact**
+Lives changed. Opportunities created. Talent transformed. Metrics that matter beyond quarterly reports.
 
-### 4. Open Expansion
-The environment is designed for infinite scalability across any field, industry, or region. **Operationally:** Architecture is modular, machines are reusable, governance is layer-agnostic.
+**Community**
+Brilliant, mission-driven collaborators. People who chose meaning over easier paths.
 
-### Team-Specific Values
-
-- **Mission-Driven:** We exist to serve the ecosystem, not extract from it
-- **Systems Thinking:** Every decision considers ripple effects across layers
-- **Transparency:** Financial and operational data flows openly to stakeholders
-- **Accountability:** Authority is paired with responsibility; we own outcomes
-- **Experimentation:** Validation-first approach applies to our internal work too
-- **Humility:** We learn from the network; feedback loops inform strategy
+**Legacy**
+You're building something that could outlast you. An economic model that works differently than what came before.
 
 ---
 
-## Onboarding: Your First 90 Days
+## The Invitation
 
-### Week 1-2: Ecosystem Immersion
-- Complete ecosystem architecture training (all environments, machines, layers)
-- Shadow existing team members across functions
-- Create accounts in Community, Hub, Network, Marketplace to experience user journeys
-- Review Financial Eco Model document in depth
-- Meet with leadership for role clarity and expectations
+### What We're Asking
 
-### Week 3-4: Financial & Governance Foundations
-- Deep dive into Credits/Points ledger system with Finance team
-- Learn ABC costing model for machines with Operations
-- Participate in machine-level P&L review meeting
-- Study dispute resolution case histories
-- Understand internal transfer pricing mechanics
+We're asking you to carry the responsibility of making this work.
 
-### Week 5-8: Cross-Functional Collaboration
-- Join product roadmap planning sessions
-- Contribute to KPI dashboard design or analysis
-- Attend community meetup or campaign planning
-- Collaborate on pricing model adjustments
-- Present insights or recommendations to leadership
+Not just your function. The whole thing. When the ecosystem struggles, you feel it. When it succeeds, you built that.
 
-### Week 9-12: Ownership & Initiative
-- Take ownership of a specific project, metric, or initiative
-- Begin regular reporting on your area of responsibility
-- Identify and propose one process improvement or strategic opportunity
-- Mentor an intern or volunteer
-- Complete onboarding with self-assessment and feedback session
+We're asking you to think in systems, not silos. To optimize for ecosystem health, not departmental metrics. To choose trust when revenue tempts otherwise.
+
+We're asking you to be a steward, not just an employee.
+
+### What We're Offering
+
+A seat at the center of something meaningful. The chance to build an economy that works differently. Authority that comes with weight, but real authority nonetheless.
+
+**Welcome to the Core Team.**
+
+The ecosystem depends on us. Let's make it work.
 
 ---
 
-## Key Challenges We Navigate
+## The Wider Philosophy
 
-### Balancing Competing Interests
-- **Network Members** want maximum earnings and freedom
-- **Clients** want minimum cost and maximum control
-- **Hub Partners** want autonomy and margin
-- **Interns/Volunteers** want progression and recognition
-- **Wider Team** must optimize for ecosystem health, not individual maximization
+*"We don't hire employees; we cultivate believers."*
 
-**Our Approach:** Transparent governance, data-driven decision-making, and tight coupling of rewards to contribution and quality.
+*"The strong bring rights to the weak—not through charity, but through empowerment."*
 
-### Managing Dual-Currency Integrity
-Preventing gaming of Credits/Points system while maintaining trust and fairness.
+*"Value First isn't philosophy. It's architecture."*
 
-**Our Approach:** Non-convertibility, algorithmic monitoring, reputation signals, and authority thresholds.
-
-### Scaling Without Losing Quality
-Rapid growth can dilute trust, reduce match quality, and overload machines.
-
-**Our Approach:** Wider Prime certification, validation-first expansion, and machine capacity planning.
-
-### Financial Sustainability vs. Value-First Philosophy
-How do we capture revenue *after* value delivery without starving operations?
-
-**Our Approach:** Diversified revenue streams, reserves management, and milestone-based payment triggers.
+*"Authority without responsibility is tyranny. Responsibility without authority is helplessness. We carry both."*
 
 ---
 
-## Strategic Priorities (Current)
+**Wider |<—>| SEE BEYOND**
 
-1. **Machine Optimization:**
-   Achieve full ABC implementation across all five machines with accurate internal transfer pricing.
+*From Extraction to Ecosystem.*
+*From Employment to Stewardship.*
+*From Company to Movement.*
 
-2. **Credits/Points Ledger Integrity:**
-   Launch automated monitoring dashboards to prevent gaming and ensure accurate liability tracking.
-
-3. **Wider Labs Market Entry:**
-   Bring two production-ready AI models to market via cloud provider partnerships.
-
-4. **Hub Partner Expansion:**
-   Onboard three new regional hubs with clear revenue-sharing agreements and local governance protocols.
-
-5. **Client Acquisition Scale:**
-   Develop repeatable sales motion for Multiplier Commission model targeting mid-market enterprises.
-
-6. **Community Growth:**
-   Reach 10,000 active Community members with measurable progression to Network certification.
-
----
-
-## Tools & Systems You'll Use
-
-- **Financial Management:** Custom Credits/Points ledger system, ABC costing dashboards
-- **Project Management:** Internal task tracking (integrated with Network environment)
-- **Communication:** Wider Talks (Forum), Slack/Teams for internal coordination
-- **Data & Analytics:** Recommendation Engine insights, machine utilization reports, KPI dashboards
-- **Governance:** Dispute resolution portal, policy documentation system
-- **Development:** Access to supercomputer infrastructure, cloud partner dashboards
-
----
-
-## Questions New Team Members Ask
-
-**Q: How do I know if a decision is mine to make vs. needs leadership approval?**
-A: Use the "Reversibility Test." If the decision is easily reversible and low-risk, make it and inform the team. If it's irreversible or high-impact (financial, strategic, governance), escalate for review.
-
-**Q: Can I work on a personal startup while on the Core Team?**
-A: Yes, with transparency. Wider Rise exists to support entrepreneurship, including for team members. Disclose the venture, ensure no conflict of interest, and formalize any resource usage (Credits, compute time, mentorship) through standard processes.
-
-**Q: What if I see a machine operating inefficiently?**
-A: You have both the authority and responsibility to investigate. Pull the machine's P&L, analyze cost drivers, interview the machine operators, and propose adjustments to leadership with data-backed recommendations.
-
-**Q: How do we handle ethical dilemmas (e.g., client requests that conflict with ecosystem values)?**
-A: Escalate immediately to leadership. Document the conflict, propose alternatives, and prepare to decline revenue if necessary to maintain ecosystem integrity. **Value-First includes value alignment.**
-
-**Q: What happens if Credits liabilities exceed our reserves?**
-A: This is a monitored risk. Finance team tracks liability ratios weekly. If approaching risk threshold, we implement controls: pause new Credits issuance, incentivize redemption, or adjust pricing. This is a Core Team priority scenario.
-
----
-
-## Closing Note: The Weight and Honor of the Core
-
-Being part of the Wider Team means you carry the greatest **systemic risk and responsibility** in the ecosystem. You are not just employees—you are **economic regulators, trust architects, and vision keepers.**
-
-Every pricing decision you make affects thousands of members. Every governance rule you set shapes livelihoods. Every machine you optimize unlocks new possibilities. Every partnership you approve expands the frontier of what's possible.
-
-This role demands:
-- **Strategic thinking** across complex, interconnected systems
-- **Financial discipline** to maintain sustainability while scaling
-- **Ethical clarity** to make hard decisions that preserve trust
-- **Operational excellence** to ensure reliability and quality
-- **Mission alignment** to keep the ecosystem's purpose ahead of short-term gains
-
-In return, you receive:
-- **Authority** to shape a transformative ecosystem
-- **Equity** in long-term value creation
-- **Impact** measured in lives changed and opportunities unlocked
-- **Community** of brilliant, mission-driven collaborators
-- **Legacy** as architects of a new economic model
-
-Welcome to the center. The ecosystem depends on you.
-
----
-
-**For questions, clarifications, or deeper dives into any section, reach out to:**
-- **Leadership Team** for strategic and governance matters
-- **Finance Lead** for Credits, Points, ABC, and treasury
-- **Operations Lead** for machines, infrastructure, and network coordination
-- **Product Lead** for environments, tools, and technical architecture
-
-**Let's build something that lasts.**
