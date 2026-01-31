@@ -95,6 +95,9 @@ Read this to understand the philosophy and the "Cement vs Powder" idea.
 
 [Click-Here](https://drive.google.com/file/d/1KH1WqVHSnq9FaAGjl2dBkROAMUz0_g_z/view?usp=sharing)
 
+### Mujarrad Doc
+[Click Here](https://docs.google.com/document/d/1aTeHhqrbA5NL5jbWl0BFSvC2Fxrfz44SySyarlIFIv8/edit?tab=t.0#heading=h.8gya2wte6t6u)
+
 ### Marketing-Arabic-Comprehensive-Guide.pdf
 Read this to understand our "Voice." We want to sound warm, friendly, and like a family. Not like a robot.
 
@@ -126,5 +129,6 @@ Read this to understand the product requirements.
 ----
 ### Open Source Project Based Resources
 - [QUD & Abstract Logic Experience Frontend](https://github.com/pixlcore/xyops)
+
 
 
