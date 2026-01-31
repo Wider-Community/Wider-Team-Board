@@ -44,6 +44,24 @@ The transformation from vulnerable to valuable isn't about changing who you are.
 
 ---
 
+## AQWAM: The Soul Technology
+
+Before we talk about processes, understand what underpins everything.
+
+**AQWAM** is the technology rooted in personal identity, discovery, and manifestation. It is the cornerstone of the Wider ecosystem—designed to help individuals discover their ultimate purpose and unlock their true potential.
+
+**What AQWAM Recognizes:**
+- **The Human Soul**: Respects spiritual dimensions and internal struggles that affect how you show up
+- **Self-Management**: Provides a framework for understanding your place in the world and taking responsibility
+- **Identity Claim**: Moves you from "role-play" to genuine ownership of who you are
+
+**Why This Matters for You:**
+When you discover your authentic identity, you stop performing and start becoming. The energy unlocked through this process gets recycled into the community—creating outstanding quality of talent where everyone believes in themselves, others, and the ecosystem.
+
+*"Because we help them learn about themselves and relieve the pain of not being themselves, they feel gratitude and are ready to pay back for this favor."*
+
+---
+
 ## The Smith Process
 
 ### Why "The Smith"?
@@ -118,7 +136,22 @@ Traditional credentials decay. Your degree becomes less relevant each year. Your
 
 Every project adds to your record. Every testimonial strengthens your credibility. Every successful delivery makes you more valuable. The system remembers what you've done and reflects it to those who need to know.
 
+**The Reputation Engine:**
+Your reputation is forged through a verified sequence:
+1. **Theory**: Studying articles, taking courses, earning certifications
+2. **Experimentation**: Building projects and applying skills in a sandbox
+3. **Monetization**: Using skills in real-world projects to earn value
+4. **Verification**: Receiving testimonials from clients and teams
+
+This creates **Social Credit**—a permanent, immutable record of your reputation. Your ability is verified by ecosystem data, making your Social Credit more valuable than any traditional resume.
+
 **You don't have to talk about yourself. The ecosystem talks about you.**
+
+### 5. Your Story Drives the Ecosystem
+
+Beyond technical data, the Recommendation Engine connects the **stories** of people and projects. By weaving your individual successes into larger ecosystem narratives, it creates valuable content that triggers interest and recycled opportunities across the network.
+
+**This is the core organic content**: Your story, combined with others, drives traffic and loyalty. When you succeed, that story becomes proof for the ecosystem—and proof creates opportunity for everyone, including you.
 
 ---
 
@@ -153,6 +186,22 @@ The network opens paths that don't exist for solo practitioners:
 - Member → Evaluator (earning through quality validation)
 
 **Non-linear progression.** You can hold multiple roles simultaneously. Be a team member while launching a venture. Be an employee somewhere while delivering Wider projects. Identity is fluid.
+
+### The Multi-Role Philosophy
+
+Wider Smith rejects the "single-hat" professional model. You're empowered to be a student, an intern, an employee, and an entrepreneur at once.
+
+- **Fluid Status**: Your startup ideas as an employee get the same weight as an entrepreneur's
+- **Generalist Appreciation**: While expert specialization is respected, we value the person who can move across domains
+- **Unleashing Potential**: The goal is to move beyond "role-play" into "identity-claim"—where you embrace your total capability
+
+### Account Evolution Through Practice
+
+The evolution of your account is not based on something you can do instantly like paying money. There are factors that push toward practices ensuring continuity and value for everyone:
+
+- **Practices that are rewarded cannot be spoofed or magically acquired**
+- **Consistency creates access**—higher contribution = lower fees, better routing, premium opportunities
+- **Asset Monetization**: Your digital assets (code modules, templates, specialized content) can be hosted, reused, and traded, compounding value over time
 
 ---
 

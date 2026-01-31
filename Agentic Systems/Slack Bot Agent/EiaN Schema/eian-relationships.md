@@ -11,7 +11,7 @@ graph TD
     subgraph SPACE_LAYER["SPACE LAYER"]
         SPACES["SPACES
         ═══════════════
-        PK: space_id
+        PK: space_id٫
         FK: parent_space_id
         ───────────────
         Types:

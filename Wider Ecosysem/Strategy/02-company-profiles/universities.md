@@ -161,18 +161,38 @@ Each stage is recorded in the student's **Shield**—a digital credential that s
 
 **The Principle:** Academic excellence should create wealth—for researchers, for institutions, for society.
 
-Faculty research too often ends in journals that only other researchers read. The Research Commercialization Pipeline connects academic work to market opportunity.
+Faculty research too often ends in journals that only other researchers read. The Research Commercialization Pipeline connects academic work to market opportunity through **Wider Labs**—our production engine that transforms community research into revenue-generating products.
 
 **How it works:**
 
 1. **Assessment**: Faculty submit research for commercial potential analysis
 2. **Development**: Wider Labs provides technical teams to build prototypes
-3. **Validation**: Small-scale market testing
+3. **Validation**: Small-scale market testing using the Validation-First methodology
 4. **Launch**: Full commercial deployment with revenue sharing
-5. **Scaling**: Integration into the Wider ecosystem
+5. **Scaling**: Integration into the Wider ecosystem as monetizable assets
+
+**Two Production Paths:**
+- **The Model Path**: Research becomes a trained AI model—deployed once, generates continuous revenue. Partners cover operational costs while the institution earns licensing fees.
+- **The Agentic Path**: Research becomes an interactive solution—users pay for recurring engagement, maximizing Lifetime Value.
 
 **IP Protection:**
 The researcher maintains ownership. Wider provides infrastructure. The university gains reputation and revenue share. Everyone wins because the alternative—research gathering dust—serves no one.
+
+### 6. AQWAM: The Soul Technology
+
+**The Principle:** Education should cultivate identity, not just skills.
+
+Underpinning our approach is **AQWAM**—technology rooted in personal identity, discovery, and manifestation. AQWAM is the cornerstone of the Wider ecosystem because it recognizes that the human soul carries potential that traditional systems fail to see.
+
+**What AQWAM Provides:**
+- **Holistic Discovery**: Respects the human soul and acknowledges the "unseen"—spiritual dimensions and internal struggles that affect performance
+- **Self-Management**: A framework for understanding one's place in the world and taking responsibility
+- **Identity Cultivation**: Helps each person become the hero of their own story
+
+**Why This Matters for Universities:**
+When students discover their authentic identity, they stop performing and start becoming. The gratitude they feel for this self-discovery translates into ecosystem loyalty. They become believers, not just employees.
+
+*"AQWAM identifies and unleashes potential. Wider Smith contains, respects, and scales that potential."*
 
 ---
 
@@ -249,6 +269,16 @@ The economy doesn't want specialists or generalists. It wants people who can mov
 
 ## The Hub Partnership: How It Works
 
+### Becoming a System-Readable Component
+
+When you become a Wider Hub, you don't just get access to tools. You become a **system-readable component** in a global intelligent grid. The Wider Hub operates as a B2B integration layer where your university's capabilities are understood at a granular level—individual contributors, specific research areas, faculty expertise—enabling smart business integrations and efficient strategic decisions.
+
+**The Recommendation Engine Advantage:**
+Your students and faculty aren't just listed in a directory. The engine:
+- **Intelligently routes** opportunities based on verified capabilities
+- **Discovers partnerships** with companies seeking your specific research areas
+- **Optimizes assets** by connecting your resources where they create highest value
+
 ### Becoming a Wider Hub
 
 **What you provide:**
@@ -264,6 +294,9 @@ The economy doesn't want specialists or generalists. It wants people who can mov
 - Client relationships and project flow
 - Quality assurance and governance frameworks
 - Revenue sharing on all economic activity
+- **Pooling**: Your students aggregated into shared availability pools, prepared as teams before opportunities arrive
+- **Dynamic Assignment**: Automatic work routing based on skills, capacity, and predefined rules
+- **Pluralism Risk Mitigation**: Multiple qualified alternatives for every project requirement
 
 ### Implementation Path
 

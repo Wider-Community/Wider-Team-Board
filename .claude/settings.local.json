@@ -5,7 +5,19 @@
       "Bash(mv:*)",
       "mcp__obsidian-vault__obsidian_append_content",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$(cat <<''EOF''\nvault backup: 2026-01-27 $(date +%H:%M:%S)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")"
+      "Bash(git commit -m \"$(cat <<''EOF''\nvault backup: 2026-01-27 $(date +%H:%M:%S)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git checkout:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Complete Wider Strategy documentation (15 documents)\n\n## What''s Included\n\n### Company Profiles (7 segments)\n- Universities: Academic partnership & talent pipeline\n- Partners: Hub partner opportunity & revenue model\n- Clients: Service delivery & value proposition\n- Wider Network: Member benefits & growth paths\n- Wider Interns: Learning journey & Smith process\n- Wider Team: Internal operations & governance\n\n### System Illustrations (4 documents)\n- Ecosystem Overview: High-level architecture\n- Governance Layers: Concentric circle model\n- Value Flow: Credits/Points dual currency system\n- Machine Architecture: 5 machines + supercomputer\n\n### Ecosystem Maps (2 documents)\n- Components: Detailed component definitions\n- Relationships: Cross-component data flows\n\n### Resources (2 documents)\n- Terminology Glossary: 80+ ecosystem terms\n- Key Messages: Segment-specific messaging framework\n\n### Strategic Framework\n- Master roadmap for session continuity\n- Pending: Org chart data (~70 members)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit:*)",
+      "WebFetch(domain:gamma.app)",
+      "WebSearch",
+      "WebFetch(domain:developers.gamma.app)",
+      "Bash(curl:*)",
+      "Bash(git -C /Users/omarhamdy/Developer/Wider/Wider-Team-Board status)",
+      "Bash(git -C /Users/omarhamdy/Developer/Wider/Wider-Team-Board diff --stat)",
+      "Bash(git -C /Users/omarhamdy/Developer/Wider/Wider-Team-Board log --oneline -5)",
+      "Bash(git -C /Users/omarhamdy/Developer/Wider/Wider-Team-Board add:*)",
+      "Bash(git -C /Users/omarhamdy/Developer/Wider/Wider-Team-Board commit -m \"$(cat <<''EOF''\nAdd source materials & expand company profiles\n\n- Add Playbook, Financial Model, and Arabic guides as source materials\n- Add Marketing Arabic Guide and Wider Labs Pitch PDFs\n- Create presentations directory structure\n- Expand company profiles with ecosystem perspectives\n- Update strategy roadmap with refined sections\n- Update EiaN relationships schema\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []

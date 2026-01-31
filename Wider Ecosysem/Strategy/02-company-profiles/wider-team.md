@@ -109,6 +109,15 @@ The Wider ecosystem operates in concentric layers. At the center: the Core Team.
 
 We sit at the intersection of these flows. We don't control them—we regulate them. We ensure value reaches where it's needed. We prevent extraction from concentrating unfairly. We maintain the conditions that make the ecosystem work.
 
+### Decision-Making Technology
+
+We leverage the software infrastructure and AI super capabilities to manage all ecosystem data and make decisions using decision-making technologies developed through years of iteration. This is the optimum governance and orchestration capability:
+
+- **Persona Identification & Mapping**: Every individual is mapped to a specific persona (Core Team, Partner, Member, Intern) and a functional skill set
+- **Traceability**: Every contribution (time, code, content) is accurately tracked
+- **Accountability**: Clear roles prevent overlap in responsibilities
+- **Currency Allocation**: Credits and Points distributed precisely based on persona's engagement level
+
 ### What This Position Requires
 
 **Strategic thinking across complex systems.**
@@ -215,6 +224,35 @@ It forces strategic prioritization. Prevents "free work" mentality. Enables prof
 
 ---
 
+## Wider Labs & Wider Rise: Our Strategic Engines
+
+### Wider Labs: The Production Engine
+
+Wider Labs transforms community research into production-ready AI models and digital products. It operates on two monetization models:
+
+**The Models**: Trained once, deployed as revenue-generating assets. Partners cover operational costs while we capture continuous revenue.
+
+**The Agentic Solutions**: Function like an arcade—users pay for recurring engagement. Optimized for Lifetime Value (LTV) over Customer Acquisition Cost (CAC).
+
+**Infrastructure Partnerships:**
+We leverage strategic partnerships with Cloud Service Providers (CSPs). They provide hardware; we provide AI software that makes hardware profitable. This creates patient, cooperative capital partnerships.
+
+### Wider Rise: The Capital Ecosystem
+
+**Wider Ventures** provides three capitals:
+- **Digital Capital**: Access to Five Machines, existing assets, partner technologies
+- **Human Capital**: Direct connection to workforce, experts, developers, strategists
+- **Network Capital**: Strategic exposure to community and market for smart market entry
+
+**Wider VCs** operates system-led investment:
+- **Validation-First Investment**: Ideas validated with least possible capital before scaling
+- **The "Buffett" Model**: Identifying weak startups with high growth potential, fixing core issues with ecosystem resources
+- **Distressed Asset Recovery**: Acquiring dying startups and revitalizing with technology and human resources
+
+**Wider Tribes**: Decentralized funding mechanism for entrepreneurs to access community-backed funding from their relatives and families, with financial readiness and legal protection.
+
+---
+
 ## How Value Flows
 
 ### The Economic Loop
@@ -232,17 +270,27 @@ The loop repeats. Each cycle strengthens the ecosystem. Reputation compounds. Ca
 
 | Stream | What It Is | How We Capture |
 |--------|-----------|----------------|
-| Revenue Campaigns | Mission-based initiatives | Success fees after impact |
-| Spotlight Memberships | Enhanced visibility | Recurring subscriptions |
-| Contribution Service | Matchmaking and delivery | Service fee from successful deliveries |
-| Opportunity Discovery | Shaping potential projects | Success fees after conversion |
-| Multiplier Commission | Coordinated micro-teams | Commission after milestones |
-| Licensing & IP | External licensing | Royalties after creator payouts |
-| Training Programs | Certifications and development | Revenue share after completion |
-| Compute Services | Surplus capacity sales | Usage fees after utilization |
-| Digital Transformation | Advisory and implementation | Outcome fees after confirmation |
+| Revenue Campaigns | Mission-based initiatives funded by sponsors | Success fees after achievement of campaign impact |
+| Spotlight Memberships | Optional subscription for enhanced visibility | Recurring subscription fees for promotional services |
+| Contribution Service/Share | Matchmaking and delivery oversight | Service fee from successful deliveries; contributors paid first |
+| Opportunity Discovery | Identification and shaping of projects through community data | Success fees after opportunity converts to funded project |
+| Multiplier Commission | Coordination of specialized micro-teams at bundled price | Commission embedded in project total, released after milestone |
+| Licensing & IP | External licensing of software, content, patents | Share of royalties after creator payouts |
+| Training & Capacity Building | Certification and internship programs with partners | Revenue sharing after participant milestone completion |
+| Compute and Data-Center Services | External sale of surplus compute capacity | Usage fees based on successful utilization at market rates |
+| Digital Transformation Consulting | Strategic consultation and implementation | Outcome-based fees after project improvements confirmed |
 
 **The pattern:** Revenue is recognized after value is delivered, not before.
+
+### The Network Interaction Loop
+
+The ecosystem functions as a closed-loop economy where governance flows outward and value flows inward:
+
+1. **Core Team → Machines**: Allocate capital and set internal rates for compute and engineering
+2. **Machines → Network Members**: Supply standardized tools and automation. Access charged against project budgets.
+3. **Network Members → Clients**: Execute missions. Client payments fund the entire stack (Members, Machines, Platform fees).
+4. **Interns/Volunteers → System**: Generate non-monetary value (validation, moderation) in exchange for Points and human capital formation.
+5. **Hub Partners → Local Markets**: Expand regionally, remitting revenue share in exchange for ecosystem infrastructure access.
 
 ---
 

@@ -28,6 +28,22 @@ We chose these words deliberately.
 
 When you become a Hub Partner, you're not buying access to our platform. You're joining a movement to eliminate the waste that plagues talent markets everywhere.
 
+### Understanding the Competitive Landscape
+
+At Wider, we don't ask "Who is our competitor?" We ask: **At which layer does overlap occur?**
+
+**The Four Layers of Competition:**
+
+| Layer | What It Covers | Your Role as Partner |
+|-------|---------------|---------------------|
+| **Ecosystem** | How people, work, products, capital connect | Orchestrate connected problems in your territory |
+| **Environment** | Individual user experiences across platforms | Deliver unified experiences that reinforce each other |
+| **Institutional** | Innovation, investment, human development | Integrate what others separate into distinct institutions |
+| **Foundational** | Data, logic, system structure | Deploy Mujarrad—technology that absorbs change |
+
+**Your Competitive Advantage:**
+Surface similarity exists with many platforms—LinkedIn for identity, Upwork for transactions, Discord for community. But you're not competing feature-by-feature. You're replacing the fragmentation between them. When a comparison feels unclear, ask: "Which layer is this comparison referring to?"
+
 ### The Waste We're Eliminating
 
 Every market has the same disease: talented people can't find opportunity, and companies can't find talent. They exist in the same geography, sometimes in the same building, but they can't see each other.
@@ -184,11 +200,18 @@ The economics improve as your hub matures because reputation compounds. The hub 
 - Communication and collaboration tools
 
 **The Five Machines:**
-- **Mujarrad**: Data structuring, cleaning, governance
-- **Recommendation Engine**: Intelligent routing and matching
-- **People Machine**: Recruitment automation and skill assessment
-- **Content Machine**: Scaled production of training and marketing materials
-- **Coding Machine**: Digital product development and validation
+- **Mujarrad**: Data structuring, cleaning, governance—the foundational technology that makes the entire system flexible
+- **Recommendation Engine**: Intelligent routing and matching—matches members to tasks and assets
+- **People Machine**: Recruitment automation and skill assessment—earns fees through placement and outsourcing
+- **Content Machine**: Scaled production of training and marketing materials—reduces cost and time for high-volume delivery
+- **Coding Machine**: Digital product development and validation—generates revenue through milestone-based development
+
+**Machine-Level Economics:**
+Each machine operates as an independent cost center using Activity-Based Costing (ABC):
+- **Internal Transfer Pricing**: When one machine serves another, an internal price is charged (Cost + 5-15% margin)
+- **Cost Drivers**: Direct labor, GPU hours, allocated shared infrastructure
+- **Strategic Prioritization**: Prevents resource overuse and forces efficient allocation
+- **Profitability Analysis**: Enables you to understand true economics of each capability
 
 **AI Infrastructure:**
 - Access to GPU resources at internal rates
@@ -330,8 +353,18 @@ We're looking for partners who understand their market and are committed to buil
 **Zero-Waste Infrastructure:**
 You're not building from scratch. The platform, the machines, the methodology—they exist. You're deploying proven infrastructure, not hoping your experiment works.
 
+**Five Strategic Integration Models You Can Offer:**
+1. **Machine-Assisted Cost Reduction**: Execute complex projects at a fraction of market costs through proprietary machines
+2. **Capability R&D Acquisition**: Execute projects at cost/zero profit to develop internal machines and IP for new market segments
+3. **Cost Aggregation & Shared Infrastructure**: Coordinate clients with overlapping resource needs to split capital expenditure
+4. **Resource & Talent Syndication**: Partner multiple companies to share the cost of elite talent
+5. **Rights & Governance Protection**: Preserve IP, legal rights, and financial interests through verified ecosystem protocols
+
 **Network Effects:**
 Your members can collaborate with the global talent pool. Your clients can access capabilities from across the network. You're not building an island—you're joining a continent.
+
+**Story-Driven Content:**
+People's stories become the core organic content that drives traffic and loyalty. When your members succeed, their stories weave into larger ecosystem narratives—creating valuable content that triggers interest and recycled opportunities. This is the main user-generated content that will drive traffic and assure continuity.
 
 **Compound Reputation:**
 As your hub certifies excellent talent and delivers quality projects, your reputation grows. Better reputation attracts better talent and clients. The flywheel accelerates.

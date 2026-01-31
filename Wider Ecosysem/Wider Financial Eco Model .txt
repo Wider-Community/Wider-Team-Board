@@ -1,0 +1,549 @@
+﻿Introduction 
+
+
+1. “What is Wider”?
+Wider is positioning itself as more than a single product; it is "a network of interconnected environments working together to create real value." The platform connects individuals to opportunities, companies to capabilities, and teams to projects through an intelligent system that understands needs and matches them with the right fit. In marketing material, Wider emphasizes that a person alone is just a talent, but with the community they become a force; the ecosystem promises that members will never be alone and will find opportunities they never imagined. This collaborative ethos underpins the financial and economic design described here.
+
+
+This presentation defines the financial management and internal economic system of Wider. It explains how the Wider ecosystem is structured and how its components interact in practice from a financial, operational, and economic perspective. The presentation details the architecture of the ecosystem, the purpose and function of each core environment, the governance and trust layers of the Wider Network, the role of the internal machines and the Super Computers with a great number GPU initially and will be replaced laters with cloud service providers partners who are going to provide resources based on smart opportunity discovery and smart strategic partnerships that wider provides, and the mechanics of the dual-currency system.
+
+
+It further outlines the actual revenue and cost structures, budgeting and risk-management principles, quality and governance controls, and the phased implementation roadmap through which the Wider ecosystem is designed to scale sustainably. Together, these elements describe how Wider creates, distributes, measures, and protects value across individuals, teams, companies, and partners within a unified economic framework.
+
+
+2. Ecosystem Architecture
+Wider is built around four core environments that together form the structural backbone of the ecosystem:
+1. Wider Community: The public-facing identity layer where individuals build dynamic, living portfolios. Members showcase profiles, contributions, and digital assets that can be reused, traded, and monetized across the ecosystem. The Community serves as the primary gateway into Wider, enabling individuals to establish credibility, visibility, Viability, desirability and long-term value.
+2. Wider Hub: A B2B integration layer where companies present their capabilities and connect directly to the ecosystem. The Hub supports business integration, structured capability pages, and intelligent matching through the recommendation engine. Organizations are designed to interconnect seamlessly, operating together like components within a smart, adaptive grid.
+3. Wider Network: The operational execution layer of Wider. It matches verified individuals and teams to missions based on skill, specialization, and capacity. The Network functions as a curated workforce, ensuring that work is delivered through trusted, qualified participants aligned with defined standards.
+4. Wider Client Community Portal: The primary client-facing entry point into the Wider ecosystem. It is designed to give clients immediate visibility into the value, activity, and credibility of the Wider network while guiding them toward engagement and participation.
+The portal presents a structured view of the ecosystem through clearly defined sections, including Projects, Meetups, Members, Products, and the Community Map. These sections allow clients to explore active work, discover verified talent and teams, review available products and assets, and understand the breadth and geographic distribution of the Wider community.
+
+
+The Wider Client Community Portal plays three strategic roles within the ecosystem: it acts as a value demonstration layer by showcasing ecosystem capabilities, activity, and participation metrics to build immediate trust; it serves as an engagement and conversion engine, guiding clients through clear calls to action that turn exploration into active participation; and it functions as a discovery and navigation surface, enabling clients to quickly identify the right members, projects, products, and opportunities with confidence.
+
+
+All Wider environments are unified through a single digital identity, allowing skills, contributions, and collaborations to evolve into a continuously growing portfolio. Digital assets—such as templates, code, modules, and content—are designed to be reusable and tradable across the ecosystem, compounding their value over time. Through structured challenges, learning cycles, and mentorship, Wider accelerates personal and professional growth, while its boundaryless opportunity model enables freelancers, teams, and enterprises to discover and engage with the right opportunities instantly.
+
+
+3. Network Structure and Governance Layers
+The Wider Network is organized as concentric layers of responsibility, authority, and economic participation. Each layer plays a defined role in governance while interacting with the internal financial and economic system. Authority, standards, and trust flow outward from the center, while value creation, capital, and opportunities flow inward through verified participation.
+1. Wider Core Team: The central governance layer of the ecosystem. It is responsible for defining strategy, pricing models, standards, KPIs, revenue-sharing structures, and dispute-resolution mechanisms. Financially, this layer oversees budget allocation, platform-wide revenue aggregation, reserve management, and risk controls. The Core Team functions as the economic regulator of the ecosystem, ensuring stability, sustainability, and alignment across all layers.
+2. Wider Interns: The internal development and learning layer supporting the ecosystem. They contribute to research, system development, data preparation, content production, and operational support under structured supervision. Economically, interns are primarily compensated through learning opportunities, experience, and access to the ecosystem, with potential stipends, performance-based rewards, or credits. This layer serves as a talent pipeline, converting learning and contribution into future operational or network roles.
+3. Wider Volunteers: Support the community through moderation, engagement, validation, and content contribution. Rather than direct financial compensation, this layer primarily participates in the non-cash economy of the system. Volunteers earn points, reputation, and access privileges, which can unlock advanced participation, priority opportunities, or progression into paid roles within the ecosystem.
+4. Wider Network Members: Certified individuals and teams responsible for delivering missions, projects, and services. They pay membership and certification fees and may invest credits to access premium visibility or opportunities. In return, they earn project revenue, performance-based rewards, and reputation growth. This layer represents the core value-execution engine of the Wider economy, where trust, quality, and delivery directly translate into financial outcomes.
+5. Wider Client Staff: The operational and decision-making teams on the client side. They initiate demand, fund projects, approve milestones, and evaluate outcomes. Financially, this layer introduces capital into the ecosystem through project budgets, subscriptions, and service fees. Their approvals trigger milestone-based payments, ensuring that value delivery and financial release remain tightly coupled.
+6. Wider Hub Partners: Form the outer expansion layer of the network. They operate regional or industry-specific hubs, onboard members and clients, and enforce Wider’s standards locally. Economically, this layer functions through revenue-sharing or licensing models, earning a portion of the value generated within their hubs while contributing to ecosystem growth, resilience, and geographic scale.
+In this layered structure, governance, standards, and trust flow outward, while economic value, capital, and opportunities flow inward. Inner layers carry greater responsibility and system risk, while outer layers benefit from increased reach and flexibility. The financial model ensures that incentives are aligned with contribution, accountability increases with authority, and economic rewards reinforce quality, ethics, and long-term ecosystem health.
+
+
+This structure features the following:
+* Pooling: Aggregates members and resources into shared availability pools.
+* Dynamic Assignment: Automatically assigns work based on skills, capacity, and predefined rules.
+* Members Grouping: Organizes members into structured teams or functional clusters.
+* Partnership Integration: Connects partners into unified operational and delivery workflows.
+* Partnerships Integration – Success Management: Tracks, measures, and optimizes partner performance and outcomes.
+* Client Project-Based Talents Allocation: Dynamically allocates talent according to client project requirements.
+* Combined Complex Pricing: Applies multi-factor pricing models across services, teams, and resources.
+* Pluralism Risk Mitigation: Distributes work and dependencies to reduce operational and delivery risk.
+* Dues Process Quality Management: Enforces quality, compliance, and delivery standards across projects.
+* Licenses and Rights Management: Manages intellectual property, usage rights, and contractual permissions.
+
+
+  
+
+4. Machines and Tools
+Wider’s capabilities are powered by a 200-GPU super-computer and a set of five internal machines that together form the technical and operational backbone of the ecosystem. The super-computer provides large-scale compute for AI training and inference, supporting both internal development and external services. A significant portion of its capacity is designed to be monetized through compute-based services, while a dedicated share is reserved for internal research, development, and community experimentation.
+
+
+Each machine operates as a specialized capability unit, delivering distinct services while sharing infrastructure, data, and intelligence across the ecosystem.
+1. Mujarrad (Data Technology Machine): Mujarrad is responsible for collecting, cleaning, structuring, and governing data used by all other machines. It ensures privacy-compliant ingestion, storage, and access while enabling reliable data flows across the ecosystem. Operated by data engineers and AI specialists, Mujarrad provides data integration services to partners and supports subscription-based data products, forming a foundational revenue stream.
+2. Recommendation Engine: The Recommendation Engine matches members, teams, tasks, and digital assets across the Wider ecosystem. Powered by models trained on the super-computer, it drives intelligent routing of projects, partnership suggestions, and opportunity discovery. The engine underpins the Hub’s matching capabilities and supports premium services such as prioritized routing and advanced enterprise recommendations.
+3. People Machine: The People Machine automates recruitment, talent evaluation, and team formation. It parses profiles and CVs, matches skills to requirements, and coordinates AI-assisted interviews and assessments. By streamlining hiring and placement workflows, the machine reduces operational cost and time while improving match quality. It generates revenue through recruitment projects, outsourcing engagements, and placement-based fees.
+4. Content Machine: The Content Machine produces structured marketing, product, and training content at scale. It addresses common challenges such as fragmented content creation and inconsistent quality by standardizing workflows and tooling. Through automation, it increases content production efficiency while reducing time and cost. Services include documentation, branding materials, knowledge assets, and internal training packages.
+5. Coding Machine: The Coding Machine designs and delivers digital products, ERP systems, and automation solutions. It follows a validation-first approach, starting with small experiments and proofs before scaling into full development. This approach reduces delivery risk, shares cost with clients, and improves outcome certainty. Revenue is generated through milestone-based projects and long-term maintenance and support agreements.
+5. Economic and Financial Model System Design
+
+
+Wider’s internal financial and economic system is designed to reward contribution, sustain growth, and maintain trust across all stakeholders. The model treats every mission, asset, and action as a source of value and ensures that costs and rewards are allocated fairly among the machines, members, and partners who make them happen.
+
+
+
+
+5.1 Economic value in Wider flows through several channels:
+
+
+Wider is built on the philosophy of “time to value” — people who engage with the network should experience tangible benefits before Wider captures any return. The platform helps clients, partners, volunteers, interns, and community members to win first by giving them access to talent, networks, knowledge, and opportunities. Once these stakeholders recognize the value delivered, Wider may earn revenue through various channels. This value-first approach builds loyalty and fosters a culture of freedom, creativity, investment, and partnership.
+Revenue Stream
+	Value delivered
+	Revenue campaigns
+	Wider organizes mission-based campaigns that mobilize the community to solve challenges or launch initiatives. Sponsors and clients fund these efforts, while participants gain exposure, learning, and tangible outcomes. Revenue for Wider comes through management or success-based fees—only after participants and sponsors have already recognized real value from the campaign’s impact.
+	Spotlight memberships
+	This optional subscription is for community members who want extra visibility and promotion (featured profiles, priority search placement, verified badges). It is not required for basic participation. Members who subscribe enjoy enhanced exposure and increased opportunities, and Wider earns a recurring fee from these promotional services.
+	Contribution service / share
+	Wider matches contributors to missions and provides delivery support, scoping, and supervision. Contributors receive the majority of payments for their work, and clients get reliable results. Wider collects a small service fee from successful deliveries, ensuring the contributors are compensated first.
+	Opportunity discovery
+	Wider analyses skills and needs across the community to identify and shape potential projects, partnerships, or investments. It connects the right people to these opportunities, helping them create measurable value. It is a win-win situation once the opportunity has been turned into a working project and stakeholders have seen tangible benefits.
+	Multiplier commission (Team output for the “price of one”)
+	Wider assembles coordinated micro-teams so that clients can hire multiple experts for the cost of one role. The clients receive higher-quality results and faster delivery, while the team members benefit from steady work and guidance. Wider’s revenue comes from a commission embedded in the bundled price, after milestones are achieved.
+	Licensing and IP revenue
+	Software, content, and patents developed within the Wider network may be licensed externally. Creators are rewarded first through royalties or licensing payouts. Wider earns its share of revenue after ensuring that the individuals behind the intellectual property have been compensated.
+	Training and capacity-building programs
+	Through partnerships with universities and companies, Wider provides hands-on training, certifications, and internships. These programs give participants real-world experience and help sponsors achieve social-impact objectives. Fees or revenue shares are collected by Wider after participants complete milestones and benefit from newly gained skills.
+	Compute and data-center services
+	Wider manages its own computing infrastructure and may sell surplus capacity to external customers. Internal projects benefit from low-cost computing, while external clients pay market rates. Revenue is recognized after users have successfully utilized the infrastructure and confirmed value.
+	Digital-transformation consulting
+	Drawing on expertise in software development, data analytics, and communications infrastructure, Wider advises organizations on digital-transformation projects. Clients pay fees for consultancy and implementation based on delivered outcomes—after improvements have been realized, not before.
+	5.2 Dual Currency Mechanism:
+
+
+To align incentives without introducing excessive monetary cost, Wider uses two complementary units of value:
+* Credits (hard currency): Credits are purchased with cash or earned through high-value work. They are used to pay platform fees, reserve compute hours, acquire premium placements, and redeem goods and services. Credits represent a claim on scarce resources and are treated as liabilities on the platform’s balance sheet until redeemed.
+* Points (soft currency): Points are awarded for contributions that improve the ecosystem—mentoring, moderating, knowledge sharing, peer reviews, and community support. Points cannot be purchased or withdrawn; they unlock privileges such as governance participation, queue priority, and eligibility for grants or scholarships. Points serve as a non-cash reward for behaviors that build trust and quality.
+5.3 Accounting for Machines:
+
+
+The best approach: Machine-as-a-Cost-Center + Activity-Based Costing (ABC), treating each machine as an internal economic unit that:
+* Consumes resources
+* Performs measurable activities
+* Produces outputs that create value
+* Transfers that value internally or externally
+Core principle: Machines are internal service providers; they must be costed, priced, and evaluated like internal businesses.
+
+
+Practice Steps:
+
+
+Step 1: Define each Machine as a Cost Center:
+
+
+Create five cost centers, one per machine. Each cost center has:
+* Direct costs
+* Allocated shared costs
+* Activity metrics
+* Internal transfer prices
+Step 2: What costs to include (this is critical):
+1. Direct Costs (fully attributable). Rule: If the machine would not function without it → it’s a direct cost.
+Cost Type
+	Examples
+	Human cost
+	Salaries, stipends, mentor time
+	Compute
+	GPU hours, cloud compute, storage
+	Software
+	Licenses, data sources, tools
+	Operations
+	QA, monitoring, deployment
+	1. Shared Infrastructure Costs (allocated):
+
+Shared items examples:
+   * 200-GPU super-computer
+   * Core platform infrastructure
+   * Security, DevOps, data governance
+   2. Allocation basis (choose wisely):
+Resource
+	Allocation Driver
+	GPU compute
+	GPU-hours consumed
+	Storage
+	TB-months used
+	Network
+	API calls / data volume
+	Core staff
+	% time allocated
+	Step 3: Measure Machine Work via Activities (ABC)
+
+
+Measure activities performed, Activity-Based Costing (ABC) model for each machine, define standard activities:
+
+
+Example — Coding Machine:
+Activity
+	Cost Driver
+	Proof of Concept
+	Hours + GPU
+	Feature delivery
+	Story points
+	Integration
+	API calls
+	Maintenance
+	Tickets resolved
+	Formula (generic): This gives a unit cost per activity.
+
+
+Activity Cost = (Labor hours × Hourly rate) + (GPU hours × GPU rate) + Allocated overhead
+
+
+Step 4: Measure Output as “Value Units”: This is we turn cost into assets. Each machine produces value units:
+Machine
+	Cost Driver
+	Mujarrad
+	Clean datasets, pipelines, data products
+	Recommendation
+	Matches, successful routing, conversion lift
+	People Machine
+	Qualified placements, team formations
+	Content Machine
+	Approved content assets
+	Coding Machine
+	Deployable software modules
+	We can track:
+   * Cost per unit
+   * Revenue per unit (if external)
+   * Internal value (if internal)
+Step 5: When one machine serves another, you charge internally:
+
+
+Example
+   * Coding Machine builds tooling for Recommendation Engine
+   * People Machine supports hiring for Coding Machine
+We apply internal prices, not “free work”, Why?
+   * Prevents overuse
+   * Forces prioritization
+   * Reveals real economics
+   * Enables profitability analysis
+Leading practice:
+
+
+Internal price ≠ market price
+
+
+Internal price = cost + small margin (5–15%)
+
+
+Step 6: Machine-level P&L (monthly): Each machine should have a shadow P&L:
+
+
+Revenue:
+   * External client revenue
+   * Internal service revenue (transfer pricing)
+   * Subscriptions / retainers
+Cost:
+   * Direct costs
+   * Allocated infrastructure
+   * Training & mentoring
+This lets you classify machines as:
+   * Profit-generating
+   * Strategic (loss-leader)
+   * Infrastructure-critical
+5.4 Accounting for Wider Network: (Dual-Ledger Network Accounting Model)
+
+
+One ledger for economic value (Credits) and one ledger for trust & contribution (Points) — both mapped to network roles and governance authority.
+
+
+The core principle is:
+   * Money follows delivery. Authority follows contribution.
+   * Credits measure economic value. Points measure ecosystem value.
+1. Two Complementary Ledgers (Non-Convertible by Design)a. Credits Ledger (Hard Currency – Financial Accounting)
+
+
+Credits behave like internal prepaid value units and are accounted for as liabilities until redeemed.
+
+
+Credits are used for:
+   * Paying for projects and services
+   * Reserving machine capacity (compute, data, engineering)
+   * Premium visibility and placement
+   * Subscription access and enterprise services
+Accounting treatment:
+   * Issued credits → Deferred revenue / platform liability
+   * Redeemed credits → Recognized revenue
+   * Expired credits → Breakage income (if applicable)
+This ledger is:
+   * Auditable
+   * Monetary
+   * Tied directly to delivery and machines
+b. Points Ledger (Soft Currency – Contribution Accounting)
+
+
+Points are non-monetary, non-withdrawable, and represent earned trust and contribution.
+
+
+Points are used for:
+   * Governance participation
+   * Priority access (queues, reviews, routing)
+   * Eligibility for roles, grants, internships, leadership
+   * Reputation and authority weighting
+Accounting treatment:
+   * Points are not financial assets or liabilities
+   * They are recorded as off-balance-sheet ecosystem metrics
+   * Used in governance, access control, and prioritization logic
+This ledger is:
+   * Behavioral
+   * Non-transferable
+   * Authority-driven
+2. Network Role → Currency Interaction Model:
+
+
+Each network layer interacts with Credits and Points differently.
+
+
+1️⃣ Wider Core Team
+Role: Economic regulator & governance authority
+Credits
+   * Controls issuance rules
+   * Allocates reserves
+   * Approves pricing and release conditions
+Points
+   * Sets scoring frameworks
+   * Defines thresholds for governance rights
+Accounting view:
+Not compensated through points; compensated via salary, equity, or governance mandate.
+2️⃣ Wider Interns
+Role: Learning + assisted contribution layer
+Credits
+      * May receive stipends or milestone-based credits
+      * Credits tied to supervised delivery
+Points
+      * Earned for participation, learning progress, reliability
+Accounting logic:
+Intern activity is capitalizable learning investment, not pure cost.
+Points act as future eligibility currency for paid roles.
+3️⃣ Wider Volunteers
+Role: Trust-building and quality reinforcement
+Credits
+         * No direct credits
+Points
+         * Primary reward mechanism
+         * Points unlock future access, priority, and roles
+Accounting logic:
+Volunteers generate non-monetary value (moderation, trust, validation).
+Their output reduces risk and operational cost → indirect economic benefit.
+4️⃣ Wider Network Members
+Role: Core value execution engine
+Credits
+            * Pay membership, certification, premium access
+            * Earn credits from project delivery
+Points
+            * Earned for quality, reliability, peer reviews
+            * Affect routing, visibility, and pricing tiers
+Accounting logic:
+Members sit at the intersection of both ledgers:
+            * Credits = income
+            * Points = long-term opportunity multiplier
+5️⃣ Wider Client Staff
+Role: Demand initiation and validation
+Credits
+               * Fund projects, subscriptions, milestones
+Points
+               * Typically, not accumulated (or minimal)
+               * May receive reputation signals for long-term clients
+Accounting logic:
+Clients inject capital; approval of milestones triggers credit-to-revenue conversion.
+6️⃣ Wider Hub Partners
+Role: Ecosystem expansion and enforcement
+Credits
+                  * Earn revenue shares
+                  * May pre-purchase credits for regional operations
+Points
+                  * Earned through ecosystem growth, compliance, quality
+Accounting logic:
+Partners combine financial incentives with reputation-based authority.
+3. How Credits and Points Interact (But Never Convert)
+
+
+The core principle is:
+                     * Points never convert to credits.
+                     * They only influence how credits flow.
+Examples:
+                     * High points → lower platform fees
+                     * High points → priority project access
+                     * High points → eligibility for grants or subsidized credits
+                     * Low points → restricted access or higher collateral
+This preserves:
+                     * Financial integrity
+                     * Trust integrity
+                     * Anti-gaming protection
+4. Linking Network Accounting to Machine Accounting
+
+
+This is where the model becomes powerful. (Credits move & Points shape the path)
+
+
+Machines:
+                     * Consume credits (as internal cost)
+                     * Produce deliverables
+Network actors:
+                     * Spend credits to request machine work
+                     * Earn credits by delivering outputs
+                     * Earn points by improving system quality
+Flow example:
+                     1. Client deposits credits
+                     2. Credits allocated to project
+                     3. Machines consume credits internally
+                     4. Members earn credits for delivery
+                     5. Points adjust future routing and pricing
+5.5 Economic Interaction Among Layers and Machines
+
+
+The Wider ecosystem operates through a contract-based internal economy in which network layers and machines interact via clearly defined financial, operational, and governance relationships. These interactions ensure that costs are traceable, incentives are aligned, and value flows transparently from demand to delivery.
+
+
+Core Team → Machines (Capital Allocation & Control)
+The Core Team functions as the economic controller of the ecosystem. It allocates capital to machines by budgeting FTE capacity, GPU hours, and shared infrastructure costs. Internal rates for compute, data, engineering, and content production are defined centrally, enabling consistent internal transfer pricing. The Core Team continuously monitors machine-level performance, utilization, and return on investment, and retains authority over capital expenditures, scaling decisions, and long-term infrastructure investments.
+
+
+Machines → Network Members (Internal Services & Cost Recovery)
+Machines operate as internal service providers to the network. They supply standardized tools, automation, data, templates, and production capacity that enable Network Members to deliver missions efficiently and at scale. Access to machine resources is charged against project budgets through internal transfer prices, ensuring that machine costs are recovered and that real demand signals are transmitted back into capacity planning and pricing decisions.
+
+
+Network Members → Clients (Value Delivery & Revenue Generation)
+Network Members are responsible for executing missions and delivering outcomes to clients. Client payments fund the full economic stack of delivery, including member compensation, machine usage, platform fees, and performance-based incentives. Milestone approvals trigger revenue recognition and credit release, tightly coupling financial flows to verified value delivery.
+
+
+Volunteers and Interns (Non-Cash/Low-Cash Contribution & Human Capital Formation)
+Volunteers and interns participate primarily through the non-monetary or low-monetary economy of the platform. They are rewarded with points, few wages/gigs and, in some cases, limited credits rather than direct/actual full cash payments. Their contributions—such as moderation, validation, content support, and supervised delivery—reduce operational costs, strengthen trust and quality, and generate long-term human capital value that feeds back into paid network roles.
+
+
+Hub Partners (Revenue Sharing & Local Market Expansion)
+Hub Partners operate regional or sector-specific extensions of the ecosystem. They collect subscription and transaction revenues within their markets and remit an agreed share to the Core Team. In return, partners receive incentive allocations, access to shared infrastructure, and visibility into machine cost structures, enabling them to set localized pricing while maintaining alignment with global standards and margins.
+
+
+Closed-Loop Economic Logic
+
+
+Together, these interactions form a closed-loop internal economy:
+                     * Capital and standards flow outward from the Core Team.
+                     * Capacity and services flow from machines to the network.
+                     * Delivery and revenue flow from members to clients.
+                     * Trust, contribution, and human capital flow inward through points, performance, and governance signals.
+This structure ensures that machines are economically sustainable, network participants are fairly incentivized, and financial rewards remain tightly coupled to quality, accountability, and long-term ecosystem health.5.6 Technical Application on Defining the Persona in Wider Community
+
+
+The starting point in structuring the Wider Community is the clear identification of each individual (persona) and their mapping to a specific community group, as illustrated in the attached diagram. Each person within Wider must first be classified into one primary persona category—such as Hub Partner, Client Staff, Network Member, Volunteer, Intern, or Core Team—based on the nature of their engagement, responsibilities, and value contribution to the ecosystem.
+  
+
+
+
+This initial classification is not merely organizational; it serves as the foundation for operational clarity, communication efficiency, and accurate accounting across the Wider system.
+
+
+Once the persona is assigned to its corresponding group, the second step is to associate that persona with a defined department, function, or skill set. Every individual must have:
+                     * A clearly defined role
+                     * A recognized skill domain or functional responsibility
+                     * A known position within Wider’s operational structure
+This dual-layer identification (Persona Group + Department/Skill Set) ensures that:
+                     * Responsibilities are transparent and traceable
+                     * Communication flows efficiently between relevant stakeholders
+                     * Contributions (time, effort, expertise, or output) can be measured and evaluated
+                     * Financial, non-financial, hard, and soft currencies can be allocated and accounted for correctly
+
+
+  
+
+By enforcing that every person has a known role and functional identity, Wider avoids ambiguity in collaboration, prevents overlap in responsibilities, and enables precise integration between human capital, machine outputs, and economic value flows.
+
+
+In essence, no participation within Wider is undefined. Each persona becomes a measurable, accountable, and communicable unit within the broader economic and operational system, allowing Wider to scale sustainably while maintaining governance, transparency, and system integrity.-----Glossary of Terms – Wider Economic & Network SystemA
+
+
+Activity-Based Costing (ABC)
+An accounting methodology used within Wider to calculate the true cost of machine operations by assigning costs to specific activities (e.g., GPU usage, development hours, data processing) rather than spreading costs evenly. ABC enables precise internal pricing, cost recovery, and profitability analysis.
+
+
+Asset (Digital Asset)
+Any reusable output produced within the Wider ecosystem, including code modules, templates, datasets, content packages, or automation components. Assets may be monetized, reused internally, or capitalized for long-term value creation.C
+
+
+Client Community Portal
+The primary client-facing interface of Wider that showcases projects, members, products, and ecosystem activity. It functions as a value demonstration layer, engagement engine, and discovery surface for clients.
+
+
+Closed-Loop Economic System
+The internal economic structure of Wider where capital, services, delivery, trust, and governance circulate continuously between machines, network participants, and clients, ensuring sustainability and incentive alignment.
+
+
+Compute-as-a-Service
+The monetization of excess super-computer capacity by selling GPU compute hours to external clients, while internal projects are charged blended internal rates to encourage efficient utilization.
+
+
+Credits (Hard Currency)
+A monetary unit of value used within Wider to pay for services, reserve machine capacity, access premium features, and fund projects. Credits are purchased with cash or earned through high-value delivery and are accounted for as liabilities until redeemed.D
+
+
+Digital Identity
+A unified identity layer across all Wider environments that aggregates skills, contributions, assets, reputation, points, and economic history into a living portfolio.
+
+
+Dual-Currency Mechanism
+Wider’s incentive system consisting of Credits (hard currency) and Points (soft currency). Credits represent economic value, while Points represent trust, contribution, and authority. The two currencies are complementary and non-convertible.G
+
+
+Governance Layers
+The concentric structure of authority, responsibility, and participation within the Wider Network, ranging from the Core Team at the center to Hub Partners at the outer edge.H
+
+
+Hub Partners
+Organizations or entities that operate regional or industry-specific extensions of Wider. They onboard members and clients, enforce standards locally, and earn revenue through sharing or licensing models.I
+
+
+Internal Transfer Pricing
+A pricing mechanism used when machines provide services to other machines or network participants. Internal prices are typically calculated as cost plus a controlled margin (5–15%) to ensure transparency and efficient resource use.
+
+
+Interns (Wider Interns)
+Participants in structured learning and delivery programs who contribute under supervision. Interns are primarily rewarded through education, experience, points, and sometimes credits, forming a long-term talent pipeline.M
+
+
+Machine-as-a-Cost-Center
+The accounting principle whereby each internal machine is treated as an independent economic unit with its own costs, outputs, internal pricing, and performance metrics.
+
+
+Milestone-Based Payments
+A payment mechanism where funds are released only after verified delivery of predefined project milestones, ensuring alignment between financial flows and value creation.N
+
+
+Network Members
+Certified individuals and teams responsible for delivering missions, projects, and services. They earn credits through delivery and points through quality and reliability.P
+
+
+People Machine
+An internal machine that automates recruitment, evaluation, and team formation using AI-driven processes. It generates revenue through placements, outsourcing, and recruitment services.
+
+
+Points (Soft Currency)
+A non-monetary unit representing trust, contribution, and reputation. Points cannot be purchased or withdrawn and are used to unlock governance rights, priority access, and eligibility for opportunities.
+
+
+Pooling
+A network feature that aggregates members and resources into shared availability pools to increase utilization efficiency and flexibility.R
+
+
+Recommendation Engine
+An AI-driven machine that matches members, teams, tasks, and assets to opportunities, underpinning project routing, partnership formation, and premium matching services.S
+
+
+Shadow P&L
+An internal profit-and-loss view maintained for each machine to assess cost recovery, efficiency, and strategic value, even if the machine is not externally monetized.
+
+
+Super-Computer (200-GPU Cluster)
+Wider’s high-performance compute infrastructure used for AI training, inference, internal automation, and external compute services.T
+
+
+Transfer Pricing
+The internal pricing applied when value or services move between machines or organizational layers, ensuring accountability and economic clarity.V
+
+
+Value Units
+Standardized measures of output produced by machines (e.g., datasets, matches, placements, content assets, software modules) used to calculate cost per unit and assess efficiency.
+
+
+Volunteers (Wider Volunteers)
+Community contributors who support moderation, validation, and engagement. They are rewarded primarily with points and reputation rather than cash.W
+
+
+Wider Community
+The public-facing identity and participation layer where individuals build portfolios, showcase contributions, and enter the ecosystem.
+
+
+Wider Hub
+The B2B integration environment where organizations connect capabilities, access matching services, and engage with the network.
+
+
+Wider Network
+The operational execution layer where verified individuals and teams deliver missions through structured governance and economic rules.-----Closing Note
+
+
+This glossary defines the shared language of the Wider ecosystem, ensuring consistent understanding across governance, finance, technology, and community operations. It reinforces how value is created, measured, and protected within Wider’s unified economic framework.
