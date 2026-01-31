@@ -1,0 +1,89 @@
+﻿الشركات الـ B2B
+النقاط الرئيسية
+* تعريف الشركات B2B: هي شركات تبيع منتجات أو خدمات إلى شركات أخرى، مثل توريد مواد خام أو حلول تقنية، وتختلف عن B2C التي تبيع مباشرة للمستهلكين. غالبًا ما تكون معاملاتها كبيرة وطويلة الأمد.
+* خدمات الذكاء الاصطناعي لشركات B2B: يمكن تقديم خدمات مثل التعرف التلقائي على الكلام (ASR) وتحويل النص إلى كلام (TTS)، بالإضافة إلى التحليل التنبؤي، الدردشة الآلية، والأتمتة، لتحسين الكفاءة والمبيعات. البحوث تشير إلى أن الذكاء الاصطناعي يمكن أن يوفر تكاليف تصل إلى 60% في بعض الحالات.
+ 
+قائمة بخدمات الذكاء الاصطناعي لشركات  B2B
+الذكاء الاصطناعي (AI) يحول شركات B2B من خلال الأتمتة والتحليلات، مما يقلل التكاليف ويزيد الإنتاجية.
+هذه قائمة شاملة بالخدمات الممكنة:
+* التعرف التلقائي على الكلام (ASR): تحويل الكلام إلى نص لتحليل المكالمات التجارية، يساعد في فهم احتياجات العملاء.
+* تحويل النص إلى كلام (TTS): إنشاء صوت آلي للدعم أو التسويق، يوفر وقت الفرق البشرية.
+* الدردشة الآلية (Chatbots): دعم عملاء 24/7، يقلل الانتظار ويزيد توليد العملاء بنسبة 10-20%.
+* الوكلاء الذكيون (AI Agents): أتمتة المهام المعقدة مثل إدارة الطلبات، يدعم B2B بكفاءة عالية ويمكن شاستخدشام شادوشات مثل N8N.
+* التحليل التنبؤي (Predictive Analytics): توقع الطلب من البحث وطلب والحصول علي منتجات لم يجدها العميل، يحسن إدارة المخزون.
+* التخصيص (Personalization): تخصيص العروض للعملاء، يزيد الاحتفاظ بالعملاء.
+* إدارة الطلبات الآلية: تكامل مع المنصات لمعالجة الطلبات، يوفر رؤى ذكية.
+* تحسين محركات البحث (SEO AI): أدوات مثل seoClarity لتحسين الرؤية عبر الإنترنت.
+* توليد العملاء (Lead Generation): أدوات مثل Pipedrive للتنقيب عن عملاء جدد.
+* إدارة العلاقات مع العملاء (CRM AI): تكامل مع Salesforce للتنبؤ بالمبيعات.
+* التحليلات البيانات: أدوات مثل Omniful.ai للرؤى الذكية.
+* الأمان والامتثال: AI لكشف الاحتيال في المعاملات.
+* التسويق الآلي: إنشاء محتوى مخصص.
+* إدارة المخزون: توقع النقص باستخدام ML.
+* الدعم الافتراضي: Brand Bots لتحسين التفاعل.
+* التكامل السحابي: حلول مثل LivePerson للتواصل.
+* البحث عن البيانات: Seamless.AI للعثور على عملاء.
+* التحليل الصوتي التعليقات: لفهم التفاعلات.
+قائمة بشركات B2B في مصر والوطن العربي
+في مصر
+* كبيرة: MaxAB (www.maxab.io) - تجارة إلكترونية B2B.
+* Jarir (www.jarir.com) - إلكترونيات.
+* Flextock (www.flextock.com) - لوجستيات.
+* Teradix (www.teradix.com) - تجارة إلكترونية.
+* FabMinds (www.fabminds.com) - تصنيع.
+* AgriCash (www.agricash.com) - زراعة.
+* Fawaterak (www.fawaterak.com) - دفع.
+* ELSupplier (www.elsupplier.com) - توريد.
+* iSagha (www.isagha.com) - مجوهرات.
+* Veryllion (www.veryllion.com) - تقنية.
+* Bosta (www.bosta.co) - شحن.
+* PayMob (www.paymob.com) - دفع.
+* Nawy (www.nawy.com) - عقارات.
+* متوسطة: Homzmart (www.homzmart.com) - أثاث.
+* Yodawy (www.yodawy.com) - صيدلية.
+* Breadfast (www.breadfast.com) - توصيل.
+* Elmenus (www.elmenus.com) - طعام.
+* Rabbit Mart (www.rabbitmart.com) - تجزئة.
+* Zumrafood (www.zumrafood.com) - غذاء.
+* Egybasket (www.egybasket.com) - سلع.
+* Ingram Micro Egypt (www.ingrammicro.com) - توزيع.
+* Giza Cable Industries (www.gc3.com) - كابلات.
+* Future Technologies (www.futec.com) - تقنية.
+* صغيرة: Capiter (www.capiter.com) - تجارة.
+* Mentoriz (www.mentoriz.com) - تسويق.
+* Adswell (www.adswell.com) - إعلانات.
+* Egessia (www.egessia.com) - تسويق صناعي.
+* eMarketing Egypt (www.emarketing-egypt.com) - تسويق رقمي.
+* B2B Egypt (www.b2begypt.org) - إعلانات.
+في الوطن العربي (أكثر من 30 شركة، من السعودية، الإمارات، إلخ):
+* كبيرة: Al Muhaidib Group (www.almuhaidib.com) - متعدد.
+* Abdul Latif Jameel (www.alj.com) - سيارات.
+* Al-Futtaim (www.alfuttaim.com) - تجزئة.
+* Mansour Group (www.mansourgroup.com) - صناعة.
+* DAMAC Group (www.damacgroup.com) - عقارات.
+* Olayan (www.olayan.com) - استثمار.
+* Majid Al Futtaim (www.majidalfuttaim.com) - تجزئة.
+* Al Ghurair (www.alghurair.com) - صناعة.
+* Al Faisal Holding (www.alfaisalholding.com) - متعدد.
+* Power International (www.powerinternational.com) - بناء.
+* SEDCO (www.sedco.com) - استثمار.
+* Sary (www.sary.com) - تجارة إلكترونية.
+* Retailo (www.retailo.co) - تجزئة.
+* BRKZ (www.brkz.com) - بناء.
+* Qawafel (www.qawafel.com) - لوجستيات.
+* Ezhalha (www.ezhalha.com) - سيارات.
+* متوسطة: Klasha (www.klasha.com) - دفع.
+* Global-e (www.global-e.com) - تجارة دولية.
+* Tradeling (www.tradeling.com) - تجارة.
+* Abraa (www.abraa.com) - سوق.
+* Melltoo (www.melltoo.com) - بيع مستعمل.
+* Madfooat (www.madfooat.com) - مالية.
+* MAGNiTT (www.magnitt.com) - ناشئات.
+* Mawdoo3 (www.mawdoo3.com) - محتوى.
+* Riseup (www.riseup.com) - استشارات.
+* RouteKick (www.routekick.com) - نقل.
+* صغيرة: Supplybase Solutions (www.supplybase.com) - توريد.
+* B2B Shipping (www.b2bshipping.com) - شحن.
+* Twyla Technology (www.twyla.com) - تقنية.
+* TradeKey (www.tradekey.com) - تجارة.
+هذه القوائم غير شاملة، لكنها تعكس التنوع. لمزيد، يمكن زيارة منصات مثل Kompass أو TradeWheel.
