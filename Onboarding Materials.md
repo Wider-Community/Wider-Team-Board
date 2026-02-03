@@ -9,8 +9,7 @@ Welcome to the team! This guide will help you get started with all the tools and
 - [📱 Communication - Slack](#-communication---slack)
 - [🎨 Collaboration - FigJam](#-collaboration---figjam)
 - [📝 Knowledge Management - Obsidian](#-knowledge-management---obsidian)
-- [📋 Spec-Driven Development - Spec Kit](#-spec-driven-development---spec-kit)
-- [📄 API Specifications - OpenSpec](#-api-specifications---openspec)
+- [📄 Spec-Driven Development - OpenSpec](#-spec-driven-development---openspec)
 - [🐧 Linux Basics (Optional)](#-linux-basics-optional)
 - [🔀 Version Control - Git & GitHub](#-version-control---git--github)
 - [🤖 AI Coding Assistants](#-ai-coding-assistants)
@@ -147,71 +146,36 @@ Obsidian is our knowledge management tool for documentation, notes, and project 
 
 ---
 
-## 📋 Spec-Driven Development - Spec Kit
 
-Spec Kit is a toolkit for Spec-Driven Development—a methodology that prioritizes creating detailed specifications before implementation.
+## 📄 Spec-Driven Development - OpenSpec
+
+OpenSpec is a CLI tool and framework for spec-driven development (SDD) designed for AI coding assistants. It bridges the gap between human requirements and AI implementation by creating a lightweight specification layer before code gets written.
 
 ### Why We Use It
-- Focus on product scenarios and predictable outcomes
-- Define requirements before jumping into code
-- Multi-step refinement over single-prompt code generation
-- Higher quality outputs for mission-critical projects
+- Establishes agreed-upon specifications upfront before development begins
+- Ensures alignment between humans and AI coding assistants
+- Each change gets its own dedicated folder with proposal, specs, design docs, and tasks
+- Maintains organized records throughout the development cycle
+- Supports brownfield projects at any scale
 
 ### Slash Commands
 Once initialized in a project, you can use these commands with AI coding assistants:
-- `/speckit.constitution` – Establish project principles
-- `/speckit.specify` – Define requirements
-- `/speckit.plan` – Create implementation strategies
-- `/speckit.tasks` – Generate actionable task lists
-- `/speckit.implement` – Execute the plan
-
-### Supported AI Assistants
-Works with 15+ coding assistants including:
-- Claude
-- GitHub Copilot
-- Cursor
-- Gemini
-- Windsurf
+- `/opsx:new` – Create a new change/feature proposal
+- `/opsx:ff` – Fast-forward planning (generate comprehensive planning docs)
+- `/opsx:apply` – Implement the planned tasks
+- `/opsx:archive` – Archive completed work
 
 ### Getting Started
-1. Install the Specify CLI (`specify`)
-2. Initialize Spec Kit in your project
-3. Follow the spec-driven workflow: Constitution → Specify → Plan → Tasks → Implement
-
+1. Install the OpenSpec CLI
+2. Initialize OpenSpec in your project
+3. Follow the spec-driven workflow: New → Fast-Forward → Apply → Archive
+4. 
 ### 🔗 Resources & Links
-| Resource          | Link                                                                                     |
-| ----------------- | ---------------------------------------------------------------------------------------- |
-| GitHub Repository | https://github.com/github/spec-kit                                                       |
-| Video Tutorial    | https://youtube.com/playlist?list=PL4cUxeGkcC9h9RbDpG8ZModUzwy45tLjb&si=OhwDsGlKuJ8sXQGK |
 
-
----
-
-## 📄 API Specifications - OpenSpec
-
-OpenSpec is our API specification and documentation standard for building consistent APIs.
-
-### What It Covers
-- API endpoint definitions
-- Request/response schemas
-- Authentication methods
-- Error handling standards
-- Versioning guidelines
-
-### How to Use
-1. Review existing API specs before building new endpoints
-2. Follow naming conventions and patterns
-3. Document all new endpoints in OpenSpec format
-4. Validate specs before implementation
-
-### 🔗 Resources & Links
 | Resource               | Link                                        |
 | ---------------------- | ------------------------------------------- |
 | OpenSpec Documentation | https://github.com/Fission-AI/OpenSpec      |
 | Video Tutorial         | https://www.youtube.com/watch?v=gHkdrO6IExM |
-
-
----
 
 ## 🐧 Linux Basics (Optional)
 
