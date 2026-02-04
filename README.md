@@ -18,7 +18,7 @@ Central knowledge base for the **Wider Community** team. This repository contain
 
 If you are a new member, follow these steps in order:
 
-1. **Review the [Wider Team Integration](Wider-Team-Integration.md)** guide to understand the 3-phase approach for joining the team.
+1. **Review the [Wider Team Integration](Wider-Team-Management.md)** guide to understand the 3-phase approach for joining the team.
 2. **Read the [Onboarding Materials](Onboarding%20Materials.md)** - covers all tools, workflows, and expectations.
 3. **Set up your tools** by following the onboarding guide:
    - **Slack** - team communication and daily status updates
